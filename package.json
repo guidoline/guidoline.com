@@ -1,0 +1,21 @@
+{
+  "name": "guidoline.com",
+  "version": "1.0.0",
+  "description": "Site web de l'association Guidoline.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guidoline/guidoline.com.git"
+  },
+  "author": "Ziopod <ziopod@gmail.com> (http://ziopod.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guidoline/guidoline.com/issues"
+  },
+  "homepage": "https://github.com/guidoline/guidoline.com#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}
