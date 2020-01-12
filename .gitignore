@@ -48,4 +48,6 @@ Thumbs.db
 ####################
 content
 build
+dist
 package-lock.json
+.env
