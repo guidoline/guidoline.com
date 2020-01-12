@@ -3,7 +3,7 @@ name: CD
 on: [push]
 
 jobs:
-  build:_and_publish:
+  build_and_publish:
     runs-on: ubuntu-latest
 
     steps:
