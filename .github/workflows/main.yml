@@ -9,6 +9,12 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
+    - name: Get content
+      uses: actions/checkout@v2
+      with:
+        repository: guidoline/guidoline.com-content
+        path: content
+        lfs: true
     - name: Install npm dependencies
       run: npm install
     - name: Build
