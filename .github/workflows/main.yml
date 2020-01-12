@@ -1,6 +1,6 @@
 name: CD
 
-on: [push]
+on: push
 
 jobs:
   build_and_publish:
@@ -21,8 +21,10 @@ jobs:
       run: npm run build
     - name: GitHub Pages Deploy
       if: success()
-      uses: peaceiris/actions-gh-pages@v2
+      uses: docker://peaceiris/gh-pages:v2
       env:
         PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./dist
+      with:
+        emptyCommits: false
