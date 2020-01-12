@@ -1,6 +1,5 @@
 [build]
   command = "curl -o master.zip https://github.com/guidoline/guidoline.com-content/archive/master.zip && unzip master.zip && mv guidoline.com-content-master content && yarn && yarn run build"
-  command = "yarn && yarn run build"
   publish = "dist"
   functions = "src/functions"
   NODE_ENV = "production"
