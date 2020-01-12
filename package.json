@@ -2,9 +2,11 @@
   "name": "guidoline.com",
   "version": "1.0.0",
   "description": "Site web de l'association Guidoline.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,9 @@
     "url": "https://github.com/guidoline/guidoline.com/issues"
   },
   "homepage": "https://github.com/guidoline/guidoline.com#readme",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.4.0",
+    "gridsome": "^0.7.0"
+  }
 }
