@@ -32,6 +32,7 @@ git
 node_modules
 build/Release
 .sass-cache
+.cache
 
 # OS generated files #
 ######################
