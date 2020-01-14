@@ -25,6 +25,7 @@ module.exports = function (api) {
     // Contenu en relation
     addSchemaTypes(`
       type Content implements Node @infer {
+        author: Author @reference(by: "fileInfo.path")
         related_content: Related @reference(by: "fileInfo.path")
         related_contents: [Related] @reference(by: "fileInfo.path")
       }

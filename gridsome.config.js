@@ -7,7 +7,6 @@
 module.exports = {
   siteName: 'Guidoline',
   siteURL: process.env.URL,
-  siteDescription: 'Atelier d\'auto réparation de bicyclette',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -15,6 +14,11 @@ module.exports = {
         baseDir: './content',
         path: '*.md',
         typeName: 'Content',
+        // refs: {
+        //   author: {
+        //     typeName: 'Author'
+        //   }
+        // }
         // refs: {
           // related: 'Related'
           // related: {
@@ -30,6 +34,15 @@ module.exports = {
         // ex. `src/templates/welcome.vue`
         Pages: '/:fileinfo__name'
       },
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        baseDir: './content',
+        path: 'authors/*.md',
+        typeName: 'Author',
+        resolveAbsolutePaths: true,
+      }
     },
     {
       use: '@gridsome/source-filesystem',

@@ -9,7 +9,11 @@
         <g-link class="nav__link" to="/about/">About</g-link>
       </nav>
     </header>
-    <slot/>
+    <transition name="fade" appear>
+      <main>
+      <slot/>
+      </main>
+    </transition>
   </div>
 </template>
 
@@ -22,6 +26,15 @@ query {
 </static-query>
 
 <style>
+
+.fade-enter-active {
+  transition: opacity .5s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
 body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   margin:0;
