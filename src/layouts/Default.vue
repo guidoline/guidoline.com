@@ -9,6 +9,7 @@
         <g-link class="nav__link" to="/about/">About</g-link>
       </nav>
     </header>
+    <p v-html="settings" />
     <transition name="fade" appear>
       <main>
       <slot/>
@@ -24,6 +25,23 @@ query {
   }
 }
 </static-query>
+
+<script lang="ts">
+// https://gridsome.org/docs/body-html-attributes/#change-attributes-globally
+// https://gridsome.org/docs/data-store-api/
+import setting_navigation from '@/../content/settings/navigation.yml';
+import setting_theme from '@/../content/settings/theme.yml';
+export default {
+  data() {
+    return {
+      settings: {
+        navigation: setting_navigation,
+        theme: setting_theme
+      }
+    }
+  }
+}
+</script>
 
 <style>
 

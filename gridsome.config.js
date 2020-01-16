@@ -64,7 +64,7 @@ module.exports = {
       templates: {
         Post: '/blog/:year/:month/:title'
       }
-    },
+    }
   ],
   transformers: {
     remark: {}
