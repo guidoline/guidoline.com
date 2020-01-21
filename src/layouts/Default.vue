@@ -1,20 +1,12 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <p v-html="settings" />
+    <Header :settings="settings"/>
     <transition name="fade" appear>
       <main>
       <slot/>
       </main>
     </transition>
+    <Footer :settings="settings"/>
   </div>
 </template>
 
@@ -27,11 +19,18 @@ query {
 </static-query>
 
 <script lang="ts">
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+
 // https://gridsome.org/docs/body-html-attributes/#change-attributes-globally
 // https://gridsome.org/docs/data-store-api/
 import setting_navigation from '@/../content/settings/navigation.yml';
 import setting_theme from '@/../content/settings/theme.yml';
 export default {
+  components: {
+    Header,
+    Footer,
+  },
   data() {
     return {
       settings: {
@@ -41,6 +40,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style>
