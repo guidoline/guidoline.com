@@ -21,6 +21,39 @@ module.exports = function (api) {
 
   // })
 
+  /**
+   * Patch pour @gridsome/remark
+   */
+  api.loadSource(({addSchemaResolvers}) => {
+    addSchemaResolvers({
+      Post: {
+        excerpt(obj) {
+
+          if (obj.excerpt) {
+            return obj.excerpt;
+          }
+
+          if (obj.description) {
+            return obj.description;
+          }
+
+          const lines = obj.content.split('\n');
+          let excerpt = '';
+
+          for (index in lines) {
+            excerpt = lines[index].trim();
+
+            if (excerpt) {
+              break;
+            }
+          }
+
+          const elipsis = (excerpt.length > 200) ? '…' : '';
+          return excerpt.replace(/^(.{200}[^\s]*).*/, "$1" + elipsis);
+        }
+      }
+    })
+  })
   api.loadSource(({ addSchemaTypes }) => {
     // Contenu en relation
     addSchemaTypes(`
