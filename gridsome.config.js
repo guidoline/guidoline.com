@@ -14,6 +14,9 @@ module.exports = {
         baseDir: './content',
         path: '*.md',
         typeName: 'Content',
+        resolveAbsolutePaths: true,
+        // index: ['welcome'],
+
         // refs: {
         //   author: {
         //     typeName: 'Author'
@@ -32,7 +35,7 @@ module.exports = {
       },
       templates: {
         // ex. `src/templates/welcome.vue`
-        Pages: '/:fileinfo__name'
+        Content: '/:fileinfo__name'
       },
     },
     {
@@ -60,6 +63,7 @@ module.exports = {
         pathPrefix: '/blog',
         path: '**/*.md',
         typeName: 'Post',
+        resolveAbsolutePaths: true,
       },
       templates: {
         Post: '/blog/:year/:month/:title'

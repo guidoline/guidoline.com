@@ -17,7 +17,7 @@
 
 <page-query>
 query {
-  welcome: content(path: "/welcome") {
+  welcome: content(path: "/welcome/") {
     title
     content
     cover {
