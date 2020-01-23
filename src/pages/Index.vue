@@ -8,6 +8,7 @@
     <Section :sections="$page.welcome.sections"/>
     <ul v-for="post in $page.lastPosts.edges" :key="post.node.id">
       <li>
+        <PostAbsctract :post="post.node" />
         <g-link :to="post.node.path">{{ post.node.title }}</g-link>
       </li>
     </ul>
@@ -39,7 +40,12 @@ query {
     edges {
       node {
         title
+        excerpt
         path
+        cover {
+          src
+          alt
+        }
       }
     }
   }
@@ -50,12 +56,14 @@ query {
 import Layout from '@/layouts/Default'
 import Section from '@/components/Section'
 import Cover from '@/components/Cover'
+import PostAbsctract from '@/components/Post/Absctract'
 
 export default {
   components: {
     Layout,
     Section,
-    Cover
+    Cover,
+    PostAbsctract
   }
 }
 </script>
