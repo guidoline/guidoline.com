@@ -6,7 +6,7 @@
       <div v-html="$page.welcome.content"/>
     </article>
     <Section :sections="$page.welcome.sections"/>
-    <ul v-for="post in $page.lastPosts.edges" :key="post.node.id">
+    <ul class="is-quiet" v-for="post in $page.lastPosts.edges" :key="post.node.id">
       <li>
         <PostAbsctract :post="post.node" />
         <g-link :to="post.node.path">{{ post.node.title }}</g-link>
@@ -45,6 +45,7 @@ query {
         cover {
           src
           alt
+          legend
         }
       }
     }
