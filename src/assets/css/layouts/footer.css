@@ -1,0 +1,10 @@
+/**
+ * Footer layout part
+ */
+:root {
+  --footer-background-color: var(--color-variant);
+  --footer-text-color: var(--color-variant-contrast);
+  --footer-button-background-color: var();
+  --footer-button-background-highlight-color: var();
+  --footer-button-text-color: var();
+}

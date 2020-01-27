@@ -1,0 +1,11 @@
+/**
+ * Default Vanilla CSS
+ */
+@import 'config/variables.css';
+@import 'config/vanilla.css';
+@import 'layouts/containers.css';
+@import 'layouts/columns.css';
+/* @import 'components/navigation.css'; */
+/* @import 'components/pagination.css'; */
+@import 'elements/button.css';
+@import 'elements/list.css';
