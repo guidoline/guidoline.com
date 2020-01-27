@@ -8,7 +8,7 @@
     <Section :sections="$page.welcome.sections"/>
     <ul class="is-quiet" v-for="post in $page.lastPosts.edges" :key="post.node.id">
       <li>
-        <PostAbsctract :post="post.node" />
+        <PostAbstract :post="post.node"/>
         <g-link :to="post.node.path">{{ post.node.title }}</g-link>
       </li>
     </ul>
@@ -57,14 +57,14 @@ query {
 import Layout from '@/layouts/Default'
 import Section from '@/components/Section'
 import Cover from '@/components/Cover'
-import PostAbsctract from '@/components/Post/Absctract'
+import PostAbstract from '@/components/Post/Abstract'
 
 export default {
   components: {
     Layout,
     Section,
     Cover,
-    PostAbsctract
+    PostAbstract
   }
 }
 </script>
