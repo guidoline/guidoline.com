@@ -16,3 +16,12 @@ query content($path: String) {
   }
 }
 </page-query>
+<script>
+export default {
+  metaInfo() {
+    return {
+      title: this.$page.content.title
+    }
+  },
+}
+</script>

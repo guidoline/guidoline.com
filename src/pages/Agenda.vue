@@ -31,6 +31,9 @@ query {
 import EventAbstract from '@/components/Event/Abstract'
 
 export default {
+  metaInfo: {
+    title: "Agenda"
+  },
   components: {
     EventAbstract
   }
