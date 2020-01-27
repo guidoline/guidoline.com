@@ -10,15 +10,12 @@
           <span v-if="$page.post.author">Écrit par <Mailto :toEmail="$page.post.author.email" :toName="$page.post.author.title"/>
           </span>
         </p>
-        <p>
-          Categorie : <a href="">{{$page.post.category}}</a>
-        </p>
+        <p>Étiquettes : </p>
         <ul v-for="tag in $page.post.tags" :key="tag.id">
-            <li>{{ tag }}</li>
+            <li>
+              <g-link :to="tag.path">{{ tag.title }}</g-link>
+            </li>
         </ul>
-        <p>
-          <a :href="$page.post.path">Permalien</a>
-        </p>
       </footer>
     </article>
   </layout>
@@ -32,7 +29,11 @@ query post($path: String) {
     content
     date
     category
-    tags
+    tags {
+      title
+      id
+      path
+    }
     path
     author {
       title

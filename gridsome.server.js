@@ -14,12 +14,13 @@ module.exports = function (api) {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
   })
 
-  // api.loadSource(actions => {
-  //   const content = actions.addCollection('Content')
+  api.loadSource(actions => {
+    const posts = actions.addCollection('Post');
+    posts.addReference('tag', 'Tag');
 
-  //   content.addReference('related', 'Related')
-
-  // })
+    // const content = actions.addCollection('Content')
+    // content.addReference('related', 'Related')
+  })
 
   /**
    * Patch pour @gridsome/remark

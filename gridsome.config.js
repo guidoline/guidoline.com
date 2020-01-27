@@ -64,12 +64,21 @@ module.exports = {
         path: '**/*.md',
         typeName: 'Post',
         resolveAbsolutePaths: true,
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            create: true
+          }
+        }
       },
       templates: {
-        Post: '/blog/:year/:month/:title'
+        Post: '/blog/:year/:month/:title',
       }
-    }
+    },
   ],
+  templates: {
+    Tag: '/tag/:title'
+  },
   transformers: {
     remark: {}
   }
