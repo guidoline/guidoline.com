@@ -1,0 +1,36 @@
+<template>
+  <layout>
+    <h1>Blog</h1>
+    <article v-for="post in $page.posts.edges" :key="post.node.id">
+      <h1>{{ post.title }}</h1>
+      <PostAbstract :post="post.node"/>
+    </article>
+  </layout>
+</template>
+<page-query>
+query {
+  posts: allPost(limit: 10) {
+    edges {
+      node {
+        title
+        excerpt
+        path
+        cover {
+          src
+          alt
+          legend
+        }
+      }
+    }
+  }
+}
+</page-query>
+<script>
+import PostAbstract from '@/components/Post/Abstract'
+
+export default {
+  components: {
+    PostAbstract
+  }
+}
+</script>
