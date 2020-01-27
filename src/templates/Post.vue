@@ -56,5 +56,10 @@ export default {
     Cover,
     Mailto
   },
+  metaInfo() {
+    return {
+      title: this.$page.post.title
+    }
+  }
 }
 </script>
