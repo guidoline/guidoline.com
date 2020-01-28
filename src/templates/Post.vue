@@ -18,6 +18,17 @@
         </ul>
       </footer>
     </article>
+    <aside>
+      <h2>Contenus en relation</h2>
+      <ul class="is-quiet">
+        <li v-for="related in $page.post.related_posts" :key="related.id">
+          <g-link :to="related.path">
+            <h3>{{ related.title }}</h3>
+            <div v-markdown="related.excerpt" />
+          </g-link>
+        </li>
+      </ul>
+    </aside>
   </layout>
 </template>
 
@@ -43,6 +54,11 @@ query post($path: String) {
       src
       alt
       legend
+    }
+    related_posts {
+      path
+      title
+      excerpt
     }
   }
 }

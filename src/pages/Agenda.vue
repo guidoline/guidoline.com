@@ -1,8 +1,8 @@
 <template>
   <layout>
-    <ul class="is-quiet" v-for="post in $page.events.edges" :key="post.node.id">
+    <ul class="is-quiet" v-for="event in $page.events.edges" :key="event.node.id">
       <li>
-        <EventAbstract :post="post.node"/>
+        <EventAbstract :event="event.node"/>
       </li>
     </ul>
   </layout>

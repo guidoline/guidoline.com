@@ -9,7 +9,7 @@
 </template>
 <page-query>
 query {
-  posts: allPost(limit: 10) {
+  posts: allPost(limit: 10, filter: {category : { ne: "Évenements"}}) {
     edges {
       node {
         title

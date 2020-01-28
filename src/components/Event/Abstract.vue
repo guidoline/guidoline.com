@@ -1,7 +1,7 @@
 <template>
   <article>
-    <h2><g-link :to="post.path">{{ post.title }}</g-link></h2>
-    <div v-markdown="post.excerpt"/>
+    <h2><g-link :to="event.path">{{ event.title }}</g-link></h2>
+    <div v-markdown="event.excerpt"/>
   </article>
 </template>
 
@@ -10,7 +10,7 @@ import Cover from '@/components/Cover'
 
 export default {
   props: {
-    post: {
+    event: {
       type: Object,
       required: true,
     }

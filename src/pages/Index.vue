@@ -6,10 +6,16 @@
       <div v-html="$page.welcome.content"/>
     </article>
     <Section :sections="$page.welcome.sections"/>
-    <ul class="is-quiet" v-for="post in $page.lastPosts.edges" :key="post.node.id">
-      <li>
+    <h2>Agenda</h2>
+    <ul class="is-quiet">
+      <li v-for="event in $page.lastEvents.edges" :key="event.node.id">
+        <EventAbstract :event="event.node"/>
+      </li>
+    </ul>
+    <h2>Blog</h2>
+    <ul class="is-quiet">
+      <li v-for="post in $page.lastPosts.edges" :key="post.node.id">
         <PostAbstract :post="post.node"/>
-        <g-link :to="post.node.path">{{ post.node.title }}</g-link>
       </li>
     </ul>
   </layout>
@@ -36,7 +42,7 @@ query {
       content
     }
   }
-  lastPosts: allPost(limit: 6, sortBy: "date", order: DESC) {
+  lastPosts: allPost(limit: 6, sortBy: "date", order: DESC, filter: {category: {ne: "Évenements"}}) {
     edges {
       node {
         title
@@ -50,6 +56,15 @@ query {
       }
     }
   }
+  lastEvents: allPost(limit: 3, sortBy: "date", order: DESC, filter: {category: {eq: "Évenements"}}) {
+    edges {
+      node {
+        title
+        excerpt
+        path
+      }
+    }
+  }
 }
 </page-query>
 
@@ -58,13 +73,15 @@ import Layout from '@/layouts/Default'
 import Section from '@/components/Section'
 import Cover from '@/components/Cover'
 import PostAbstract from '@/components/Post/Abstract'
+import EventAbstract from '@/components/Event/Abstract'
 
 export default {
   components: {
     Layout,
     Section,
     Cover,
-    PostAbstract
+    PostAbstract,
+    EventAbstract
   }
 }
 </script>
