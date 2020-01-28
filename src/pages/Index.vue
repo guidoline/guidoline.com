@@ -26,6 +26,7 @@
 query {
   welcome: content(path: "/welcome/") {
     title
+    excerpt
     content
     cover {
       src
@@ -82,6 +83,18 @@ export default {
     Cover,
     PostAbstract,
     EventAbstract
+  },
+  metaInfo() {
+    return {
+      title: 'Bienvenue',
+      meta: [
+        {
+          name: "description",
+          content: this.$page.welcome.excerpt
+        }
+      ]
+
+    }
   }
 }
 </script>
