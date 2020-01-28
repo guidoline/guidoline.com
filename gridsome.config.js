@@ -59,9 +59,8 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        baseDir: './content/posts',
-        pathPrefix: '/blog',
-        path: '**/*.md',
+        baseDir: './content',
+        path: 'blog/**/*.md',
         typeName: 'Post',
         resolveAbsolutePaths: true,
         refs: {
@@ -74,7 +73,7 @@ module.exports = {
       templates: {
         Post: '/blog/:year/:month/:title',
       }
-    },
+    }
   ],
   templates: {
     Tag: '/tag/:title'
