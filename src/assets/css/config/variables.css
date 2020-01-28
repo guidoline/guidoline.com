@@ -89,9 +89,9 @@
    */
 
   /* @todo: à revoir cf. chibicss/tools/color.less */
-  --color-strong: #9e5055;
+  --color-strong: #ac2b2b;
   --color-strong-contrast:#f2ebf3;
-  --color: #ea4848; /* #5886D0 */
+  --color: #ea4848; /* #ea4848 */
   /* --color-contrast:#f2ebf3; */
   --color-contrast:#17181a;
   --color-light: #db7f85;
@@ -111,7 +111,7 @@
   --color-achromatic-stronger-contrast: var(--color-achromatic-light);
   --color-achromatic-strong: #383838;
   --color-achromatic-strong-contrast: var(--color-achromatic-lighter);
-  --color-achromatic: #706F6F;
+  --color-achromatic: #696868;
   --color-achromatic-contrast: #1F1F1F;
   --color-achromatic-light: #B4B4B4;
   --color-achromatic-light-contrast: var(--color-achromatic-stronger);
@@ -213,9 +213,9 @@
   --link-underline      : underline;
   --link-external       : ' ↗';
   /* Couleurs */
-  --link-color          : var(--color);
-  --link-color-hover    : var(--color-strong);
-  --link-color-visited  : var(--color-achromatic);
+  --link-color          : var(--color-strong);
+  --link-color-hover    : var(--color-achromatic-stronger);
+  --link-color-visited  : var(--color-achromatic-strong);
   --link-color-focus    : var(--color-complementary);
 }
 

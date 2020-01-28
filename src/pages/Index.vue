@@ -2,8 +2,8 @@
   <layout>
     <article>
       <Cover :cover="$page.welcome.cover"/>
-      <h1 v-html="$page.welcome.title"/>
-      <div v-html="$page.welcome.content"/>
+      <h1>{{ $page.welcome.title }}</h1>
+      <div>{{ $page.welcome.content }}</div>
     </article>
     <Section :sections="$page.welcome.sections"/>
     <h2>Agenda</h2>
