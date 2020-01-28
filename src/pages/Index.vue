@@ -1,7 +1,7 @@
 <template>
   <layout>
     <article>
-      <Cover :cover="$page.welcome.cover"/>
+      <Cover :cover="$page.welcome.hero"/>
       <h1>{{ $page.welcome.title }}</h1>
       <div v-html="$page.welcome.content"/>
     </article>
@@ -28,13 +28,15 @@ query {
     title
     excerpt
     content
-    cover {
+    hero {
       src
       alt
       legend
       link {
-        target
+        href
         text
+        icon
+        color
       }
     }
     sections {
