@@ -72,7 +72,6 @@ query {
 </page-query>
 
 <script>
-import Layout from '@/layouts/Default'
 import Section from '@/components/Section'
 import Cover from '@/components/Cover'
 import PostAbstract from '@/components/Post/Abstract'
@@ -80,7 +79,6 @@ import EventAbstract from '@/components/Event/Abstract'
 
 export default {
   components: {
-    Layout,
     Section,
     Cover,
     PostAbstract,
@@ -91,6 +89,7 @@ export default {
       title: 'Bienvenue',
       meta: [
         {
+          key: "description",
           name: "description",
           content: this.$page.welcome.excerpt
         }

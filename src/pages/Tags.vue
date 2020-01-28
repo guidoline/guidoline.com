@@ -22,3 +22,20 @@ query {
   }
 }
 </page-query>
+
+<script>
+export default {
+  metaInfo() {
+    return {
+      title: 'Étiquettes',
+      meta: [
+        {
+          key: 'description',
+          name: 'description',
+          content: 'Accédez au contenu du site via les étiquettes.'
+        }
+      ]
+    }
+  }
+}
+</script>

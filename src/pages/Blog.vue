@@ -37,6 +37,7 @@ export default {
       title: 'Blog',
       meta: [
         {
+          key: 'description',
           name: 'description',
           content: 'Retrouvez le détail et le retour sur toutes les activités de Guidoline sur notre Blog.'
         }
