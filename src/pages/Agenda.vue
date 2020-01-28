@@ -1,5 +1,6 @@
 <template>
   <layout>
+    <h1>Agenda</h1>
     <ul class="is-quiet" v-for="event in $page.events.edges" :key="event.node.id">
       <li>
         <EventAbstract :event="event.node"/>
