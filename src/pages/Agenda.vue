@@ -6,12 +6,17 @@
         <EventAbstract :event="event.node"/>
       </li>
     </ul>
+    <Pager :info="$page.events.pageInfo" class="pagination" :linkclass="'pagination-link'"/>
   </layout>
 </template>
 
 <page-query>
-query {
-  events: allPost(limit: 6, filter: {category: { eq: "Évenements"}}) {
+query($page: Int) {
+  events: allPost(perPage: 10, page: $page, filter: {category: { eq: "Évenements"}}) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         title
@@ -30,8 +35,13 @@ query {
 
 <script>
 import EventAbstract from '@/components/Event/Abstract'
+import { Pager } from 'gridsome'
 
 export default {
+  components: {
+    EventAbstract,
+    Pager
+  },
   metaInfo: {
     title: "Agenda",
     meta: [
@@ -41,9 +51,6 @@ export default {
         content: 'Tous les événements à venir de Guidoline sont détaillés sur notre Agenda.'
       }
     ]
-  },
-  components: {
-    EventAbstract
   }
 }
 </script>

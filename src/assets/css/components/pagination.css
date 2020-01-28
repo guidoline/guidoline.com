@@ -48,14 +48,3 @@
   grid-template-columns: repeat(auto-fit, minmax(2.5em, max-content));
   justify-content: center;
 }
-
-/* Presentation sur petites écrans */
-.pagination-link { display: none; }
-.pagination-link.is-first,
-.pagination-link.is-previous,
-.pagination-link.is-next,
-.pagination-link.is-last { display: block; }
-
-@media only screen and (min-width: calc(22.5rem * 2)) {
-  .pagination-link { display: block; }
-}

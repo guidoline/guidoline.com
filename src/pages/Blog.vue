@@ -5,11 +5,16 @@
       <h1>{{ post.title }}</h1>
       <PostAbstract :post="post.node"/>
     </article>
+    <Pager :info="$page.posts.pageInfo" class="pagination" :linkClass="'pagination-link'"/>
   </layout>
 </template>
 <page-query>
-query {
-  posts: allPost(limit: 10, filter: {category : { ne: "Évenements"}}) {
+query($page: Int) {
+  posts: allPost(perPage: 10, page: $page, filter: {category : { ne: "Évenements"}}) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         title
@@ -27,10 +32,12 @@ query {
 </page-query>
 <script>
 import PostAbstract from '@/components/Post/Abstract'
+import { Pager } from 'gridsome'
 
 export default {
   components: {
-    PostAbstract
+    PostAbstract,
+    Pager
   },
   metaInfo() {
     return {
