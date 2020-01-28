@@ -47,15 +47,15 @@ module.exports = {
         resolveAbsolutePaths: true,
       }
     },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        baseDir: './content',
-        path: '**/*.md',
-        typeName: 'Related',
-        resolveAbsolutePaths: true,
-      }
-    },
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     baseDir: './content',
+    //     path: '**/*.md',
+    //     typeName: 'Related',
+    //     resolveAbsolutePaths: true,
+    //   }
+    // },
     {
       use: '@gridsome/source-filesystem',
       options: {

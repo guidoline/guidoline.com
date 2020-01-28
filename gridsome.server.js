@@ -30,7 +30,9 @@ module.exports = function (api) {
 
     for (index in lines) {
       excerpt = lines[index].trim();
-      if (excerpt) break
+      // The first line should'n be Markdown title
+      is_title = excerpt.indexOf('#') === 0;
+      if (excerpt && ! is_title) break
     }
 
     const elipsis = (excerpt.length > 500) ? '…' : '';
@@ -52,11 +54,20 @@ module.exports = function (api) {
   })
   api.loadSource(({ addSchemaTypes }) => {
     // Contenu en relation
+    // addSchemaTypes(`
+    //   type Content implements Node @infer {
+    //     author: Author @reference(by: "fileInfo.path")
+    //     related_content: Related @reference(by: "fileInfo.path")
+    //     related_contents: [Related] @reference(by: "fileInfo.path")
+    //   }
+    //   type Post implements Node @infer {
+    //     author: Author @reference(by: "fileInfo.path")
+    //     related_posts: [Post] @reference(by: "fileInfo.path")
+    //   }
+    // `);
     addSchemaTypes(`
       type Content implements Node @infer {
         author: Author @reference(by: "fileInfo.path")
-        related_content: Related @reference(by: "fileInfo.path")
-        related_contents: [Related] @reference(by: "fileInfo.path")
       }
       type Post implements Node @infer {
         author: Author @reference(by: "fileInfo.path")
