@@ -2,7 +2,6 @@
   <layout>
     <article>
       <Cover :cover="$page.post.cover"/>
-      <h1 v-html="$page.post.title"/>
       <div v-html="$page.post.content"/>
       <footer>
         <p>
