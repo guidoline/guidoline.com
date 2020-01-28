@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer id="footer">
     <nav v-for="link in settings.navigation.footer" :key="link.url">
       <g-link :to="link.url">{{ link.name }}</g-link>
     </nav>

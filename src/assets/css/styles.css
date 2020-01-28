@@ -5,6 +5,7 @@
 @import 'config/vanilla.css';
 @import 'layouts/containers.css';
 @import 'layouts/columns.css';
+@import 'layouts/footer.css';
 /* @import 'components/navigation.css'; */
 /* @import 'components/pagination.css'; */
 @import 'elements/button.css';
