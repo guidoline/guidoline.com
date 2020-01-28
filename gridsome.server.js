@@ -22,36 +22,28 @@ module.exports = function (api) {
     // content.addReference('related', 'Related')
   })
 
+  const makeExcerpt = (obj) => {
+    if (obj.excerpt) return obj.excerpt
+    if (obj.description) return obj.description
+    const lines = obj.content.split('\n')
+    let excerpt = ''
+
+    for (index in lines) {
+      excerpt = lines[index].trim();
+      if (excerpt) break
+    }
+
+    const elipsis = (excerpt.length > 500) ? '…' : '';
+    return excerpt.replace(/^(.{500}[^\s]*).*/, "$1" + elipsis);
+  }
+
   /**
    * Patch pour @gridsome/remark
    */
   api.loadSource(({addSchemaResolvers}) => {
     addSchemaResolvers({
       Post: {
-        excerpt(obj) {
-
-          if (obj.excerpt) {
-            return obj.excerpt;
-          }
-
-          if (obj.description) {
-            return obj.description;
-          }
-
-          const lines = obj.content.split('\n');
-          let excerpt = '';
-
-          for (index in lines) {
-            excerpt = lines[index].trim();
-
-            if (excerpt) {
-              break;
-            }
-          }
-
-          const elipsis = (excerpt.length > 200) ? '…' : '';
-          return excerpt.replace(/^(.{200}[^\s]*).*/, "$1" + elipsis);
-        }
+        excerpt(obj){ return makeExcerpt(obj) }
       }
     })
   })
@@ -65,7 +57,7 @@ module.exports = function (api) {
       }
       type Post implements Node @infer {
         author: Author @reference(by: "fileInfo.path")
-        related_contents: [Related] @reference(by: "fileInfo.path")
+        related_posts: [Post] @reference(by: "fileInfo.path")
       }
     `);
   })
