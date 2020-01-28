@@ -12,6 +12,7 @@ query content($path: String) {
   content: content(path: $path) {
     id
     title
+    excerpt
     content
   }
 }
@@ -20,7 +21,13 @@ query content($path: String) {
 export default {
   metaInfo() {
     return {
-      title: this.$page.content.title
+      title: this.$page.content.title,
+      meta: [
+        {
+          name: 'description',
+          content: this.$page.content.excerpt
+        }
+      ]
     }
   },
 }

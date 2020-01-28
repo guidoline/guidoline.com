@@ -44,6 +44,9 @@ module.exports = function (api) {
     addSchemaResolvers({
       Post: {
         excerpt(obj){ return makeExcerpt(obj) }
+      },
+      Content: {
+        excerpt(obj){ return makeExcerpt(obj) }
       }
     })
   })

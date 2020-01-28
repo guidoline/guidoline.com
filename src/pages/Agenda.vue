@@ -32,7 +32,13 @@ import EventAbstract from '@/components/Event/Abstract'
 
 export default {
   metaInfo: {
-    title: "Agenda"
+    title: "Agenda",
+    meta: [
+      {
+        name: 'description',
+        content: 'Tous les événements à venir de Guidoline sont détaillés sur notre Agenda.'
+      }
+    ]
   },
   components: {
     EventAbstract

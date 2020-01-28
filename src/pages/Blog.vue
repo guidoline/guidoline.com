@@ -31,6 +31,17 @@ import PostAbstract from '@/components/Post/Abstract'
 export default {
   components: {
     PostAbstract
+  },
+  metaInfo() {
+    return {
+      title: 'Blog',
+      meta: [
+        {
+          name: 'description',
+          content: 'Retrouvez le détail et le retour sur toutes les activités de Guidoline sur notre Blog.'
+        }
+      ]
+    }
   }
 }
 </script>

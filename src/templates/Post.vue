@@ -37,6 +37,7 @@ query post($path: String) {
   post: post(path: $path){
     id
     title
+    excerpt
     content
     date
     category
@@ -75,7 +76,13 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.post.title
+      title: this.$page.post.title,
+      meta: [
+        {
+          name: 'description',
+          content: this.$page.post.excerpt
+        }
+      ]
     }
   }
 }

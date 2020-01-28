@@ -3,7 +3,7 @@
     <article>
       <Cover :cover="$page.welcome.cover"/>
       <h1>{{ $page.welcome.title }}</h1>
-      <div>{{ $page.welcome.content }}</div>
+      <div v-html="$page.welcome.content"/>
     </article>
     <Section :sections="$page.welcome.sections"/>
     <h2>Agenda</h2>
