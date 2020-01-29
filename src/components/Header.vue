@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <h1>
-      <g-link :to="themeURL">{{ themeName }}</g-link>
+      <g-link :to="siteURL">{{ siteName }}</g-link>
     </h1>
     <nav class="menu" v-for="link in settings.navigation.main" :key="link.url">
       <g-link class="menu-item" :to="link.url">{{ link.name }}</g-link>
@@ -18,10 +18,10 @@ export default {
     }
   },
   computed: {
-    themeName() { return this.settings.theme.name },
-    themeURL() {
+    siteName() { return this.settings.global.name },
+    siteURL() {
       // Ne peut pas être passé à `:to`
-      return this.settings.theme.url ? this.settings.theme.url : '/'
+      return this.settings.global.url ? this.settings.global.url : '/'
     }
   },
   methods: {

@@ -25,7 +25,7 @@ import Footer from "@/components/Footer"
 // https://gridsome.org/docs/body-html-attributes/#change-attributes-globally
 // https://gridsome.org/docs/data-store-api/
 import setting_navigation from '@/../content/settings/navigation.yml';
-import setting_theme from '@/../content/settings/theme.yml';
+import setting_global from '@/../content/settings/global.yml';
 export default {
   components: {
     Header,
@@ -35,8 +35,21 @@ export default {
     return {
       settings: {
         navigation: setting_navigation,
-        theme: setting_theme
+        global: setting_global
       }
+    }
+  },
+  metaInfo() {
+    return {
+      title: setting_global.name,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: setting.global.description
+        }
+      ]
+
     }
   }
 }
