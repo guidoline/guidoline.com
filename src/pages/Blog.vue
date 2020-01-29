@@ -1,6 +1,11 @@
 <template>
   <layout>
     <h1>Blog</h1>
+    <ul class="is-inline">
+      <li v-for="category in $page.categories.edges" :key="category.node.id">
+        <g-link :to="category.node.path">{{category.node.title}}</g-link>
+      </li>
+    </ul>
     <article v-for="post in $page.posts.edges" :key="post.node.id">
       <h1>{{ post.title }}</h1>
       <PostAbstract :post="post.node"/>
@@ -25,6 +30,15 @@ query($page: Int) {
           alt
           legend
         }
+      }
+    }
+  }
+  categories: allCategory {
+    edges {
+      node {
+        title
+        id
+        path
       }
     }
   }

@@ -4,8 +4,8 @@
       <g-link :to="link.url">{{ link.name }}</g-link>
     </nav>
     <section>
-      <h1 v-html="settings.theme.name"/>
-      <div v-html="settings.theme.description"/>
+      <h1 v-html="settings.global.name"/>
+      <div v-html="settings.global.description"/>
     </section>
   </footer>
 </template>

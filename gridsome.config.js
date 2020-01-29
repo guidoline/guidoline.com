@@ -67,6 +67,10 @@ module.exports = {
           tags: {
             typeName: 'Tag',
             create: true
+          },
+          category: {
+            typeName: 'Category',
+            create: true
           }
         }
       },
@@ -76,7 +80,8 @@ module.exports = {
     }
   ],
   templates: {
-    Tag: '/tag/:title'
+    Tag: '/tag/:title',
+    Category: '/category/:title'
   },
   transformers: {
     remark: {}

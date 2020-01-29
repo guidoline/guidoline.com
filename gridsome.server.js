@@ -17,6 +17,7 @@ module.exports = function (api) {
   api.loadSource(actions => {
     const posts = actions.addCollection('Post');
     posts.addReference('tag', 'Tag');
+    posts.addReference('category', 'Category');
 
     // const content = actions.addCollection('Content')
     // content.addReference('related', 'Related')

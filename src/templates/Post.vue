@@ -39,7 +39,6 @@ query post($path: String) {
     excerpt
     content
     date
-    category
     tags {
       title
       id

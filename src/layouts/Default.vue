@@ -46,7 +46,7 @@ export default {
         {
           key: "description",
           name: "description",
-          content: setting.global.description
+          content: setting_global.description
         }
       ]
 
