@@ -1,5 +1,5 @@
 <template>
-  <figure v-if="cover">
+  <figure v-if="cover.src">
     <g-image :src="cover.src" :alt="cover.alt" />
     <figcaption v-if="cover.legend">
       <div v-markdown="cover.legend" />
