@@ -1,7 +1,7 @@
 <template>
   <layout>
     <article>
-      <Cover :cover="$page.welcome.hero"/>
+      <Cover v-if="$page.welcome.hero" :cover="$page.welcome.hero"/>
       <h1>{{ $page.welcome.title }}</h1>
       <div v-html="$page.welcome.content"/>
     </article>

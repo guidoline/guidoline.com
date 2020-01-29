@@ -1,7 +1,7 @@
 <template>
   <article>
     <h2><g-link :to="post.path">{{ post.title }}</g-link></h2>
-    <Cover :cover="post.cover"/>
+    <Cover v-if="post.cover" :cover="post.cover"/>
     <div v-markdown="post.excerpt"/>
   </article>
 </template>

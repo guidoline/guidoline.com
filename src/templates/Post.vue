@@ -1,7 +1,7 @@
 <template>
   <layout>
     <article>
-      <Cover :cover="$page.post.cover"/>
+      <Cover v-if="$page.post.cover" :cover="$page.post.cover"/>
       <div v-html="$page.post.content"/>
       <footer>
         <p>
