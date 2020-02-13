@@ -1,21 +1,17 @@
 ---
 name: "Rapport de bug \U0001F41E"
-about: Créer un rapport de bug pour nous aider à améliorer ce projet
+about: "Quelque chose ne fonctionne pas comme convenu \U0001F62B."
 title: ''
 labels: bug
 assignees: ''
 
 ---
 
-# Rapport de bug 🐞
-
-Quelque chose n'as pas fonctionné comme convenu 😫.
-
-Veuillez remplir minuscieusement ce document, supprimez les paragraphes qui ne vous semble pas pertinents.
+Veuillez remplir minutieusement ce document, supprimez les paragraphes qui ne vous semble pas pertinents.
 
 ## Description du bug
 
-Veuillez fournir une description clear et conscise du bug.
+Veuillez fournir une description claire et concise du bug.
 
 Mentionnez l'URL de la page, le nom de la page, le parcours suivie ayant déclenché le bug, etc.
 
