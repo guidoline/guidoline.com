@@ -1,8 +1,7 @@
 ---
 name: "Régression \U0001F4A2"
 about: "Quelque chose ne fonctionne plus comme avant \U0001F624 (vérifier tout de
-  même dans [le registre des changements](https://github.com/guidoline/guidoline.com/releases)
-  si cela n'était pas prévue)"
+  même dans le registre des changements si cela n'était pas prévue)"
 title: L'intitulé de la regression
 labels: bug
 assignees: ''
