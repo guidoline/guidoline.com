@@ -1,5 +1,6 @@
 <template>
   <footer id="footer">
+    <Search />
     <nav v-for="link in settings.navigation.footer" :key="link.url">
       <g-link :to="link.url">{{ link.name }}</g-link>
     </nav>
@@ -11,7 +12,12 @@
 </template>
 
 <script>
+import Search from '@/components/Search'
+
 export default {
+  components: {
+    Search
+  },
   props: {
     settings: {
       type: Object,

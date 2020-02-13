@@ -77,6 +77,26 @@ module.exports = {
       templates: {
         Post: '/blog/:year/:month/:title',
       }
+    },
+    {
+      use: 'gridsome-plugin-flexsearch',
+      options: {
+        collections: [
+          {
+            typeName: 'Post',
+            indexName: 'Post',
+            fields: ['title', 'description', 'tags']
+          },
+          {
+            typeName: 'Tag',
+            indexName: 'Tag',
+            fields: ['title']
+          }
+        ],
+        searchFields: ['title', 'description', 'content', 'tags'],
+        suggest: true,
+        page: true,
+      }
     }
   ],
   templates: {
