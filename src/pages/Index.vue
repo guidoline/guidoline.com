@@ -1,30 +1,41 @@
 <template>
   <layout>
     <article>
-      <Cover v-if="$page.welcome.hero" :cover="$page.welcome.hero"/>
-      <h1>{{ $page.welcome.title }}</h1>
-      <div v-html="$page.welcome.content"/>
+      <Cover v-if="page.hero" :cover="page.hero"/>
+      <h1>{{ page.title }}</h1>
+      <div v-html="page.content"/>
     </article>
-    <Section :sections="$page.welcome.sections"/>
-    <h2>Agenda</h2>
-    <ul class="is-quiet">
-      <li v-for="event in $page.lastEvents.edges" :key="event.node.id">
-        <EventAbstract :event="event.node"/>
-      </li>
-    </ul>
-    <h2>Blog</h2>
-    <ul class="is-quiet">
-      <li v-for="post in $page.lastPosts.edges" :key="post.node.id">
-        <PostAbstract :post="post.node"/>
-      </li>
-    </ul>
+    <div class="columns">
+      <Section
+        v-for="section in page.sections"
+        :key="section.id"
+        :section="section"
+        class="column"
+      />
+    </div>
+    <template v-if="lastEvents.length">
+      <h2>Agenda</h2>
+      <ul class="is-quiet">
+        <li v-for="event in lastEvents" :key="event.id">
+          <EventAbstract :event="event"/>
+        </li>
+      </ul>
+    </template>
+    <template v-if="lastPosts.length">
+      <h2>Blog</h2>
+      <ul class="is-quiet">
+        <li v-for="post in lastPosts" :key="post.id">
+          <PostAbstract :post="post"/>
+        </li>
+      </ul>
+    </template>
   </layout>
 </template>
 
 
 <page-query>
 query {
-  welcome: content(path: "/welcome/") {
+  page: pageEntry(path: "/") {
     title
     excerpt
     content
@@ -51,6 +62,10 @@ query {
         title
         excerpt
         path
+        category {
+          title
+          path
+        }
         cover {
           src
           alt
@@ -91,10 +106,21 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.$page.welcome.excerpt
+          content: this.$page.page.excerpt
         }
       ]
 
+    }
+  },
+  computed: {
+    page () {
+      return this.$page.page
+    },
+    lastPosts() {
+      return this.$page.lastPosts.edges.map(edge => edge.node)
+    },
+    lastEvents() {
+      return this.$page.lastEvents.edges.map(edge => edge.node )
     }
   }
 }
