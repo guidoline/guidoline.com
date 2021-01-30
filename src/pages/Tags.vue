@@ -2,8 +2,9 @@
   <layout>
     <h1>Étiquettes</h1>
     <ul>
-      <li v-for="tag in $page.tags.edges" :key="tag.node.id">
-        <g-link :to="tag.node.path">{{tag.node.title }}</g-link>
+      <li v-for="tag in tags" :key="tag.id">
+        <g-link :to="tag.path">{{ tag.title }}</g-link>
+        ({{ tag.posts.totalCount }})
       </li>
     </ul>
   </layout>
@@ -11,12 +12,15 @@
 
 <page-query>
 query {
-  tags: allTag {
+  allTag {
     edges {
       node {
         title
         id
         path
+        posts: belongsTo {
+          totalCount
+        }
       }
     }
   }
@@ -25,6 +29,9 @@ query {
 
 <script>
 export default {
+  /**
+   * TODO : Rendre les métas éditables (cf. `pages/Category.vue`)
+   */
   metaInfo() {
     return {
       title: 'Étiquettes',
@@ -35,6 +42,11 @@ export default {
           content: 'Accédez au contenu du site via les étiquettes.'
         }
       ]
+    }
+  },
+  computed: {
+    tags() {
+      return this.$page.allTag.edges.map( edge => edge.node )
     }
   }
 }
