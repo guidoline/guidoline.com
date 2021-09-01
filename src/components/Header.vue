@@ -10,28 +10,31 @@
 </template>
 
 <script>
+/**
+ * Entête principal
+ */
 export default {
   props: {
+    /**
+     * Réglage globaux
+     */
     settings: {
       type: Object,
       required: true,
     }
   },
   computed: {
+    /**
+     * Le nom du site
+     */
     siteName() { return this.settings.global.name },
+    /**
+     * L'URL global du site
+     */
     siteURL() {
       // Ne peut pas être passé à `:to`
       return this.settings.global.url ? this.settings.global.url : '/'
     }
-  },
-  methods: {
-    test() {
-      // console.log("Hello")
-    }
-  },
-  mounted() {
-    this.test()
   }
-
 }
 </script>

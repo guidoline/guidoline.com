@@ -25,3 +25,15 @@ Une fois **l'artefact prêt**, il pourras être transférer sur le serveur de pr
  - [Pipeline Github délimitées](https://devkimchi.com/2019/12/18/building-ci-cd-pipelines-with-github-actions/)
  - [Thème Gridsome Bleda](https://github.com/hellocosmin/gridsome-starter-bleda)
  - [Théme Gridsome Jamdocs](https://gridsome.org/starters/jamdocs/)
+
+## Guides de styles
+
+Les outils de guide de styles actuellement en test sont les suivants.
+
+### vue-styleguidist
+
+Version de [Styleguidist](https://react-styleguidist.js.org/) pour Vue. Exemple d'usage : http://bokuweb.github.io/re-bulma/
+
+~~~
+$ npm run styleguide
+~~~

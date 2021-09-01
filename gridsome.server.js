@@ -10,17 +10,44 @@ module.exports = function (api) {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
   })
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
+  // api.createPages(async ({ createPage, graphql }) => {
+  //   // Use the Pages API here: https://gridsome.org/docs/pages-api/
+  //   const { data } = await graphql(`{
+  //     allBook {
+  //       edges {
+  //         node {
+  //           path
+  //         }
+  //       }
+  //     }
+  //   }`)
+
+  //   data.allBook.edges.forEach(edge => {
+  //     createPage({
+  //       path: edge.node.path,
+  //       component: `./src/templates/Book.vue`,
+  //       context: {
+  //         chapterFilterPath: `^${edge.node.path}`,
+  //       }
+  //     })
+  //   })
+  // })
 
   api.loadSource(actions => {
     const posts = actions.addCollection('Post');
+    // Note: normalement cela est géré par `source-filesystem`
+    // https://gridsome.org/plugins/@gridsome/source-filesystem
     posts.addReference('tag', 'Tag');
     posts.addReference('category', 'Category');
 
     // const content = actions.addCollection('Content')
     // content.addReference('related', 'Related')
+
+    // Ajout de relations automatiques
+    // const books = actions.addCollection('Book')
+    // books.addReference('autoChapter', 'Chapter')
+    // forEach => trouver les chapitres, joindre les chapitres
+    // Ou via un resolver ?
   })
 
   const makeExcerpt = (obj) => {
@@ -43,12 +70,12 @@ module.exports = function (api) {
   /**
    * Patch pour @gridsome/remark
    */
-  api.loadSource(({addSchemaResolvers}) => {
+  api.loadSource(({addSchemaResolvers, graphql}) => {
     addSchemaResolvers({
       Post: {
         excerpt(obj){ return makeExcerpt(obj) }
       },
-      Content: {
+      PageEntry: {
         excerpt(obj){ return makeExcerpt(obj) }
       }
     })
@@ -67,9 +94,6 @@ module.exports = function (api) {
     //   }
     // `);
     addSchemaTypes(`
-      type Content implements Node @infer {
-        author: Author @reference(by: "fileInfo.path")
-      }
       type Post implements Node @infer {
         author: Author @reference(by: "fileInfo.path")
         related_posts: [Post] @reference(by: "fileInfo.path")

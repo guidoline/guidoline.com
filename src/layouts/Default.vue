@@ -3,7 +3,8 @@
     <Header :settings="settings"/>
     <transition name="fade" appear>
       <main>
-      <slot/>
+        <!-- @slot Slot principal -->
+        <slot/>
       </main>
     </transition>
     <Footer :settings="settings"/>
@@ -18,7 +19,7 @@ query {
 }
 </static-query>
 
-<script lang="ts">
+<script>
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 

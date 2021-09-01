@@ -6,8 +6,10 @@
 </template>
 
 <script>
-import Cover from '@/components/Cover'
-
+import Cover from '../../components/Cover'
+/**
+ * @displayName Newsletter/Abstract
+ */
 export default {
   props: {
     newsletter: {

@@ -11,39 +11,18 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        baseDir: './content',
+        typeName: 'PageEntry',
+        baseDir: './content/pages',
         path: '*.md',
-        typeName: 'Content',
         resolveAbsolutePaths: true,
-        // index: ['welcome'],
-
-        // refs: {
-        //   author: {
-        //     typeName: 'Author'
-        //   }
-        // }
-        // refs: {
-          // related: 'Related'
-          // related: {
-          //   typeName: 'Related',
-          //   create: true
-          // },
-          // sections: {
-          //   typeName: 'Related'
-          // }
-        // }
-      },
-      templates: {
-        // ex. `src/templates/welcome.vue`
-        Content: '/:fileinfo__name'
       },
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
+        typeName: 'Author',
         baseDir: './content',
         path: 'authors/*.md',
-        typeName: 'Author',
         resolveAbsolutePaths: true,
       }
     },
@@ -59,9 +38,9 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        baseDir: './content',
-        path: 'blog/**/*.md',
         typeName: 'Post',
+        baseDir: './content',
+        path: 'blog/**/[!index]*.md',
         resolveAbsolutePaths: true,
         refs: {
           tags: {
@@ -74,10 +53,78 @@ module.exports = {
           }
         }
       },
+      // ESt-ce que cette configuration de template
+      // est bien prise en compte ici ?
       templates: {
-        Post: '/blog/:year/:month/:title',
+        // Post: '/blog/:year/:month/:title',
       }
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Book',
+        baseDir: './content/books/',
+        pathPrefix: 'book',
+        path: '*/index.md',
+        // refs: {
+        //   chapter: 'Chapter'
+        //   // chapter: {
+        //   //   typeName: 'Chapter',
+        //   //   create: true,
+        //   // }
+        // }
+      },
+    },
+    // Ajouter typeName BookPage
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'BookPage',
+        baseDir: './content/books/',
+        pathPrefix: 'book',
+        // path: '*/[!index]*.md',
+        path: '**/[!index]*.md',
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'BookFile',
+        baseDir: './content/books/',
+        prefix: 'file',
+        path: '**/*.md'
+      }
+    },
+    /**
+     * Note : Créer la liaison (Book.ref) à la main
+     * Besoin d'identifié le chapite par son `path`
+     * Besoin de référencer le parent.
+     * À priori, ces deux impératfs ne sont pas
+     * géré par source-filesystem
+     */
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'BookChapter',
+        baseDir: './content/books/',
+        pathPrefix: 'book',
+        // path: '*/chapitre-*/index.md',
+        path: '**/chapitre-*/index.md',
+        // refs: {
+        //   book: 'Book'
+        // }
+      },
+    },
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     typeName: 'BookChapterPage',
+    //     baseDir: './content/books/',
+    //     pathPrefix: 'book',
+    //     // path: '*/chapitre-*/[!index]*.md'
+    //     path: '**/chapitre-*/[!index]*.md'
+    //   }
+    // },
     {
       use: 'gridsome-plugin-flexsearch',
       options: {
@@ -101,7 +148,32 @@ module.exports = {
   ],
   templates: {
     Tag: '/tag/:title',
-    Category: '/category/:title'
+    Category: '/category/:title',
+    // Book: [
+    //   {
+    //     path: '/book/:title',
+    //     component: './src/templates/Book.vue'
+    //   }
+    // ],
+    // BookPage: [
+    //   {
+    //     path: '/book/:path',
+    //     component: '.src/templates/BookPage.vue'
+    //   }
+    // ],
+    // Chapter: [
+    //   {
+    //     // path: '/book/:fileInfo__path',
+    //     // path: '/book/:fileInfo__directory/:title',
+    //     path: '/book/:path',
+    //     component: './src/template/Chapter.vue'
+    //   }
+    //   // {
+    //   //   name: 'entretenir-son-velo',
+    //   //   path: '/entretenir-son-velo/chapitre/:title',
+    //   //   component: '.src/templates/book/Chapter.vue'
+    //   // }
+    // ],
   },
   transformers: {
     remark: {}

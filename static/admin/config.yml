@@ -7,7 +7,7 @@ backend:
 display_url: https://guidoline.com
 
 publish_mode: editorial_workflow
-media_folder: assets/uploads
+media_folder: uploads
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'posts' # Used in routes, ie.: /admin/collections/:slug/edit
@@ -37,8 +37,6 @@ collections: # A list of collections the CMS should be able to edit
         tagname: ''
 
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
-    meta:
-      - { label: 'SEO Description', name: 'description', widget: 'text' }
 
   - name: 'content' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Content' # Used in the UI

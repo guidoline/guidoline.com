@@ -6,8 +6,10 @@
 </template>
 
 <script>
-import Cover from '@/components/Cover'
-
+import Cover from '../../../src/components/Cover'
+/**
+ * @displayName Event/Abstract
+ */
 export default {
   props: {
     event: {

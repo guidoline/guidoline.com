@@ -20,6 +20,10 @@ query($page: Int) {
         title
         excerpt
         path
+        category {
+          title
+          path
+        }
         cover {
           src
           alt
