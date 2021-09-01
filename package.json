@@ -24,7 +24,7 @@
   "homepage": "https://github.com/guidoline/guidoline.com#readme",
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.4.0",
+    "@gridsome/transformer-remark": "^0.6.4",
     "gridsome": "^0.7.0",
     "gridsome-plugin-flexsearch": "^0.1.12",
     "markdown-it": "^10.0.0"
@@ -37,6 +37,6 @@
     "@storybook/vue": "^5.3.14",
     "babel-loader": "^8.0.6",
     "babel-preset-vue": "^2.0.2",
-    "vue-styleguidist": "^4.8.1"
+    "vue-styleguidist": "^4.41.1"
   }
 }
