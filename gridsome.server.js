@@ -73,10 +73,16 @@ module.exports = function (api) {
   api.loadSource(({addSchemaResolvers, graphql}) => {
     addSchemaResolvers({
       Post: {
-        excerpt(obj){ return makeExcerpt(obj) }
+        excerpt: {
+          type: 'String',
+          resolve(obj){ return makeExcerpt(obj) }
+        }
       },
       PageEntry: {
-        excerpt(obj){ return makeExcerpt(obj) }
+        excerpt: {
+          type: 'String',
+          resolve(obj){ return makeExcerpt(obj) }
+        }
       }
     })
   })
