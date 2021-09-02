@@ -1,9 +1,12 @@
 <template>
   <layout>
     <article>
-      <Cover v-if="page.hero" :cover="page.hero"/>
+      <Cover
+        v-if="page.hero"
+        :cover="page.hero"
+      />
       <h1>{{ page.title }}</h1>
-      <div v-html="page.content"/>
+      <div v-html="page.content" />
     </article>
     <div class="columns">
       <Section

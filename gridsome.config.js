@@ -9,10 +9,17 @@ module.exports = {
   siteURL: process.env.URL,
   plugins: [
     {
+      // /!\ Attention :
+      // Utiliser '/' comme racine de base pour de contenu
+      // peut causer des erreur de dupllication de clef
+      // L'idéal est de soit TOUJOURS avoir un chemin préfixé pour les contenus
+      // géneriques, et un fichier 'templates/nom-de-la-page.vue' pour les
+      // contenu originaux (non générique, tel que "a-propos" par exemple)
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'PageEntry',
         baseDir: './content/pages',
+        // /!\ besoin d'un prefixe ici (`page` par exemple)
         path: '*.md',
         resolveAbsolutePaths: true,
       },
@@ -175,7 +182,34 @@ module.exports = {
     //   // }
     // ],
   },
+  chainWebPack: config => {
+    const svgRule = config.module.rule('svg')
+    svgRule.uses.clear()
+    svgRule
+      .rule('vue-svg-loader')
+      .loader('vue-svg-loader')
+  },
   transformers: {
-    remark: {}
+    remark: {
+      config: {
+        footnotes: true
+      }
+    }
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        sourceMap: true,
+        plugins: [
+          require('postcss-import'),
+          require('postcss-preset-env')({
+            stage: 0,
+            browsers: ['last 2 versions', 'not dead', '>3%']
+          }),
+          require('postcss-font-magician'),
+          require('cssnano')({ preset: 'default' })
+        ]
+      }
+    }
   }
 }

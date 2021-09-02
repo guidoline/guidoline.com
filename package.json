@@ -22,12 +22,30 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "gridsome": "^0.7.0",
-    "gridsome-plugin-flexsearch": "^0.1.12",
-    "markdown-it": "^10.0.0"
+    "gridsome-plugin-flexsearch": "^2.0.1",
+    "markdown-it": "^12.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "babel-loader": "^8.0.6",
-    "babel-preset-vue": "^2.0.2"
+    "cssnano": "^4.1.11",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-gridsome": "^1.6.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^7.17.0",
+    "postcss-cli": "^8.3.1",
+    "postcss-custom-selectors": "^6.0.0",
+    "postcss-font-magician": "^3.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-use-nesting": "^3.0.0",
+    "vue-eslint-parser": "^7.10.0",
+    "vue-svg-loader": "^0.16.0"
   }
 }
