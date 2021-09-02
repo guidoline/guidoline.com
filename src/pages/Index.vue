@@ -38,7 +38,7 @@
 
 <page-query>
 query {
-  page: pageEntry(path: "/") {
+  page: pageEntry(path: "/home/") {
     title
     excerpt
     content

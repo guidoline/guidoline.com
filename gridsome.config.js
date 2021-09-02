@@ -7,19 +7,25 @@
 module.exports = {
   siteName: 'Guidoline',
   siteURL: process.env.URL,
+  /**
+   * Modèles de donnes :
+   * - page basique (contenu  + metas basiques)
+   * - page avec héro (basique + visuel)
+   * - page avec sections (héro + sections)
+   * - blog
+   * - fiche auteurs
+   * - livres (à réviser)
+   */
   plugins: [
     {
-      // /!\ Attention :
-      // Utiliser '/' comme racine de base pour de contenu
-      // peut causer des erreur de dupllication de clef
-      // L'idéal est de soit TOUJOURS avoir un chemin préfixé pour les contenus
-      // géneriques, et un fichier 'templates/nom-de-la-page.vue' pour les
-      // contenu originaux (non générique, tel que "a-propos" par exemple)
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'PageEntry',
         baseDir: './content/pages',
-        // /!\ besoin d'un prefixe ici (`page` par exemple)
+        // /!\ Attention aux conflits de nommage des routes
+        // Pas de génération automatique sans de prefixe ?:/
+        // (nécessite un template dédié comme pour "Index.vue")
+        // pathPrefix: 'page',
         path: '*.md',
         resolveAbsolutePaths: true,
       },
