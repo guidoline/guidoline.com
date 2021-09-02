@@ -5162,7 +5162,7 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-gridsome-plugin-flexsearch@^1.1.0:
+gridsome-plugin-flexsearch@^1.0.4:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/gridsome-plugin-flexsearch/-/gridsome-plugin-flexsearch-1.1.0.tgz#311c23b1f9df1f9df02c6ff5cf5badb8b507f4e0"
   integrity sha512-Mq8g93tdM/xNaeHMVmyZ7e1xyQjh4rrKgcq1sBEvP4m0qr3O61nGEAbd0pqV6J266VWrA9fqiYLkhuiSVmqX3A==
