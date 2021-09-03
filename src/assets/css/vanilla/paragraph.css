@@ -43,6 +43,11 @@ blockquote dd:last-child { margin-bottom: 0; }
 
 blockquote footer::before { content: "—\00A0"; }
 
+blockquote cite {
+  display: block;
+  text-align: right;
+}
+
 q, cite {
 	quotes: var(--quotes);
   font-style: italic;
@@ -58,5 +63,8 @@ cite:after {
   content: close-quote;
 }
 
-q[cite],
-cite[cite] { cursor: help; }
+q[title],
+cite[title] {
+  border-bottom: thin dotted;
+  cursor: help;
+}

@@ -144,18 +144,16 @@ module.exports = {
         collections: [
           {
             typeName: 'Post',
-            indexName: 'Post',
-            fields: ['title', 'description', 'tags']
+            indexName: 'posts',
+            fields: ['id', 'path', 'title', 'description', 'tags']
           },
           {
             typeName: 'Tag',
-            indexName: 'Tag',
-            fields: ['title']
+            indexName: 'tags',
+            fields: ['id', 'path', 'title']
           }
         ],
-        searchFields: ['title', 'description', 'content', 'tags'],
-        suggest: true,
-        page: true,
+        searchFields: ['path', 'title', 'description', 'content', 'tags']
       }
     }
   ],
