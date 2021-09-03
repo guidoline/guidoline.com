@@ -3,22 +3,15 @@
     <h1 class="navigation-brand">
       <g-link :to="siteURL">{{ siteName }}</g-link>
     </h1>
-    <nav class="navigation-menu">
-      <g-link
-        v-for="(link, index) in settings.navigation.main"
-        :key="index"
-        class="navigation-menu-item" :to="link.url"
-      >
-        {{ link.name }}
-      </g-link>
-    </nav>
+    <Navigation
+      :links="settings.navigation.main"
+      :use-burger="true"
+    />
   </header>
 </template>
 
 <script>
-/**
- * Entête principal
- */
+import Navigation from '@/components/Elements/Navigation'
 export default {
   props: {
     /**
@@ -29,6 +22,7 @@ export default {
       required: true,
     }
   },
+  components: { Navigation },
   computed: {
     /**
      * Le nom du site
@@ -54,7 +48,8 @@ export default {
   text-decoration: none;
 }
 /** Utiliser Post-CSS */
-@media only screen and (min-width: calc(22.5rem * 2)) {
+/* @media only screen and (min-width: calc(22.5rem * 2)) { */
+@media (--tablet) {
   .navigation {
     color: red !important;
     display: flex;

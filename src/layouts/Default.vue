@@ -58,7 +58,11 @@ export default {
 </script>
 
 <style>
+/** Forcer l'import des variables */
+@import '../assets/css/variables.css';
+:root {
 
+}
 .fade-enter-active {
   transition: opacity .5s;
 }

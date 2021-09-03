@@ -91,7 +91,7 @@ query {
 
 <script>
 import Section from '@/components/Section'
-import Cover from '@/components/Cover'
+import Cover from '@/components/Elements/Cover'
 import PostAbstract from '@/components/Post/Abstract'
 import EventAbstract from '@/components/Event/Abstract'
 

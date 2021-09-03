@@ -1,0 +1,228 @@
+/**
+ * S29 Stylesheet
+ *
+ * Feuille de style sans framework.
+ * Mettre en place que le necessaire pour l'intégration du design du site.
+ *
+ * Éviter l'usage de variable dérivées, préferer une définition de variables
+ * directe.
+ *
+ * ## Convention pour les variables
+ * Les **variables initiales**, sont des varaibles sans contexte
+ * d'usage particulier. Elles sont définies au niveau racine `:root`.
+ *
+ * `<nom>(-<variante>)`
+ *
+ * Par exemple :
+ * ~~~
+ * :root {
+ *  --color: #191813;
+ *  --color-black: #0C0B09;
+ *  --color-grey: #42403D
+ *  --color-primary: #FFAA00;
+ * }
+ * ~~~
+ *
+ * Les **variables dérivées** sont des variables dont l'usage et contextuel.
+ * Elles sont définie au niveau de leur contexte.
+ *
+ * Les noms de variables devrais être similaire aux propriétés ou elles sont
+ * déstinées. Par exemple `color: var(--color)`, `margin: var(margin)`,
+ * `margin-left: var(--margin-left)`, etc.
+ *
+ * `<contexte>-<nom>(-<variante>)`
+ *
+ * Par exemple :
+ * ~~~
+ * body {
+ *  --text-color: var(--color-black);
+ *  --background-color: var(--color-black-invert);
+ *  --border-color: var(--color-grey);
+ * }
+ * a {
+ *  --text-color: var(--color-primary);
+ * }
+ * ~~~
+ *
+ * ## Points d'améliorations
+ * Éviter les varaibles initiales / dérivées.
+ * Éviter :
+ * ~~~
+ * :root {
+ *  --color-black: black;
+ *  --text-color: var(--color-black);
+ * }
+ * ~~~
+ *
+ * Préférer :
+ * `<propriété>(-<variante>)`
+ * ~~~
+ * :root {
+ *  --color: darkgray;
+ *  --background-color: white;
+ *  --color-dark: black;
+ *  --background-color-dark: white;
+ *  // Texte en surbrillance `:selected`, `<mark>`
+ *  --color-highlight: black;
+ *  --background-color-highlight: pink;
+ *  // Texte d'intéraction
+ *  --color-interactive: green;
+ *  --backgrond-color-interactive: white;
+ *  --font-family-sans: "PT Sans", sans-serif;
+ *  --font-family-serif: "PT Serif", serif;
+ *  --font-family-mono: monospace;
+ *  // font-family-sans-alt ? Utilisé pour bouton, tags, menu, etc
+ *  --font-family-ui: "Roboto Light", sans-serif;
+ * }
+ * body {
+ * }
+ * ~~~
+ *
+ * Toutes variables spécifique à un module, ne devrais pas être nécessaire.
+ * Par exemple, le module `Button` :
+ *
+ * ~~~
+ * .button {
+ *    font-family: var(--font-family-ui);
+ * }
+ * ~~~
+ *
+ * @author Steve Beau <ziopod@gmail.com>
+ * @license MIT
+ */
+
+/**
+ * Breakpoints
+ *
+ * Exemple d'usage :
+ *
+ * ~~~.css
+ * @media (--desktop) {
+ *   .burger-mmenu { display: none; }
+ * }
+ * ~~~
+ */
+
+@custom-media --tablet (width >= 768px);
+@custom-media --desktop (width >= 1024px);
+@custom-media --widescreen (width >= 1216px);
+@custom-media --fullhd (width >= 1408px);
+
+/**
+ * Typographies
+ *
+ * Tailles de corps en fonction du contexte (font-size)
+ * | taille   | em    | 100% | 112.5% | 125% | 150% |
+ * |----------|-------|------|--------|------|------|
+ * | xxxlarge | 3     | 48px | 54px  | 60px  | 72px |
+ * | xxlarge  | 2.5   | 40px | 45px  | 50px  | 60px |
+ * | xlarge   | 2     | 32px | 36px  | 40px  | 48px |
+ * | large    | 1.5   | 24px | 27px  | 30px  | 36px |
+ * | normal   | 1     | 16px | 18px  | 20px  | 24px |
+ * | small    | 0.834 | 13px | 15px  | 17px  | 20px |
+ * | xsmall   | 0.667 | 10px | 12px  | 13px  | 16px |
+ * | xxsmall  | 0.5   | 8px  | 9px   | 10px  | 12px |
+ *
+ */
+
+/**
+ * Contexte général
+ */
+ :root {
+
+  /* Couleurs */
+  --color-black: #0D0D0C;
+  --color-black-invert: var(--color-white);
+  --color-white: #F7F7F6;
+  --color-white-invert: var(--color-black);
+  --color-grey-darker: #212120;
+  --color-grey-darker-invert: var(--color-white);
+  --color-grey-dark: #424241;
+  --color-grey-dark-invert: var(--color-white);
+  --color-grey: #737372;
+  --color-grey-invert: var(--color-white);
+  --color-grey-light: #9C9C9A;
+  --color-grey-light-invert: var(--color-black);
+  --color-grey-lighter: #DBDBDA;
+  --color-grey-lighter-invert: var(--color-black);
+  --color-primary-lighter: #D1E0FF;
+  --color-primary-lighter-invert: var(--color-black);
+  --color-primary-light: #A1C1FF;
+  --color-primary-light-invert: var(--color-black);
+  --color-primary: #254B92;
+  --color-primary-invert: var(--color-white);
+  --color-primary-dark: #1B3E77;
+  --color-primary-dark-invert: var(--color-white);
+  --color-secondary-light: #FCBF51;
+  --color-secondary-light-invert: var(--color-black);
+  --color-secondary: #FFAA00;
+  --color-secondary-invert: var(--color-black);
+  --color-secondary-dark: #E69A0F;
+  --color-secondary-dark-invert: var(--color-black);
+  --color-information: #3298dc;
+  --color-information-invert: var(--color-white);
+  --color-warning: #ffdd57;
+  --color-warning-invert: var(--color-grey-dark);
+  --color-success: #48c774;
+  --color-success-invert: var(--color-white);
+  --color-danger: #f14668;
+  --color-danger-invert: var(--color-white);
+
+  /* TODO:
+   * Tester la définition de couleur en spécifiants des éléments :
+   * - boites d'informations et d'alerte (couleurs : fonds, typo et bordures)
+   * - insert, etc.
+   */
+
+  /* Espaces et marges */
+  --pixrem: calc(1 / 16 * 1rem);
+  --gap-quarter: calc(var(--gap) / 4); /* remove ? utilisé par button.is-compact */
+  --gap-third: calc(var(--gap) / 3); /* --space-between */
+  --gap-demi: calc(var(--gap) / 2); /* --space-thin */
+  --gap: 1.687rem; /* space */
+  --gap-double: calc(var(--gap) * 2); /* --space-large */
+  --gap-triple: calc(var(--gap) * 3); /* remove ? */
+  --gap-quadruple: calc(var(--gap) * 4); /* remove? */
+  --margin-before: 0;
+  --margin-after: var(--gap); /* use --space */
+  --margins: var(--margin-before) 0 var(--margin-after);
+  --padding-horizontal: var(--gap-demi); /* remove ? */
+  --padding-vertical: var(--gap-third); /* remove ? */
+  --paddings: var(--padding-vertical) var(--padding-horizontal);
+
+  /* Typographie */
+  --font-family-normal: "PT Sans", "Roboto", -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-family-heading: "Roboto Condensed", Sans-serif;
+  --font-family-ui: "Roboto Condensed", Sans-serif;
+  --font-family-monospace: Menlo, Monaco, 'Courier New', monospace;
+  /* ou 1em */
+  --font-size-base: 100%;
+  --font-size-normal: 1em;
+  --font-size-large: 1.5em;
+  --font-size-small: 0.834em;
+  --line-height-normal: 1.5em;
+  --font-weight-normal: 400;
+  --font-weight-light: 200;
+  --font-weight-bold: 600;
+  --text-color-normal: var(--color-grey-dark);
+  --text-color-light: var(--color-grey);
+  --text-color-dark: var(--color-grey-darker);
+  --text-color-dark-background: var(--color-grey-lighter);
+  --text-color-highlight: #3273dc;
+  --text-color-active: var(--color-danger);
+  --text-color-disabled: var(--color-grey);
+
+  /* Bordures (/!\ à relocaliser) */
+  /* /!\ Utiliser des varaibles primaires `--width` */
+  --border-width: calc( 2 * var(--pixrem));
+  --border-width-large: calc( 3 * var(--pixrem)); /* à supprimer ! */
+  --border-width-thin: calc( 1 * var(--pixrem)); /* à supprimer ! */
+  --border-color: var(--color-grey-light);
+}
+
+@media (--md) {
+  :root {
+    /* --font-size-normal: 112.5%; */ /* 18px */
+    --font-size-base: 125%; /* 20px */
+  }
+}

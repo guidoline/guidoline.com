@@ -1,8 +1,9 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
-const markdown = require('markdown-it');
 import DefaultLayout from '~/layouts/Default.vue'
+import '~/plugins/filters.js'
 import '~/assets/css/styles.css'
+const Markdown = require('markdown-it');
 
 export default function (Vue, { router, head, isClient}) {
   // Set default layout as a global component
@@ -16,12 +17,11 @@ export default function (Vue, { router, head, isClient}) {
    */
   Vue.directive('markdown', {
     bind: function(el, binding, vnode) {
-
-      if ( binding.value == undefined) {
-        return null;
+      if (binding.value === undefined) {
+        return null
       }
 
-      const md = new markdown();
+      const md = new Markdown()
       const content = md.render(binding.value);
       el.innerHTML = content;
     }
