@@ -64,6 +64,8 @@ export default {
  * <Button href="http://example.com" class="is-dark" />
  * ~~~
  *
+ * @todo: Ajouter des valeurs fallback (ex. `var(--paddings, 1rem)`)
+ *
  * @uses
  * - --color-white
  * - --color-white-contrast
