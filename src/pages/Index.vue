@@ -94,6 +94,7 @@ import Section from '@/components/Section'
 import Cover from '@/components/Elements/Cover'
 import PostAbstract from '@/components/Post/Abstract'
 import EventAbstract from '@/components/Event/Abstract'
+// import ChibiButton from 'chibilib'
 
 export default {
   components: {
@@ -101,6 +102,7 @@ export default {
     Cover,
     PostAbstract,
     EventAbstract
+    // ChibiButton
   },
   metaInfo() {
     return {
