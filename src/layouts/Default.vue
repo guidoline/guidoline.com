@@ -61,7 +61,9 @@ export default {
 /** Forcer l'import des variables */
 @import '../assets/css/variables.css';
 :root {
-
+  --margins: 0 0 1.5rem 0;
+  --paddings-small: 0.6rem 1.2rem;
+  --heading-color: red;
 }
 .fade-enter-active {
   transition: opacity .5s;
@@ -72,17 +74,31 @@ export default {
 }
 
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-normal);
+  font-family: var(--font-family-normal);
+  line-height: var(--line-height);
 }
+
+@media (--tablet) { body { --font-size-normal: 1.125em; } }
+
+@media (--desktop) { body { --font-size-normal: 1.25em; } }
+
+@media (--widescreen) { body { --font-size-normal: 1.375em; } }
+
+@media (--fullhd) { body { --font-size-normal: 1.5em; } }
 
 .layout {
-  max-width: 760px;
+  /* max-width: 760px; */
+  /* modulo, column, padding, margin */
+  /* max-width: calc(var(--gap) * 45); */
   margin: 0 auto;
-  padding-left: 20px;
   padding-right: 20px;
+  padding-left: 20px;
 }
 
+img { max-width: 100%; }
+h1, h2, h3, h4, h5, h6, p, figure { margin: var(--margins); }
+figcaption { }
 </style>

@@ -179,7 +179,7 @@
   --gap-quarter: calc(var(--gap) / 4); /* remove ? utilisé par button.is-compact */
   --gap-third: calc(var(--gap) / 3); /* --space-between */
   --gap-demi: calc(var(--gap) / 2); /* --space-thin */
-  --gap: 1.687rem; /* space */
+  --gap: 1.5rem; /* space */
   --gap-double: calc(var(--gap) * 2); /* --space-large */
   --gap-triple: calc(var(--gap) * 3); /* remove ? */
   --gap-quadruple: calc(var(--gap) * 4); /* remove? */
@@ -191,7 +191,7 @@
   --paddings: var(--padding-vertical) var(--padding-horizontal);
 
   /* Typographie */
-  --font-family-normal: "PT Sans", "Roboto", -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-family-normal: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --font-family-heading: "Roboto Condensed", Sans-serif;
   --font-family-ui: "Roboto Condensed", Sans-serif;
   --font-family-monospace: Menlo, Monaco, 'Courier New', monospace;

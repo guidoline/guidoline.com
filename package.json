@@ -21,9 +21,13 @@
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
+    "@shoelace-style/shoelace": "^2.0.0-beta.52",
+    "@shoelace-style/vue-sl-model": "1",
+    "copy-webpack-plugin": "^9.0.1",
     "gridsome": "^0.7.0",
     "gridsome-plugin-flexsearch": "^2.0.1",
-    "markdown-it": "^12.2.0"
+    "markdown-it": "^12.2.0",
+    "vue-no-ssr": "^1.1.1"
   },
   "devDependencies": {
     "cssnano": "^4.1.11",
@@ -46,6 +50,7 @@
     "stylelint-order": "^4.1.0",
     "stylelint-use-nesting": "^3.0.0",
     "vue-eslint-parser": "^7.10.0",
+    "vue-feather-icons": "^5.1.0",
     "vue-svg-loader": "^0.16.0"
   }
 }
