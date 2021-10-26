@@ -5,13 +5,14 @@
   >
     <g-image
       v-if="cover.src"
-      :src="cover.src" :alt="cover.alt"
+      :src="cover.src"
+      :alt="cover.alt"
       class="cover-image"
     />
     <figcaption
       v-if="cover.legend"
-      v-html="$options.filters.markdownify(cover.legend)"
       class="cover-caption"
+      v-html="$options.filters.markdownify(cover.legend)"
     />
   </figure>
 </template>
@@ -35,7 +36,6 @@ export default {
 .cover {
   position: relative;
   height: calc(80vh - calc(var(--gap) * 2));
-  margin-top: var(--gap);
   overflow: hidden;
 
   &.is-layered::after {
@@ -86,11 +86,11 @@ export default {
   position: absolute;
   bottom: var(--gap);
   margin-bottom: 0;
-  padding: var(--paddings);
+  padding: var(--gap) var(--gap) var(--gap) var(--gap-demi);
   /* background-color: rgba(255, 255, 255, 0.6); */
   background: white;
   /* mix-blend-mode: lighten; */
-
+  & p:last-child { margin-bottom: 0;}
 }
 
 /* from https://codepen.io/vailjoy/details/OWVwvO */
