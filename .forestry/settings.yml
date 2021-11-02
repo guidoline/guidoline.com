@@ -14,8 +14,8 @@ sections:
   path: content/mentions-legales.md
   label: Mentions légales
 - type: directory
-  path: content/blog
-  label: Blog
+  path: content/journal
+  label: Journal
   create: all
   match: "**/*"
   templates:
