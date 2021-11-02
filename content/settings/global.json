@@ -1,0 +1,42 @@
+{
+  "name": "Guidoline",
+  "description": "Atelier d'auto-réparation de bicyclette",
+  "about": "# Qui sommes-nous ?\n\n **Guidoline** est né en **2010** de trois passionnés de vélo autour d’une même envie : **mettre Rouen en selle**.\n\n L’association a aujourd’hui déjà fédéré plus de **6000 adhérents** à travers ses [ateliers de bicyclette](/a-propos#ateliers-de-bycilclette). C’est autant de cyclistes qui apprennent librement les finesses de la mécanique cycle afin de devenir autonome avec leur propre vélo. Guidoline, c’est aussi [des animations](/a-propos#animations-prestations) qui font goûter allègrement à de nouvelles saveurs cyclistes et [un espace café qui provoque les rencontres](/a-propos#bar-cafe-associatif) d’entre-gens. **Tout est prétexte à échanger et partager sur le thème du vélo**.",
+  "contacts": {
+    "main": {
+      "name": "Guidoline à Rouen",
+      "description": "Description de l'atellier de Rouen",
+      "address": {
+        "name": "Guidoline Rouen",
+        "street": "36, rue Molière",
+        "zipcode": "76000",
+        "city": "Rouen",
+        "country": "France"
+      },
+      "email": "contact@guidoline.com",
+      "phone": "09.52.52.67.11",
+      "hours": "Mardi, jeudi, vendredi et samedi : 13h00 à 17h30"
+    },
+    "secondary": {
+      "name": "Guidoline à Sotteville-lès-Rouen",
+      "description": "Description de l'atelier de Sotteville",
+      "address": {
+        "name": "Guidoline Sotteville-lès-Rouen",
+        "street": "23, rue Pierre Corneille",
+        "zipcode": "76300",
+        "city": "Sotteville-lès-Rouen",
+        "country": "France"
+      },
+      "email": "contact@guidoline.com",
+      "phone": "02.27.08.36.52",
+      "hours": "Mercredi, vendredi et samedi : 13h00 à 17h30"
+    }
+  },
+  "credits": "",
+  "categories" : [
+    "Évenements",
+    "Reportage",
+    "Newsletter"
+  ],
+  "url": ""
+}

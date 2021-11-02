@@ -1,0 +1,61 @@
+{
+  "main": [
+    {
+      "name": "Journal",
+      "to": "/journal",
+      "highlight": false
+    },
+    {
+      "name": "Dossiers",
+      "to": "/dossiers"
+    },
+    {
+      "name": "Agenda",
+      "to": "/agenda",
+      "highlight": false
+    },
+    {
+      "to": "/a-propos",
+      "highlight": false,
+      "name": "À propos"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Accueil",
+      "to": "/"
+    },
+    {
+      "name": "Journal",
+      "to": "/journal"
+    },
+    {
+      "name": "À propos",
+      "to": "/a-propos"
+    },
+    {
+      "name": "Contacts",
+      "to": "/a-propos#contacts"
+    },
+    {
+      "name": "Réglement intérieur",
+      "to": "/contacts/reglement-inerieur"
+    },
+    {
+      "name": "Newsletters",
+      "to": "/newsletters"
+    },
+    {
+      "name": "Étiquettes",
+      "to": "/journal/tags"
+    },
+    {
+      "name": "Catégories",
+      "to": "/journale/categories"
+    },
+    {
+      "name": "Mentions légales",
+      "to": "/mentions-legales"
+    }
+  ]
+}
