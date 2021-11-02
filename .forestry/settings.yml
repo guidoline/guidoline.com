@@ -7,12 +7,6 @@ sections:
 - type: document
   path: content/welcome.md
   label: Accueil
-- type: document
-  path: content/a-propos.md
-  label: À propos
-- type: document
-  path: content/mentions-legales.md
-  label: Mentions légales
 - type: directory
   path: content/journal
   label: Journal
@@ -20,6 +14,13 @@ sections:
   match: "**/*"
   templates:
   - blog-post
+- type: directory
+  path: content/pages
+  label: Pages
+  create: all
+  match: "**/*"
+  templates:
+  - page
 - type: heading
   label: Sections
 - type: directory
