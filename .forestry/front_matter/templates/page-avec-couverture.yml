@@ -17,5 +17,3 @@ fields:
     template: _hero
     label: Hero
   label: Hero
-pages:
-- a-propos.md

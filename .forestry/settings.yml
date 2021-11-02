@@ -1,25 +1,26 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path:
-# webhook_url: https://api.netlify.com/build_hooks/5e1c995c83ae738773a44299
+admin_path: public/admin
+webhook_url: 
 sections:
 - type: document
   path: content/welcome.md
   label: Accueil
-- type: document
-  path: content/a-propos.md
-  label: À propos
-- type: document
-  path: content/mentions-legales.md
-  label: Mentions légales
 - type: directory
-  path: content/blog
-  label: Blog
+  path: content/journal
+  label: Journal
   create: all
   match: "**/*"
   templates:
   - blog-post
+- type: directory
+  path: content/pages
+  label: Pages
+  create: all
+  match: "**/*"
+  templates:
+  - page
 - type: heading
   label: Sections
 - type: directory
@@ -32,10 +33,10 @@ sections:
 - type: heading
   label: Configuration
 - type: document
-  path: content/settings/global.yml
+  path: content/settings/global.json
   label: Paramètres
 - type: document
-  path: content/settings/navigation.yml
+  path: content/settings/navigation.json
   label: Navigation
 upload_dir: public/uploads
 public_path: "/uploads"
