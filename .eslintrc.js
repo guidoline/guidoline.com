@@ -1,19 +1,19 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
-    es2020: true
+    node: true,
+    es2021: true
   },
-  extends: [
-    'plugin:gridsome/recommended',
-    'plugin:vue/recommended',
-    'standard'
-  ],
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: 13,
     sourceType: 'module'
   },
+  extends: [
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended'
+  ],
   plugins: [
     'vue'
   ],
-  rules: {}
 }

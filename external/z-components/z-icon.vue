@@ -1,0 +1,19 @@
+<template>
+  <component :is="heroIcons[currentIcon]" class="h-5 w-5 mx-0.5 inline"/>
+</template>
+<script setup>
+// https://heroicons.com/
+// @todo : prévoir un screen reader ? cf. z-button
+import * as heroIcons from '@heroicons/vue/outline'
+import { computed } from 'vue'
+const props = defineProps({
+  icon: {
+    type: String,
+    default: null
+  }
+})
+const currentIcon = computed(() => {
+  if (!props.icon) return null
+  return `${props.icon}Icon`
+})
+</script>

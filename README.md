@@ -1,39 +1,62 @@
-# Guidoline.com
-Le site web de l'association Guidoline.
+# Starter simple avec Vite, Vite-SSG et Vue
 
-## Build & deploy
+Starter sans route dynamiques.
 
-**La construction du site statique** est faite à partir de ce dépôt. Les actions Github seront utilisées.
+Les contenus Markdwown sont importé via `vite-plugin-md`, les routes sont généré via `vite-plugin-pages`.
 
-**Le contenu versionné** distant sera importé lors de la phase de déployement.
+@todo : 
+ - [×] linters (editor, es, style) ;
+ - [×] système de layout ;
+ - [×] fichier Markdown ;
+ - [×] routes & routes dynamiques ;
+ - [×] framework CSS (Windi CSS) ;
+ - [ ] tester la configuration Viet et Rollup de Wndi CSS ;
+ - [ ] framework de composant Shoelace (lus le module de directive two way) ;
+ - [ ] valider le mariage Shoelace et WindiCSS ;
+ - [ ] composants hors build (noSSR) ;
+ - [ ] dark mode ;
+ - [ ] génération de marqueurs d'images responsives (cd [Remark images](https://github.com/florianeckerstorfer/remark-images)) ;
+ - [ ] génération d'images responsives ;
+ - [ ] importation auto d'icônes ;
+ - [ ] importation auto d'icône ;
+ - [ ] optimisations diverses (PWA, images, CSS…) cf. [Antfu blog](https://github.com/antfu/antfu.me/blob/main/vite.config.ts).
 
-Une fois **l'artefact prêt**, il pourras être transférer sur le serveur de production.
+## Dépendances
 
-### Documentations
+Documentation : [Vitesse](https://github.com/antfu/vitesse/blob/main/package.json)
 
- - [Sources du site](https://github.com/guidoline/guidoline.com) ;
- - [Sources du contenu](https://github.com/guidoline/guidoline.com-content) ;
- - [Générateur statique Gridsome](https://gridsome.org/) ;
- - [Serveur de production Netlify](https://www.netlify.com/).
+### Production
+ - [×] vue@next ;
+ - [×] @vueuse/head@latest ;
+ - [×] vue-router@next ;
 
 
-## Documentation d'étude
 
- - [WP to MD](https://github.com/lonekorean/wordpress-export-to-markdown)
- - [Migration WP to Gridsome](https://devkimchi.com/2020/01/03/migrating-wordpress-to-gridsome-on-netlify-through-github-actions/)
- - [Déployer sur Github page](https://dev.to/peaceiris/deploy-to-github-pages-with-github-actions-for-static-site-generator-1mo6)
- - [Pipeline Github délimitées](https://devkimchi.com/2019/12/18/building-ci-cd-pipelines-with-github-actions/)
- - [Thème Gridsome Bleda](https://github.com/hellocosmin/gridsome-starter-bleda)
- - [Théme Gridsome Jamdocs](https://gridsome.org/starters/jamdocs/)
+### Dev
 
-## Guides de styles
-
-Les outils de guide de styles actuellement en test sont les suivants.
-
-### vue-styleguidist
-
-Version de [Styleguidist](https://react-styleguidist.js.org/) pour Vue. Exemple d'usage : http://bokuweb.github.io/re-bulma/
-
-~~~
-$ npm run styleguide
-~~~
+ - [×] @vue/compiler-sfc ;
+ - [×] vite ;
+ - [×] vite-ssg ;
+ - [×] vite-plugin-md ;
+ - [×] @vitejs/plugin-vue ;
+ - @vue/server-renderer ?;
+ - [×] @heroicons/vue ;
+ - z-components ;
+ - [×] vite-plugin-pages ;
+ - [×] vite-plugin-windicss :
+ - [×] windicss ;
+ - [×] windicss-analysis ;
+ - [×] cross-env;
+ - cssnano ? ;
+ - [×] eslint ;
+ - [×] eslint-config-standard ;
+ - [×] eslint-standard ;
+ - [×] eslint-plugin-import ;
+ - [×] eslint-plugin-node ;
+ - [×] eslint-plugin-promise ;
+ - [×] stylelint ;
+ - [×] stylelint-order ;
+ - [×] stylelint-config-rational-order ;
+ - [×] stylelint-config-standard ;
+ - vue-eslint-parser ? ;
+ - vue-svg-loader ? ;
