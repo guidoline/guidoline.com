@@ -6,7 +6,7 @@ fields:
 - name: base
   type: include
   config: {}
-  template: base
+  template: _base
   label: Base
 - name: cover
   type: field_group
