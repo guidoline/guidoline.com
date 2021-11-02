@@ -1,0 +1,31 @@
+---
+label: Page avec sections
+hide_body: false
+display_field: title
+fields:
+- name: page
+  type: include
+  config: {}
+  template: page
+  label: Page
+- name: hero
+  type: field_group
+  config: {}
+  fields:
+  - name: hero
+    type: include
+    config: {}
+    template: _hero
+    label: Hero
+  label: Hero
+- name: sections
+  type: blocks
+  label: Sections
+  template_types:
+  - _section
+  - couverture
+  config:
+    min: 
+    max: 
+pages:
+- welcome.md

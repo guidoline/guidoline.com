@@ -1,0 +1,46 @@
+---
+label: Blog post
+hide_body: false
+display_field: title
+fields:
+- name: base
+  type: include
+  config: {}
+  template: base
+  label: Base
+- name: cover
+  type: field_group
+  config: {}
+  fields:
+  - name: cover
+    type: include
+    config: {}
+    template: couverture
+    label: Couverture
+  label: Couverture
+- name: category
+  type: select
+  default: ''
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: theme
+      file: settings/global.yml
+      path: categories
+  label: Catégorie
+- name: tags
+  type: tag_list
+  default: []
+  label: Étiquettes
+- name: related_posts
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: '3'
+    source:
+      type: pages
+      section: blog
+  label: Articles en relation

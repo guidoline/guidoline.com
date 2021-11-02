@@ -1,0 +1,19 @@
+---
+label: _hero
+hide_body: true
+fields:
+- name: cover
+  type: include
+  config: {}
+  template: couverture
+  label: Couverture
+- name: link
+  type: field_group
+  config: {}
+  fields:
+  - name: link
+    type: include
+    config: {}
+    template: _lien
+    label: Lien
+  label: Lien

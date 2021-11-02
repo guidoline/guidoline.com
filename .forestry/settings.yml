@@ -1,9 +1,42 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
-webhook_url: 
-sections: 
+admin_path:
+# webhook_url: https://api.netlify.com/build_hooks/5e1c995c83ae738773a44299
+sections:
+- type: document
+  path: content/welcome.md
+  label: Accueil
+- type: document
+  path: content/a-propos.md
+  label: À propos
+- type: document
+  path: content/mentions-legales.md
+  label: Mentions légales
+- type: directory
+  path: content/blog
+  label: Blog
+  create: all
+  match: "**/*"
+  templates:
+  - blog-post
+- type: heading
+  label: Sections
+- type: directory
+  path: content/authors
+  label: Authors
+  create: documents
+  match: "**/*"
+  templates:
+  - auteur
+- type: heading
+  label: Configuration
+- type: document
+  path: content/settings/global.yml
+  label: Paramètres
+- type: document
+  path: content/settings/navigation.yml
+  label: Navigation
 upload_dir: public/uploads
 public_path: "/uploads"
 front_matter_path: "/uploads"
@@ -14,4 +47,4 @@ build:
   preview_docker_image: forestryio/node:12
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: npm run develop
+  instant_preview_command: npm run dev

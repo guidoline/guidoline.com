@@ -1,0 +1,44 @@
+---
+label: _base
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Titre
+  description: Pour SEO optimal, ne pas dépasser 70 caractères.
+- name: author
+  type: select
+  default: authors/guidoline.md
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: authors
+      file: 
+      path: 
+  label: Auteur
+- name: date
+  type: datetime
+  label: Date de publication
+  description: ''
+  config:
+    required: false
+    date_format: YYYY/MM/DD
+    time_format: h:mm A
+    display_utc: true
+    export_format: YYYY/MM/DD h:mm A ZZ
+  default: now
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Description
+  description: Pour un SEO optimal, ne pas dépasser 160 caractères

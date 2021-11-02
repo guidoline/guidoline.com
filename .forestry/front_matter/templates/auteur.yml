@@ -1,0 +1,17 @@
+---
+label: Auteur
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Nom
+- name: email
+  type: text
+  config:
+    required: false
+  label: Email
+pages:
+- authors/guidoline.md
