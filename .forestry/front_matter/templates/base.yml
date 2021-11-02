@@ -8,7 +8,7 @@ fields:
   config:
     required: true
   label: Titre
-  description: Pour SEO optimal, ne pas dépasser 70 caractères.
+  description: Optimal 70 caractères.
 - name: SEO
   type: field_group
   config: {}
@@ -45,4 +45,4 @@ fields:
       schema:
         format: markdown
     label: Description
-    description: Pour un SEO optimal, ne pas dépasser 160 caractères
+    description: Optimal 160 caractères
