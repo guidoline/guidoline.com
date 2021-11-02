@@ -8,3 +8,5 @@ fields:
   config: {}
   template: base
   label: Base
+pages:
+- content/pages/ttest.md
