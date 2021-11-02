@@ -46,3 +46,4 @@ fields:
         format: markdown
     label: Description
     description: Optimal 160 caractères
+  label: SEO
