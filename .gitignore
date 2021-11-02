@@ -47,7 +47,6 @@ Thumbs.db
 
 # Project specific #
 ####################
-content
 build
 dist
 package-lock.json
