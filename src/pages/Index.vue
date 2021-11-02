@@ -54,7 +54,7 @@
  *
  * ?
  */
-import Home from '@/content/pages/home.md'
+import Home from '@/content/welcome.md'
 import { useHead } from '@vueuse/head'
 useHead({
   title: 'Hello',
