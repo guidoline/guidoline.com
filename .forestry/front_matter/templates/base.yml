@@ -3,16 +3,16 @@ label: _base
 hide_body: true
 display_field: title
 fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Titre
+  description: Pour SEO optimal, ne pas dépasser 70 caractères.
 - name: SEO
   type: field_group
   config: {}
   fields:
-  - name: title
-    type: text
-    config:
-      required: true
-    label: Titre
-    description: Pour SEO optimal, ne pas dépasser 70 caractères.
   - name: author
     type: select
     default: authors/guidoline.md
