@@ -8,5 +8,3 @@ fields:
   config: {}
   template: base
   label: Base
-pages:
-- mentions-legales.md
