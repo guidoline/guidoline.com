@@ -32,10 +32,10 @@ sections:
 - type: heading
   label: Configuration
 - type: document
-  path: content/settings/global.yml
+  path: content/settings/global.json
   label: Paramètres
 - type: document
-  path: content/settings/navigation.yml
+  path: content/settings/navigation.json
   label: Navigation
 upload_dir: public/uploads
 public_path: "/uploads"
