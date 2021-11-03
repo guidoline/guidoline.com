@@ -105,13 +105,8 @@ fields:
   config: {}
   fields:
   - name: categories
-    type: list
-    config:
-      use_select: false
-      min: 
-      max: 
-      source:
-        type: simple
+    type: tag_list
+    default: []
     label: Catégories
   - name: articles_per_page
     type: number
