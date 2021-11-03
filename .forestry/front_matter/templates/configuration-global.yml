@@ -17,7 +17,7 @@ fields:
   fields:
   - type: field_group
     name: main
-    label: main
+    label: Principal
     fields:
     - type: text
       name: name
@@ -55,7 +55,7 @@ fields:
       label: hours
   - type: field_group
     name: secondary
-    label: secondary
+    label: Secondaire
     fields:
     - type: text
       name: name
