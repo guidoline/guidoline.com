@@ -7,11 +7,6 @@ SEO:
 tags:
 - Spécial
 title: Exemple d'événement
-cover:
-  src: "/uploads/pages/02_11_herne.jpg"
-  alt: ''
-  legend: ''
-category: Évenements
 related_posts:
 - content/journal/2019/07/guidoline-ouvre-un-second-atelier-velo.md
 template: event
