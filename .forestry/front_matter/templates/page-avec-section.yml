@@ -6,18 +6,8 @@ fields:
 - name: page
   type: include
   config: {}
-  template: page
+  template: page-avec-couverture
   label: Page
-- name: hero
-  type: field_group
-  config: {}
-  fields:
-  - name: hero
-    type: include
-    config: {}
-    template: _hero
-    label: Hero
-  label: Hero
 - name: sections
   type: blocks
   label: Sections
