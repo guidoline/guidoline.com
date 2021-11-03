@@ -3,17 +3,20 @@ label: configuration.global
 hide_body: true
 fields:
 - type: text
+  name: url
+  label: url
+- type: text
   name: name
-  label: name
+  label: Nom
 - type: text
   name: description
-  label: description
+  label: Description
 - type: textarea
   name: about
-  label: about
+  label: À propos
 - type: field_group
   name: contacts
-  label: contacts
+  label: Contacts
   fields:
   - type: field_group
     name: main
@@ -93,13 +96,7 @@ fields:
       label: hours
 - type: text
   name: credits
-  label: credits
-- type: list
-  name: categories
-  label: categories
-- type: text
-  name: url
-  label: url
+  label: Crédits
 - name: journal
   type: field_group
   config: {}
