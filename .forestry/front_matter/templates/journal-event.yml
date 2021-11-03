@@ -1,4 +1,9 @@
 ---
 label: Journal.event
-hide_body: true
-fields: []
+hide_body: false
+fields:
+- name: seo
+  type: include
+  config: {}
+  template: _base
+  label: SEO
