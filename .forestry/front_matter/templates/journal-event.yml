@@ -2,6 +2,13 @@
 label: Journal.event
 hide_body: false
 fields:
+- name: template
+  type: text
+  config:
+    required: false
+  label: template
+  default: event
+  hidden: true
 - name: seo
   type: include
   config: {}
@@ -30,10 +37,3 @@ fields:
   config:
     required: false
   label: Lieu
-- name: template
-  type: text
-  config:
-    required: false
-  label: template
-  default: event
-  hidden: true
