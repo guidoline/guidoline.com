@@ -12,3 +12,5 @@ fields:
   config: {}
   template: _base
   label: Base
+pages:
+- content/pages/a-propos/animations-et-prestations.md
