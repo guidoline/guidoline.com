@@ -7,6 +7,6 @@ publish: true
 ---
 # Hello
 
-![Groupe de bébés poulpes](/public/uploads/pages/test/3e4d9955a1a93d8a0adf99198bec09f7.jpg "Les poulpes !")
+![Groupe de bébés poulpes](/uploads/pages/test/3e4d9955a1a93d8a0adf99198bec09f7.jpg "Les poulpes !")
 
 Contenu pour faire quelques *tests*.

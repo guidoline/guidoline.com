@@ -19,4 +19,4 @@ related_articles:
 - content/journal/2019/07/guidoline-ouvre-un-second-atelier-velo.md
 
 ---
-Exemple d’événement,
+Exemple d’événement.

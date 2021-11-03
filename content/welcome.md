@@ -55,11 +55,11 @@ hero:
     ## Titrage de la légende
     Exemple de **description de couverture** [250 signes maximum].
   link:
-    text: Exemple de lien vers du contenu
+    text: Exemple de lien vers du contenuw
     href: blog/2019/07/rejoignez-lequipe-guidoline-recherche-une-responsable-datelier
     icon: ''
     color: primary
-image: "/public/uploads/pages/bienvenue/1_1024.jpg"
+image: "/uploads/pages/bienvenue/1_1024.jpg"
 description: Description de la page.
 SEO:
   author: content/authors/guidoline.md
@@ -67,6 +67,6 @@ SEO:
   description: ''
 
 ---
-![L'équipe de Guidoline](/public/uploads/pages/bienvenue/equipe-guidoline.jpg)
+![L'équipe de Guidoline](/uploads/pages/bienvenue/equipe-guidoline.jpg)
 
 Description / résumé principal de Guidoline \[500 signes maximum]
