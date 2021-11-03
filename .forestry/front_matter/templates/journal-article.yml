@@ -30,8 +30,8 @@ fields:
     options: []
     source:
       type: documents
-      section: theme
-      file: settings/global.yml
+      section: parametres
+      file: content/settings/global.json
       path: categories
   label: Catégorie
 - name: tags
