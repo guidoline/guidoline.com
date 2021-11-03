@@ -3,6 +3,10 @@ label: Article
 hide_body: false
 display_field: title
 fields:
+- name: publish
+  type: boolean
+  label: Publier
+  default: true
 - name: base
   type: include
   config: {}
