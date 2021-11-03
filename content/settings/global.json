@@ -38,5 +38,11 @@
     "Reportage",
     "Newsletter"
   ],
-  "url": ""
+  "url": "",
+  "journal": {
+    "articles_per_page": 25,
+    "categories": [
+
+    ]
+  }
 }

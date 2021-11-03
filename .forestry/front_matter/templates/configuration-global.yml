@@ -124,3 +124,5 @@ fields:
       max: 60
       step: 
   label: Journal
+pages:
+- content/settings/global.json
