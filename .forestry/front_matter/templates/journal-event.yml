@@ -39,5 +39,17 @@ fields:
   config:
     required: false
   label: Lieu
+- name: related_post
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: blog
+      file: 
+      path: 
+  label: Articles en relation
 pages:
 - content/journal/2021/11/exemple-d-evenement.md
