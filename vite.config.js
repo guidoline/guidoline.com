@@ -8,7 +8,7 @@ import markdownItAnchor from 'markdown-it-anchor'
 import { slugify } from './src/services/utilities.js'
 // import vueSvg from './pluginSVG'
 // import vueSvg from 'rollup-plugin-vue-inline-svg'
-import vueSvg from '@vuetter/vite-plugin-vue-svg'
+// import vueSvg from '@vuetter/vite-plugin-vue-svg'
 import fs from 'fs'
 import grayMatter from 'gray-matter'
 import markdownIt from 'markdown-it'
@@ -108,15 +108,15 @@ export default defineConfig({
       }
     }),
     windicss(),
-    vueSvg({
-      // htmlWrapper: {
-      //   tagName: 'span',
-      //   attrs: {
-      //       class: 'ui-icon',
-      //   },
-      // },
-      svgo: false
-    })
+    // vueSvg({
+    //   // htmlWrapper: {
+    //   //   tagName: 'span',
+    //   //   attrs: {
+    //   //       class: 'ui-icon',
+    //   //   },
+    //   // },
+    //   svgo: false
+    // })
   ],
   server: {
     fs: {
