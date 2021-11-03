@@ -25,7 +25,7 @@
   "dependencies": {
     "vue": "^3.2.20",
     "vue-router": "^4.0.12",
-    "z-components": "link:external/z-components"
+    "z-components": "file:external/z-components"
   },
   "devDependencies": {
     "@heroicons/vue": "^1.0.5",
