@@ -52,7 +52,6 @@
         title="Retour sur la page d'accueil"
       >
         <slot>
-          <Logo class="logo" />
           <h1 class="sr-only">Default title</h1>
         </slot>
       </router-link>
@@ -90,7 +89,7 @@
 import NavigationBurgerButton from '~/components/Element/Navigation/Burger/Button.vue'
 import HeaderOffScreen from '~/components/Layout/Header/OffScreen.vue'
 import Search from '~/components/Element/Search.vue'
-import Logo from '~/assets/logo.svg?inline'
+// import Logo from '~/assets/logo.svg?inline'
 import { main as mainMenu } from '@/content/settings/navigation.json'
 import { contacts } from '@/content/settings/global.json'
 import { ref } from 'vue'
