@@ -6,10 +6,6 @@ webhook_url:
 sections:
 - type: document
   path: content/pages/welcome.md
-  label: sqsq
-  match: "**/*"
-- type: document
-  path: content/pages/welcome.md
   label: Accueil
 - type: directory
   path: content/journal
