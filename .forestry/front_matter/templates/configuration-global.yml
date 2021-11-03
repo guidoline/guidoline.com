@@ -100,3 +100,27 @@ fields:
 - type: text
   name: url
   label: url
+- name: journal
+  type: field_group
+  config: {}
+  fields:
+  - name: categories
+    type: list
+    config:
+      use_select: false
+      min: 
+      max: 
+      source:
+        type: simple
+    label: Catégories
+  - name: articles_per_page
+    type: number
+    label: Articles par page
+    description: ''
+    default: 25
+    required: true
+    config:
+      min: 5
+      max: 60
+      step: 
+  label: Journal
