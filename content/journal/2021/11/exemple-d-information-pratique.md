@@ -2,6 +2,8 @@
 title: Exemple d'information pratique
 layout: information
 publish: true
+related_articles:
+- content/journal/2021/10/test-hello-world.md
 
 ---
 # Nouveaux horaires à partir du 12 décembre 2021
