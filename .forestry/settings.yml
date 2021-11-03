@@ -5,7 +5,7 @@ admin_path: public/admin
 webhook_url: 
 sections:
 - type: document
-  path: content/welcome.md
+  path: content/pages/welcome.md
   label: Accueil
 - type: directory
   path: content/journal
