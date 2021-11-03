@@ -15,9 +15,9 @@ category: Évenements
 related_posts:
 - content/journal/2019/07/guidoline-ouvre-un-second-atelier-velo.md
 template: event
-date_end: 2021-11-03T01:51:00Z
+date_end: 
 place: Rouen
-date_start: 
+date_start: 2021-11-16T23:00:00Z
 
 ---
 Exemple d’événement,
