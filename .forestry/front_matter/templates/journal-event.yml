@@ -37,3 +37,5 @@ fields:
   config:
     required: false
   label: Lieu
+pages:
+- content/journal/2021/11/exemple-d-evenement.md

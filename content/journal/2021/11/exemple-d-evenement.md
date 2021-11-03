@@ -6,7 +6,7 @@ SEO:
   description: Description de l'évenement
 tags:
 - Spécial
-title: Exemple d'évenement
+title: Exemple d'événement
 cover:
   src: "/uploads/pages/02_11_herne.jpg"
   alt: ''
@@ -14,6 +14,10 @@ cover:
 category: Évenements
 related_posts:
 - content/journal/2019/07/guidoline-ouvre-un-second-atelier-velo.md
+template: event
+date_end: 2021-11-03T01:51:00Z
+place: Rouen
+date_start: 
 
 ---
-Exempe
+Exemple d’événement,
