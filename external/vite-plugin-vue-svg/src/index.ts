@@ -30,8 +30,9 @@ export default function (options: PluginOptions = {}) : Plugin {
         return (code: string) => `<${tagName} ${stringifiedAttrs}>${code}</${tagName}>`;
     };
 
-    const wrapper = options?.htmlWrapper?.tagName
+    const wrapper = options.htmlWrapper ? options.htmlWrapper.tagName
         ? createWrapper(options.htmlWrapper.tagName)
+        : (code: string) => code
         : (code: string) => code;
 
     async function compileSvg(source: string, path: string) {
