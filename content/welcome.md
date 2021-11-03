@@ -62,7 +62,7 @@ hero:
 image: "/public/uploads/pages/bienvenue/1_1024.jpg"
 description: Description de la page.
 SEO:
-  author: ''
+  author: content/authors/guidoline.md
   date: ''
   description: ''
 
