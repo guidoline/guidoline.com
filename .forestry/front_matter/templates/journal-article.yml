@@ -38,7 +38,7 @@ fields:
   type: tag_list
   default: []
   label: Étiquettes
-- name: related_posts
+- name: related_articles
   type: list
   config:
     use_select: true
