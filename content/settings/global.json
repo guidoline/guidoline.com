@@ -42,7 +42,10 @@
   "journal": {
     "articles_per_page": 25,
     "categories": [
-
+      "Évenements",
+      "Reportage",
+      "Newsletter",
+      "Tutoriel"
     ]
   }
 }
