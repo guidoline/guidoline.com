@@ -6,7 +6,7 @@
         "esModuleInterop": true,
         "strict": true,
         "declaration": true,
-        "declarationDir": "dist",
+        "declarationDir": "build",
         "strictNullChecks": true,
         "moduleResolution": "Node",
         "resolveJsonModule": true,
@@ -14,7 +14,7 @@
         "allowSyntheticDefaultImports": true
     },
     "exclude": [
-        "dist",
+        "build",
         "node_modules"
     ]
 }
