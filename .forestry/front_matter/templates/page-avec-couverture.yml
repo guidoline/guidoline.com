@@ -2,11 +2,11 @@
 label: Page avec hero
 hide_body: false
 fields:
-- name: base
+- name: page
   type: include
   config: {}
-  template: base
-  label: Base
+  template: page
+  label: Page
 - name: hero
   type: field_group
   config: {}
