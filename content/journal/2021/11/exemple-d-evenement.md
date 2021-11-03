@@ -12,7 +12,11 @@ related_posts:
 template: event
 date_end: 
 place: Rouen
-date_start: 2021-11-16T23:00:00Z
+date_start: 2021-11-16T23:00:00.000+00:00
+related_articles:
+- content/journal/2018/05/fermeture-du-printemps.md
+- content/journal/2021/10/test-hello-world.md
+- content/journal/2019/07/guidoline-ouvre-un-second-atelier-velo.md
 
 ---
 Exemple d’événement,
