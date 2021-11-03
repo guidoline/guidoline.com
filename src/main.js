@@ -3,6 +3,7 @@ import App from './App.vue'
 import generatedRoutes from 'virtual:generated-pages'
 import ZComponents from 'z-components'
 import LayoutDefault from './layouts/Default.vue'
+import LayoutSimple from './layouts/Simple.vue'
 import LayoutMarkdown from './layouts/Markdown.vue'
 import 'virtual:windi.css'
 // Modification / contrôle des routes
@@ -105,7 +106,9 @@ routes.push({
     App,
     { routes },
     ({ app, router, routes, isClient, initialState }) => {
+      // @todo: ajouter un chargement auto des composant dans `App.vue`
       app.component('LayoutDefault', LayoutDefault)
+      app.component('LayoutSimple', LayoutSimple)
       app.component('LayoutMarkdown', LayoutMarkdown)
       // @todo :  tenter d'etendre l'ancien système de layout définie dans main
       //  1. Choisi auto par vite-plugin-md (un template local peut être appliqué en fonction d'une varaible du front matter) :

@@ -11,7 +11,7 @@ const props = defineProps({
 // @todo: changer le nommage pour éviter les confusions :
 // layout => template
 const currentLayout = computed(() => {
-  const layout = props.frontmatter.layout || 'default'
+  const layout = props.frontmatter.layout || 'empty'
   const layoutName = `layout-${layout}`
   return layouts.default[layoutName]
 })

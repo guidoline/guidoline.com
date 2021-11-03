@@ -27,9 +27,9 @@ const filterMD = (text) => {
 export default { name: 'LayoutDefaultHome' }
 </script>
 <template>
+  <pre>./templates/Default/Home.vue</pre>
   <details>
     <summary>Debug</summary>
-    <pre>layouts/templates/Default/Home.vue</pre>
     <pre>{{ frontmatter }}</pre>
   </details>
 <!-- z-hero -->
