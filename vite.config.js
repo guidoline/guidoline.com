@@ -14,7 +14,7 @@ import grayMatter from 'gray-matter'
 import markdownIt from 'markdown-it'
 import windicss from 'vite-plugin-windicss'
 import { resolve } from 'path'
-import { log } from 'console'
+
 
 export default defineConfig({
   define: {

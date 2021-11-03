@@ -32,7 +32,7 @@
     "@vitejs/plugin-vue": "^1.9.4",
     "@vue/compiler-sfc": "^3.2.20",
     "@vue/server-renderer": "^3.2.20",
-    "@vuetter/vite-plugin-vue-svg": "^0.1.1",
+    "@vuetter/vite-plugin-vue-svg": "link:external/vite-plugin-vue-svg",
     "@vueuse/head": "^0.6.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.12.1",

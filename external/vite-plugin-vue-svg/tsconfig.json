@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "ES2020",
+        "lib": ["ESNext"],
+        "esModuleInterop": true,
+        "strict": true,
+        "declaration": true,
+        "declarationDir": "dist",
+        "strictNullChecks": true,
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "noUnusedLocals": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "dist",
+        "node_modules"
+    ]
+}

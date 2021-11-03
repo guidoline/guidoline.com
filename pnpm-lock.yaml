@@ -5,7 +5,7 @@ specifiers:
   '@vitejs/plugin-vue': ^1.9.4
   '@vue/compiler-sfc': ^3.2.20
   '@vue/server-renderer': ^3.2.20
-  '@vuetter/vite-plugin-vue-svg': ^0.1.1
+  '@vuetter/vite-plugin-vue-svg': link:external/vite-plugin-vue-svg
   '@vueuse/head': ^0.6.0
   cross-env: ^7.0.3
   eslint: ^7.12.1
@@ -39,7 +39,7 @@ devDependencies:
   '@vitejs/plugin-vue': 1.9.4_vite@2.6.13
   '@vue/compiler-sfc': 3.2.20
   '@vue/server-renderer': 3.2.20_vue@3.2.20
-  '@vuetter/vite-plugin-vue-svg': 0.1.1
+  '@vuetter/vite-plugin-vue-svg': link:external/vite-plugin-vue-svg
   '@vueuse/head': 0.6.0_vue@3.2.20
   cross-env: 7.0.3
   eslint: 7.32.0
@@ -377,11 +377,6 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /@trysound/sax/0.2.0:
-    resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
-    engines: {node: '>=10.13.0'}
-    dev: true
-
   /@types/glob/7.2.0:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
@@ -535,14 +530,6 @@ packages:
 
   /@vue/shared/3.2.20:
     resolution: {integrity: sha512-FbpX+hD5BvXCQerEYO7jtAGHlhAkhTQ4KIV73kmLWNlawWhTiVuQxizgVb0BOkX5oG9cIRZ42EG++d/k/Efp0w==}
-
-  /@vuetter/vite-plugin-vue-svg/0.1.1:
-    resolution: {integrity: sha512-L44nxtueNZPq4jZZp17OUrU9k9btGTNepVioNCBdeagrNOQnETZWaE/sq8JOSgTkdv7OqYhjZi5D0TcE3EE8cw==}
-    engines: {node: '>= 12'}
-    dependencies:
-      '@vue/compiler-sfc': 3.2.20
-      svgo: 2.7.0
-    dev: true
 
   /@vueuse/head/0.6.0_vue@3.2.20:
     resolution: {integrity: sha512-fi7ZjkMpEAUtTT6iR5wgL2HkX1+3zbrmbpcwU//RgJIWEr5b42jk8E9yOheaC2dYAAHzelAllVpX0pDmhcTXuw==}
@@ -1081,11 +1068,6 @@ packages:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
     dev: true
 
-  /commander/7.2.0:
-    resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
-    engines: {node: '>= 10'}
-    dev: true
-
   /component-emitter/1.3.0:
     resolution: {integrity: sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==}
     dev: true
@@ -1163,14 +1145,6 @@ packages:
       nth-check: 2.0.1
     dev: true
 
-  /css-tree/1.1.3:
-    resolution: {integrity: sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q==}
-    engines: {node: '>=8.0.0'}
-    dependencies:
-      mdn-data: 2.0.14
-      source-map: 0.6.1
-    dev: true
-
   /css-what/5.1.0:
     resolution: {integrity: sha512-arSMRWIIFY0hV8pIxZMEfmMI47Wj3R/aWpZDDxWYCPEiOMv6tfOrnpDtgxBYPEQD4V0Y/958+1TdC3iWTFcUPw==}
     engines: {node: '>= 6'}
@@ -1180,13 +1154,6 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
-    dev: true
-
-  /csso/4.2.0:
-    resolution: {integrity: sha512-wvlcdIbf6pwKEk7vHj8/Bkc0B4ylXZruLvOgs9doS5eOsOpuodOV2zJChSpkp+pRpYQLQMeF04nr3Z68Sta9jA==}
-    engines: {node: '>=8.0.0'}
-    dependencies:
-      css-tree: 1.1.3
     dev: true
 
   /cssom/0.3.8:
@@ -3141,10 +3108,6 @@ packages:
       unist-util-visit: 1.4.1
     dev: true
 
-  /mdn-data/2.0.14:
-    resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
-    dev: true
-
   /mdurl/1.0.1:
     resolution: {integrity: sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=}
     dev: true
@@ -3285,10 +3248,6 @@ packages:
 
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
-    dev: true
-
-  /nanocolors/0.1.12:
-    resolution: {integrity: sha512-2nMHqg1x5PU+unxX7PGY7AuYxl2qDx7PSrTRjizr8sxdd3l/3hBuWWaki62qmtYm2U5i4Z5E7GbjlyDFhs9/EQ==}
     dev: true
 
   /nanoid/3.1.30:
@@ -4272,10 +4231,6 @@ packages:
     resolution: {integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=}
     dev: true
 
-  /stable/0.1.8:
-    resolution: {integrity: sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==}
-    dev: true
-
   /state-toggle/1.0.3:
     resolution: {integrity: sha512-d/5Z4/2iiCnHw6Xzghyhb+GcmF89bxwgXG60wjIiZaxnymbyOmI8Hk4VqHXiVVp6u2ysaskFfXg3ekCj4WNftQ==}
     dev: true
@@ -4548,20 +4503,6 @@ packages:
 
   /svg-tags/1.0.0:
     resolution: {integrity: sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=}
-    dev: true
-
-  /svgo/2.7.0:
-    resolution: {integrity: sha512-aDLsGkre4fTDCWvolyW+fs8ZJFABpzLXbtdK1y71CKnHzAnpDxKXPj2mNKj+pyOXUCzFHzuxRJ94XOFygOWV3w==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
-    dependencies:
-      '@trysound/sax': 0.2.0
-      commander: 7.2.0
-      css-select: 4.1.3
-      css-tree: 1.1.3
-      csso: 4.2.0
-      nanocolors: 0.1.12
-      stable: 0.1.8
     dev: true
 
   /symbol-tree/3.2.4:
