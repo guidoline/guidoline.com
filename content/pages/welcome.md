@@ -63,8 +63,9 @@ image: "/uploads/pages/bienvenue/1_1024.jpg"
 description: Description de la page.
 SEO:
   author: content/authors/guidoline.md
-  date: ''
+  date: 
   description: ''
+publish: true
 
 ---
 ![L'équipe de Guidoline](/uploads/pages/bienvenue/equipe-guidoline.jpg)
