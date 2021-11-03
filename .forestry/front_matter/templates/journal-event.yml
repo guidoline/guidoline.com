@@ -7,3 +7,21 @@ fields:
   config: {}
   template: _base
   label: SEO
+- name: date_start
+  type: datetime
+  label: Date de début
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: date_end
+  type: datetime
+  label: Date de fin
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
