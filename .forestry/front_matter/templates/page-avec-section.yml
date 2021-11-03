@@ -3,11 +3,11 @@ label: Page avec sections
 hide_body: false
 display_field: title
 fields:
-- name: page
+- name: page-hero
   type: include
   config: {}
   template: page-avec-couverture
-  label: Page
+  label: Page hero
 - name: sections
   type: blocks
   label: Sections
