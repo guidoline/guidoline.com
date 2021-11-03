@@ -6,15 +6,6 @@
       "highlight": false
     },
     {
-      "name": "Dossiers",
-      "to": "/dossiers"
-    },
-    {
-      "name": "Agenda",
-      "to": "/agenda",
-      "highlight": false
-    },
-    {
       "to": "/a-propos",
       "highlight": false,
       "name": "À propos"
