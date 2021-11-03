@@ -1,7 +1,9 @@
 ---
 title: Test de slug
 date: 2021-11-02 23:18
-image: /public/uploads/pages/02_11_herne.jpg
+image: "/public/uploads/pages/02_11_herne.jpg"
+publish: true
+
 ---
 # Hello
 
