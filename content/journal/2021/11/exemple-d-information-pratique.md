@@ -1,8 +1,9 @@
 ---
 title: Exemple d'information pratique
 layout: information
----
+publish: true
 
+---
 # Nouveaux horaires à partir du 12 décembre 2021
 
 Pour des raison pratiques, nous adoptons des horaires d'hivers.
