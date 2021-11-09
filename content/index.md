@@ -55,8 +55,8 @@ hero:
     ## Titrage de la légende
     Exemple de **description de couverture** [250 signes maximum].
   link:
-    text: Exemple de lien vers du contenuw
-    href: blog/2019/07/rejoignez-lequipe-guidoline-recherche-une-responsable-datelier
+    text: Exemple de lien vers du contenu
+    href: /journal/2021/11/exemple-d-information-pratique
     icon: ''
     color: primary
 image: "/uploads/pages/bienvenue/1_1024.jpg"

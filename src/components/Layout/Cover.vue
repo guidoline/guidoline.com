@@ -4,7 +4,7 @@
     <figcaption
       v-if="cover.legend"
     >
-      <div v-html="cover.legend" />
+      <div v-html="$filters.md(cover.legend)" />
       <z-button
         v-if="cover.link.href"
         :to="cover.link.href"
