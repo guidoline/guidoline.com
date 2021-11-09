@@ -44,7 +44,7 @@ export default { name: 'LayoutHome' }
     v-if="hasHero"
     :cover="frontmatter.hero"
   />
-  <div class="prose-container"><slot/></div>
+  <div class="prose-container" id="content"><slot/></div>
   <div class="sections">
     <section
       v-for="(section, index) in frontmatter.sections"

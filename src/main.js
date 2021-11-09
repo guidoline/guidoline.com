@@ -105,8 +105,23 @@ routes.push({
 
   export const createApp = ViteSSG(
     App,
-    { routes },
+    {
+      routes,
+      scrollBehavior(to, from, savedPostion) {
+        if (savedPostion) return savedPostion
+        if (to.hash)  return { el: to.hash, behavior: 'smooth' }
+        const content = document.getElementById('content')
+        || document.getElementsByTagName('main')[0]
+        if (content) return { el: content, behavior: 'smooth' }
+        return { top: 0, behavior: 'smooth' }
+      }
+    },
     ({ app, router, routes, isClient, initialState }) => {
+      // Routeur
+      // router.scrollBehavior((to, from, savedPostion) => {
+      //   return { top: 0 }
+      // })
+      // Filtres
       app.config.globalProperties.$filters = {
         md(value) { return markdownify(value)}
       }

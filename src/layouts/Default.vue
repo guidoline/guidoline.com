@@ -33,7 +33,7 @@ export default { name: 'LayoutDefault' }
 </script>
 <template>
   <Header />
-  <slot/>
+  <main><slot/></main>
   <Footer>
     <template #subfooter>Mentions légales, etc…</template>
   </Footer>
