@@ -1,6 +1,6 @@
 ---
 title: Exemple d'information pratique
-layout: empty
+layout: simple
 template: information
 publish: true
 related_articles:

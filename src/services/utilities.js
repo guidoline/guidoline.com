@@ -3,6 +3,16 @@
  *
  */
 
+import MD from 'markdown-it'
+const markdownify = (text) => {
+  return new MD({
+    html: false,
+    linkify: false, // Éviter les liens dans les extraits
+    typographer: true,
+    quotes: ['«\x40', '\x40»', '‹\x40', '\x40›']
+    }).render(text)
+}
+
 // https://github.com/dodo/node-slug#options
 import slug from 'slug'
 slug.charmap['’'] = '-'
@@ -14,4 +24,4 @@ const stringsToURL = (route, texts) => texts.map(text => ({
   to: `${route}${slug(text)}`
 }))
 
-export { slugify, stringsToURL }
+export { slugify, stringsToURL, markdownify }

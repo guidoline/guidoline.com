@@ -23,8 +23,8 @@ const hasHero = computed(() => {
   return true
 })
 // Do filter
-import MD from 'markdown-it'
 import { computed } from 'vue';
+import MD from 'markdown-it'
 const filterMD = (text) => {
   return new MD({
     html: false,

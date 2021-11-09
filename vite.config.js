@@ -12,10 +12,19 @@ import { slugify } from './src/services/utilities.js'
 import vueSvg from './external/vite-plugin-vue-svg/src'
 import fs from 'fs'
 import grayMatter from 'gray-matter'
-import markdownIt from 'markdown-it'
 import windicss from 'vite-plugin-windicss'
 import { resolve } from 'path'
+import { markdownify } from './src/services/utilities'
+// import markdownIt from 'markdown-it'
 
+// const mardownify = (data) => {
+//   return new markdownIt({
+//     html: false,
+//     linkify: false, // Éviter les liens dans les extraits
+//     typographer: true,
+//     quotes: ['«\x40', '\x40»', '‹\x40', '\x40›']
+//   }).render(data)
+// }
 
 export default defineConfig({
   define: {
@@ -52,12 +61,7 @@ export default defineConfig({
             // @todo: à terme, ne conserver que les marqueurs md de base.
             file.data.excerpt = file.data.excerpt.replace(/[#]+/g, '')
             // Rendu Markdown
-            file.data.excerpt = new markdownIt({
-              html: false,
-              linkify: false, // Éviter les liens dans les extraits
-              typographer: true,
-              quotes: ['«\x40', '\x40»', '‹\x40', '\x40›']
-            }).render(file.data.excerpt)
+            file.data.excerpt = markdownify(file.data.excerpt)
           },
         })
         console.log('# DATA LAYOUT: ', entry.data.title, entry.data.layout)

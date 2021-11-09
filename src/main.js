@@ -7,6 +7,7 @@ import LayoutHome from './layouts/Home.vue'
 import LayoutSimple from './layouts/Simple.vue'
 import LayoutMarkdown from './layouts/Markdown.vue'
 import 'virtual:windi.css'
+import { markdownify } from './services/utilities'
 // Modification / contrôle des routes
 const routes = generatedRoutes
 // Ajout de composants Vue comme route
@@ -106,6 +107,9 @@ routes.push({
     App,
     { routes },
     ({ app, router, routes, isClient, initialState }) => {
+      app.config.globalProperties.$filters = {
+        md(value) { return markdownify(value)}
+      }
       // @todo: ajouter un chargement auto des composant dans `App.vue`
       app.component('LayoutDefault', LayoutDefault)
       app.component('LayoutHome', LayoutHome)
