@@ -14,7 +14,7 @@ import JournalSlug from '~/pages/Journal/[slug].vue'
 </script>
 <template>
   <JournalSlug>
-  <pre>layouts/templates/Default/Article.vue</pre>
+  <pre>./layouts/templates/Default/Article.vue</pre>
   <slot/>
   </JournalSlug>
 </template>

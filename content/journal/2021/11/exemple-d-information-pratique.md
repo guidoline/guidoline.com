@@ -1,6 +1,7 @@
 ---
 title: Exemple d'information pratique
-layout: information
+layout: empty
+template: information
 publish: true
 related_articles:
 - content/journal/2021/10/test-hello-world.md

@@ -5,7 +5,6 @@ export default {
 </script>
 <template>
   <LayoutSimple>
-    <pre>layouts/templates/Simple/Newsletter.vue</pre>
     <slot/>
     <div class="prose-container">
       [champ] <z-button type="primary" icon="at">S'abonner à la newsletter</z-button>

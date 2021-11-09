@@ -39,12 +39,6 @@ export default defineConfig({
         // Lecture du composant pout peupler les metas du routeur
         const path = resolve(__dirname, route.component.slice(1))
         const md = fs.readFileSync(path, 'utf-8')
-        console.log('#RRR : ', route.name)
-        // /!\ respecter la structure de gray matter :
-        // - file
-        //   - data (frontatter)
-        //   - excerpt (callback function)
-        //   - content
         const entry = grayMatter(md, {
           // Extraction / géneration de l'extrait
           // https://github.com/jonschlinkert/gray-matter#optionsexcerpt
@@ -66,6 +60,7 @@ export default defineConfig({
             }).render(file.data.excerpt)
           },
         })
+        console.log('# DATA LAYOUT: ', entry.data.title, entry.data.layout)
         route.meta = Object.assign(route.meta || {}, {
           title: entry.data.title,
           description: entry.data.description
@@ -77,16 +72,19 @@ export default defineConfig({
           date: entry.data.date,
           cover: entry.data.cover,
           // @todo: faire une liste blanche plutôt
-          //  (`includeInMenu : main | footer | all`)
+          //  (`includeInMenu | menu(s) : main | footer | all`)
           excludeFromNavigation: true,
-          layout: entry.data.layout
+          // Layout par défaut
+          // layout: entry.data.layout ? entry.data.layout : 'default',
+          layout: entry.data.layout || 'default',
+          template: entry.data.template ||  false
         })
         return route
       }
     }),
     markdown({
       headEnabled: true,
-      wrapperClasses: 'prose-container',
+      // wrapperClasses: 'prose-container',
       wrapperComponent: 'LayoutMarkdown',
       markdownItOptions: {
         html: true,

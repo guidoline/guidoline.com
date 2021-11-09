@@ -1,5 +1,5 @@
 <template>
-  <figure>
+  <figure class="cover">
     <img :src="cover.src" :alt="cover.alt"/>
     <figcaption
       v-if="cover.legend"
@@ -27,3 +27,8 @@ defineProps({
   }
 })
 </script>
+<style scoped>
+.cover { @apply relative min-h-60vh overflow-hidden; }
+.cover img { @apply absolute w-full h-full object-cover ; }
+.cover figcaption { @apply absolute bottom-4 left-4 p-4 bg-white; }
+</style>

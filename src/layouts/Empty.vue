@@ -1,8 +1,14 @@
 <script>
-// Template
 export default { name: 'LayoutEmpty' }
 </script>
+<script setup>
+defineProps({
+  frontmatter: {
+    type: Object,
+    default: {}
+  }
+})
+</script>
 <template>
-  <pre>layouts/Empty.vue</pre>
   <slot />
 </template>

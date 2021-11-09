@@ -3,6 +3,7 @@ import App from './App.vue'
 import generatedRoutes from 'virtual:generated-pages'
 import ZComponents from 'z-components'
 import LayoutDefault from './layouts/Default.vue'
+import LayoutHome from './layouts/Home.vue'
 import LayoutSimple from './layouts/Simple.vue'
 import LayoutMarkdown from './layouts/Markdown.vue'
 import 'virtual:windi.css'
@@ -23,7 +24,7 @@ Object.keys(pages).forEach(componentPath => {
     let name = path
     .replace(/\//, '')
     .replace(/\//g, '-')
-    console.log("ROUTE : ", filename[1], path)
+    // console.log("ROUTE : ", filename[1], path)
     // https://router.vuejs.org/fr/guide/essentials/passing-props.html#mode-booleen
     let props = true
     const meta = {
@@ -46,9 +47,9 @@ Object.keys(pages).forEach(componentPath => {
         // props = { folio: 1 }
         // path = '/journal/:folio(\\d+)?'
         path = '/journal/:folio(\\d+)?'
-        // props = (route) => ({
-        //   folio: Number(route.params.folio) || 1
-        // })
+        props = (route) => ({
+          folio: Number(route.params.folio) || 1
+        })
         break
       default: path
     }
@@ -101,13 +102,13 @@ routes.push({
   //   })
   // }
 
-  console.log('GROUTES : ', routes)
   export const createApp = ViteSSG(
     App,
     { routes },
     ({ app, router, routes, isClient, initialState }) => {
       // @todo: ajouter un chargement auto des composant dans `App.vue`
       app.component('LayoutDefault', LayoutDefault)
+      app.component('LayoutHome', LayoutHome)
       app.component('LayoutSimple', LayoutSimple)
       app.component('LayoutMarkdown', LayoutMarkdown)
       // @todo :  tenter d'etendre l'ancien système de layout définie dans main
@@ -121,6 +122,7 @@ routes.push({
       // app.component('Layout', nomDuLayout)
       // app.config.devtools = true
       for (const component in ZComponents) {
+        // console.log('Z COMPONENT : ', component)
         app.component(component, ZComponents[component])
       }
     }

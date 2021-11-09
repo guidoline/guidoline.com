@@ -1,19 +1,30 @@
 <script setup>
+
+// /!\ Pas d'accès au frontmatter d'ici !
+
+import Header from '~/components/Layout/Header.vue'
+import Footer from '~/components/Layout/Footer.vue'
 import Cover from '~/components/Layout/Cover.vue'
-/**
- * Note:
- * Ici nous utilisons un agencement de composant un peu particulier,
- * qui permet de faciliter l'accès au contexte du fronmatter du fichier MD.
- * Sans devoir emettre le frontatter vers le composant parent.
- */
+
+
+// https://gridsome.org/docs/body-html-attributes/#change-attributes-globally
+// https://gridsome.org/docs/data-store-api/
+import setting_navigation from '@/content/settings/navigation.json';
+import setting_global from '@/content/settings/global.json';
 const props = defineProps({
   frontmatter: {
     type: Object,
-    required: true
+    default: {}
   }
+})
+const hasHero = computed(() => {
+  if (!props.frontmatter) return false
+  if (!props.frontmatter.hero) return false
+  return true
 })
 // Do filter
 import MD from 'markdown-it'
+import { computed } from 'vue';
 const filterMD = (text) => {
   return new MD({
     html: false,
@@ -22,22 +33,18 @@ const filterMD = (text) => {
     quotes: ['«\x40', '\x40»', '‹\x40', '\x40›']
     }).render(text)
 }
+// @todo: doit pouvoir charger des templates comme `./layouts/Markdown.vue` ?
 </script>
 <script>
-export default { name: 'LayoutDefaultHome' }
+export default { name: 'LayoutHome' }
 </script>
 <template>
-  <pre>./layouts/templates/Default/Home.vue</pre>
-  <details>
-    <summary>Debug</summary>
-    <pre>{{ frontmatter }}</pre>
-  </details>
-<!-- z-hero -->
-  <Cover
-    v-if="frontmatter.hero.src"
+  <Header />
+    <Cover
+    v-if="hasHero"
     :cover="frontmatter.hero"
   />
-  <slot/>
+  <div class="prose-container"><slot/></div>
   <div class="sections">
     <section
       v-for="(section, index) in frontmatter.sections"
@@ -57,6 +64,9 @@ export default { name: 'LayoutDefaultHome' }
     </section>
   </div>
   <!-- Contenu divers, inscription newsletter, mise en vavant des réseaux sociaux, récupération de vélo, articles mis en avant, derniers articles, etc. -->
+  <Footer>
+    <template #subfooter>Mentions légales, etc…</template>
+  </Footer>
 </template>
 <style scoped>
 .sections { @apply flex justify-center px-4 }

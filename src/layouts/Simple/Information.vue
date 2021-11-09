@@ -5,7 +5,6 @@ export default {
 </script>
 <template>
   <LayoutSimple>
-    <pre>layouts/templates/Simple/Information.vue</pre>
     <slot/>
   </LayoutSimple>
 </template>

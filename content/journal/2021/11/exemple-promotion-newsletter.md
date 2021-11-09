@@ -1,6 +1,6 @@
 ---
 title: Exemple de promotion de newsletter
-layout: newsletter
+template: newsletter
 ---
 
 # Guidoline newsletter #212

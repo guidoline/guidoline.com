@@ -1,21 +1,18 @@
 ---
 title: Guide de Style
+links:
+  - name: 'Typographie'
+    to: '/styleguide/typographie'
+  - name: 'Composants'
+    to: '/styleguide/components'
 ---
+
+<z-menu :links="frontmatter.links" />
 
 # Guide de style
 
-## Table des matières
-
-- [Titrages](#titrages)
-- [Marquer du texte](#marquer-du-texte)
-- [Hyperliens](#hyperliens)
-- [Médias](#médias)
-- [Listes](#listes)
-- [Tableau](#tableau)
-- [Divers](#divers)
-- [Couleurs](#couleurs)
-- [Boutons](#boutons)
-- [Boites](#boites)
+### Table des matières
+[[TOC]]
 
 ## Titrages
 Hiérarchiser les niveaux d'informations du contenu.
