@@ -67,7 +67,17 @@ export default defineConfig({
         // Définir le template
         const template = entry.data.template ||  false
         // @todo: ajouter un chargement automatique de template basé
-        // sur la route (fallback : contrôle de l'existence du temaplate)
+        // sur la route (fallback : contrôle de l'existence du template)
+        // @todo: ajouter un système de filtre pour les frontmatter
+        // - auteur (related contnent)
+        // - date (formattage de date)
+        // - tags (routes)
+        // - category (route)
+        // - related-articles (related contents)
+        // - next / previous (routes)
+        // @note: agir comme pour des routes dynamiques dotn le contenu
+        // est chargé depuis un service (standardiser, dimuinuer l'abstraction)
+        // cf. les pratiques avec les modèles de données de Kohana
         route.meta = Object.assign(route.meta || {}, {
           title: entry.data.title,
           description: entry.data.description
