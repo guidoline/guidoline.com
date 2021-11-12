@@ -56,7 +56,7 @@ const props = defineProps({
 const hasLinks = computed(() => props.links.length >= 1 )
 const additionnalClasses = computed(() =>
 `${props.isCompact ? 'is-compact ' : '' }`+
-// `${props.isVertical ? 'is-vertical ' : 'is-horizontal ' }`+
+`${props.isVertical ? 'is-vertical ' : 'is-horizontal ' }`+
 `${props.isResponsive ? 'is-responsive ' : '' }`
 )
 </script>
@@ -65,8 +65,9 @@ menu {
   @apply list-none px-0 m-0
 }
 /* menu:not(.is-vertical){ @apply flex flex-wrap justify-center items-center } */
-menu .button { @apply w-full }
+menu:not(.is-vertical) .button { @apply w-full }
 menu { @apply flex-wrap justify-center items-center }
 menu:not(.is-responsive){ @apply flex }
 menu.is-responsive{ @apply sm:(flex ) }
+menu.is-vertical{ @apply block text-left }
 </style>
