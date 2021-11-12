@@ -14,7 +14,7 @@ cover:
   alt: Adhérent de guidoline avec son vélo.
   legend: Guillaume et son superbe vélo
   credit: Photo par ©guidoline 2020
-category: ''
+category: 'Portraits'
 related_posts: []
 template: article
 ---
