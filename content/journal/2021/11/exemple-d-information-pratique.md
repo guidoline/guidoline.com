@@ -9,6 +9,6 @@ related_articles:
 ---
 # Nouveaux horaires à partir du 12 décembre 2021
 
-Pour des raison pratiques, nous adoptons des horaires d'hivers.
+Pour des raisons pratiques, nous adoptons des horaires d'hivers.
 
-Les ateliers sont maintenant **tous les jeudis de 14h00 à 18h00** à partir du 12 décembre 2021.
+Les ateliers sont maintenant ouverts **tous les jeudis de 14h00 à 18h00** à partir du 12 décembre 2021.

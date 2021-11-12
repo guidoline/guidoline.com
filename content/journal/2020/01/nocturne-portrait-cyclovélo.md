@@ -10,12 +10,12 @@ description: Notre deuxième soirée vous propose de venir vous faire tirer le p
   passés la porte de l’atelier, ils forment un duo cyclocycliste unique, que nous
   aimerions immortaliser.
 cover:
-  src: "//uploads/2020/01/82340456_10157086359458693_4602531523269230592_o.jpg"
+  src: "/uploads/2020/01/82340456_10157086359458693_4602531523269230592_o.jpg"
   alt: Adhérent de guidoline avec son vélo.
   legend: Photo par ©guidoline 2020
 category: ''
 related_posts: []
-
+template: fancy
 ---
 # Nocturne Portrait Cyclovélo
 

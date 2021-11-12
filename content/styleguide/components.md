@@ -5,6 +5,8 @@ links:
     to: '/styleguide/typographie'
   - name: 'Composants'
     to: '/styleguide/components'
+  - name: 'Composant Inset'
+    to: '/styleguide/inset'
 ---
 
 <z-menu :links="frontmatter.links" />
@@ -115,6 +117,102 @@ Exemple d'usage : gallerie d'images
 |-----------|-------------|
 | `compact` | 
 | `variant` | 
+
+#### Exemple
+##### Mono ligne
+<z-grid class="is-colored is-flexible">
+  <p>Hello</p>
+  <p>bla</p>
+  <p>blli</p>
+</z-grid>
+
+##### Multiligne
+<z-grid class="is-colored">
+  <section class="z-grid-item-full">Full</section>
+  <section class="z-grid-item-major">Major</section>
+  <section class="z-grid-item-major">Major</section>
+  <section class="z-grid-item-major is-last">Major</section>
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+  <section class="z-grid-item-minor">Minor</section>
+  <section class="z-grid-item-minor">Minor</section>
+  <section class="z-grid-item-minor">Minor</section>
+  <section class="z-grid-item-minor">Minor</section>
+  <section class="z-grid-item-minor">Minor</section>
+  <section class="z-grid-item-minor">Minor</section>
+</z-grid>
+
+#### Multiligne flexible
+<z-grid class="is-colored is-flexible">
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+  <section class="">Normal</section>
+</z-grid>
+
+##### Massonnerie
+<z-grid class="is-colored is-masonry-flex">
+  <p>op</p>
+  <h1>yolo</h1>
+  <p>
+    Some **Mardown** here.
+  </p>
+  <p>Hello</p>
+  <p>bsdlli</p>
+  <div>
+    <p>blli</p>
+    <p>blli</p>
+    <p>blli</p>
+    <p>blli</p>
+  </div>
+  <div>
+    <p>bla</p>
+    <p>blli</p>
+  </div>
+  <p>Hello</p>
+  <div>
+    <p>blli</p>
+    <p>blli</p>
+    <p>blli</p>
+    <p>blli</p>
+    <p>blli</p>
+  </div>
+  <p>bla</p>
+  <p>blli</p>
+  <div>
+    <p>blli</p>
+    <p>blli</p>
+    <p>blli</p>
+    <p>blli</p>
+    <p>blli</p>
+  </div>
+  <p>Hello</p>
+  <p>bla</p>
+  <p>blli</p>
+  <p>Hello</p>
+  <div>
+    <p>bla</p>
+    <p>blli</p>
+    <p>blli</p>
+  </div>
+  <p>bla</p>
+  <p>blli</p>
+  <div>
+    <p>blli</p>
+    <p>blli</p>
+  </div>
+  <p>Hello</p>
+  <p>bla</p>
+  <p>blli</p>
+</z-grid>
 
 
 ## Boutons
