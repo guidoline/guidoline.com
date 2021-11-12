@@ -31,6 +31,7 @@ export default {
     zTheme
   ],
   // darkMode: 'class',
+  darkMode: 'media',
   // preflight: false,
   // https://windicss.org/guide/extractions.html#scanning
   // https://github.com/windicss/vite-plugin-windicss/issues/206#issuecomment-870126991
@@ -227,6 +228,7 @@ export default {
       //   sans: ['typo-a', 'typo-b'],
       //   serif: ['typo-a', 'typo-b']
       // }
+      // @todo : dark mode https://github.com/leerob/leerob.io/blob/453c7a666d1650ef507849efe54dec51d719e357/tailwind.config.js#L27
       typography: {
         DEFAULT: {
           css: {

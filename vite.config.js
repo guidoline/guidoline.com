@@ -53,8 +53,8 @@ export default defineConfig({
           // https://github.com/jonschlinkert/gray-matter#optionsexcerpt
           excerpt: (file) => {
             file.data.excerpt =
-              file.data.excerpt ||
               file.data.description ||
+              file.data.excerpt ||
               file.content.split('\n').slice(0, 4).join(' ')
             file.data.excerpt = ['information'].includes(file.data.layout) ? file.content : file.data.excerpt
             // Suppression des titres MD
