@@ -5,6 +5,8 @@
 import Header from '~/components/Layout/Header.vue'
 import Footer from '~/components/Layout/Footer.vue'
 import Cover from '~/components/Layout/Cover.vue'
+import { computed } from 'vue'
+import { markdownify } from '~/services/utilities.js'
 
 
 // https://gridsome.org/docs/body-html-attributes/#change-attributes-globally
@@ -22,17 +24,7 @@ const hasHero = computed(() => {
   if (!props.frontmatter.hero) return false
   return true
 })
-// Do filter
-import { computed } from 'vue';
-import MD from 'markdown-it'
-const filterMD = (text) => {
-  return new MD({
-    html: false,
-    linkify: false, // Éviter les liens dans les extraits
-    typographer: true,
-    quotes: ['«\x40', '\x40»', '‹\x40', '\x40›']
-    }).render(text)
-}
+
 // @todo: doit pouvoir charger des templates comme `./layouts/Markdown.vue` ?
 </script>
 <script>
@@ -44,15 +36,15 @@ export default { name: 'LayoutHome' }
     v-if="hasHero"
     :cover="frontmatter.hero"
   />
-  <div class="prose-container" id="content"><slot/></div>
-  <div class="sections">
+  <div id="content"><slot/></div>
+  <z-grid class="sections">
     <section
       v-for="(section, index) in frontmatter.sections"
       :key="index"
-      class="prose"
+      class="prose z-grid-item-major"
     >
       <h1>{{ section.title }}</h1>
-      <div v-html="filterMD(section.content)"/>
+      <div v-html="markdownify(section.content)"/>
       <z-button
         v-if="section.link.href"
         :to="section.link.href"
@@ -62,13 +54,15 @@ export default { name: 'LayoutHome' }
         {{ section.link.text }}
       </z-button>
     </section>
-  </div>
+    <section class="z-grid-item-major is-gizmo">
+      GIZMO
+    </section>
+  </z-grid>
   <!-- Contenu divers, inscription newsletter, mise en vavant des réseaux sociaux, récupération de vélo, articles mis en avant, derniers articles, etc. -->
   <Footer>
     <template #subfooter>Mentions légales, etc…</template>
   </Footer>
 </template>
 <style scoped>
-.sections { @apply flex justify-center px-4 }
-.sections section { @apply max-w-40ch pr-4 last:pr-0 }
+.sections section { @apply bg-primary-100 p-4; }
 </style>

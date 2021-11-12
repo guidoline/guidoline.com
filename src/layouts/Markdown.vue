@@ -42,6 +42,7 @@ export default {
     <component
       v-if="template"
       :is="template"
+      :frontmatter="frontmatter"
     >
       <slot />
     </component>
