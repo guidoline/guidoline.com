@@ -17,7 +17,7 @@ category: Lectures au coin du feu
 featured: true
 publish: true
 cover:
-  src: /uploads/2021/11/Vingtmillelieue00vern_orig_0210_1.jpg
+  src: /uploads/2021/11/Vingtmillelieue00vern_orig_0210_1.png
   text: Vingt Mille lieues sous les mers
   legend: |
     # Vingt mille lieues sous les mers
@@ -28,7 +28,7 @@ template: fancy
 
 # Vingt mille lieues sous les mers
 
-![](/uploads/2021/11/Houghton_FC8_V5946_869ve_-_Verne,_frontispiece.jpg)
+![](/uploads/2021/11/Houghton_FC8_V5946_869ve_-_Verne,_frontispiece.png)
 
 ### Sommaire
 
@@ -51,7 +51,7 @@ Le capitaine Anderson fit stopper immédiatement, et l’un des matelots plonge
 
 Les ingénieurs procédèrent alors à la visite du *Scotia*, qui fut mis en cale sèche. Ils ne purent en croire leurs yeux. A deux mètres et demi au-dessous de la flottaison s’ouvrait une déchirure régulière, en forme de triangle isocèle. La cassure de la tôle était d’une netteté parfaite, et elle n’eût pas été frappée plus sûrement à l’emporte-pièce. Il fallait donc que l’outil perforant qui l’avait produite fût d’une trempe peu commune — et après avoir été lancé avec une force prodigieuse, ayant ainsi perce une tôle de quatre centimètres, il avait dû se retirer de lui- même par un mouvement rétrograde et vraiment inexplicable.
 
-![](/uploads/2021/11/20000_squid_Nautilus_viewbay.jpg)
+![](/uploads/2021/11/20000_squid_Nautilus_viewbay.png)
 
 *La pieuvre et le Nautilus* — ©viewbay
 
@@ -66,7 +66,7 @@ A l’époque où ces événements se produisirent, je revenais d’une expl
 J’étais parfaitement au courant de la question à l’ordre du jour, et comment ne l’aurais-je pas été ? J’avais lu et relu tous les journaux américains et européens sans être plus avancé. Ce mystère m’intriguait. Dans l’impossibilité de me former une opinion, je flottais d’un extrême à l’autre. Qu’il y eut quelque chose, cela ne pouvait être douteux, et les incrédules étaient invités à mettre le doigt sur la plaie du *Scotia*.
 
 <z-inset>
-<img src="/uploads/2021/11/Félix_Nadar_1820-1910_portraits_Jules_Verne.jpg">
+<img src="/uploads/2021/11/Félix_Nadar_1820-1910_portraits_Jules_Verne.png">
 <template #right>
   <a href="https://fr.wikipedia.org/wiki/Jules_Verne">Jules Verne</a>, né le 8 février 1828 à Nantes et mort le 24 mars 1905 à Amiens, est un écrivain français dont l'œuvre est, pour la plus grande partie, constituée de romans d'aventures évoquant les progrès scientifiques du XIXe siècle. 
 </template>
