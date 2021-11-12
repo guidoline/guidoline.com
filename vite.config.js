@@ -64,7 +64,10 @@ export default defineConfig({
             file.data.excerpt = markdownify(file.data.excerpt)
           },
         })
-        console.log('# DATA LAYOUT: ', entry.data.title, entry.data.layout)
+        // Définir le template
+        const template = entry.data.template ||  false
+        // @todo: ajouter un chargement automatique de template basé
+        // sur la route (fallback : contrôle de l'existence du temaplate)
         route.meta = Object.assign(route.meta || {}, {
           title: entry.data.title,
           description: entry.data.description
@@ -81,7 +84,7 @@ export default defineConfig({
           // Layout par défaut
           // layout: entry.data.layout ? entry.data.layout : 'default',
           layout: entry.data.layout || 'default',
-          template: entry.data.template ||  false
+          template: template
         })
         return route
       }
