@@ -1,5 +1,4 @@
 <script>
-import { computed } from 'vue'
 export default { name: 'TemplateArticle'}
 </script>
 <script setup>
