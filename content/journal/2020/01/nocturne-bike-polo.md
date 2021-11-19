@@ -1,7 +1,7 @@
 ---
 title: Nocturne Bike Polo 2020
 cover:
-  src: "//uploads/2020/01/match-de-bike-polo.jpg"
+  src: "/uploads/2020/01/match-de-bike-polo.jpg"
   alt: Match de Bike Polo
   legend: crédit photo @auteur 2020
 category: Évenements
@@ -16,6 +16,9 @@ description: "Le _20 Janvier 2020 de 18h00 à 22h00_  \nÀ _Guidoline, 36 rue Mo
   Rouen_\n\nSession de Bike Polo en nocturne de la rentrée 2020."
 
 ---
+
+# Nocturne Bike Polo 2020
+
 Le _20 Janvier 2020 de 18h00 à 22h00_
 À _Guidoline, 36 rue Molière, Rouen_
 

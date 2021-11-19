@@ -19,6 +19,8 @@ publish: true
 cover:
   src: /uploads/2021/11/Vingtmillelieue00vern_orig_0210_1.png
   text: Vingt Mille lieues sous les mers
+  alt: Gravure de l'enterrement sous-marin
+  credit: Auteur ©2020
   legend: |
     # Vingt mille lieues sous les mers
     Le voyage extraordinaire

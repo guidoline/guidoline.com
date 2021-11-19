@@ -2,7 +2,7 @@
 title: Guidoline, recrute un volontaire
 date: 2019-07-02
 cover:
-  src: "//uploads/2020/01/guidoline-recrute-1-service-civique.png"
+  src: "/uploads/2020/01/guidoline-recrute-1-service-civique.png"
   alt: Guidoline recrute un volontaire en service civique
 author: authors/guidoline.md
 

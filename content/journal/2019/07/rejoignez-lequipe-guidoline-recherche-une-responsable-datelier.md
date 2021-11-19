@@ -1,8 +1,9 @@
 ---
 title: "Rejoignez l'équipe ! Guidoline recherche un(e) responsable d'atelier"
+short-title: "Appel à candidature pour 2019"
 date: "2019-07-02"
 cover:
-  src: "//uploads/2019/07/guidoline-recrute-un-responsable-datelier.jpg"
+  src: "/uploads/2019/07/guidoline-recrute-un-responsable-datelier.jpg"
 ---
 
 # Rejoignez l'équipe ! Guidoline recherche un(e) responsable d'atelier

@@ -1,4 +1,5 @@
 ---
+publish: true
 author: authors/guidoline.md
 date: 2020/01/27 02:26
 tags:
@@ -7,7 +8,7 @@ title: Première Nocturne de 2020
 description: "Le _9 janvier 2020 de 18h00 à 22h00_  \nÀ _Guidoline, 36 rue Molière,
   Rouen_\n\nNous ouvrons le bal des nocturnes avec un pot de la nouvelle année."
 cover:
-  src: "//uploads/2020/01/82335359_10157086351243693_7795312384645529600_o.jpg"
+  src: "/uploads/2020/01/82335359_10157086351243693_7795312384645529600_o.jpg"
   alt: Adhérents et bénévoles en atelier plein air
   legend: Photo par © Guidoline 2020
 category: Évenements

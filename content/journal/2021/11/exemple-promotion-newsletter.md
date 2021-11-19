@@ -1,6 +1,9 @@
 ---
 title: Exemple de promotion de newsletter
 template: newsletter
+publish: true
+date: 2021/11/03
+
 ---
 
 # Guidoline newsletter #212

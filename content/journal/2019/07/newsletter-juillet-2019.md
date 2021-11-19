@@ -2,7 +2,7 @@
 title: Newsletter Juillet 2019
 date: 2019-07-02
 cover:
-  src: "//uploads/2019/07/newsletter-juillet-2019.png"
+  src: "/uploads/2019/07/newsletter-juillet-2019.png"
   alt: Newsletter juillet 2019
 author: authors/guidoline.md
 category: Newsletter

@@ -3,6 +3,7 @@ title: Exemple d'information pratique
 layout: simple
 template: information
 publish: true
+date: 2021/11/13
 related_articles:
 - content/journal/2021/10/test-hello-world.md
 

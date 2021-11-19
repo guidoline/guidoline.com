@@ -3,7 +3,7 @@ title: Newsletter Décembre 2019
 date: 2019-12-11
 description: Une newsletter pour souhaiter de joyeuses fêtes de fin d'annèes 2019
 cover:
-  src: "//uploads/2019/12/photo-carte-adherent2020.jpeg"
+  src: "/uploads/2019/12/photo-carte-adherent2020.jpeg"
   alt: Carte d'adhérents, badges et casquettes
 author: authors/guidoline.md
 category: Newsletter
