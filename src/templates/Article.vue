@@ -8,7 +8,7 @@ import Cover from '~/components/Layout/Cover.vue'
 import { computed } from 'vue'
 import { stringsToURL }from '~/services/utilities.js'
 const props = defineProps({
-  frontmatter: {
+  content: {
     type: Object,
     default: {}
   }
@@ -20,25 +20,25 @@ const props = defineProps({
  */
 
 const cover = computed(() => {
-  if (!props.frontmatter.cover) return null
+  if (!props.content.cover) return null
   return {
-    ...props.frontmatter.cover,
-    // supcaption: `Publié le ${props.frontmatter.date}`
+    ...props.content.cover,
+    // supcaption: `Publié le ${props.content.date}`
   }
 })
 
 const category = computed(() => {
-  if (!props.frontmatter.category) return null
-  return stringsToURL('/journal/categorie/', [props.frontmatter.category]).shift()
+  if (!props.content.category) return null
+  return stringsToURL('/journal/categorie/', [props.content.category]).shift()
 })
 
 // Pas nécessaire de compilé ?
 const tags = (() => {
-  if (!props.frontmatter.tags) return null
-  return stringsToURL('/journal/etiquette/', props.frontmatter.tags)
+  if (!props.content.tags) return null
+  return stringsToURL('/journal/etiquette/', props.content.tags)
 })()
 
-const date = props.frontmatter.date;
+const date = props.content.date;
 
 /**
  * Author
@@ -47,14 +47,15 @@ const date = props.frontmatter.date;
  * @return Null | Object
  */
 const author = computed(() => {
-  if (!props.frontmatter.author) return null
-  return { name: props.frontmatter.author }
+  if (!props.content.author) return null
+  return { name: props.content.author }
 })
 
 </script>
 <template>
+  <code>template/articles.vue</code>
   <main
-    :class="frontmatter.cover ? `has-cover`: null"
+    :class="content.cover ? `has-cover`: null"
   >
     <Cover v-if="cover" :cover="cover" />
     <div class="prose-container">
@@ -63,25 +64,13 @@ const author = computed(() => {
       </div>
       <slot />
     </div>
-    <footer class="prose-container">
-      <z-grid class="article-info ">
+    <footer class="">
+      <z-grid class="article-info prose-container ">
         <section v-if="category">
           <h1 class="article-info-title">Catégorie</h1>
           <router-link :to="category.to">
             {{ category.name }}
           </router-link>
-        </section>
-        <section v-if="tags">
-          <h1 class="article-info-title">Étiquettes</h1>
-          <span class="tags">
-            <router-link
-              v-for="tag in tags"
-              :key="tag.to"
-              :to="tag.to"
-            >
-              {{ tag.name }}
-            </router-link>
-          </span>
         </section>
         <section v-if="author">
           <h1 class="article-info-title">Auteur</h1>
@@ -95,14 +84,48 @@ const author = computed(() => {
             {{ author.name }}
           </template>
         </section>
+        <section v-if="tags" class="col-span-full">
+          <h1 class="article-info-title">Étiquettes</h1>
+          <span class="tags">
+            <router-link
+              v-for="tag in tags"
+              :key="tag.to"
+              :to="tag.to"
+            >
+              {{ tag.name }}
+            </router-link>
+          </span>
+        </section>
       </z-grid>
+      <section>
+        <z-grid>
+          <div>
+            <z-button
+              :to="content.pagination.previous.to"
+              icon="ChevronLeft"
+            >
+              {{ content.pagination.previous.name }}
+            </z-button>
+          </div>
+          <div>
+            <z-button
+              :to="content.pagination.next.to"
+              icon-right="ChevronRight"
+              style="float: right"
+            >
+              {{ content.pagination.next.name }}
+            </z-button>
+          </div>
+        </z-grid>
+      </section>
     </footer>
     <!-- @ajouter : auteur, date, tags, category, related_posts, aticle suivat / précedent-->
   </main>
 </template>
 <style scoped>
 .article-info-title { @apply inline pr-2 uppercase text-xs text-gray-400; }
-.article-info { @apply bg-white text-sm text-gray-500 font-light; }
+.article-info { @apply bg-white text-gray-500 font-light mb-12; }
+.article-info > section { @apply text-sm; }
 .tags a:not(:last-child):after {
   content: ", ";
 }

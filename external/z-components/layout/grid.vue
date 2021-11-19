@@ -23,26 +23,48 @@ Breakpoint natifs:
 /* Gouttières 16px > 24px  */
 .z-grid {
   /* @apply bg-red-100;  */
-  @apply grid gap-4 ) ;
+  @apply grid gap-4 justify-between;
 }
+/*
+@todo : revisoter de façon pragnatique :
+- usage : Abstrati d'article : mono colonne sur mobile, 3 colonnes (1/3 image, 2/3 texte), espace texte 38 signes minimum, 60 signes maximum.
+- dit être piloté par le container (sorte de polyfill de @media container) :
+  - 2 cols, 3 cols, 6 cols, 8 cols
+- doit inclure un container full layout responsive
+  - usage : header, footer, main container
+- doit être basé sur un modulo 22ch
+- grid auto doit permettre de définir de colonnes mineures et majeures
+ */
+
+/* Grille auto */
+/* Le nombre de colonne est déterminée par le nombre d'enfants */
 .z-grid {
-  grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(22ch, 1fr));
   grid-template-rows: repeat(auto-fit, min-content);
 }
 
+/* Varaintes pour la grille auto */
+.z-grid:deep(.col-minor) { @apply grid-span-1; /* /!\ valeur par défaut */ }
+.z-grid:deep(.col-major) {
+    grid-column: span 2 / span 2;
+    /* @apply grid-span-2;  */
+}
+
+/* Grille explicite */
 .is-container {
   @apply w-auto
   mx-4
-  md:(w-screen-md mx-auto gap-6)
+  md:(w-screen-sm mx-auto gap-6)
   lg:(w-screen-lg)
-  xl:(w-screen-xl)
-  2xl:(w-screen-2xl);
+  xl:(w-screen-lg)
+  2xl:(w-screen-xl);
 }
 
-.is-twelve { @apply grid-cols-12;}
+.is-twelve { @apply grid-cols-12; }
 /* <grid-item span-demi > Example </grid-item> */
 /* .z-grid:deep(.grid-item), */
-.z-grid:deep([class^=col-]),
+/* .z-grid:deep([class^=col-]), */
 .z-grid:deep(.col-span-full) { @apply col-span-full; }
 .z-grid:deep(.col-span-five-sixths) { @apply col-span-10; }
 .z-grid:deep(.col-span-three-quarters) { @apply col-span-9; }

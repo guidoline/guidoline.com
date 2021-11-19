@@ -4,7 +4,7 @@ import * as layouts from '~/layouts'
 import * as templates from '~/templates'
 import { useRoute } from 'vue-router'
 const props = defineProps({
-  frontmatter: {
+  content: {
     type: Object,
     default: {}
   }
@@ -13,8 +13,8 @@ const props = defineProps({
 // @todo: changer le nommage pour éviter les confusions :
 // layout => template
 const currentLayout = computed(() => {
-  const layout = props.frontmatter.layout
-  // const layout = props.frontmatter.layout
+  const layout = props.content.layout
+  // const layout = props.content.layout
   // const layout = useRoute().meta.layout
   // if (!layout) return 'null'
   // if (!layout) return false
@@ -24,7 +24,7 @@ const currentLayout = computed(() => {
 
 const template = computed(() => {
   // const template = useRoute() ? useRoute().meta.template : null
-  const template = props.frontmatter.template
+  const template = props.content.template
   return templates.default[`template-${template}`]  || templates.default['template-default']
 })
 </script>
@@ -37,12 +37,12 @@ export default {
   <component
     v-if="currentLayout"
     :is="currentLayout"
-    :frontmatter="frontmatter"
+    :content="content"
   >
     <component
       v-if="template"
       :is="template"
-      :frontmatter="frontmatter"
+      :content="content"
     >
       <slot />
     </component>

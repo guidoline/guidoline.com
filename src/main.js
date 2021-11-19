@@ -5,7 +5,7 @@ import { createRouter } from './router'
 const routes = createRouter().getRoutes() || []
 
 import store from './store'
-import { usePagesStore } from './store/modules/pages'
+import { useContentsStore } from './store/modules/contents'
 
 import ZComponents from 'z-components'
 import LayoutDefault from './layouts/Default.vue'
@@ -19,6 +19,10 @@ export const createApp = ViteSSG(
   App,
   {
     routes,
+    // routes(routes) {
+    //   console.log('ROUTES FROM CREATE APP : ', routes.map(r => r.path))
+    //   return routes
+    // },
     scrollBehavior(to, from, savedPostion) {
       if (savedPostion) return savedPostion
       if (to.hash)  return { el: to.hash, behavior: 'smooth' }
@@ -37,11 +41,9 @@ export const createApp = ViteSSG(
     for (const component in ZComponents) {
       app.component(component, ZComponents[component])
     }
-
     app.use(store)
-    router.beforeEach(() => {
-      const store = usePagesStore()
-      store.initialize()
-    })
+    // Générer les routes dynamique ici (SSR ony) (exemple : les folios et la pagination)
+    console.log('MAIN ARE SSR : ', import.meta.env.SSR)
+    // console.log('ROUTES FROM MAIN : ', routes.map(r => r.path))
   }
 )

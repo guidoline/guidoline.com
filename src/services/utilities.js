@@ -18,11 +18,19 @@ const markdownify = (text, options = {}) => {
 import slug from 'slug'
 slug.charmap['’'] = '-'
 slug.charmap['\''] = '-'
-const slugify = (text) => slug(text, { locale: 'fr' })
 
-const stringsToURL = (route, texts) => texts.map(text => ({
-  name: text,
-  to: `${route}${slugify(text)}`
-}))
+const slugify = (text) => slug(text.toString(), { locale: 'fr' })
 
-export { slugify, stringsToURL, markdownify }
+const stringsToURL = (route, texts) => texts.map(text => {
+  const slug = slugify(text)
+  return {
+    name: text,
+    slug: slug,
+    to: `${route}${slug}`
+  }
+})
+
+// Uppercase First Letter
+const ucFirst = (text) => text.charAt(0).toUpperCase() + text.slice(1)
+
+export { slugify, stringsToURL, markdownify, ucFirst }

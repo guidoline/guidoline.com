@@ -21,6 +21,10 @@ import Footer from '~/components/Layout/Footer.vue'
 import setting_navigation from '@/content/settings/navigation.json';
 import setting_global from '@/content/settings/global.json';
 defineProps({
+  content: {
+    type: Object,
+    default: null
+  },
   frontmatter: {
     type: Object,
     default: {}
@@ -33,7 +37,7 @@ export default { name: 'LayoutDefault' }
 </script>
 <template>
   <Header />
-  <main><slot/></main>
+  <slot/>
   <Footer>
     <template #subfooter>Mentions légales, etc…</template>
   </Footer>

@@ -5,6 +5,14 @@ import windicss from 'vite-plugin-windicss'
 import mdToJson from './pluginMdToJson.js'
 import { resolve } from 'path'
 
+// Store
+// import { createPinia } from 'pinia'
+// import { useArticlesStore } from './src/store/modules/articles'
+// const articleStore = useArticlesStore(createPinia())
+// import { data } from '@pluginMdToJson'
+// articleStore.initialize(data)
+// articleStore.initialize()
+
 export default defineConfig({
   define: {
     '__VUE_PROD_DEVTOOLS__': 'true'
@@ -35,6 +43,8 @@ export default defineConfig({
     // cf. includeAllRoute
     // includeAllRoutes: true,
     includedRoutes(routes) {
+      // @note: Pas d'accès à `import` ici.
+      // console.log('VITE CONFIG ARE SSR : ', import.meta.env.SSR)
       // @todo :
       // 1. compter toutes les routes `/journal/`
       // 2. calculer les routes d'index du journal basé sur la pagination
@@ -44,18 +54,23 @@ export default defineConfig({
         switch(route) {
           case '/:pathMatch(.*)*': return '404'
           case '/journal/:folio(\\d+)?': return 'journal'
+          case '/journal/:year(\\d+)?/:month(\\d+)?/:slug': return false
+          case '/journal/archives/:year(\\d+)?/:month(\\d+)?': return '/journal/archives'
+          // case '/journal/categorie/:category': return false
+          // case '/journal/etiquette/:tag': return false
           default: return route
         }
       })
 
-      // Routes dynamiques pour `/journal`
-      const articlesPerPage = 10 // À unifier dans un module de pagination
-      const articlesCount = routes.filter(r => r.startsWith('/journal/')).length
-      const pagesCount = Math.ceil(articlesCount / articlesPerPage)
-      for (let i = pagesCount; i; i --) {
-        routes.push(`/journal/${i}`)
-      }
-
+      // @todo: générer les routes dynamiques pour le SSG via le store
+      // Articles
+      // articleStore.articles.forEach(a => {
+      //   routes.push(a.path)
+      // })
+      // Journal folio
+      // Journal Archives
+      // Journal catégories
+      // Journal etiquettes
       return routes
     }
   }

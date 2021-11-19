@@ -42,7 +42,8 @@ const hasLink = computed(() => {
 .cover { @apply relative min-h-60vh overflow-hidden; }
 .cover.is-full { @apply absolute top-0 w-full h-100vh min-h-84; }
 .cover.is-full :deep(+ *) { @apply text-red-500 mt-100vh; }
-.cover.is-full img { @apply absolute w-full h-full object-cover; }
+.cover img { @apply w-full max-h-75vh min-h-25rem object-cover; }
+.cover.is-full img { @apply absolute h-full min-h-100vh; }
 .cover figcaption { @apply absolute bottom-4 left-4 p-4 bg-white text-lg; }
 .cover figcaption :deep(h1) { @apply text-6xl font-medium mb-1; }
 .cover-supcaption { @apply pb-2 text-sm text-gray-400 uppercase; }

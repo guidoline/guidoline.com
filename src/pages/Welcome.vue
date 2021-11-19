@@ -1,13 +1,20 @@
 <script setup>
-import { computed, ref } from 'vue'
-import { useRoute } from 'vue-router'
-import { usePagesStore } from '~/store/modules/pages.js'
+// Données additionnelles
+// import { computed } from 'vue'
+// import { useContentsStore } from '~/store/modules/contents.js'
+// const sixLastArticles = computed(() => useContentsStore().lastArticles(6))
 
-const welcome = computed(() => usePagesStore().page('/index'))
+defineProps({
+  content: {
+    type: Object,
+    default: null
+  }
+})
+
 
 </script>
 <template>
-  <LayoutHome>
-    <pre>#{{ welcome }}</pre>
+  <LayoutHome :content="content">
+    <div v-html="content.content"/>
   </LayoutHome>
 </template>

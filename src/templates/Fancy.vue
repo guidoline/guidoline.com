@@ -6,16 +6,16 @@ import Cover from '~/components/Layout/Cover.vue'
 import { stringsToURL } from '~/services/utilities.js'
 //  Passer la catégorie en sur légende de la couverture
 const cover = {
-  supcaption: props.frontmatter.cover.supcaption ||
-    props.frontmatter.category
-    ? stringsToURL('/journal/categories/', [props.frontmatter.category])
+  supcaption: props.content.cover.supcaption ||
+    props.content.category
+    ? stringsToURL('/journal/categories/', [props.content.category])
         .reduce((string, link) => `${string} [${link.name}](${link.to})` , '')
     : null,
-  ...props.frontmatter.cover
+  ...props.content.cover
 }
 
 const props = defineProps({
-  frontmatter: {
+  content: {
     type: Object,
     default: {}
   }
@@ -28,11 +28,11 @@ const props = defineProps({
       <div class="cover-info article-info">
         <div>
           <span class="article-info-title">Date de publication : </span>
-          {{ frontmatter.date }}
+          {{ content.date }}
         </div>
         <div>
           <span class="article-info-title">Par : </span>
-          {{ frontmatter.author }}
+          {{ content.author }}
         </div>
       </div>
       <Cover
@@ -49,22 +49,22 @@ const props = defineProps({
               <span class="article-info-title">Étiquettes : </span>
               <span class="tags">
                 <template
-                  v-for="(tag, index) in frontmatter.tags"
+                  v-for="(tag, index) in content.tags"
                   :key="index"
                 >
                   <a href="#">{{ tag }}</a>
                 </template>
               </span>
             </div>
-            <div v-if="frontmatter.license">
+            <div v-if="content.license">
               <span class="article-info-title">Licence : </span>
-              <a :href="frontmatter.license.href">{{ frontmatter.license.name }}</a>
+              <a :href="content.license.href">{{ content.license.name }}</a>
             </div>
           </div>
         </div>
         <aside class="article-aside">
           <h2>Aside</h2>
-          <details><pre>{{ frontmatter }}</pre></details>
+          <details><pre>{{ content }}</pre></details>
         </aside>
     </div>
   </main>

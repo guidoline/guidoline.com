@@ -182,6 +182,14 @@ export default {
         background: colors.indigo[500],
       },
     }),
+    container: {
+      center: true,
+      margin: '0 auto',
+      padding: '1rem',
+    },
+    gridTemplateColumns: {
+      frameless: 'repeat(auto-fit, 30ch)'
+    },
     extend: {
       // ...zTheme,
       // Étendre les couleurs par défaut
@@ -232,6 +240,7 @@ export default {
       typography: {
         DEFAULT: {
           css: {
+            'max-width': 'none',
             // color: textColor[700],
             strong: { color: textColor[800] },
             code: { color: textColor[800] },

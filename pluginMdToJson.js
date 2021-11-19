@@ -61,6 +61,7 @@ function renderMarkdown(rawMarkdown, options) {
   })
   return markdown.render(rawMarkdown)
 }
+
 export default function pluginMdToJson(params = {}) {
   const directory = params.directory || 'content'
   const markdownOptions = params.markdownOptions || {}
@@ -75,6 +76,7 @@ export default function pluginMdToJson(params = {}) {
     },
     load(id) {
       if (id === virtualFileId) {
+        console.log('#pluginMdToJson : ', `get files from "${directory}"`)
         return `export const data = ${JSON.stringify(files)}`
       }
     }

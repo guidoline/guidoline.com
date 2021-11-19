@@ -19,29 +19,7 @@
           type="text"
         />
         <h2>Dates</h2>
-        <details>
-          <summary>Débug</summary>
-          <pre>
-          Articles par date :
-          2021
-          2020
-          2019
-          […]
-          Chaque année affiche la liste des mois :
-          /journal/2021
-          Décembre
-          - article 12
-          - article 11
-          - article 10
-          - article 9
-          […]
-          Novembre
-          - article 21
-          - article 20
-          - article 19
-          […]
-          </pre>
-        </details>
+
       </section>
       <section>
         <h2>Sitemap</h2>
@@ -73,30 +51,23 @@
 <script setup>
 import { footer as footerMenu } from '@/content/settings/navigation.json'
 import { name, about, contacts, categories as _categories } from '@/content/settings/global.json'
-// import u from '~/services/utilities.js'
 import { stringsToURL, markdownify } from '~/services/utilities'
-// console.log(u.slugify)
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-// const categories = computed(() => _categories.map(c => ({
-  // name: c,
-  // slug: u.slugify(c)
-// })))
-const categories = stringsToURL('/journal/categories/', _categories)
-const sitemap = useRouter().getRoutes()
-  .filter(r => {
-    if (!r.name) return false
-    if (r.name.startsWith('journal-')) return false
-    return true
-  })
+import { useContentsStore } from '~/store/modules/contents.js'
+import { useArticlesStore } from '~/store/modules/articles.js'
+const articleStore = useArticlesStore()
+articleStore.initialize()
+const categories = articleStore.getCategories()
+const contentStore = useContentsStore()
+contentStore.initialize()
+const sitemap = contentStore.pages
   .map(r => ({
-    name: r.name,
+    name: r.title || r.name,
     to: r.path
   }))
 </script>
 <style scoped>
-/*  @todo: peut-être utilisé une grille afin d'avoir un colonnage
-homogène… */
 footer {
   @apply flex flex-wrap justify-between
   bg-coolGray-700 text-coolGray-100 antialiased font-light pt-12;
