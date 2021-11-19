@@ -206,7 +206,7 @@ if (import.meta.env.SSR) {
   // Categories
 }
 
-console.log("# ROUTES COUNT : ", routes.count)
+console.log("# ROUTES COUNT : ", routes.length)
 
 export function createRouter() {
   return _createRouter({

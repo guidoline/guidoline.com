@@ -50,6 +50,7 @@ export default defineConfig({
       // 2. calculer les routes d'index du journal basé sur la pagination
       // 2bis. unifier la pagination (avec `journal.vue`)
       // 3. ajouter les routes d'index aux routes globale
+      console.log('# SSG OPTIONS')
       routes = routes.map(route => {
         switch(route) {
           case '/:pathMatch(.*)*': return '404'
@@ -60,7 +61,7 @@ export default defineConfig({
           // case '/journal/etiquette/:tag': return false
           default: return route
         }
-      })
+      }).filter(r => r !== false)
 
       // @todo: générer les routes dynamiques pour le SSG via le store
       // Articles

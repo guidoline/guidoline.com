@@ -44,6 +44,9 @@ export const createApp = ViteSSG(
     app.use(store)
     // Générer les routes dynamique ici (SSR ony) (exemple : les folios et la pagination)
     console.log('MAIN ARE SSR : ', import.meta.env.SSR)
+    if (import.meta.env.SSR) {
+      console.log('Render route : ', routes.map(r => r.path))
+    }
     // console.log('ROUTES FROM MAIN : ', routes.map(r => r.path))
   }
 )
