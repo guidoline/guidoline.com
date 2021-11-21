@@ -24,15 +24,14 @@
   "homepage": "https://github.com/guidoline/guidoline.com#readme",
   "dependencies": {
     "vue": "^3.2.20",
-    "vue-router": "^4.0.12",
-    "z-components": "file:external/z-components"
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@heroicons/vue": "^1.0.5",
     "@vitejs/plugin-vue": "^1.9.4",
     "@vue/compiler-sfc": "^3.2.20",
     "@vue/server-renderer": "^3.2.20",
-    "@vuetter/vite-plugin-vue-svg": "file:external/vite-plugin-vue-svg",
+    "@vuetter/vite-plugin-vue-svg": "^0.1.2",
     "@vueuse/head": "^0.6.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.12.1",
@@ -40,6 +39,7 @@
     "eslint-plugin-vue": "^7.20.0",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
+    "markdown-it": "^12.2.0",
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-table-of-contents": "^0.5.2",
     "pinia": "^2.0.3",

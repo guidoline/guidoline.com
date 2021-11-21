@@ -30,12 +30,11 @@
         type="light"
         @click="$emit('update:menuOpen', false)"
       />
-      <Search />
+      <ZSearch />
     </div>
   </nav>
 </template>
 <script setup>
-import Search from '~/components/Element/Search.vue'
 import Logo from '~/assets/logo.svg?inline'
 import { main as mainMenu } from '@/content/settings/navigation.json'
 import { watch } from 'vue'

@@ -4,6 +4,7 @@
 <script setup>
 // https://heroicons.com/
 // @todo : prévoir un screen reader ? cf. z-button
+// @todo : inclure la librairie d'icônes dans le plugin
 import * as heroIcons from '@heroicons/vue/outline'
 import { computed } from 'vue'
 const props = defineProps({

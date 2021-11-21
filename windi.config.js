@@ -5,8 +5,8 @@ import plugin from 'windicss/plugin'
 import colors from 'windicss/colors'
 import defaultTheme from 'windicss/defaultTheme'
 // import windiComponents from './external/z-components/windi-components'
-import windiComponents from './external/z-components/windi-components.js'
-import { theme as zTheme } from './external/z-components/windi-preset.js'
+// import windiComponents from './external/z-components/windi-components.js'
+// import { theme as zTheme } from './external/z-components/windi-preset.js'
 const textColor = colors.coolGray
 const zColors = {
   primary: {
@@ -28,7 +28,7 @@ const addOpacity = (variableName) => ({ opacityVariable, opacityValue}) => {
 }
 export default {
   presets: [
-    zTheme
+    // zTheme
   ],
   // darkMode: 'class',
   darkMode: 'media',

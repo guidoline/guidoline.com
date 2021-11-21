@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueSvg from './external/vite-plugin-vue-svg/src'
+import vueSvg from '@vuetter/vite-plugin-vue-svg'
 import windicss from 'vite-plugin-windicss'
 import mdToJson from './pluginMdToJson.js'
 import { resolve } from 'path'

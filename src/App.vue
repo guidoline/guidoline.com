@@ -6,20 +6,6 @@ import * as layouts from '~/layouts'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
-// @note: layout programmatique, ne peut pas récupérer le layout depuis
-// un fichier Markdown
-// const currentLayout = computed(() => {
-//   const layout = useRoute().meta.layout || 'default'
-//   const layoutName = `layout-${layout}`
-//   console.log('#LAYOUT : ', layoutName)
-//   return layouts.default[layoutName]
-// })
-const als =  () => {
-  if ('AmbientLightSensor' in window) {
-    const ALS = new AmbientLightSensor()
-    return ALS.illuminance
-  }
-}
 </script>
 <template>
   <router-view v-slot="{ Component }">
@@ -27,7 +13,6 @@ const als =  () => {
         <component :is="Component" />
       </Suspense>
   </router-view>
-  <div class="als" v-if="asl">Illuminance: {{ als() }}</div>
 </template>
 <style>
 /* Debug */

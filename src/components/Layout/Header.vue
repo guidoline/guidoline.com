@@ -70,7 +70,7 @@
         :links="importantMenu"
         class="nav-menu nav-item"
       />
-      <Search />
+      <ZSearch />
       <z-menu
         :links="secondaryMenu"
         class="nav-menu-burger nav-item"
@@ -79,7 +79,7 @@
     </div>
     <div class="nav-burger nav-item">
       <!-- v-model sur menuOpen ? -->
-      <NavigationBurgerButton
+      <ZNavigationBurgerButton
         v-model:menu-open="menuOpen"
         falllback-target="#off-screen-navigation"
       />
@@ -87,9 +87,7 @@
   </header>
 </template>
 <script setup>
-import NavigationBurgerButton from '~/components/Element/Navigation/Burger/Button.vue'
 import HeaderOffScreen from '~/components/Layout/Header/OffScreen.vue'
-import Search from '~/components/Element/Search.vue'
 import Logo from '~/assets/logo.svg?inline'
 import { main as mainMenu } from '@/content/settings/navigation.json'
 import { contacts } from '@/content/settings/global.json'

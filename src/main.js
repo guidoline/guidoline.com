@@ -6,14 +6,14 @@ const routes = createRouter().getRoutes() || []
 
 import store from './store'
 import { useContentsStore } from './store/modules/contents'
-
-import ZComponents from 'z-components'
+import ZComponents from './components/Z'
 import LayoutDefault from './layouts/Default.vue'
 import LayoutHome from './layouts/Home.vue'
 import LayoutSimple from './layouts/Simple.vue'
 import LayoutMarkdown from './layouts/Markdown.vue'
 
 import 'virtual:windi.css'
+import 'virtual:windi-devtools'
 
 export const createApp = ViteSSG(
   App,
@@ -38,10 +38,11 @@ export const createApp = ViteSSG(
     app.component('LayoutHome', LayoutHome)
     app.component('LayoutSimple', LayoutSimple)
     app.component('LayoutMarkdown', LayoutMarkdown)
-    for (const component in ZComponents) {
-      app.component(component, ZComponents[component])
-    }
+    // for (const component in ZComponents) {
+    //   app.component(component, ZComponents[component])
+    // }
     app.use(store)
+    app.use(ZComponents)
     // Générer les routes dynamique ici (SSR ony) (exemple : les folios et la pagination)
     console.log('MAIN ARE SSR : ', import.meta.env.SSR)
     if (import.meta.env.SSR) {
