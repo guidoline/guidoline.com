@@ -1,4 +1,4 @@
-import ZTag from './tag.vue'
+import ZTag from './Tag.vue'
 import ZSearch from './Search.vue'
 import ZPagination from './Pagination.vue'
 import ZMenu from './Menu.vue'
