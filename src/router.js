@@ -86,7 +86,7 @@ const routes = Object.keys(pages)
         })
         break
       case 'journal-etiquette':
-        path = '/journal/etiquette/:tag/:volio(\\d+)?',
+        path = '/journal/etiquette/:tag/:folio(\\d+)?',
         props = (route) => ({
           tag: route.params.tag,
           folio: Number(route.params.folio) || 1
@@ -171,15 +171,12 @@ routes.push({
 // - `journal/archives/[year]/[month]`
 // - `journal/etiquette/[slug]`
 // - `journal/categorie/[slug]`
-console.log('ROUTER ARE SSR : ', import.meta.env.SSR)
-// console.log('ROUTES FROM ROUTER : ', routes.map(r => r.path))
+
 
 if (import.meta.env.SSR) {
-  console.log('# ADD SSR ROUTES #')
   // Articles
 
   articlesStore.articles.forEach(a => {
-    console.log('ADD ROUTE : ', a.name)
     routes.push({
       name: a.name,
       path: a.path,
@@ -204,9 +201,14 @@ if (import.meta.env.SSR) {
   // Archives
   // Étiquettes
   // Categories
+
+  console.log('\n——————————————————————————————————————————————')
+  console.log('Géneration des routes SSR')
+  console.log('——————————————————————————————————————————————')
+  routes.forEach(r => { console.log(r.path)})
+  console.log('\n')
 }
 
-console.log("# ROUTES COUNT : ", routes.length)
 
 export function createRouter() {
   return _createRouter({

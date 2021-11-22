@@ -33,21 +33,17 @@ export const createApp = ViteSSG(
     }
   },
   ({ app, router, routes, isClient, initialState }) => {
-    // @todo: ajouter un chargement auto des composant dans `App.vue`
+    // @todo: auto charger les layout
     app.component('LayoutDefault', LayoutDefault)
     app.component('LayoutHome', LayoutHome)
     app.component('LayoutSimple', LayoutSimple)
     app.component('LayoutMarkdown', LayoutMarkdown)
-    // for (const component in ZComponents) {
-    //   app.component(component, ZComponents[component])
-    // }
+
     app.use(store)
     app.use(ZComponents)
-    // Générer les routes dynamique ici (SSR ony) (exemple : les folios et la pagination)
-    console.log('MAIN ARE SSR : ', import.meta.env.SSR)
+
     if (import.meta.env.SSR) {
-      console.log('Render route : ', routes.map(r => r.path))
+      // Faire des chose SSR à chaque invocation de route si besoin.
     }
-    // console.log('ROUTES FROM MAIN : ', routes.map(r => r.path))
   }
 )

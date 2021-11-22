@@ -50,15 +50,19 @@ export default defineConfig({
       // 2. calculer les routes d'index du journal basé sur la pagination
       // 2bis. unifier la pagination (avec `journal.vue`)
       // 3. ajouter les routes d'index aux routes globale
-      console.log('# SSG OPTIONS')
+      console.log('——————————————————————————————————————————————')
+      console.log('Rendu SSG des routes ')
+      console.log('——————————————————————————————————————————————')
+      routes.forEach(r => { console.log(r) })
+      console.log('\n')
       routes = routes.map(route => {
         switch(route) {
           case '/:pathMatch(.*)*': return '404'
           case '/journal/:folio(\\d+)?': return 'journal'
           case '/journal/:year(\\d+)?/:month(\\d+)?/:slug': return false
           case '/journal/archives/:year(\\d+)?/:month(\\d+)?': return '/journal/archives'
-          // case '/journal/categorie/:category': return false
-          // case '/journal/etiquette/:tag': return false
+          case '/journal/categorie/:category/:folio(\\d+)?': return false
+          case '/journal/etiquette/:category/:folio(\\d+)?': return false
           default: return route
         }
       }).filter(r => r !== false)

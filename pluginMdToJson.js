@@ -76,7 +76,12 @@ export default function pluginMdToJson(params = {}) {
     },
     load(id) {
       if (id === virtualFileId) {
-        console.log('#pluginMdToJson : ', `get files from "${directory}"`)
+        console.log('\n——————————————————————————————————————————————')
+        console.log('Convertion des fichiers Markdown')
+        console.log(`Repertoire "${directory}"`)
+        console.log('——————————————————————————————————————————————')
+        files.forEach(f => { console.log(f.path) })
+        console.log('\n')
         return `export const data = ${JSON.stringify(files)}`
       }
     }

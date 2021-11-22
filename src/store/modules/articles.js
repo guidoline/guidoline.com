@@ -73,7 +73,7 @@ export const useArticlesStore = defineStore({
       this.articles = orderBy(this.articles)
       // Apply data filter
       this.articles = this.articles.map(a => applyFilters(a))
-      console.log('STORE ARE SSR : ', import.meta.env.SSR)
+
       // console.log('ARTICLES FROM STORE : ', this.articles.map(a => a.path))
       // Links pagination
       this.articles = this.articles.map((a, index) => {
@@ -84,6 +84,15 @@ export const useArticlesStore = defineStore({
           ...a
         }
       })
+
+      if(import.meta.env.SSR) {
+        console.log('\n——————————————————————————————————————————————')
+        console.log('Chargement des données du Store ')
+        console.log('——————————————————————————————————————————————')
+        console.log(`${this.articles.length} articles`)
+        console.log('\n')
+      }
+
       // Chainable
       return this
     },
