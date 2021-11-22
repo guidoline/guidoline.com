@@ -62,7 +62,7 @@ export default defineConfig({
           case '/journal/:year(\\d+)?/:month(\\d+)?/:slug': return false
           case '/journal/archives/:year(\\d+)?/:month(\\d+)?': return '/journal/archives'
           case '/journal/categorie/:category/:folio(\\d+)?': return false
-          case '/journal/etiquette/:category/:folio(\\d+)?': return false
+          case '/journal/etiquette/:tag/:folio(\\d+)?': return false
           default: return route
         }
       }).filter(r => r !== false)
