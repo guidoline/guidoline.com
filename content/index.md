@@ -32,7 +32,7 @@ sections:
 - template: _section
   title: Animation / prestations
   content: |-
-    Guidoline [**organise et participe régulièrement à des manifestations**](/blog/animations) pour donner son regard sur la **culture vélo**.
+    Guidoline [**organise et participe régulièrement à des manifestations**](/journal/categorie/animation) pour donner son regard sur la **culture vélo**.
 
     * Atelier mobile
     * Roller racing

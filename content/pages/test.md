@@ -9,7 +9,6 @@ template: fancy
 
 `./content/pages/test.md`
 
-[Go to `/test`](/test)  
 [Go to `/pages/test`](/pages/test)
 
 # Hello

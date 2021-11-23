@@ -27,23 +27,21 @@ export const useContentsStore = defineStore({
     },
     page() {
       return (path) => this.pages.find(c => c.path === path)
-    },
-    articles() {
-      return this.publishedContents.filter(c => c.dirname.startsWith('content/journal'))
-    },
-    articlesCount() { return this.articles.length },
-    article() {
-      return (path) => this.articles.find(c => c.path === path)
     }
   },
   actions: {
-    async initialize() {
+    initialize() {
       if (this.isReady) return
       this.ready = true
-      this.contents = data.map(c => ({ ...c, path: c.path === '/index' ? '/' : c.path}))
+      this.setContents()
       // Chainable
       // return this
+    },
+    setContents() {
+      this.contents = data
+        .map(c => ({ ...c, path: c.path === '/index' ? '/' : c.path}))
     }
+
   }
 })
 

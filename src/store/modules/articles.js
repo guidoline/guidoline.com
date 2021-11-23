@@ -8,12 +8,13 @@ export const useArticlesStore = defineStore({
     return {
       ready: false,
       articles: [],
+      limit: 10,
     }
   },
   getters: {
     isReady: state => state.ready,
-    limit: state => state.offset + state.articlesPerPage,
-    count: state => state.articles.length,
+    // limit: state => state.offset + state.articlesPerPage,
+    // count: state => state.articles.length,
     getArticles: state => state.articles,
     getArticle: state => (path) => state.articles.find(c => c.path === path),
     // Categories list
@@ -53,6 +54,16 @@ export const useArticlesStore = defineStore({
       filterBy(state.articles, 'tags', 'callback',
         (prop) => prop.some(p => p.slug === tag)
     ),
+    // getPaginateArticles: (state) => {
+    //   const limit = state.limit
+    //   const count = state.articles.length
+    //   const pagesCount = Math.ceil(count / limit)
+    //   const articlesRoutes = []
+    //   for (const i = 1; i < pagesCount; i ++) {
+    //     articlesRoutes.push(`(/journal/${i})`)
+    //   }
+    //   return articlesRoutes
+    // },
 
     // Articles groupés par catégories (usages ?)
     articlesByDate: state => () => groupBy(state.articles, 'date'),

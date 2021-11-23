@@ -2,7 +2,7 @@
 title: "Newsletter Décembre 2018"
 date: 2018/12/05
 cover:
-  src: "/uploads/2018/12/newsletter-decembre-2019.png"
+  src: "/uploads/2018/12/newsletter-decembre-2018.png"
   alt: "Newsletter décembre 2018"
 category: Newsletter
 ---

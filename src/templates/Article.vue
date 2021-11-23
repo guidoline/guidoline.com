@@ -27,17 +27,6 @@ const cover = computed(() => {
   }
 })
 
-const category = computed(() => {
-  if (!props.content.category) return null
-  return stringsToURL('/journal/categorie/', [props.content.category]).shift()
-})
-
-// Pas nécessaire de compilé ?
-const tags = (() => {
-  if (!props.content.tags) return null
-  return stringsToURL('/journal/etiquette/', props.content.tags)
-})()
-
 const date = props.content.date;
 
 /**
@@ -53,7 +42,6 @@ const author = computed(() => {
 
 </script>
 <template>
-  <code>template/articles.vue</code>
   <main
     :class="content.cover ? `has-cover`: null"
   >
@@ -66,10 +54,10 @@ const author = computed(() => {
     </div>
     <footer class="">
       <z-grid class="article-info prose-container ">
-        <section v-if="category">
+        <section v-if="content.category">
           <h1 class="article-info-title">Catégorie</h1>
-          <router-link :to="category.to">
-            {{ category.name }}
+          <router-link :to="content.category.to">
+            {{ content.category.name }}
           </router-link>
         </section>
         <section v-if="author">
@@ -84,11 +72,11 @@ const author = computed(() => {
             {{ author.name }}
           </template>
         </section>
-        <section v-if="tags" class="col-span-full">
+        <section v-if="content.tags" class="col-span-full">
           <h1 class="article-info-title">Étiquettes</h1>
           <span class="tags">
             <router-link
-              v-for="tag in tags"
+              v-for="tag in content.tags"
               :key="tag.to"
               :to="tag.to"
             >

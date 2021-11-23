@@ -6,7 +6,7 @@
   >
     <z-button
       @click.prevent="$emit('update:menuOpen', false)"
-      href="#"
+      href="#!"
       type="light"
       icon="X"
     />

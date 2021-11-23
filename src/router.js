@@ -43,9 +43,11 @@ const routes = Object.keys(pages)
       .replace(/\//g, '-')
     // let props = () => {}
     // Contenu asynchrone avec Vue router 4
-    const beforeEnter = async (to, from, next) => {
-      // const content = await contentStore.content(to.path)
+    // let beforeEnter = async (to, from, next) => {
+    //   const content = await contentStore.content(to.path)
+    let beforeEnter = (to, from, next) => {
       const content = contentStore.content(to.path)
+      // const content = contentStore.content(to.path)
       Object.assign(to.meta, { props: { content } })
       next()
     }
@@ -108,6 +110,25 @@ const routes = Object.keys(pages)
       //   break
       // case 'journal[year][month]':
       //   break
+      case 'pages':
+        path = '/pages/:slug'
+        beforeEnter = (to, from, next) => {
+          const content = contentStore.content(to.path)
+        // beforeEnter = async (to, from, next) => {
+          // const content = await contentStore.content(to.path)
+          if (!content) {
+            // @todo: à corriger 404 est appelé en attendant
+            // le chargement de content
+            next({ name: '404', params: [to.path] })
+          } else {
+            Object.assign(to.meta, { props: { content } })
+            next()
+          }
+        }
+        props = (route) => ({
+          content: route.meta.props.content
+        })
+        break
       default:
         // 404 ou Index
         props = (route) => ({
@@ -141,7 +162,8 @@ const routes = Object.keys(pages)
 routes.push({
   name: 'journal-article',
   path: '/journal/:year(\\d+)?/:month(\\d+)?/:slug',
-  beforeEnter: async (to, from, next) => {
+  // beforeEnter: async (to, from, next) => {
+  beforeEnter: (to, from, next) => {
     // https://github.com/vuejs/vue-router/issues/977#issuecomment-266221374
     const article = articlesStore.getArticle(to.path)
     // console.log('TO : ', to)
@@ -173,6 +195,9 @@ routes.push({
 // - `journal/categorie/[slug]`
 
 
+
+// @todo: Concatener avec `routes` de la même manière que les fichiers `.vue`
+// (comme si c'était des ficheirs "virtuelles")
 if (import.meta.env.SSR) {
   // Articles
 
@@ -187,10 +212,30 @@ if (import.meta.env.SSR) {
     })
   })
 
+  // @todo : génerer de manière génrique tout les contenus
+  // provenant du store (`contents`)
+  // Les contenu ne doivent pas être chargées de manière asynchrone par
+  // `route.beforeEnter`.
+  // Le composant doit correspondre au chemin du contenu :
+  // ex. `content/articles` `./src/articles.vue`
+  contentStore.contents.forEach(c => {
+    routes.push({
+      name: c.name,
+      path: c.path,
+      props: {
+        content: c
+      },
+      component: () => {
+        const comp = 'Pages'
+        return import(`./pages/${comp}.vue`)
+      }
+    })
+  })
+
+
   // Pagination
   const pagesCount = Math.ceil(articlesStore.count / articlesStore.articlesPerPage)
-  for (let i = 1; i <= pagesCount; i ++) {
-    console.log('# ADD ARTICL PAGINATION FOLIO : ', i)
+  for (let i = 1; i < pagesCount + 1; i ++) {
     routes.push({
       name: `journal-folio-${i}`,
       path: `/journal/${i}`,
@@ -199,8 +244,62 @@ if (import.meta.env.SSR) {
   }
 
   // Archives
-  // Étiquettes
   // Categories
+  articlesStore.getCategories().forEach(c => {
+    const limit = 10
+    const categoryRoute = {
+      name: `journal-category-${c.slug}`,
+      path: c.to,
+      props: {
+        category: c.slug,
+        folio: 1
+      },
+      component: () => import('./pages/Journal/Category.vue')
+    }
+    routes.push(categoryRoute)
+    const count = articlesStore.getCategoryArticles(c.slug).length
+    const pagesCount = Math.ceil(count / limit)
+    for (let i = 1; i < pagesCount + 1; i ++) {
+      routes.push( {
+        name: `journal-category-${c.slug}-${i}`,
+        path: `${c.to}/${i}`,
+        props: {
+          category: c.slug,
+          folio: i
+        },
+        component: () => import('./pages/Journal/Category.vue')
+      })
+    }
+  })
+
+  // Étiquettes
+  articlesStore.getTags().forEach(t => {
+    const limit = 10
+    const tagRoute = {
+      name: `journal-tag-${t.slug}`,
+      path: t.to,
+      props: {
+        tag: t.slug,
+        folio: 1
+      },
+      component: () => import('./pages/Journal/Etiquette.vue')
+    }
+    routes.push(tagRoute)
+    const count = articlesStore.getTagArticles(t.slug).length
+    const pagesCount = Math.ceil(count / limit)
+    for (let i = 1; i < pagesCount + 1; i ++) {
+      routes.push( {
+        name: `journal-tag-${t.slug}-${i}`,
+        path: `${t.to}/${i}`,
+        props: {
+          tag: t.slug,
+          folio: i
+        },
+        component: () => import('./pages/Journal/Etiquette.vue')
+      })
+    }
+  })
+
 
   console.log('\n——————————————————————————————————————————————')
   console.log('Géneration des routes SSR')
@@ -208,7 +307,6 @@ if (import.meta.env.SSR) {
   routes.forEach(r => { console.log(r.path)})
   console.log('\n')
 }
-
 
 export function createRouter() {
   return _createRouter({
