@@ -42,6 +42,7 @@ export default defineConfig({
   ssgOptions: {
     // cf. includeAllRoute
     // includeAllRoutes: true,
+    dirStyle: 'nested',
     includedRoutes(routes) {
       // @note: Pas d'accès à `import` ici.
       // console.log('VITE CONFIG ARE SSR : ', import.meta.env.SSR)
