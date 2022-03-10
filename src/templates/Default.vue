@@ -1,9 +1,12 @@
+<script setup>
+import ProseContainer from '~/components/Layout/Container/Prose.vue'
+</script>
 <script>
 export default { name : 'TemplateDefault'}
 </script>
 
 <template>
-  <div class="prose-container">
+  <ProseContainer>
     <slot/>
-  </div>
+  </ProseContainer>
 </template>

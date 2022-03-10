@@ -5,6 +5,7 @@ export default { name: 'TemplateArticle'}
 // @note: l'idéal serait de placer les fichiers de template dans le
 // repertoire `./src/pages(/<parent>)/<template>.vue`
 import Cover from '~/components/Layout/Cover.vue'
+import ContainerProse from '~/components/Layout/Container/Prose.vue'
 import { computed } from 'vue'
 import { stringsToURL }from '~/services/utilities.js'
 const props = defineProps({
@@ -46,12 +47,12 @@ const author = computed(() => {
     :class="content.cover ? `has-cover`: null"
   >
     <Cover v-if="cover" :cover="cover" />
-    <div class="prose-container">
+    <ContainerProse>
       <div v-if="date" class="article-date">
         Publié le {{ date }}
       </div>
       <slot />
-    </div>
+    </ContainerProse>
     <footer class="">
       <z-grid class="article-info prose-container ">
         <section v-if="content.category">
