@@ -81,7 +81,7 @@
       <!-- v-model sur menuOpen ? -->
       <ZNavigationBurgerButton
         v-model:menu-open="menuOpen"
-        falllback-target="#off-screen-navigation"
+        fallback-target="#off-screen-navigation"
       />
     </div>
   </header>
