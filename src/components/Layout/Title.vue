@@ -13,7 +13,7 @@ h1 { @apply bold text-4xl mb-8; }
 h1 { @apply text-center pt-8 font-serif italic text-shadow-sm; }
 @screen md {
   h1:before,
-  h1:after { content: " — "; @apply font-thin ; }
+  h1:after { content: " — "; @apply font-thin ; }
 }
 </style>
 <template>
