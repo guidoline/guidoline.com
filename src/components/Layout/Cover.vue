@@ -47,6 +47,6 @@ const hasLink = computed(() => {
 .cover figcaption { @apply absolute bottom-4 left-4 p-4 bg-white text-lg; }
 .cover figcaption :deep(h1) { @apply text-6xl font-medium mb-1; }
 .cover-supcaption { @apply pb-2 text-sm text-gray-400 uppercase; }
-.cover-credit { @apply text-sm text-right text-gray-400; }
+.cover-credit { @apply text-sm text-gray-400; }
 .cover.is-full figcaption { @apply mr-4 bottom-20 md:(max-w-screen-sm); }
 </style>
