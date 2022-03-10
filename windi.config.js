@@ -142,7 +142,7 @@ export default {
         DEFAULT: colors.blueGray[100],
         ...colors.blueGray
       }
-    }
+    },
     //   // L'opacité n'est pas pris en charge avec des custom var, cf. :
     //   // https://github.com/adamwathan/tailwind-css-variable-text-opacity-demo
     //   // 'custom-css-var': 'var(--my-custom-css-var)',
