@@ -28,11 +28,11 @@ const props = defineProps({
       <div class="cover-info article-info">
         <div>
           <span class="article-info-title">Date de publication : </span>
-          {{ content.date }}
+          {{ content.date }}
         </div>
         <div>
           <span class="article-info-title">Par : </span>
-          {{ content.author }}
+          {{ content.author }}
         </div>
       </div>
       <Cover
@@ -64,7 +64,7 @@ const props = defineProps({
         </div>
         <aside class="article-aside">
           <h2>Aside</h2>
-          <details><pre>{{ content }}</pre></details>
+          <details><pre>{{ content }}</pre></details>
         </aside>
     </div>
   </main>
