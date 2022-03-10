@@ -1,14 +1,15 @@
 <script>
-export default { name : 'TemplateBlue'}
+export default { name : 'TemplateFancy'}
 </script>
 <script setup>
 import Cover from '~/components/Layout/Cover.vue'
 import { stringsToURL } from '~/services/utilities.js'
 //  Passer la catégorie en sur légende de la couverture
+console.log('SUPCATION ', props.content.category)
 const cover = {
   supcaption: props.content.cover.supcaption ||
     props.content.category
-    ? stringsToURL('/journal/categories/', [props.content.category])
+    ? stringsToURL('/journal/categorie/', [props.content.category.name])
         .reduce((string, link) => `${string} [${link.name}](${link.to})` , '')
     : null,
   ...props.content.cover
