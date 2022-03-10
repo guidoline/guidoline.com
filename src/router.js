@@ -77,21 +77,21 @@ const routes = Object.keys(pages)
         path = '/journal/:folio(\\d+)?'
         props = (route) => ({
           // content: route.meta.props.content,
-          folio: Number(route.params.folio) || 1
+          folio: Number(route.params.folio) || 1
         })
         break
       case 'journal-category':
         path = '/journal/categorie/:category/:folio(\\d+)?',
         props = (route) => ({
           category: route.params.category,
-          folio: Number(route.params.folio) || 1
+          folio: Number(route.params.folio) || 1
         })
         break
       case 'journal-etiquette':
         path = '/journal/etiquette/:tag/:folio(\\d+)?',
         props = (route) => ({
           tag: route.params.tag,
-          folio: Number(route.params.folio) || 1
+          folio: Number(route.params.folio) || 1
         })
         break
       // @todo: Paramètres obligatoire
@@ -182,7 +182,7 @@ routes.push({
     return { content : article }
   },
   // props: (route) => ({
-  //   content: route.meta.props.content || null
+  //   content: route.meta.props.content || null
   // }),
   component: () => import('./pages/Journal/Article.vue')
   // component: () => import('./templates/article.vue')
