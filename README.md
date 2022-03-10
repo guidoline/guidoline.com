@@ -22,6 +22,27 @@ Les contenus Markdwown sont importé via `vite-plugin-md`, les routes sont gén�
  - [ ] preview & lazyload des images ;
  - [ ] optimisations diverses (PWA, images, CSS…) cf. [Antfu blog](https://github.com/antfu/antfu.me/blob/main/vite.config.ts).
 
+ ## Convention pour les routes et les données
+
+Les routes sont définies à partir des composants Vue disponible dans le repertoire `./src/pages/`.
+
+Chaque composant de page tenteras de charger automatiquement le fichier correspondant dans le repertoire de contenu Markdown correspondant au chemin. Par exemple : l'url `/a-propos`, tenteras de charger un composant `pages/Apropos.vue` et un contenu `./content/a-propos.md`. Le contenu sera injecté via la propriété (`props`) `content`.
+
+Une URL pointant un repertoire de données, par exemple `./content/journal/`, chargera le composant correspondant (`./src/pages/Journal.vue`) et mettras à disposition via la proprietés (`props`) `content` la liste des données.
+
+Exemples : 
+| Nom | Route | Composant | Fichier Markdown | 
+| - | - | - | - | 
+| home | `/` | `Index.vue` | `index.md`
+| à propos | `/a-propos` | `APropos.vue` | `a-propos.md`
+| contacts | `/a-propos/contact` | `APropos/Contact.vue` | `a-propos/contact.md`
+| journal | `/journal` | `Journal.vue` | `callback` |
+| journal folio | `/journal/:folio` | `Journal.vue` | `callback` |
+| article | `/journal/:slug` | `Journal/[slug].vue`| `callback` |
+
+Les routes dynamiques (par ex. `:folio`, `:slug`) devrons être manuellement générées lors de la phase SSG.
+
+
 ## Dépendances
 
 Documentation : [Vitesse](https://github.com/antfu/vitesse/blob/main/package.json)
