@@ -23,7 +23,7 @@ export const useContentsStore = defineStore({
       return this.publishedContents.length
     },
     pages() {
-      return this.publishedContents.filter(c => c.dirname === 'content/pages' || c.dirname === 'content')
+      return this.publishedContents.filter(c => c.dirname === 'content/pages' || c.dirname === 'content')
     },
     page() {
       return (path) => this.pages.find(c => c.path === path)
