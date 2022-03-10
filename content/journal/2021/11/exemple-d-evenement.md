@@ -20,4 +20,6 @@ related_articles:
 - content/journal/2019/07/guidoline-ouvre-un-second-atelier-velo.md
 
 ---
-Exemple d’événement.
+
+Exemple d'évenement, description simple ne nécessitant pas forcément de titrage.
+[@todo: afficher la période (date début et fin), le lieu et les articles en relation]
