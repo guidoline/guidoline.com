@@ -5,7 +5,6 @@ import { createRouter } from './router'
 const routes = createRouter().getRoutes() || []
 
 import store from './store'
-import { useContentsStore } from './store/modules/contents'
 import ZComponents from './components/Z'
 import LayoutDefault from './layouts/Default.vue'
 import LayoutHome from './layouts/Home.vue'
