@@ -72,7 +72,7 @@ const props = defineProps({
 </template>
 <style scoped>
 /* .fancy { @apply bg-primary-500 text-white p6; } */
-.cover-wrapper { @apply relative h-100vh min-h-84; }
+.cover-wrapper { @apply relative h-100vh min-h-94; }
 .cover-info { @apply absolute flex flex-wrap justify-between z-1 left-4 bottom-4 right-4; }
 /* - None	width: 100%;
 - sm (640px)	max-width: 640px;
