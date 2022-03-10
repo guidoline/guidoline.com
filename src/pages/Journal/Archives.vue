@@ -25,36 +25,38 @@ const currentYearArchives = computed(() => archives.value[currentYear.value])
 </script>
 <template>
   <LayoutDefault>
-    <main class="prose-container">
-      <Title>Archives année «&nbsp;{{ currentYearArchives.name }}&nbsp;»</Title>
-      <router-link
-        v-for="(year, index) in years"
-        :key="index"
-        :to="`/journal/archives/${year}`"
-        class="px-2"
-      >
-        {{ year }}
-      </router-link>
-      <ul>
-        <li
-          v-for="month in currentYearArchives.months"
-          :key="`${currentYearArchives.name}-${month.name}`"
+    <main>
+      <Title>Archives année «&nbsp;{{ currentYearArchives.name }}&nbsp;»</Title>
+      <div class="prose-container">
+        <router-link
+          v-for="(year, index) in years"
+          :key="index"
+          :to="`/journal/archives/${year}`"
+          class="px-2"
         >
-          {{ month.name }} {{ currentYearArchives.name }}
-          <ul>
-            <li
-              v-for="article in month.articles"
-              :key="article.path"
-            >
-              <router-link
-                :to="article.path"
+          {{ year }}
+        </router-link>
+        <ul>
+          <li
+            v-for="month in currentYearArchives.months"
+            :key="`${currentYearArchives.name}-${month.name}`"
+          >
+            {{ month.name }} {{ currentYearArchives.name }}
+            <ul>
+              <li
+                v-for="article in month.articles"
+                :key="article.path"
               >
-                {{ article.title }}
-              </router-link>
-            </li>
-          </ul>
-        </li>
-      </ul>
+                <router-link
+                  :to="article.path"
+                >
+                  {{ article.title }}
+                </router-link>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </main>
   </LayoutDefault>
 </template>

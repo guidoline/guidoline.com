@@ -7,9 +7,9 @@ const tags = store.getTags()
 </script>
 <template>
   <LayoutDefault>
-    <main class="prose">
+    <main>
       <Title>Étiquettes</Title>
-      <div class="container">
+      <div class="prose-container">
         <z-tag
           v-for="(tag, index) in tags"
           :key="index"

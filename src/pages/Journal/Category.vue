@@ -44,21 +44,20 @@ const obCategory = computed(() => store.getCategories().find(c => c.slug === pro
 </script>
 <template>
   <LayoutDefault>
-    <main class="prose">
+    <main>
       <Title>Catégorie «&nbsp;<strong>{{ obCategory.name }}</strong>&nbsp;»</Title>
-      <div class="container">
-        <z-pagination
-          :route-prefix="`/journal/categorie/${category}/`"
-          @change-folio="changePage($event)"
-          :folio="folio"
-          :folio-count="pagesCount"
-        />
-        <ArticleAbstract
-          v-for="article in paginateArticles"
-          :key="article.path"
-          :article="article"
-        />
-      </div>
+      <z-pagination
+        :route-prefix="`/journal/categorie/${category}/`"
+        @change-folio="changePage($event)"
+        :folio="folio"
+        :folio-count="pagesCount"
+      />
+      <ArticleAbstract
+        class="prose"
+        v-for="article in paginateArticles"
+        :key="article.path"
+        :article="article"
+      />
     </main>
   </LayoutDefault>
 </template>

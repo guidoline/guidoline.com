@@ -126,7 +126,7 @@ export default {
   shortcuts: {
     // 'plugin-button': 'subpixel-antialiased',
     'theme-global': 'text-gray-600',
-    'prose-container': 'prose container mx-auto md:w-prose px-4 py-4',
+    'prose-container': 'prose container mx-auto md:w-prose px-4 pt-4 pb-12',
   },
   // preflight: false, // ± 15ko
   theme: {

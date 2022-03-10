@@ -7,9 +7,9 @@ const categories = store.getCategories()
 </script>
 <template>
   <LayoutDefault>
-    <main class="prose">
+    <main>
       <Title>Categories</Title>
-      <div class="container">
+      <div class="prose-container">
         <z-tag
           v-for="(category, index) in categories"
           :key="index"

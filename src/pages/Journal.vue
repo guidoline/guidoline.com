@@ -35,7 +35,11 @@ const changePage = (folio) => {
 
 const links = [
   {
-    name: 'catégories',
+    name: 'Articles',
+    to: '/journal/'
+  },
+  {
+    name: 'Catégories',
     to: '/journal/categories'
   },
   {
@@ -54,7 +58,7 @@ const links = [
     <nav>
       <z-menu :links="links" />
     </nav>
-    <main class="prose no-container">
+    <main>
       <Title>Journal</Title>
       <z-pagination
         route-prefix="/journal/"
@@ -63,6 +67,7 @@ const links = [
         :folio-count="pagesCount"
       />
       <ArticleAbstract
+        class="prose"
         v-for="article in paginateArticles"
         :key="article.__vd_id"
         :article="article"

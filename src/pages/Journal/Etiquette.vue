@@ -43,7 +43,7 @@ const obTag = computed(() => store.getTags().find(c => c.slug === props.tag))
 </script>
 <template>
   <LayoutDefault>
-    <main class="prose">
+    <main>
       <Title>Étiquette «&nbsp;<strong>{{ obTag.name }}</strong>&nbsp;»</Title>
       <div class="container">
         <z-pagination
@@ -53,6 +53,7 @@ const obTag = computed(() => store.getTags().find(c => c.slug === props.tag))
           :folio-count="pagesCount"
         />
         <ArticleAbstract
+          class="prose"
           v-for="article in paginateArticles"
           :key="article.path"
           :article="article"
