@@ -45,7 +45,9 @@ Les routes dynamiques (par ex. `:folio`, `:slug`) devrons être manuellement gé
 
 ## Dépendances
 
-Documentation : [Vitesse](https://github.com/antfu/vitesse/blob/main/package.json)
+Documentation : 
+ - [Vitesse](https://github.com/antfu/vitesse/blob/main/package.json)
+ - [installation Vite/Vue3/TS](https://miyauchi.dev/posts/vite-vue3-typescript/)
 
 ### Production
  - [×] vue@next ;
