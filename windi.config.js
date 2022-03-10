@@ -92,7 +92,7 @@ export default {
        *  theme: {
        *   ZButton: {
        *    color: colors.amber[50],
-       *    background: coloes.indigo[500]
+       *    background: colors.indigo[500]
        *   }
        *  }
        * }
@@ -131,17 +131,18 @@ export default {
   // preflight: false, // ± 15ko
   theme: {
     // Remplacer les couleurs par défaut
-    // colors: {
-    //   ...colors,
-    //   textColor,
-    //   primary: {
-    //     DEFAULT: colors.teal[500],
-    //     ...colors.teal
-    //   },
-    //   'primary-invert': {
-    //     DEFAULT: colors.blueGray[100],
-    //     ...colors.blueGray
-    //   }
+    colors: {
+      ...colors,
+      textColor,
+      primary: {
+        DEFAULT: colors.teal[500],
+        ...colors.teal
+      },
+      'primary-invert': {
+        DEFAULT: colors.blueGray[100],
+        ...colors.blueGray
+      }
+    }
     //   // L'opacité n'est pas pris en charge avec des custom var, cf. :
     //   // https://github.com/adamwathan/tailwind-css-variable-text-opacity-demo
     //   // 'custom-css-var': 'var(--my-custom-css-var)',
