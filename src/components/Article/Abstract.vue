@@ -31,7 +31,7 @@ defineProps({
           :key="index"
           :tag="tag"
         >
-          {{ tag.name }}
+          {{ tag.name }}
         </z-tag>
       </div>
       <h2 class="article-title">
