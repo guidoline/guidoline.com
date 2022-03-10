@@ -24,7 +24,9 @@ defineProps({
       <z-tag
         v-if="article.category"
         :tag="article.category"
-      />
+      >
+        {{ article.category.name }}
+      </z-tag>
       <div v-if="article.tags" class="tags">
         <z-tag
           v-for="(tag, index) in article.tags"
