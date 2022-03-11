@@ -16,4 +16,4 @@ place: ''
 related_articles: []
 
 ---
-Évenement simple sans image de couverture
+Événement simple sans image de couverture
