@@ -14,6 +14,10 @@ fields:
 - type: textarea
   name: about
   label: À propos
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
 - type: text
   name: credits
   label: Crédits
