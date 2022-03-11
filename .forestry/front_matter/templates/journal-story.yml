@@ -2,6 +2,13 @@
 label: journal.story
 hide_body: false
 fields:
+- name: template
+  type: text
+  config:
+    required: false
+  label: Template
+  hidden: true
+  default: story
 - name: article
   type: include
   config: {}
