@@ -1,6 +1,7 @@
 ---
-label: Journal.event
+label: journal.event
 hide_body: false
+display_field: title
 fields:
 - name: template
   type: text

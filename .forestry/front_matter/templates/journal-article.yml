@@ -1,5 +1,5 @@
 ---
-label: Journal.article
+label: journal.article
 hide_body: false
 display_field: title
 fields:
