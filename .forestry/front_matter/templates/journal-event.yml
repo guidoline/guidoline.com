@@ -10,14 +10,11 @@ fields:
   label: template
   default: event
   hidden: true
-- name: seo
+- name: base
   type: include
   config: {}
   template: _base
-  label: SEO
-- name: publish
-  type: boolean
-  label: Publier
+  label: Base
 - name: cover
   type: field_group
   config: {}
