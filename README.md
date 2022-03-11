@@ -42,6 +42,17 @@ Exemples :
 
 Les routes dynamiques (par ex. `:folio`, `:slug`) devrons être manuellement générées lors de la phase SSG.
 
+## Serveur local
+
+Démarrage du servuer : 
+~~~
+npm run dev
+~~~
+
+Serveur & interface d'admnistration 
+~~~
+npm run admin
+~~~
 
 ## Dépendances
 
@@ -53,8 +64,6 @@ Documentation :
  - [×] vue@next ;
  - [×] @vueuse/head@latest ;
  - [×] vue-router@next ;
-
-
 
 ### Dev
 
