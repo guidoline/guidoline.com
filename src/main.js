@@ -8,7 +8,7 @@ import store from './store'
 import ZComponents from './components/Z'
 import LayoutDefault from './layouts/Default.vue'
 import LayoutHome from './layouts/Home.vue'
-import LayoutSimple from './layouts/Simple.vue'
+import LayoutDistractionFree from './layouts/DistractionFree.vue'
 import LayoutMarkdown from './layouts/Markdown.vue'
 
 import 'virtual:windi.css'
@@ -32,10 +32,15 @@ export const createApp = ViteSSG(
     }
   },
   ({ app, router, routes, isClient, initialState }) => {
+    // auto chargement des layouts
+    // for (const layoutName in layouts) {
+    //   console.log('chargement du layout : ', layoutName)
+    //   app.component(layoutName, layouts[layoutName])
+    // }
     // @todo: auto charger les layout
     app.component('LayoutDefault', LayoutDefault)
     app.component('LayoutHome', LayoutHome)
-    app.component('LayoutSimple', LayoutSimple)
+    app.component('LayoutDistractionFree', LayoutDistractionFree)
     app.component('LayoutMarkdown', LayoutMarkdown)
 
     app.use(store)

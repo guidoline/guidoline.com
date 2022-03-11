@@ -5,9 +5,7 @@ import ContainerProse from '~/components/layout/Container/Prose.vue'
 <template>
   <LayoutDistractionFree>
     <ContainerProse>
-      <slot />
-      <pre>@todo: ajouter le widget d'inscription à la newsletter</pre>
-      [champ texte] <z-button>S'inscire</z-button>
+      <slot/>
     </ContainerProse>
   </LayoutDistractionFree>
 </template>

@@ -1,14 +1,12 @@
 <script setup>
+import LayoutDefault from '~/layouts/Default.vue'
 import ContainerProse from '~/components/Layout/Container/Prose.vue'
 </script>
-
 <template>
   <LayoutDefault>
     <ContainerProse>
-      <main>
-        <h1>404</h1>
-        <p>Not found</p>
-      </main>
+      <slot />
+      <pre>@todo: ajouter l'affichage des date et du lieu</pre>
     </ContainerProse>
   </LayoutDefault>
 </template>

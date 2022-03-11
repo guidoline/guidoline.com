@@ -5,7 +5,7 @@
 import Header from '~/components/Layout/Header.vue'
 import Footer from '~/components/Layout/Footer.vue'
 import Cover from '~/components/Layout/Cover.vue'
-import { computed } from 'vue'
+import { computed } from 'vue'
 import { markdownify } from '~/services/utilities.js'
 
 
@@ -14,10 +14,12 @@ import { markdownify } from '~/services/utilities.js'
 import setting_navigation from '@/content/settings/navigation.json';
 import setting_global from '@/content/settings/global.json';
 const props = defineProps({
+  // Récupération de tout le contenu
   content: {
     type: Object,
     default: null
   },
+  // Récupération du frontmatter seulement
   // frontmatter: {
   //   type: Object,
   //   default: {}
@@ -55,10 +57,12 @@ export default { name: 'LayoutHome' }
       :key="index"
       class="prose z-grid-item-major"
     >
+      <!-- Créer des composants pour chaque type de template de section -->
+      <code>template de section: {{ section.template }}</code>
       <h1>{{ section.title }}</h1>
-      <div v-html="markdownify(section.content)"/>
+      <div v-if="section.content" v-html="markdownify(section.content)"/>
       <z-button
-        v-if="section.link.href"
+        v-if="section.link"
         :to="section.link.href"
         :icon="section.link.icon"
         :type="section.link.color"

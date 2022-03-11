@@ -1,12 +1,14 @@
-import TemplateDefault from './Default.vue'
-import TemplateEmpty from './Empty.vue'
+import TemplatDefault from './Default.vue'
 import TemplateArticle from './Article.vue'
+import TemplateEvent from './Event.vue'
+import TemplateInformation from './Information.vue'
+import TemplateStory from './Story.vue'
 import TemplateNewsletter from './Newsletter.vue'
-import TemplateFancy from './Fancy.vue'
 export default {
-  'template-default': TemplateDefault,
+  'template-default': TemplatDefault,
   'template-article': TemplateArticle,
-  'template-empty': TemplateEmpty,
-  'template-newsletter': TemplateNewsletter,
-  'template-fancy': TemplateFancy
+  'template-event': TemplateEvent,
+  'template-story': TemplateStory,
+  'template-information': TemplateInformation,
+  'template-newsletter': TemplateNewsletter
 }

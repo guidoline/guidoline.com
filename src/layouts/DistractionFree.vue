@@ -1,4 +1,5 @@
 <template>
+  <!-- Distraction free layout -->
   <nav class="navigation">
     <p>
       <z-button type="light" icon="ArrowLeft" href="/journal" @click.prevent="$router.back()">Retour</z-button>
@@ -14,21 +15,6 @@
   </nav>
   <slot />
 </template>
-<script>
-import { computed } from 'vue'
-// Free distraction layout
-export default{
-  name: 'LayoutSimple'
-}
-</script>
-<script setup>
-const props = defineProps({
-  frontmatter: {
-    type: Object,
-    default: {}
-  }
-})
-</script>
 <style scoped>
 nav {
   @apply p-4 flex flex-wrap justify-between items-center;

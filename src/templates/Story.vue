@@ -1,6 +1,3 @@
-<script>
-export default { name : 'TemplateFancy'}
-</script>
 <script setup>
 import Cover from '~/components/Layout/Cover.vue'
 import { stringsToURL } from '~/services/utilities.js'

@@ -1,16 +1,16 @@
 <script setup>
+import ContainerProse from '~/components/Layout/Container/Prose.vue'
 defineProps({
   content: {
     type: Object,
     required: true
   }
 })
-
 </script>
 <template>
   <LayoutDefault>
-    <main class="prose-container">
-      <div v-html="content.content"/>
-    </main>
+    <ContainerProse>
+      <main v-html="content.content"/>
+    </ContainerProse>
   </LayoutDefault>
 </template>

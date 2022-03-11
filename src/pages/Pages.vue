@@ -1,4 +1,5 @@
 <script setup>
+import ContainerProse from '~/components/Layout/Container/Prose.vue'
 defineProps({
   content: {
     type: Object,
@@ -8,8 +9,8 @@ defineProps({
 </script>
 <template>
   <LayoutDefault :content="content">
-    <main class="prose-container">
+    <ContainerProse>
       <div v-if="content" v-html="content.content"/>
-    </main>
+    </ContainerProse>
   </LayoutDefault>
 </template>
