@@ -23,10 +23,6 @@ Membre de l’[ADRESS](http://adress-hn.org/ "ADRESS Agence pour le développeme
 
 Guidoline appartient également au réseau national des ateliers vélos [Heureux–Cyclage](http://www.heureux-cyclage.org/ "Réseau national des ateliers vélos solidaires").
 
-## L'atelier
-
-Informations sur l'atelier.
-
 ## Participer
 
 ![L'équipe de bénévole de Guidoline](/uploads/pages/bienvenue/equipe-guidoline.jpg)
