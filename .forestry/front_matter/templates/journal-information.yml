@@ -1,4 +1,9 @@
 ---
 label: journal.information
 hide_body: false
-fields: []
+fields:
+- name: base
+  type: include
+  config: {}
+  template: _base
+  label: Base
