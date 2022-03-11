@@ -1,6 +1,6 @@
 ---
 title: Mentions légales
-layout: simple
+template: page
 ---
 
 # Mentions légales

@@ -5,7 +5,7 @@ SEO:
   author: content/authors/guidoline.md
   date: 
   description: Plus d'informations sur Guidoline.
-
+template: page
 ---
 # Au sujet de Guidoline
 

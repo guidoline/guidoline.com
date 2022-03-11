@@ -20,6 +20,6 @@ image-galery:
 - "/uploads/2020/01/guidoline-entree.jpg"
 - "/uploads/2020/01/guidoline-facade.jpg"
 - "/uploads/2020/01/match-de-bike-polo.jpg"
-
+template: story
 ---
 Template similaire à une article classique, mais béneficie d'une mise en page plus confortable pour la lecture ainsi que d'un galerie d'images.

@@ -5,7 +5,7 @@ SEO:
   description: ''
 title: Exemple d'information
 publish: true
-
+template: information
 ---
 Information simple
 

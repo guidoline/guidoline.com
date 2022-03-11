@@ -1,5 +1,4 @@
 ---
-layout: home
 author: authors/guidoline.md
 sections:
 - template: _section
@@ -19,7 +18,7 @@ sections:
     icon: ''
     color: ''
     href: ''
-- template: couverture
+- template: _couverture
   src: "/uploads/pages/test/3e4d9955a1a93d8a0adf99198bec09f7.jpg"
   legend: Test
   alt: Description du visuel
@@ -28,7 +27,6 @@ sections:
   href: "/a-propos"
   color: primary
   icon: ''
-date: 2020/01/28 12:00 AM +0000
 title: Bienvenue
 hero:
   src: "/uploads/2020/01/vu4t4.jpeg"
@@ -41,22 +39,12 @@ hero:
     href: "/journal/2021/11/exemple-d-information-pratique"
     icon: ''
     color: primary
-image: "/uploads/pages/bienvenue/1_1024.jpg"
-description: Description de la page.
 SEO:
   author: content/authors/guidoline.md
   date: ''
   description: Bienvenue.
 publish: true
-link:
-  text: ''
-  href: ''
-  icon: ''
-  color: ''
-src: ''
-alt: ''
-legend: ''
-template: ''
+template: 'home'
 
 ---
 ![L'équipe de Guidoline](/uploads/pages/bienvenue/equipe-guidoline.jpg)

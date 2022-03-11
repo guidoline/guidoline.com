@@ -1,5 +1,6 @@
 ---
 title: Réglement intérieur
+template: page
 ---
 
 # Réglement intérieur

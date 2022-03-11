@@ -14,6 +14,6 @@ cover:
 category: ''
 related_articles:
 - content/journal/2021/11/exemple-d-article-de-fond.md
-
+template: article
 ---
 Exemple d'article.
