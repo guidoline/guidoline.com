@@ -8,10 +8,6 @@ fields:
   config: {}
   template: _base
   label: Base
-- name: publish
-  type: boolean
-  label: Publier
-  default: true
 pages:
 - content/a-propos.md
 - content/pages/a-propos.md
