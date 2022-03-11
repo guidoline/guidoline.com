@@ -1,4 +1,13 @@
 ---
 label: journal.story
 hide_body: false
-fields: []
+fields:
+- name: article
+  type: include
+  config: {}
+  template: journal-article
+  label: Article
+- name: image-galery
+  type: image_gallery
+  config: {}
+  label: Galerie d'images
