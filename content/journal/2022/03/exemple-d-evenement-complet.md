@@ -17,4 +17,4 @@ related_articles:
 - content/journal/2018/11/rallye-photo-a-velo.md
 
 ---
-Exemple d’événements complet avec couverture, dates et lieu.
+Exemple d’événements complet avec couverture, article en relation, dates et lieu.
