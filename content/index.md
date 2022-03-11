@@ -11,7 +11,7 @@ sections:
   link:
     text: En savoir plus sur l'atelier
     target: "/a-propos#atelier"
-    icon: Heart
+    icon: ''
     color: primary
     href: a-propos
 - template: _section
@@ -46,6 +46,10 @@ sections:
     icon: ''
     color: ''
     href: ''
+- template: couverture
+  src: "/uploads/pages/test/3e4d9955a1a93d8a0adf99198bec09f7.jpg"
+  legend: Test
+  alt: ''
 date: 2020/01/28 12:00 AM +0000
 title: Bienvenue
 hero:
