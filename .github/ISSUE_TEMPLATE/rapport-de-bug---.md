@@ -43,7 +43,7 @@ Avez-vous une solution pour contourner ce problème, ou celui-ci vous empêche d
 
 ## Informations additionnelles
 
-Autres informations, fichier .HAR, capture d'écrans, etc. [Référence à un bug similaire](https://help.github.com/en/github/writing-on-github/autolinked-references-and-urls)
+Autres informations, [fichier .HAR](https://fr.wikipedia.org/wiki/Format_HTTP_Archive), capture d'écrans, etc. [Référence à un bug similaire](https://help.github.com/en/github/writing-on-github/autolinked-references-and-urls)
 
 ## Solution possible
 
