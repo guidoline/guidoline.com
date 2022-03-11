@@ -9,6 +9,9 @@ fields:
     required: true
   label: Titre
   description: Optimal 70 caractères.
+- name: publish
+  type: boolean
+  label: Publier
 - name: SEO
   type: field_group
   config: {}
