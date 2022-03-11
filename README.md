@@ -49,10 +49,12 @@ Démarrage du servuer :
 npm run dev
 ~~~
 
-Serveur & interface d'admnistration 
+Serveur & interface d'administration 
 ~~~
 npm run admin
 ~~~
+
+L'interface d'administration est à l'addresse `/admin/index.html`.
 
 ## Dépendances
 
