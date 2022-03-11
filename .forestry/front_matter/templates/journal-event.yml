@@ -18,6 +18,16 @@ fields:
 - name: publish
   type: boolean
   label: Publier
+- name: cover
+  type: field_group
+  config: {}
+  fields:
+  - name: cover
+    type: include
+    config: {}
+    template: couverture
+    label: Couverture
+  label: Couverture
 - name: date_start
   type: datetime
   label: Date de début
