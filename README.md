@@ -95,3 +95,19 @@ Documentation :
  - [×] stylelint-config-standard ;
  - vue-eslint-parser ? ;
  - vue-svg-loader ? ;
+
+
+## Éditorial CMS
+
+Description des templates :
+- `home` : SEO, contenu, sections et couverture
+- `page` : SEO, contenu
+- `journal.article` : SEO, contenu, couverture, catégories, étiquettes et articles en relation
+- `journal.event` : SEO, contenu, couverture, date de début, date de fin, lieu et articles en relation
+- `journal.information` : SEO, contenu
+- `journal.story` : Idem `journal.article`, mais bénificie d'un template plus confortable pour la lecture et d'un galerie d'images
+- `author` : Nom et adresse email
+
+
+@todo: cleaner les vue qui doivent correspondre au templates de contenu
+Actuelement nous avons des Layouts et des Templates, essayer d'uniformiser ça afin de n'avoir que des templates à gérer. Prendre en compte l'imbrication de rendu Composant Markdown
