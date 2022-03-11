@@ -19,8 +19,9 @@ fields:
   template_types:
   - _section
   - couverture
+  - _lien
   config:
     min: 
-    max: 
+    max: 3
 pages:
 - content/index.md
