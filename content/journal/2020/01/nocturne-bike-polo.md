@@ -1,7 +1,7 @@
 ---
 title: Nocturne Bike Polo 2020
 cover:
-  src: "/uploads/2020/01/match-de-bike-polo.jpg"
+  src: /uploads/2020/01/match-de-bike-polo.jpg
   alt: Match de Bike Polo
   legend: crédit photo @auteur 2020
 category: Évenements
