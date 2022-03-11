@@ -32,7 +32,7 @@ Veuillez décrire clairemement et de façon conscise ce que vous avez obtenu.
 
 ## Solution temporaire
 
-Avez-vous une solution pour contourner ce problème, ou celui vous empêche de poursuivre la tâche que vous vouliez faire.
+Avez-vous une solution pour contourner ce problème, ou celui-ci vous empêche de poursuivre la tâche que vous vouliez faire.
 
 ## Contexte (environnement)
 
