@@ -5,8 +5,13 @@ author: authors/guidoline.md
 published: ''
 description: Plus d'informations sur Guidoline.
 date: 2020/01/28 12:00 AM +0000
----
+publish: true
+SEO:
+  author: ''
+  date: 
+  description: ''
 
+---
 # Au sujet de Guidoline
 
 [[TOC]]
