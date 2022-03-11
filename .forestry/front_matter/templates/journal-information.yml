@@ -2,6 +2,13 @@
 label: journal.information
 hide_body: false
 fields:
+- name: template
+  type: text
+  config:
+    required: false
+  label: Template
+  hidden: true
+  default: information
 - name: base
   type: include
   config: {}
