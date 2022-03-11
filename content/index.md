@@ -56,8 +56,9 @@ link:
 src: ''
 alt: ''
 legend: ''
+template: ''
 
 ---
 ![L'équipe de Guidoline](/uploads/pages/bienvenue/equipe-guidoline.jpg)
 
-Description / résumé principal de Guidoline \[500 signes maximum]
+Description / résumé principal de Guidoline \[500 signes maximum\]
