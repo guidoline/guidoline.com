@@ -3,33 +3,6 @@ layout: home
 author: authors/guidoline.md
 sections:
 - template: _section
-  title: Atelier de bicyclette
-  content: |-
-    Mise à disposition d’outils, aide et conseils en mécanique cycle, vente de vélos et pièces détachées
-
-    _Mardi, mercredi, vendredi et samedi : 14h00 à 19h00_
-  link:
-    text: En savoir plus sur l'atelier
-    target: "/a-propos#atelier"
-    icon: ''
-    color: primary
-    href: a-propos
-- template: _section
-  link:
-    icon: []
-    color: []
-    text: ''
-    target: ''
-    href: ''
-  content: |-
-    * Espace convivial d’échange
-    * Café, thé, bières, sodas, …
-    * Programmation culturelle
-    * Bibliothèque spécialisée
-
-    _Mardi, mercredi, vendredi et samedi : 14h00 à 19h00_
-  title: Bar / café
-- template: _section
   title: Animation / prestations
   content: |-
     Guidoline [**organise et participe régulièrement à des manifestations**](/journal/categorie/animation) pour donner son regard sur la **culture vélo**.
@@ -50,6 +23,11 @@ sections:
   src: "/uploads/pages/test/3e4d9955a1a93d8a0adf99198bec09f7.jpg"
   legend: Test
   alt: Description du visuel
+- template: _lien
+  text: Exemple de lien
+  href: "/a-propos"
+  color: primary
+  icon: ''
 date: 2020/01/28 12:00 AM +0000
 title: Bienvenue
 hero:
@@ -67,9 +45,17 @@ image: "/uploads/pages/bienvenue/1_1024.jpg"
 description: Description de la page.
 SEO:
   author: content/authors/guidoline.md
-  date: 
+  date: ''
   description: Bienvenue.
 publish: true
+link:
+  text: ''
+  href: ''
+  icon: ''
+  color: ''
+src: ''
+alt: ''
+legend: ''
 
 ---
 ![L'équipe de Guidoline](/uploads/pages/bienvenue/equipe-guidoline.jpg)
