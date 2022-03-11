@@ -1,4 +1,16 @@
 ---
 label: journal.newsletter
 hide_body: false
-fields: []
+fields:
+- name: template
+  type: text
+  config:
+    required: false
+  label: Template
+  hidden: true
+  default: newsletter
+- name: base
+  type: include
+  config: {}
+  template: _base
+  label: Base
