@@ -1,7 +1,6 @@
 ---
-label: journal.information
+label: journal.newsletter
 hide_body: false
-display_field: title
 fields:
 - name: template
   type: text
@@ -9,11 +8,9 @@ fields:
     required: false
   label: Template
   hidden: true
-  default: information
+  default: newsletter
 - name: base
   type: include
   config: {}
   template: _base
   label: Base
-pages:
-- content/journal/2022/03/exemple-d-information.md
