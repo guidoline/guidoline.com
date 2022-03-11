@@ -13,9 +13,10 @@ sections:
   create: all
   match: "**/*"
   templates:
-  - journal-information
   - journal-event
   - journal-article
+  - journal-information
+  - journal-story
 - type: directory
   path: content/pages
   label: Pages
