@@ -3,6 +3,13 @@ label: journal.article
 hide_body: false
 display_field: title
 fields:
+- name: template
+  type: text
+  config:
+    required: false
+  label: Template
+  hidden: true
+  default: article
 - name: base
   type: include
   config: {}
