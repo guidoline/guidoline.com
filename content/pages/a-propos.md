@@ -5,11 +5,11 @@ SEO:
   description: Plus d'informations sur Guidoline
 publish: true
 title: À propos de Guidoline
----
 
+---
 # Au sujet de Guidoline
 
-[[TOC]]
+\[\[TOC\]\]
 
 **Guidoline** est né en **2010** de trois passionnés de vélo autour d’une même envie : **mettre Rouen en selle**.
 
@@ -36,7 +36,7 @@ Informations sur l'atelier.
 
 **Peu importe mon profil, je trouverai toujours un rôle qui me convient en fonction de ma personnalité, de mes compétences et de mon temps libre**.
 
-### Atelier
+### Atelier de bicyclette
 
 **Accueillir les adhérents**, les **aider dans leur réparation**, remonter des vélos, trier des pièces, répondre au téléphone, organiser les ateliers, …
 
