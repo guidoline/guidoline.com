@@ -3,15 +3,15 @@ label: _base
 hide_body: true
 display_field: title
 fields:
+- name: publish
+  type: boolean
+  label: Publier
 - name: title
   type: text
   config:
     required: true
   label: Titre
   description: Optimal 70 caractères.
-- name: publish
-  type: boolean
-  label: Publier
 - name: SEO
   type: field_group
   config: {}
