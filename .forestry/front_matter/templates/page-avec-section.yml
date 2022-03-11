@@ -8,6 +8,11 @@ fields:
   config: {}
   template: _base
   label: Base
+- name: hero
+  type: include
+  config: {}
+  template: _hero
+  label: Hero
 - name: sections
   type: blocks
   label: Sections
@@ -17,10 +22,5 @@ fields:
   config:
     min: 
     max: 
-- name: hero
-  type: include
-  config: {}
-  template: _hero
-  label: Hero
 pages:
 - content/index.md
