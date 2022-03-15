@@ -15,16 +15,6 @@ fields:
   config: {}
   template: _base
   label: Base
-- name: sections
-  type: blocks
-  label: Sections
-  template_types:
-  - _section
-  - couverture
-  - _lien
-  config:
-    min: 
-    max: 3
 - name: hero
   type: field_group
   config: {}
@@ -35,5 +25,15 @@ fields:
     template: _hero
     label: Hero
   label: Hero
+- name: sections
+  type: blocks
+  label: Sections
+  template_types:
+  - _section
+  - couverture
+  - _lien
+  config:
+    min: 
+    max: 3
 pages:
 - content/index.md
