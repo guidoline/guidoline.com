@@ -18,10 +18,6 @@ sections:
     icon: ''
     color: ''
     href: ''
-- template: _couverture
-  src: "/uploads/pages/test/3e4d9955a1a93d8a0adf99198bec09f7.jpg"
-  legend: Test
-  alt: Description du visuel
 - template: _lien
   text: Exemple de lien
   href: "/a-propos"
