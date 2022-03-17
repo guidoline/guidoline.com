@@ -1,3 +1,11 @@
+/**
+ * Configuration du routeur
+ *
+ * @todo: scroll behavior: https://github.com/GionDesign/Vite-and-Vue-3-Base-Starter-Template/blob/9574f5fc680ea936749af50d67fc47b506e1bd2c/src/router/index.js#L5
+ *
+ * @todo: clean that mess!
+ */
+
 import {
   createMemoryHistory,
   createWebHistory,
@@ -308,6 +316,7 @@ if (import.meta.env.SSR) {
   console.log('\n')
 }
 
+// @note: la configuration du routeur est actuellement faite dans `src/main.js`
 export function createRouter() {
   return _createRouter({
     history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),

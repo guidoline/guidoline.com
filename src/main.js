@@ -16,12 +16,15 @@ import 'virtual:windi-devtools'
 
 export const createApp = ViteSSG(
   App,
+  // configuratin du routeur
   {
     routes,
+    linkActiveClass: 'is-active',
     // routes(routes) {
     //   console.log('ROUTES FROM CREATE APP : ', routes.map(r => r.path))
     //   return routes
     // },
+    // @todo => à placer dans `/src/router.js`
     scrollBehavior(to, from, savedPostion) {
       if (savedPostion) return savedPostion
       if (to.hash)  return { el: to.hash, behavior: 'smooth' }
@@ -32,6 +35,7 @@ export const createApp = ViteSSG(
     }
   },
   ({ app, router, routes, isClient, initialState }) => {
+    console.log(router)
     // auto chargement des layouts
     // for (const layoutName in layouts) {
     //   console.log('chargement du layout : ', layoutName)
