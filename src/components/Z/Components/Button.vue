@@ -139,12 +139,14 @@ const classes = computed(() => {
     line-height: inherit;
     border-width: 0;
 	  cursor: pointer;
+    text-decoration: none;
     /* Propriétés non paramètrable */
     @apply inline-flex justify-center items-center align-middle;
   }
   /* Propriétés paramétrable */
   .button { @apply min-h-2.25rem px-4 tracking-wide text-gray-600 hover:(text-gray-900); }
   a.button { @apply text-gray-600 ; }
+  .button.is-active { text-decoration: underline; }
   .button[disabled=""] { @apply opacity-30 cursor-not-allowed; }
   .button.tonal { @apply bg-gray-100 bg-opacity-40 hover:(bg-opacity-60); }
   .button.filled { @apply bg-gray-100 hover:(bg-gray-200); }
