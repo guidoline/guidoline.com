@@ -1,6 +1,7 @@
 <script setup>
 import ArticleAbstract from '~/components/Article/Abstract.vue'
 import Title from '~/components/Layout/Title.vue'
+import SubNav from '~/components/Journal/SubNav.vue'
 import { useRouter } from 'vue-router'
 import { computed, ref } from 'vue'
 import { useArticlesStore } from '~/store/modules/articles'
@@ -33,31 +34,11 @@ const changePage = (folio) => {
   })
 }
 
-const links = [
-  {
-    name: 'Articles',
-    to: '/journal/'
-  },
-  {
-    name: 'Catégories',
-    to: '/journal/categories'
-  },
-  {
-    name: 'Étiquettes',
-    to: '/journal/etiquettes'
-  },
-  {
-    name: 'Archives',
-    to: '/journal/archives'
-  }
-]
 </script>
 
 <template>
   <LayoutDefault>
-    <nav>
-      <z-menu :links="links" />
-    </nav>
+    <SubNav />
     <main>
       <Title>Journal</Title>
       <z-pagination
