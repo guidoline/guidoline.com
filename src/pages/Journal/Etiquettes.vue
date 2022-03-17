@@ -1,5 +1,6 @@
 <script setup>
 import Title from '~/components/Layout/Title.vue'
+import Navigation from '~/components/Journal/Navigation.vue'
 import { useArticlesStore } from '~/store/modules/articles.js'
 const store = useArticlesStore()
 store.initialize()
@@ -7,6 +8,7 @@ const tags = store.getTags()
 </script>
 <template>
   <LayoutDefault>
+    <Navigation />
     <main>
       <Title>Étiquettes</Title>
       <div class="prose-container">

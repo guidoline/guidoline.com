@@ -1,6 +1,7 @@
 <script setup>
-import ArticleAbstract from '~/components/Article/Abstract.vue'
+import ArticleAbstract from '~/components/Journal/Article/Abstract.vue'
 import Title from '~/components/Layout/Title.vue'
+import Navigation  from '~/components/Journal/Navigation.vue'
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useArticlesStore } from '~/store/modules/articles.js'
@@ -44,6 +45,7 @@ const obCategory = computed(() => store.getCategories().find(c => c.slug === pro
 </script>
 <template>
   <LayoutDefault>
+    <Navigation />
     <main>
       <Title>Catégorie «&nbsp;<strong>{{ obCategory.name }}</strong>&nbsp;»</Title>
       <z-pagination

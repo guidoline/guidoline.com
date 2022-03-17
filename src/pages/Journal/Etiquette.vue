@@ -1,5 +1,6 @@
 <script setup>
-import ArticleAbstract from '~/components/Article/Abstract.vue'
+import ArticleAbstract from '~/components/Journal/Article/Abstract.vue'
+import Navigation from '~/components/Journal/Navigation.vue'
 import Title from '~/components/Layout/Title.vue'
 import { computed, ref} from 'vue'
 import { useRouter } from 'vue-router'
@@ -43,6 +44,7 @@ const obTag = computed(() => store.getTags().find(c => c.slug === props.tag))
 </script>
 <template>
   <LayoutDefault>
+    <Navigation />
     <main>
       <Title>Étiquette «&nbsp;<strong>{{ obTag.name }}</strong>&nbsp;»</Title>
       <div class="container">

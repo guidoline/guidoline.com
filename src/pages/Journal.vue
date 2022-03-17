@@ -1,7 +1,7 @@
 <script setup>
-import ArticleAbstract from '~/components/Article/Abstract.vue'
+import ArticleAbstract from '~/components/Journal/Article/Abstract.vue'
 import Title from '~/components/Layout/Title.vue'
-import SubNav from '~/components/Journal/SubNav.vue'
+import Navigation from '~/components/Journal/Navigation.vue'
 import { useRouter } from 'vue-router'
 import { computed, ref } from 'vue'
 import { useArticlesStore } from '~/store/modules/articles'
@@ -38,7 +38,7 @@ const changePage = (folio) => {
 
 <template>
   <LayoutDefault>
-    <SubNav />
+    <Navigation />
     <main>
       <Title>Journal</Title>
       <z-pagination

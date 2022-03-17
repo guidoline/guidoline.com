@@ -1,5 +1,6 @@
 <script setup>
 import Title from '~/components/Layout/Title.vue'
+import Navigation from '~/components/Journal/Navigation.vue'
 import { useArticlesStore } from '~/store/modules/articles.js'
 import { computed } from 'vue'
 const props = defineProps({
@@ -25,6 +26,7 @@ const currentYearArchives = computed(() => archives.value[currentYear.value])
 </script>
 <template>
   <LayoutDefault>
+    <Navigation />
     <main>
       <Title>Archives année «&nbsp;{{ currentYearArchives.name }}&nbsp;»</Title>
       <div class="prose-container">
