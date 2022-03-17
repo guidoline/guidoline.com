@@ -46,7 +46,12 @@ defineProps({
       </template>
       <div v-html="article.excerpt" class="last:mb-0" />
       <footer>
-        <small><code>Template: {{ article.template }}</code></small>
+        <small>
+          <details>
+            <summary>debug</summary>
+            <pre>{{ article }}</pre>
+          </details>
+        </small>
       </footer>
     </div>
   </article>
