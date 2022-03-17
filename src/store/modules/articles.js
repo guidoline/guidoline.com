@@ -129,7 +129,7 @@ export const useArticlesStore = defineStore({
       .map(f => {
         const rawDate = Date.parse(f.date)
         return {
-          category: f.category || 'Lecture',
+          category: f.category || 'Lecture',
           template: slugify(f.category || 'article'),
           'rawDate': rawDate,
           'formattedDate': rawDate ? new Date(rawDate)
