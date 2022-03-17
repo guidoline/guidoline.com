@@ -41,7 +41,9 @@ defineProps({
           {{ article.title || article.name }}
         </router-link>
       </h2>
-      <small>Publié le {{ article['formatted-date'] }}</small>
+      <template v-if="article.date">
+        <small>Publié le {{ article.formattedDate }}</small>
+      </template>
       <div v-html="article.excerpt" class="last:mb-0" />
       <footer>
         <small><code>Template: {{ article.template }}</code></small>

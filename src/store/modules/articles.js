@@ -127,12 +127,13 @@ export const useArticlesStore = defineStore({
       })
       // Filtres de données
       .map(f => {
+        const rawDate = Date.parse(f.date)
         return {
           category: f.category || 'Lecture',
           template: slugify(f.category || 'article'),
-          'raw-date': Date.parse(f.date),
-          'formatted-date': new Date(Date.parse(f.date))
-            .toLocaleDateString('fr-FR', dateOptions),
+          'rawDate': rawDate,
+          'formattedDate': rawDate ? new Date(rawDate)
+            .toLocaleDateString('fr-FR', dateOptions) : null,
           ...f
         }
       })
