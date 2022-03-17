@@ -128,8 +128,10 @@ export const useArticlesStore = defineStore({
       // Filtres de données
       .map(f => {
         const rawDate = Date.parse(f.date)
+        const hasCover = !!f.cover?.src
         return {
           category: f.category || 'Lecture',
+          hasCover,
           template: slugify(f.category || 'article'),
           'rawDate': rawDate,
           'formattedDate': rawDate ? new Date(rawDate)

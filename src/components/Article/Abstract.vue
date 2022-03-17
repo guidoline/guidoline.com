@@ -7,9 +7,9 @@ defineProps({
 })
 </script>
 <template>
-  <article class="article" :class="`category-${article.template} ${article.cover ? 'is-covered' : ''}`">
+  <article class="article" :class="`category-${article.template} ${article.hasCover ? 'is-covered' : ''}`">
     <figure
-      v-if="article.cover"
+      v-if="article.hasCover"
       class="md:col-span-2 article-cover"
     >
       <img
