@@ -35,7 +35,6 @@ export const createApp = ViteSSG(
     }
   },
   ({ app, router, routes, isClient, initialState }) => {
-    console.log(router)
     // auto chargement des layouts
     // for (const layoutName in layouts) {
     //   console.log('chargement du layout : ', layoutName)
