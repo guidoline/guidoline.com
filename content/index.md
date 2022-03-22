@@ -18,7 +18,10 @@ sections:
     color: ''
     href: ''
 - title: Une image comme section
-  content: "![](/uploads/2020/01/match-de-bike-polo.jpg)"
+  content: |-
+    ![](/uploads/2020/01/match-de-bike-polo.jpg)
+
+    Lien de téléchargement direct.
   link:
     text: Télécharger le portrait de Jules Verne
     href: "/uploads/2021/11/Félix_Nadar_1820-1910_portraits_Jules_Verne.png"
