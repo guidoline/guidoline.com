@@ -26,14 +26,18 @@ fields:
     label: Hero
   label: Hero
 - name: sections
-  type: blocks
-  label: Sections
-  template_types:
-  - _section
-  - couverture
-  - _lien
+  type: field_group_list
+  fields:
+  - name: section
+    type: include
+    config: {}
+    template: _section
+    label: Section
   config:
     min: 
     max: 3
+    labelField: title
+  label: Sections
+  description: 3 sections maximum.
 pages:
 - content/index.md
