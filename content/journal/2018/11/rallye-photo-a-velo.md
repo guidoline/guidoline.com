@@ -1,8 +1,8 @@
 ---
 title: Rallye photo à vélo
-date: 2018-11-13
+date: '2018-11-13'
 cover:
-  src: "/uploads/2018/11/45593428_10156077749413693_4286967017468067840_n.jpg"
+  src: "/uploads/2020/01/82335359_10157086351243693_7795312384645529600_o.jpg"
 author: authors/guidoline.md
 category: Reportage
 

@@ -17,7 +17,3 @@ fields:
   label: Base
 pages:
 - content/a-propos.md
-- content/pages/a-propos.md
-- content/pages/a-propos/animations-et-prestations.md
-- content/pages/a-propos/ateliers-de-bicyclette.md
-- content/pages/a-propos/bar-cafe-cutlturel.md

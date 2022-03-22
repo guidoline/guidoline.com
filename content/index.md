@@ -23,6 +23,10 @@ sections:
   href: "/a-propos"
   color: primary
   icon: ''
+- template: couverture
+  src: "/uploads/pages/02_11_herne.jpg"
+  legend: Quelques test avec une couverture
+  alt: ''
 title: Bienvenue
 hero:
   src: "/uploads/2020/01/vu4t4.jpeg"
@@ -40,7 +44,7 @@ SEO:
   date: ''
   description: Bienvenue.
 publish: true
-template: 'home'
+template: home
 
 ---
 ![L'équipe de Guidoline](/uploads/pages/bienvenue/equipe-guidoline.jpg)
