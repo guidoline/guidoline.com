@@ -316,10 +316,21 @@ if (import.meta.env.SSR) {
   console.log('\n')
 }
 
-// @note: la configuration du routeur est actuellement faite dans `src/main.js`
-export function createRouter() {
-  return _createRouter({
-    history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
-    routes
-  })
+/**
+ * Exporter une configuration pour Vue router
+ */
+
+export const routerOptions = {
+  history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
+  routes,
+  linkActiveClass: 'is-active',
+  scrollBehavior(to, from, savedPosition) {
+    console.log('SCROLL ', to, from, savedPosition)
+    if (savedPosition) return savedPosition
+    if (to.hash)  return { el: to.hash, behavior: 'smooth' }
+    const content = document.getElementById('content')
+    || document.getElementsByTagName('main')[0]
+    if (content) return { el: content, behavior: 'smooth' }
+    return { top: 0, behavior: 'smooth' }
+  }
 }

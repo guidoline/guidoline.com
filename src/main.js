@@ -1,8 +1,7 @@
 import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
 
-import { createRouter } from './router'
-const routes = createRouter().getRoutes() || []
+import { routerOptions } from './router'
 
 import store from './store'
 import ZComponents from './components/Z'
@@ -16,24 +15,7 @@ import 'virtual:windi-devtools'
 
 export const createApp = ViteSSG(
   App,
-  // configuratin du routeur
-  {
-    routes,
-    linkActiveClass: 'is-active',
-    // routes(routes) {
-    //   console.log('ROUTES FROM CREATE APP : ', routes.map(r => r.path))
-    //   return routes
-    // },
-    // @todo => à placer dans `/src/router.js`
-    scrollBehavior(to, from, savedPostion) {
-      if (savedPostion) return savedPostion
-      if (to.hash)  return { el: to.hash, behavior: 'smooth' }
-      const content = document.getElementById('content')
-      || document.getElementsByTagName('main')[0]
-      if (content) return { el: content, behavior: 'smooth' }
-      return { top: 0, behavior: 'smooth' }
-    }
-  },
+  routerOptions,
   ({ app, router, routes, isClient, initialState }) => {
     // auto chargement des layouts
     // for (const layoutName in layouts) {
