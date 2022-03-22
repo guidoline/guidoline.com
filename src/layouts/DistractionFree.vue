@@ -1,3 +1,11 @@
+<script setup>
+defineProps({
+  content: {
+    type: Object,
+    required: true
+  }
+})
+</script>
 <template>
   <!-- Distraction free layout -->
   <nav class="navigation">
