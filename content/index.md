@@ -1,8 +1,7 @@
 ---
 author: authors/guidoline.md
 sections:
-- template: _section
-  title: Animation / prestations
+- title: Animation / prestations
   content: |-
     Guidoline [**organise et participe régulièrement à des manifestations**](/journal/categorie/animation) pour donner son regard sur la **culture vélo**.
 
