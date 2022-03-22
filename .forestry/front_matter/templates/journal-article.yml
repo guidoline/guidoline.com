@@ -22,7 +22,7 @@ fields:
   - name: cover
     type: include
     config: {}
-    template: couverture
+    template: _cover
     label: Couverture
   label: Couverture
 - name: category
@@ -45,7 +45,7 @@ fields:
   type: list
   config:
     use_select: true
-    min: 
+    min:
     max: '3'
     source:
       type: pages

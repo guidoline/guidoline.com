@@ -22,7 +22,7 @@ fields:
   - name: cover
     type: include
     config: {}
-    template: couverture
+    template: _cover
     label: Couverture
   label: Couverture
 - name: date_start
@@ -31,8 +31,8 @@ fields:
   description: ''
   config:
     required: false
-    date_format: 
-    time_format: 
+    date_format:
+    time_format:
     display_utc: false
   default: now
 - name: date_end
@@ -41,8 +41,8 @@ fields:
   description: ''
   config:
     required: false
-    date_format: 
-    time_format: 
+    date_format:
+    time_format:
     display_utc: false
   default: ''
 - name: place
@@ -54,7 +54,7 @@ fields:
   type: list
   config:
     use_select: true
-    min: 
+    min:
     max: 3
     source:
       type: pages

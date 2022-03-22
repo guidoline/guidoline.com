@@ -5,7 +5,7 @@ fields:
 - name: cover
   type: include
   config: {}
-  template: couverture
+  template: _cover
   label: Couverture
 - name: link
   type: field_group

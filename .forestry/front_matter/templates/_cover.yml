@@ -1,12 +1,12 @@
 ---
-label: _couverture
+label: _cover
 hide_body: true
 display_field: alt
 fields:
 - name: src
   type: file
   config:
-    maxSize: 
+    maxSize:
   label: Image
 - name: alt
   type: text
