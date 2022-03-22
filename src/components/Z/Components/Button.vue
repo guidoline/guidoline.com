@@ -22,6 +22,8 @@
     :to="to"
     :title="title"
     v-else-if="to && !isDisabled"
+    :download="isDownloadable"
+    :target="isDownloadable ? '_blank' : null"
   >
     <z-icon :icon="icon" />
     <span
@@ -114,6 +116,10 @@ const classes = computed(() => {
       ''
   })
   return r
+})
+const isDownloadable = computed(() => {
+  if (!props.to) return
+  return props.icon === 'download' ? props.to.split('/').pop() : false
 })
 </script>
 <style scoped>
