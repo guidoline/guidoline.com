@@ -27,7 +27,7 @@
       </section>
       <section>
         <h1>{{name}}</h1>
-        <div v-html="markdownify(about)" />
+        <div v-html="about" />
 
         <h2>{{ contacts.main.name }}</h2>
         <div v-html="contacts.main.description" />
@@ -51,9 +51,6 @@
 <script setup>
 import { footer as footerMenu } from '@/content/settings/navigation.json'
 import { name, about, contacts, categories as _categories } from '@/content/settings/global.json'
-import { stringsToURL, markdownify } from '~/services/utilities'
-import { computed } from 'vue'
-import { useRouter } from 'vue-router'
 import { useContentsStore } from '~/store/modules/contents.js'
 import { useArticlesStore } from '~/store/modules/articles.js'
 const articleStore = useArticlesStore()
@@ -63,7 +60,7 @@ const contentStore = useContentsStore()
 contentStore.initialize()
 const sitemap = contentStore.pages
   .map(r => ({
-    name: r.title || r.name,
+    name: r.title || r.name,
     to: r.path
   }))
 </script>
