@@ -58,7 +58,6 @@ export default { name: 'LayoutHome' }
       class="prose z-grid-item-major"
     >
       <!-- Créer des composants pour chaque type de template de section -->
-      <code>template de section: {{ section.template }}</code>
       <h1>{{ section.title }}</h1>
       <div v-if="section.content" v-html="markdownify(section.content)"/>
       <z-button
