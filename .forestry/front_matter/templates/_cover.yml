@@ -6,7 +6,7 @@ fields:
 - name: src
   type: file
   config:
-    maxSize:
+    maxSize: 
   label: Image
 - name: alt
   type: text
