@@ -3,54 +3,36 @@
     {
       "name": "Journal",
       "to": "/journal",
-      "highlight": false
+      "highlight": false,
+      "url": "/journal"
     },
     {
       "to": "/a-propos",
       "highlight": false,
-      "name": "À propos"
+      "name": "À propos",
+      "url": "/a-propos"
     }
   ],
   "footer": [
     {
       "name": "Accueil",
-      "to": "/"
-    },
-    {
-      "name": "Journal",
-      "to": "/journal"
-    },
-    {
-      "name": "À propos",
-      "to": "/a-propos"
+      "to": "/",
+      "url": "/"
     },
     {
       "name": "Contacts",
-      "to": "/a-propos#contacts"
-    },
-    {
-      "name": "Réglement intérieur",
-      "to": "/pages/reglement-interieur"
+      "to": "/a-propos#contacts",
+      "url": "/a-propos#contacts"
     },
     {
       "name": "Newsletters",
-      "to": "/journal/categorie/newsletter"
+      "to": "/journal/categorie/newsletter",
+      "url": "https://example.com"
     },
     {
-      "name": "Étiquettes",
-      "to": "/journal/etiquettes"
-    },
-    {
-      "name": "Catégories",
-      "to": "/journal/categories"
-    },
-    {
-      "name": "Archives",
-      "to": "/journal/archives"
-    },
-    {
-      "name": "Mentions légales",
-      "to": "/pages/mentions-legales"
+      "name": "Animations",
+      "to": "/journal/etiquettes",
+      "url": "/journal/categorie/animation"
     }
   ]
 }
