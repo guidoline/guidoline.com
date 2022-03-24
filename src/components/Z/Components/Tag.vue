@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
-  tag: {
-    type: Object,
+  to: {
+    type: String,
     required: true
   }
 })
@@ -9,7 +9,7 @@ defineProps({
 <template>
   <router-link
       class="tag"
-      :to="tag.to"
+      :to="to"
     >
       <slot/>
   </router-link>

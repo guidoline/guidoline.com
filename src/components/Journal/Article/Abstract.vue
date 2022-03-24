@@ -23,7 +23,7 @@ defineProps({
     <div class="md:col-span-3" >
       <z-tag
         v-if="article.category"
-        :tag="article.category"
+        :to="article.category.to"
       >
         {{ article.category.name }}
       </z-tag>
@@ -31,7 +31,7 @@ defineProps({
         <z-tag
           v-for="(tag, index) in article.tags"
           :key="index"
-          :tag="tag"
+          :to="tag.to"
         >
           {{ tag.name }}
         </z-tag>
