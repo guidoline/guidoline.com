@@ -12,52 +12,58 @@ template: page
 
 \[\[TOC\]\]
 
-**Guidoline** est né en **2010** de trois passionnés de vélo autour d’une même envie : **mettre Rouen en selle**.
+Guidoline est **née en 2010** de l'envie de trois passionnés de **mettre Rouen en selle !**
 
 ![Façade de l'atelier Guidoline à Rouen](/uploads/2020/01/guidoline-facade.jpg)
 
-**Aujourd’hui** l’association fédère plus de **5000 adhérents** à travers un [atelier de bicyclette](http://www.guidoline.com/#atelier-de-bicyclette "Atelier de bicyclette") qui permet d’apprendre librement les finesses de la mécanique, des [animations](http://www.guidoline.com/#animations) qui font goûter allègrement à de nouvelles saveurs cyclistes et un espace café qui provoque les rencontres d’entre-gens. **Tout est prétexte à échanger et partager sur le thème du vélo.**
+Aujourd’hui **l’association fédère plus de 8000 adhérents** à travers :
+
+\- **deux ateliers** pour apprendre par vous-même à entretenir et réparer vos bicyclettes
+
+\- **des animations** dans toute la métropole pour mettre en avant la culture vélo
+
+\- **un café culturel** qui donne lieu à des rencontres enrichissantes
 
 ![Entrée de l'atelier de Guidoline](/uploads/2020/01/guidoline-entree.jpg)
 
-Membre de l’[ADRESS](http://adress-hn.org/ "ADRESS Agence pour le développement des entreprises sociales et solidaires en Haute-Normandie"), agence pour le développement de l’ESS en Haute-normandie, Guidoline repose sur les **valeurs de l’Economie Sociale et Solidaire** avec cette ambition d’**entreprendre autrement** autour d’un projet économique au service de l’utilité sociale, une mise en œuvre éthique et une dynamique de développement fondée sur un ancrage territorial et une mobilisation citoyenne qui participe au débat sociétal et révèle une alternative.
+Membre de l’ADRESS, Agence pour le Développement de l’Economie Sociale et Solidaire (ESS), Guidoline repose ses valeurs et sur les principes de l’éducation populaire.
 
-Guidoline appartient également au réseau national des ateliers vélos [Heureux–Cyclage](http://www.heureux-cyclage.org/ "Réseau national des ateliers vélos solidaires").
+L'association appartient également aux deux grandes fédérations des utilisateurs du vélo : la Fédération française des Usagers de la Bicyclette (FUB) et à l'Heureux-Cyclage (réseau national des ateliers vélos).
 
 ## L'atelier
 
-Informations sur l'atelier.
+Une équipe composée de responsables d'atelier et de bénévoles vous aidera à réparer, entretenir voire customiser votre vélo avec les outils professionnels mis à disposition et les pièces d'occasion ou celles que vous aurez amenées.
+
+Tous sont bienvenus, les différents âges et genres, les novices et les experts s'entraident dans une ambiance chaleureuse et respectueuse de chacun-e.
 
 ## Participer
 
 ![L'équipe de bénévole de Guidoline](/uploads/pages/bienvenue/equipe-guidoline.jpg)
 
-Être bénévole, c’est donner de son temps libre à l’association, c’est développer ses compétences et partager de bons moments.
-**C’est surtout ça : du plaisir.**
+Être bénévole, c’est donner de son temps libre ponctuellement ou régulièrement à l’association, c’est développer ses compétences et partager de bons moments. **C’est surtout ça : du plaisir.**
 
-**Peu importe mon profil, je trouverai toujours un rôle qui me convient en fonction de ma personnalité, de mes compétences et de mon temps libre**.
+Vous pouvez participer de multiples manières :
 
-### Atelier
+* **A l'accueil** : recevoir les adhérents, expliquer le fonctionnement de l'association aux nouveaux autour d'un café
+* **A l'atelier** : présenter les lieux aux novices, mettre vos talents de pédagogue mécanicien au services des autres adhérents
+* En vous investissant dans nos groupes de bénévoles qui s'occupent de **la communication** ou encore de la **gestion de l'association**
+* En nous aidant lors de nos **animations et événements**
+* En participant aux **campagnes de récupération** en déchetterie et chez les particuliers
 
-**Accueillir les adhérents**, les **aider dans leur réparation**, remonter des vélos, trier des pièces, répondre au téléphone, organiser les ateliers, …
-
-### Animations
-
-**Une idée d’évènement, de soirée, d’atelier ?** Envie de **participer à l’organisation** ou encore animer en étant présent le jour J !
-
-### Administration
-
-Envie de **partager vos compétences syntaxiques, linguistiques** au service de la communication, de la rédaction de dossier. Et pourquoi pas s’impliquer au plus haut niveau niveau en participant aux prises de décision en tant que **membre du conseil d’administration**.
-
-**N’hésitez pas à vous en mêler !**
-
-Pour savoir quand et comment nous aider vous pouvez [nous contacter par mail](http://www.guidoline.com/#contactez-nous), passez voir notre chef d’atelier à l’accueil ou encore vous inscrire directement dans le [planning des bénévoles en ligne.](https://docs.google.com/spreadsheets/d/1Z1kV0_uN6tA4s-LIa7xo6HHJ4F-gPov8aCd1K6us-UY/edit?usp=sharing)
+Bref, quelques soient vos compétences, votre enthousiasme suffit, il y a une place pour vous chez Guidoline !
 
 ## Animations
 
-Guidoline **organise et participe régulièrement à des manifestations** pour donner son regard sur la **culture vélo**.
+Guidoline propose différents types de prestations à destination de particuliers, d'entreprises, ou collectivités.
 
-Parmi les structures avec lesquelles nous avons déjà travaillé : _Canteleu, Petit-quevilly, Elbeuf, Quincampoix, Darnétal, Rouen, la Créa, le 106, Police municipale de Rouen, Tourcoing, Paris Mairie 4ème, SNCF, CHU, Parc expo de Rouen, Université du Havre, Bicycle Film Festival, …_
+* Atelier Mobile
+* Balades & sorties vélo
+* Roller Racing
+* Rallye Photos
+* Café Mobile
+* Etc.
+
+N'hésitez pas à nous contacter pour construire votre projet sur mesure !
 
 ### Atelier mobile
 
@@ -87,10 +93,36 @@ La liste de nos animations n’est pas exhaustive, **Guidoline regorge d’idée
 
 N’hésitez pas à [nous contacter](http://www.guidoline.com/#contactez-nous), nous pouvons **construire ensemble votre action** !
 
-## Prestations
+## Administration
 
-Informations sur ce que Guidoline peut proposer comme prestations aux institutions, particulier et entreprise.
+Envie de **partager vos compétences syntaxiques, linguistiques** au service de la communication, de la rédaction de dossier. Et pourquoi pas s’impliquer au plus haut niveau niveau en participant aux prises de décision en tant que **membre du conseil d’administration**.
+
+**N’hésitez pas à vous en mêler !**
+
+Pour savoir quand et comment nous aider vous pouvez [nous contacter par mail](http://www.guidoline.com/#contactez-nous), passez voir notre chef d’atelier à l’accueil ou encore vous inscrire directement dans le [planning des bénévoles en ligne.](https://docs.google.com/spreadsheets/d/1Z1kV0_uN6tA4s-LIa7xo6HHJ4F-gPov8aCd1K6us-UY/edit?usp=sharing)
 
 ## Contacts
 
-Téléphones, emails et adresses postales.
+### GUIDOLINE À ROUEN
+
+38 rue Molière  
+76000 Rouen
+
+Tél : 09.52.52.67.11  
+E-mail : [contact@guidoline.com](mailto:contact@guidoline.com)
+
+###### HORAIRES D’OUVERTURE :
+
+Mardi, jeudi, vendredi et samedi : 13h00 à 18h00
+
+### GUIDOLINE À SOTTEVILLE-LÈS-ROUEN
+
+23 rue Pierre Corneille  
+76300 Sotteville-lès-Rouen
+
+Tél : 02.27.08.36.52  
+E-mail : [contact@guidoline.com](mailto:contact@guidoline.com)
+
+###### HORAIRES D’OUVERTURE :
+
+Mercredi, vendredi et samedi : 13h00 à 18h00
