@@ -52,6 +52,14 @@ Vous pouvez participer de multiples manières :
 
 Bref, quelques soient vos compétences, votre enthousiasme suffit, il y a une place pour vous chez Guidoline !
 
+## Tarifs des adhésions
+
+L'adhésion à l'association se fait directement dans nos ateliers pour une durée d'un an (année civile) renouvelable à l'infini !
+
+* Individuelle : 25€
+* Bienfaiteur : 50€
+* Associations et entreprises : nous contacter
+
 ## Récupération et recyclage de vélos
 
 Ne jetez plus vos vélos ! Nous leur donnons une seconde vie !
@@ -74,7 +82,7 @@ Pour discuter de votre dernière balade, pour attendre agréablement qu'on poste
 
 Pour nos ami-e-s cyclistes lecteur-trice-s, de nombreux ouvrages et revues sont également disponibles à la lecture.
 
-## Animations
+## Nos animations
 
 Guidoline propose différents types de prestations à destination de particulier-e-s, d'entreprises, ou collectivités.
 
@@ -123,7 +131,7 @@ Envie de **partager vos compétences syntaxiques, linguistiques** au service de 
 
 Pour savoir quand et comment nous aider vous pouvez [nous contacter par mail](http://www.guidoline.com/#contactez-nous) ou passez voir notre chef d’atelier à l’accueil.
 
-## Nos ressources 
+## Nos ressources
 
 Guidoline est une association autonome financièrement.
 
@@ -131,7 +139,7 @@ La quasi entièreté de nos ressources vient des adhésions, des vélos et pièc
 
 Ainsi, nous sommes conventionnés avec la Ville de Sotteville-lès-Rouen pour y animer un atelier et avec la Métropole de Rouen pour des ateliers mobiles sur tout son territoire. En outre, la ville de Rouen nous subventionne.
 
-Tout ceci est nécessaire pour rémunérer nos salariés et payer les charges (loyer, électricité, gaz, abonnement internet...). 
+Tout ceci est nécessaire pour rémunérer nos salariés et payer les charges (loyer, électricité, gaz, abonnement internet...).
 
 ## Contacts
 
