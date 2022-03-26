@@ -9,8 +9,8 @@
     {
       "to": "/a-propos",
       "highlight": false,
-      "name": "À propos",
-      "url": "/a-propos"
+      "name": "Qui sommes-nous ?",
+      "url": "/qui-sommes-nous"
     }
   ],
   "footer": [
