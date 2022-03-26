@@ -1,5 +1,5 @@
 ---
-title: À propos de Guidoline
+title: Qui sommes-nous ?
 publish: true
 SEO:
   author: content/authors/guidoline.md
@@ -8,7 +8,7 @@ SEO:
 template: page
 
 ---
-# Au sujet de Guidoline
+# Qui sommes-nous ?
 
 \[\[TOC\]\]
 
