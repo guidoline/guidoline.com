@@ -150,14 +150,16 @@ const isDownloadable = computed(() => {
     @apply inline-flex justify-center items-center align-middle;
   }
   /* Propriétés paramétrable */
-  .button { @apply min-h-2.25rem px-4 tracking-wide text-gray-600 hover:(text-gray-900); }
+  .button { @apply min-h-2.25rem px-4 tracking-wide text-day-text hover:(text-day-text); }
   a.button { @apply text-gray-600 ; }
   .button.is-active { text-decoration: underline; }
   .button[disabled=""] { @apply opacity-30 cursor-not-allowed; }
+  .button.text { @apply px-0; }
   .button.tonal { @apply bg-gray-100 bg-opacity-40 hover:(bg-opacity-60); }
   .button.filled { @apply bg-gray-100 hover:(bg-gray-200); }
-  .button.outline { @apply ring-3 ring-gray-600 hover:(ring-gray-600 bg-gray-600); }
-  .button.outline { @apply hover:text-gray-100; }
+  .button.outline { @apply ring-3 ring-day-border hover:(ring-day-border bg-day-border); }
+  .button.outline { @apply hover:text-day-text; }
   .button.elevated { @apply shadow hover:shadow-lg; }
+  .button.light:not(.filled.tonal) { @apply text-night-text; }
 
 </style>

@@ -8,6 +8,7 @@
           :is-vertical="true"
           :is-compact="true"
           type="text"
+          linkClasses="light text"
         />
       </section>
       <section>
@@ -17,13 +18,14 @@
           :is-vertical="true"
           :is-compact="true"
           type="text"
+          linkClasses="light text"
         />
         <h2>Dates</h2>
 
       </section>
       <section>
         <h2>Sitemap</h2>
-        <z-menu :links="sitemap" type="text" :is-vertical="true"/>
+        <z-menu :links="sitemap" type="text" :is-vertical="true" linkClasses="light text"/>
       </section>
       <section>
         <h1>{{name}}</h1>

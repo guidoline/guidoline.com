@@ -41,12 +41,12 @@ const hasLink = computed(() => {
 <style scoped>
 .cover { @apply relative min-h-60vh overflow-hidden; }
 .cover.is-full { @apply absolute top-0 w-full h-100vh min-h-94; }
-.cover.is-full :deep(+ *) { @apply text-red-500 mt-100vh; }
+.cover.is-full :deep(+ *) { @apply mt-100vh; }
 .cover img { @apply w-full min-h-25rem object-cover; }
 .cover.is-full img { @apply absolute h-full min-h-100vh; }
-.cover figcaption { @apply absolute bottom-4 left-4 p-4 bg-white text-lg; }
+.cover figcaption { @apply absolute bottom-4 left-4 p-4 bg-day-background text-day-text text-lg; }
 .cover figcaption :deep(h1) { @apply text-6xl font-medium mb-1; }
-.cover-supcaption { @apply pb-2 text-sm text-gray-400 uppercase; }
+.cover-supcaption { @apply pb-2 text-sm text-day-text uppercase; }
 .cover-credit { @apply text-sm text-gray-400; }
 .cover.is-full figcaption { @apply mr-4 bottom-20 md:(max-w-screen-sm); }
 </style>

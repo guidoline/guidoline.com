@@ -15,6 +15,7 @@
         :sr="link.sr"
         :title="link.title || link.name"
         :is-compact="isCompact"
+        :class="linkClasses"
       >
         {{ link.name }}
       </z-button>
@@ -48,14 +49,18 @@ const props = defineProps({
     type: Boolean,
     default: true
   },
-  type: {
+  type: {
     type: String,
     default: 'light'
+  },
+  linkClasses: {
+    type: String,
+    default: null
   }
 })
 const hasLinks = computed(() => props.links.length >= 1 )
 const additionnalClasses = computed(() =>
-`${props.isCompact ? 'is-compact ' : '' }`+
+`${props.isCompact ? 'is-compact ' : '' }`+
 `${props.isVertical ? 'is-vertical ' : 'is-horizontal ' }`+
 `${props.isResponsive ? 'is-responsive ' : '' }`
 )
