@@ -154,9 +154,9 @@ const secondaryMenu = [
 .nav.is-open .nav-burger {
   @apply <md:(absolute top-0 right-0)
 }*/
-.nav-sup { @apply text-sm text-textColor-500 bg-primary }
-.nav { @apply bg-gray-400 }
-.nav-sub { @apply bg-gray-600 }
+.nav-sup { @apply text-sm bg-night-background text-night-text; }
+.nav { @apply bg-callout-background text-callout-text; }
+.nav-sub { @apply bg-gray-600; }
 /* .nav-item,
 .nav-left,
 .nav-center,

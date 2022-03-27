@@ -11,11 +11,12 @@ const tags = store.getTags()
     <Navigation />
     <main>
       <Title>Étiquettes</Title>
-      <div class="prose-container">
+      <div class="prose container">
         <z-tag
           v-for="(tag, index) in tags"
           :key="index"
-          :tag="tag"
+          :to="tag.to"
+          class="is-large is-secondary"
         >
          {{ tag.name }}
         </z-tag>
@@ -23,6 +24,3 @@ const tags = store.getTags()
     </main>
   </LayoutDefault>
 </template>
-<style scoped>
-.tag { @apply inline-block px-4 py-2 m-2 bg-gray-100; }
-</style>

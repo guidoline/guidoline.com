@@ -119,7 +119,7 @@ const classes = computed(() => {
 })
 const isDownloadable = computed(() => {
   if (!props.to) return
-  return props.icon === 'download' ? props.to.split('/').pop() : false
+  return props.icon === 'download' ? props.to.split('/').pop() : null
 })
 </script>
 <style scoped>

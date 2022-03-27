@@ -17,7 +17,14 @@ export const useContentsStore = defineStore({
       return state.contents.filter(c => c.publised === true)
     },
     content(state) {
-      return (path) => this.publishedContents.find(c => c.path === path)
+      return (path) => this.publishedContents.find(c => {
+        // Nettoyer les `/` en fin de chemin
+        if (path.endsWith('/') && path !== '/' ) {
+          console.log('GET CONTENT ', path, c.path, path === c.path)
+          path = path.slice(0, -1)
+        }
+        return c.path === path
+      })
     },
     contentsCount(state) {
       return this.publishedContents.length

@@ -65,10 +65,11 @@ const sitemap = contentStore.pages
   }))
 </script>
 <style scoped>
+/* Utiliser les couleurs de nuit pour le pied de page */
 footer {
-  @apply flex flex-wrap justify-between
-  bg-coolGray-700 text-coolGray-100 antialiased font-light pt-12;
+  @apply flex flex-wrap justify-between mt-4
+  bg-night-background text-night-text antialiased font-light pt-12;
 }
 footer section { @apply p-4; }
-footer section.sub-footer { @apply w-full text-xs italic bg-coolGray-800 text-coolGray-200; }
+footer section.sub-footer { @apply w-full text-xs italic bg-night-background-dark text-night-text-light; }
 </style>

@@ -2,13 +2,126 @@
  * Guidloine Windi / Tailwind preset
  */
 
-// import { defineConfig } from 'windicss/helper'
+// import { defineConfig } from 'windicss/helpers'
 import typography from 'windicss/plugin/typography'
 // Preflight
 import plugin from 'windicss/plugin'
-import colors from 'windicss/colors'
+import { colors as defaultColors } from 'windicss/colors'
 import defaultTheme from 'windicss/defaultTheme'
+const colors = {
+  light: {
+    light: '#FFFDFC',
+    DEFAULT: '#EDE7E6',
+    dark: '#D4D0D0',
+    darker: '#B5B1B1'
+  },
+  dark: {
+    light: '#273C47',
+    DEFAULT: '#1B2B33',
+    dark: '#14191F',
+  },
+  primary: {
+    light: '#F06B62',
+    DEFAULT: '#EA4848',
+    dark: '#D43D56'
+  },
+  // @tester inverser Secondary et accent
+  secondary: {
+    light: '#F2E37E',
+    DEFAULT: '#EBC855',
+    dark: '#E0A84E'
+  },
+  accent: {
+    light: '#CC5CDB',
+    DEFAULT: '#B33EC7',
+    dark: '#9639BD'
+  }
+}
 export default {
+// export default defineConfig({
+  darkMode: 'class',
+  presets: [
+
+  ],
+  plugins: [
+    typography({}),
+    // Modifications des éléments de base
+    /**
+     * - `addBase` pour les élement par défaut d'une page (couleur du texte,
+     *  couleur de fond, fonte, esapces blanc, etc.)
+     * - `addComponent` pour des élement plus complexe (boutons, card, badge, etc.)
+     *  - `addUtilities` pour le spetites utilitaires (centrage auto, etc.)
+     */
+    plugin(function({ addBase, theme }) {
+      const md = theme('screens.md', {})
+      addBase({
+        'body': {
+          color: theme('colors.day.text.DEFAULT'),
+          background: theme('colors.day.background.DEFAULT')
+        },
+        '.dark': {
+          'body': {
+            color: theme('colors.night.text.DEFAULT'),
+            background: theme('colors.night.background.DEFAULT')
+          }
+        },
+        '.prose.container': {
+          marginRight: 'auto',
+          marginLeft: 'auto',
+          paddingTop: theme('padding.4'),
+          paddingBottom: theme('padding.4'),
+          maxWidth: md,
+          '@media (min-width: 768px)': {
+            width: theme('prose.width'),
+          }
+        }
+
+        // 'hn'
+      })
+    }),
+    plugin(function({ addComponents, theme }) {
+      addComponents({
+        'a.tag': {
+          color: theme('colors.day.background.DEFAULT'),
+          backgroundColor: theme('colors.day.link.DEFAULT'),
+          '&-variant': {
+            backgroundColor: 'green',
+          }
+        },
+        // '.prose-container': {
+        //   backgroundColor: 'red',
+        //   '&:hover': {
+        //     backgroundColor: 'yellow'
+        //   },
+        //   '@apply': 'prose container'
+        // }
+      })
+    }),
+    plugin(({ addComponents }) => {
+      const buttons = {
+        '.btn': {
+          padding: '.5rem 1rem',
+          borderRadius: '.25rem',
+          fontWeight: '600',
+        },
+        '.btn-blue': {
+          'backgroundColor': '#3490dc',
+          'color': '#fff',
+          '&:hover': {
+            backgroundColor: '#2779bd',
+          },
+        },
+        '.btn-red': {
+          'backgroundColor': '#e3342f',
+          'color': '#fff',
+          '&:hover': {
+            backgroundColor: '#cc1f1a',
+          },
+        },
+      }
+      addComponents(buttons)
+    })
+  ],
   /**
    * Convention nommage de couleurs
    * [context][usage][variant]
@@ -21,28 +134,109 @@ export default {
    * day.text.normal
    * day.text.dark
    * day.text.darker
+   * day.hn.normal
    * day.background.light
    * day.background.normal
    * day.background.dark
    * day.neutral|gray|unsaturate.normal
-   * dark.link
-   * dark.accent.light
-   * dark.accent.normal
-   * dark.accent.dark
-   * dark.text.light
-   * dark.text.normal
-   * dark.text.dark
-   * dark.background.ligt
-   * dark.background.normal
-   * dark.background.dark
+   * night.link
+   * night.accent.light
+   * night.accent.dark
+   * night.accent.night
+   * night.text.light
+   * night.text.normal
+   * night.text.night
+   * night.background.lihgt
+   * night.background.normal
+   * night.background.dark
    * etc.
    */
   theme: {
     colors: {
-      primary: {
-        light: '#ED5E4B',
-        DEFAULT: '#ea4848',
-        dark: '#D14153'
+      main: colors,
+      day: {
+        text: {
+          light: colors.dark.light,
+          DEFAULT: colors.dark.DEFAULT,
+          dark: colors.dark.dark
+        },
+        background: {
+          light: colors.light.light,
+          DEFAULT: colors.light.DEFAULT,
+          dark: colors.light.dark
+        },
+        link: {
+          light: colors.primary.light,
+          DEFAULT: colors.primary.DEFAULT,
+          dark: colors.primary.dark
+        }
+      },
+      night: {
+        // Text & background sont inversé par rapport à day
+        text: {
+          light: colors.light.light,
+          DEFAULT: colors.light.DEFAULT,
+          dark: colors.light.dark
+        },
+        background: {
+          light: colors.dark.light,
+          DEFAULT: colors.dark.DEFAULT,
+          dark: colors.dark.dark
+        },
+        // Link et accent reste de la même couleur
+        link: {
+          light: colors.primary.light,
+          DEFAULT: colors.primary.DEFAULT,
+          dark: colors.primary.dark
+        }
+      },
+      insert: {
+        text: {
+          light: colors.dark.light,
+          DEFAUT: colors.dark.DEFAULT,
+          dark: colors.dark.dark
+        },
+        background: {
+          light: colors.light.DEFAULT,
+          DEFAULT: colors.light.dark,
+          dark: colors.light.darker
+        },
+        link: {
+          light: colors.primary.light,
+          DEFAULT: colors.primary.DEFAULT,
+          dark: colors.primary.dark
+        }
+      },
+      callout: {
+        text: {
+          light: colors.dark.light,
+          DEFAULT: colors.dark.DEFAULT,
+          dark: colors.dark.dark
+        },
+        background: {
+          light: colors.primary.light,
+          DEFAULT: colors.primary.DEFAULT,
+          dark: colors.primary.dark
+        },
+        link: {
+          light: colors.secondary.light,
+          DEFAULT: colors.secondary.DEFAULT,
+          dark: colors.secondary.dark,
+        }
+      },
+    },
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            color: colors.dark
+          }
+        },
+        dark: {
+          css: {
+            color: colors.light
+          }
+        }
       }
     }
   }

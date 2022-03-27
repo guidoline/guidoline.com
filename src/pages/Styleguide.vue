@@ -4,7 +4,6 @@ defineProps({
   content: {
     type: Object,
     required: true
-    // default: null
   }
 })
 </script>

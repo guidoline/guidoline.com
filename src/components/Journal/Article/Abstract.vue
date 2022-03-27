@@ -24,6 +24,7 @@ defineProps({
       <z-tag
         v-if="article.category"
         :to="article.category.to"
+        class="is-small is-secondary"
       >
         {{ article.category.name }}
       </z-tag>
@@ -32,6 +33,7 @@ defineProps({
           v-for="(tag, index) in article.tags"
           :key="index"
           :to="tag.to"
+          class="is-small"
         >
           {{ tag.name }}
         </z-tag>

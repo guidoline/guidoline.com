@@ -62,7 +62,7 @@ watch(() => props.menuOpen, (state) => emit('update:menuOpen', state))
 .nav-off-screen {
   /* @apply flex flex-col flex-1 p-4 */
   margin-top: -100vh;
-  @apply  px-4 pb-12 h-screen w-screen -mt-screen bg-white transition-margin duration-500 ease-out overflow-hidden;
+  @apply  px-4 pb-12 h-screen w-screen -mt-screen bg-callout-background text-callout-text transition-margin duration-500 ease-out overflow-hidden;
 }
 .nav-off-screen:target,
 .nav-off-screen.is-show {

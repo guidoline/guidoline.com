@@ -9,15 +9,15 @@ const categories = store.getCategories()
 </script>
 <template>
   <LayoutDefault>
-        <Navigation />
-
+    <Navigation />
     <main>
       <Title>Categories</Title>
-      <div class="prose-container">
+      <div class="prose container">
         <z-tag
           v-for="(category, index) in categories"
           :key="index"
-          :tag="category"
+          :to="category.to"
+          class="is-large is-secondary"
         >
          {{ category.name }}
         </z-tag>
