@@ -12,13 +12,13 @@ const colors = {
   light: {
     light: '#FFFDFC',
     DEFAULT: '#EDE7E6',
-    dark: '#D4D0D0',
+    dark: '#D9D5D5',
     darker: '#B5B1B1'
   },
   dark: {
-    light: '#273C47',
+    light: '#2A414C',
     DEFAULT: '#1B2B33',
-    dark: '#14191F',
+    dark: '#11171C',
   },
   primary: {
     light: '#F06B62',
@@ -37,6 +37,11 @@ const colors = {
     dark: '#9639BD'
   }
 }
+const weights = {
+  light: 300,
+  normal: 400,
+  bold: 500,
+}
 export default {
 // export default defineConfig({
   darkMode: 'class',
@@ -44,7 +49,9 @@ export default {
 
   ],
   plugins: [
-    typography({}),
+    typography({
+      dark: true
+    }),
     // Modifications des éléments de base
     /**
      * - `addBase` pour les élement par défaut d'une page (couleur du texte,
@@ -226,15 +233,33 @@ export default {
       },
     },
     extend: {
+      // Configuration de Typography
+      // https://github.com/windicss/windicss/blob/main/src/plugin/typography/styles.ts
       typography: {
-        DEFAULT: {
+        DARK: {
           css: {
-            color: colors.dark
+            a: {
+              color: colors.primary.DEFAULT
+            },
+            strong: {
+              color: colors.light.light
+            }
           }
         },
-        dark: {
+        DEFAULT: {
           css: {
-            color: colors.light
+            color: colors.dark.DEFAULT,
+            a: {
+              color: colors.primary.DEFAULT
+            },
+            strong: {
+              color: colors.dark.dark,
+              fontWeight: weights.bold
+            },
+            h1: {
+              color: colors.dark.DEFAULT,
+              fontWeight: 'normal'
+            }
           }
         }
       }

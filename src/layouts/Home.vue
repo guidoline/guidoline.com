@@ -43,9 +43,6 @@ export default { name: 'LayoutHome' }
     :cover="content.hero"
   />
   <div id="content" class=" md:grid grid-cols-6 grid-rows-3 px-4">
-    <div class="p-4 bg-day-background text-day-text dark:bg-night-background dark:text-night-text">
-      TEST
-    </div>
     <div class="col-span-4 lg:col-start-2 lg:col-span-3 row-span-3 prose">
       <slot/>
     </div>
@@ -82,5 +79,5 @@ export default { name: 'LayoutHome' }
   </Footer>
 </template>
 <style scoped>
-.sections section { @apply bg-insert-background text-insert-text p-4; }
+.sections section { @apply bg-day-background-dark dark:bg-night-background-dark text-insert-text p-4; }
 </style>
