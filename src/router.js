@@ -36,6 +36,9 @@ const pages = import.meta.glob('./pages/**/*.vue')
 // une place dans cette solution. Ou si il est préférable d'avoir ce genre de
 // composants dans un répertoire "hors routes" (ex: `src/templates/articles.vue`) (Gridsome)
 
+/**
+ * Création de routes basé sur les pages `vue`.
+ */
 const routes = Object.keys(pages)
   .reduce((routes, componentPath) => {
     // Extraction du chemin de base du composant
@@ -45,25 +48,28 @@ const routes = Object.keys(pages)
     let path = filename[1]
       .replace(/(?<!\/)[A-Z]/g, p =>`-${p}`)
       .toLowerCase()
-    // Remplacer les barres obliques `/` par des tirets séprateurs `-`
+    // Remplacement des barres obliques `/` par des tirets séprateurs `-`
     let name = path
       .replace(/\//, '')
       .replace(/\//g, '-')
-    // let props = () => {}
+
     // Contenu asynchrone avec Vue router 4
     // let beforeEnter = async (to, from, next) => {
     //   const content = await contentStore.content(to.path)
+
     let beforeEnter = (to, from, next) => {
-      const content = contentStore.content(to.path)
-      // const content = contentStore.content(to.path)
-      Object.assign(to.meta, { props: { content } })
-      next()
+      if (to.path === null) {
+        next({ name: '404', params: [to.path] })
+      } else {
+        const content = contentStore.content(to.path)
+        Object.assign(to.meta, { props: { content } })
+        next()
+      }
     }
     let props = true
-    // let props = (route) => ({
-    //   content: route.meta.props.content
-    // })
-    const meta = {}
+    const meta = {
+      props: {}
+    }
     switch (name) {
       case 'welcome':
         path = '/'
@@ -84,7 +90,6 @@ const routes = Object.keys(pages)
         name = 'journal-folio'
         path = '/journal/:folio(\\d+)?'
         props = (route) => ({
-          // content: route.meta.props.content,
           folio: Number(route.params.folio) || 1
         })
         break
@@ -103,7 +108,7 @@ const routes = Object.keys(pages)
         })
         break
       // @todo: Paramètres obligatoire
-      // permettre de modifier le compoant et http:status
+      // permettre de modifier le composant et http:status
       // depuis le `switch`
       // https://github.com/vuejs/vue-router/issues/977
       case 'journal-archives':
@@ -113,17 +118,12 @@ const routes = Object.keys(pages)
           month: Number(route.params.month) || null
         })
         break
-      // @todo
-      // case 'journal[year]':
-      //   break
-      // case 'journal[year][month]':
-      //   break
       case 'pages':
-        path = '/pages/:slug'
+        // Parmètre de route répetable
+        // https://router.vuejs.org/guide/essentials/route-matching-syntax.html#repeatable-params
+        path = '/pages/:slug+'
         beforeEnter = (to, from, next) => {
           const content = contentStore.content(to.path)
-        // beforeEnter = async (to, from, next) => {
-          // const content = await contentStore.content(to.path)
           if (!content) {
             // @todo: à corriger 404 est appelé en attendant
             // le chargement de content
@@ -133,10 +133,28 @@ const routes = Object.keys(pages)
             next()
           }
         }
-        props = (route) => ({
-          content: route.meta.props.content
-        })
+        props = (route) => {
+          const content = contentStore.content(route.path)
+          return { content: content }
+        }
         break
+      // case 'styleguide':
+      //   path = '/styleguide/:slug'
+      //   beforeEnter = (to, from, next) => {
+      //     console.log('STYLEGUIDE ', to)
+      //     const content = contentStore.content(to.path)
+      //     if (!content) {
+      //       // next({ name: '404', params: [to.path] })
+      //     } else {
+      //       Object.assign(to.meta, { props: { content }})
+      //       next()
+      //     }
+      //   }
+      //   props = (route) => {
+      //     const content = contentStore.content(route.path)
+      //     return { content: content }
+      //   }
+      //   break
       default:
         // 404 ou Index
         props = (route) => ({
@@ -156,30 +174,18 @@ const routes = Object.keys(pages)
     return routes
   }, [])
 
-// contentStore.publishedContents.map(c => {
-//   console.log('ROUTES FROM DATA : ', {
-//     path: c.path,
-//     dirname: c.dirname,
-//     name: c.name,
-//     layout: c.layout,
-//     template: c.template
-//   })
-// })
-
 // Articles
 routes.push({
   name: 'journal-article',
   path: '/journal/:year(\\d+)?/:month(\\d+)?/:slug',
+  // @todo tester le chargement asynchrone
   // beforeEnter: async (to, from, next) => {
   beforeEnter: (to, from, next) => {
+    // Lancer un 404 si le contenu n'existe pas
     // https://github.com/vuejs/vue-router/issues/977#issuecomment-266221374
     const article = articlesStore.getArticle(to.path)
-    // console.log('TO : ', to)
     if (!article) {
-      // next({name: '404', params: [to.path], replace: true})
       next({ name: '404', params: [to.path] })
-      // next({ alias: '404'})
-      // next('/404')
     } else {
       Object.assign(to.meta, { props: { content: article } })
       next()
@@ -189,18 +195,8 @@ routes.push({
     const article = articlesStore.getArticle(route.path)
     return { content : article }
   },
-  // props: (route) => ({
-  //   content: route.meta.props.content || null
-  // }),
   component: () => import('./pages/Journal/Article.vue')
-  // component: () => import('./templates/article.vue')
 })
-
-// Générer les pages dynamiques ici (SSR only) :
-// - `journal/[year]/[month]/[slug]`
-// - `journal/archives/[year]/[month]`
-// - `journal/etiquette/[slug]`
-// - `journal/categorie/[slug]`
 
 
 
@@ -221,12 +217,13 @@ if (import.meta.env.SSR) {
   })
 
   // @todo : génerer de manière génrique tout les contenus
-  // provenant du store (`contents`)
+  // provenant du store `contents` (`contents` => `getPages`) et `getArticles`
   // Les contenu ne doivent pas être chargées de manière asynchrone par
   // `route.beforeEnter`.
   // Le composant doit correspondre au chemin du contenu :
   // ex. `content/articles` `./src/articles.vue`
   contentStore.contents.forEach(c => {
+    // console.log('CCC', c.name, c.path)
     routes.push({
       name: c.name,
       path: c.path,
@@ -242,8 +239,9 @@ if (import.meta.env.SSR) {
 
 
   // Pagination
-  const pagesCount = Math.ceil(articlesStore.count / articlesStore.articlesPerPage)
+  const pagesCount = Math.ceil(articlesStore.articles.length / articlesStore.limit)
   for (let i = 1; i < pagesCount + 1; i ++) {
+    console.log('FOLIO ', i)
     routes.push({
       name: `journal-folio-${i}`,
       path: `/journal/${i}`,
@@ -308,7 +306,6 @@ if (import.meta.env.SSR) {
     }
   })
 
-
   console.log('\n——————————————————————————————————————————————')
   console.log('Géneration des routes SSR')
   console.log('——————————————————————————————————————————————')
@@ -321,9 +318,12 @@ if (import.meta.env.SSR) {
  */
 
 export const routerOptions = {
+  // https://router.vuejs.org/guide/essentials/history-mode.html#netlify
   history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
   routes,
   linkActiveClass: 'is-active',
+  sensitive: false,
+  strict: false,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
     if (to.hash)  return { el: to.hash, behavior: 'smooth' }
