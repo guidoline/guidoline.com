@@ -1,11 +1,24 @@
 <script>
-export default { name: 'App' }
-</script>
-<script setup>
-import * as layouts from '~/layouts'
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
-
+/**
+ * Documentation
+ * Utilisation du jeu de couleur préféré via media query :
+ * https://windicss.org/features/dark-mode.html#media-query-mode
+ */
+const preferColorScheme = function() {
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.add('light')
+  }
+}
+export default {
+  created() {
+    // Coté client uniquement
+    if(!import.meta.env.SSR) {
+      preferColorScheme()
+    }
+  }
+}
 </script>
 <template>
   <router-view v-slot="{ Component }">
