@@ -5,6 +5,11 @@ import MarkdownIt from 'markdown-it'
 import MarkdownItAnchor from 'markdown-it-anchor'
 import MarkdownItTOC from 'markdown-it-table-of-contents'
 
+/**
+ * @todo
+ * Tester un rendu Markdown dans la vue directement.
+ * https://github.com/antfu/vite-plugin-md
+ */
 
 // Scan de fichiers recursif
 function scanFiles(directory, extensions, paths) {
