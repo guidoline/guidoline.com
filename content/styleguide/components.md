@@ -12,6 +12,10 @@ title: Composants | Guide de Style
 [[TOC]]
 
 
+## Test de Vue dans Markdown
+
+{{ 1 + 2 }}
+
 ## Layouts
 
 ### Inset
