@@ -138,23 +138,23 @@ const routes = Object.keys(pages)
           return { content: content }
         }
         break
-      // case 'styleguide':
-      //   path = '/styleguide/:slug'
-      //   beforeEnter = (to, from, next) => {
-      //     console.log('STYLEGUIDE ', to)
-      //     const content = contentStore.content(to.path)
-      //     if (!content) {
-      //       // next({ name: '404', params: [to.path] })
-      //     } else {
-      //       Object.assign(to.meta, { props: { content }})
-      //       next()
-      //     }
-      //   }
-      //   props = (route) => {
-      //     const content = contentStore.content(route.path)
-      //     return { content: content }
-      //   }
-      //   break
+      case 'styleguide':
+        path = '/styleguide/:slug+'
+        beforeEnter = (to, from, next) => {
+          console.log('STYLEGUIDE ', to)
+          const content = contentStore.content(to.path)
+          if (!content) {
+            // next({ name: '404', params: [to.path] })
+          } else {
+            Object.assign(to.meta, { props: { content }})
+            next()
+          }
+        }
+        props = (route) => {
+          const content = contentStore.content(route.path)
+          return { content: content }
+        }
+        break
       default:
         // 404 ou Index
         props = (route) => ({
@@ -173,6 +173,14 @@ const routes = Object.keys(pages)
 
     return routes
   }, [])
+
+// Styleguide, ajout de l'index
+routes.push({
+  name: 'styleguide-index',
+  path: '/styleguide',
+  props: { content: contentStore.content('/styleguide') },
+  component: () => import('./pages/Pages.vue')
+})
 
 // Articles
 routes.push({
