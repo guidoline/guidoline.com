@@ -60,14 +60,17 @@ export default { name: 'LayoutHome' }
       <!-- Créer des composants pour chaque type de template de section -->
       <h1>{{ section.title }}</h1>
       <div v-if="section.content" v-html="markdownify(section.content)"/>
-      <z-button
-        v-if="section.link"
-        :to="section.link.href"
-        :icon="section.link.icon"
-        :type="section.link.color"
-      >
-        {{ section.link.text }}
-      </z-button>
+      <template v-if="section.link">
+        <z-button
+          v-if="section.link.href"
+          :to="section.link.href"
+          :icon="section.link.icon"
+          :class="section.link.color"
+          filled
+        >
+          {{ section.link.text }}
+        </z-button>
+      </template>
     </section>
     <section class="z-grid-item-major is-gizmo">
       GIZMO
