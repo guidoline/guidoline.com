@@ -16,7 +16,7 @@ links:
 # Guide de style
 
 ## Sommaire
-- [Typographie](/styleguide/typography)
+- [Typographie](/styleguide/typographie)
 - [Inset](/styleguide/inset)
 - [Grid](/styleguide/grid)
 - [Components](/styleguide/components)
