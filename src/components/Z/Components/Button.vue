@@ -101,7 +101,7 @@ const isDisabled = computed(() => {
 const availablesStyles = [
   'text', 'tonal', 'filled', 'outline', 'elevated',
   'small', 'large', 'fullwidth', 'compact',
-  'label', 'success', 'danger', 'light', 'dark', 'fab', 'gradient', 'shiny', 'fancy',
+  'label', 'success', 'danger', 'light', 'dark', 'fab', 'gradient', 'shiny', 'fancy', 'primary', 'secondary',
   'is-caps',
 ]
 const attrs = useAttrs()
@@ -115,6 +115,7 @@ const classes = computed(() => {
       `${r} ${style}` : r
       ''
   })
+
   return r
 })
 const isDownloadable = computed(() => {
@@ -150,16 +151,18 @@ const isDownloadable = computed(() => {
     @apply inline-flex justify-center items-center align-middle;
   }
   /* Propriétés paramétrable */
-  .button { @apply min-h-2.25rem px-4 tracking-wide text-day-text hover:(text-day-text); }
+  .button { @apply min-h-2.25rem px-4 py-2 mx-1 tracking-wide text-main-dark hover:(text-main-dark-dark); }
   a.button { @apply text-gray-600 ; }
   .button.is-active { text-decoration: underline; }
   .button[disabled=""] { @apply opacity-30 cursor-not-allowed; }
-  .button.text { @apply px-0; }
-  .button.tonal { @apply bg-gray-100 bg-opacity-40 hover:(bg-opacity-60); }
-  .button.filled { @apply bg-gray-100 hover:(bg-gray-200); }
+  .button.text { @apply px-0 underline; }
+  .button.tonal { @apply bg-main-light-dark bg-opacity-40 hover:(bg-opacity-60); }
+  .button.filled { @apply bg-main-light-dark hover:(bg-main-dark-light text-main-light); }
   .button.outline { @apply ring-3 ring-day-border hover:(ring-day-border bg-day-border); }
   .button.outline { @apply hover:text-day-text; }
   .button.elevated { @apply shadow hover:shadow-lg; }
-  .button.light:not(.filled.tonal) { @apply text-night-text; }
-
+  /* couleurs */
+  .button.primary { @apply bg-main-primary text-main-light hover:(bg-main-primary-dark text-main-light-light); }
+  .button.secondary { @apply bg-main-secondary text-main-dark hover:(bg-main-secondary-dark text-main-dark-dark); }
+  .button.accent { @apply bg-main-accent text-main-light hover:(bg-main-accent-dark text-main-light-light); }
 </style>
