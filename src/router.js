@@ -144,7 +144,7 @@ const routes = Object.keys(pages)
           console.log('STYLEGUIDE ', to)
           const content = contentStore.content(to.path)
           if (!content) {
-            // next({ name: '404', params: [to.path] })
+            next({ name: '404', params: [to.path] })
           } else {
             Object.assign(to.meta, { props: { content }})
             next()
