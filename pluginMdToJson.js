@@ -6,7 +6,7 @@ import MarkdownIt from 'markdown-it'
 // Scan de fichiers recursif
 function scanFiles(directory, extensions, paths) {
   const files = fs.readdirSync(directory)
-  paths = paths || []
+  paths = paths ||[]
 
   for (let file of files) {
     file = path.join(directory, file)
@@ -64,7 +64,7 @@ function renderMarkdown(rawMarkdown, options) {
 
 export default function pluginMdToJson(params = {}) {
   const directory = params.directory || 'content'
-  const markdownOptions = params.markdownOptions || {}
+  const markdownOptions = params.markdownOptions || {}
   let files = markdownFilesToData(scanFiles(`./${directory}`, ['.md']), directory, markdownOptions)
   // Grouper les fichiers par répertoire
 
@@ -80,7 +80,7 @@ export default function pluginMdToJson(params = {}) {
         console.log('Convertion des fichiers Markdown')
         console.log(`Repertoire "${directory}"`)
         console.log('——————————————————————————————————————————————')
-        files.forEach(f => { console.log(f.path) })
+        files.forEach(f => { console.log(f.path) })
         console.log('\n')
         return `export const data = ${JSON.stringify(files)}`
       }
