@@ -2,6 +2,9 @@ import fs from 'fs'
 import path from 'path'
 import grayMatter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
+import MarkdownItAnchor from 'markdown-it-anchor'
+import MarkdownItTOC from 'markdown-it-table-of-contents'
+
 
 // Scan de fichiers recursif
 function scanFiles(directory, extensions, paths) {
@@ -59,6 +62,8 @@ function renderMarkdown(rawMarkdown, options) {
     quotes: ['«\x40', '\x40»', '<\x40', '\x40>'],
     ...options
   })
+  markdown.use(MarkdownItAnchor.default)
+  markdown.use(MarkdownItTOC)
   return markdown.render(rawMarkdown)
 }
 
