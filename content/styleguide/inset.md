@@ -2,6 +2,8 @@
 title:  Inset
 ---
 
+[Guide de style](/styleguide)
+
 # Inset
 
 [[TOC]]

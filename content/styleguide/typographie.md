@@ -7,6 +7,8 @@ links:
     to: '/styleguide/components'
 ---
 
+[Guide de style](/styleguide)
+
 <z-menu :links="frontmatter.links" />
 
 # Guide de style

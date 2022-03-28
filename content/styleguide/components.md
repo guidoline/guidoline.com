@@ -1,15 +1,10 @@
 ---
 title: Composants | Guide de Style
-links:
-  - name: 'Typographie'
-    to: '/styleguide/typographie'
-  - name: 'Composants'
-    to: '/styleguide/components'
-  - name: 'Composant Inset'
-    to: '/styleguide/inset'
 ---
 
-<z-menu :links="frontmatter.links" />
+[Guide de style](/styleguide)
+
+
 
 # Composants
 

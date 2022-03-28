@@ -2,6 +2,8 @@
 title: Grille
 ---
 
+[Guide de style](/styleguide)
+
 # Grille
 
 
