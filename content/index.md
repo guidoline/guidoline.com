@@ -31,6 +31,8 @@ title: Bienvenue
 hero:
   src: "/uploads/2020/01/vu4t4.jpeg"
   alt: Carte, badges et casquette de cycliste.
+  supcaption: Exemple de surtitrage
+  credit: crédit photo © machin truc
   legend: |
     ## Titrage de la légende
     Exemple de **description de couverture** [250 signes maximum].
