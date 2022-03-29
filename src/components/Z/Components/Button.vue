@@ -162,7 +162,7 @@ const isDownloadable = computed(() => {
   .button.secondary { @apply bg-main-secondary text-main-dark hover:(bg-main-secondary-dark text-main-dark-dark); }
   .button.accent { @apply bg-main-accent text-main-light hover:(bg-main-accent-dark text-main-light-light); }
   .button.light:not(.text) { @apply bg-main-primary text-main-light; }
-  .button.light.text { @apply text-main-light hover:text-main-light-light; }
+  .button.light.text { @apply font-light text-main-light hover:text-main-light-light; }
   /* Espace blanc */
   .button + .button { @apply ml-1; }
 </style>
