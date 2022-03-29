@@ -21,7 +21,13 @@
           linkClasses="light text"
         />
         <h2>Dates</h2>
-
+        <z-menu
+          :links="years"
+          :is-vertical="true"
+          :is-compatc="true"
+          type="text"
+          linkClasses="light text"
+        />
       </section>
       <section>
         <h2>Sitemap</h2>
@@ -51,13 +57,15 @@
   </footer>
 </template>
 <script setup>
+import { computed } from 'vue'
 import { footer as footerMenu } from '@/content/settings/navigation.json'
 import { name, about, contacts, categories as _categories } from '@/content/settings/global.json'
 import { useContentsStore } from '~/store/modules/contents.js'
 import { useArticlesStore } from '~/store/modules/articles.js'
 const articleStore = useArticlesStore()
 articleStore.initialize()
-const categories = articleStore.getCategories()
+const categories = computed(() => articleStore.getCategories())
+const years = computed(() => Object.keys(articleStore.articlesByDate()).map(d => ({ name: d, slug: d, to: `/journal/archives/${d}` })).reverse())
 const contentStore = useContentsStore()
 contentStore.initialize()
 const sitemap = contentStore.pages
