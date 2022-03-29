@@ -11,8 +11,8 @@ import defaultTheme from 'windicss/defaultTheme'
 const colors = {
   light: {
     light: '#FFFDFC',
-    DEFAULT: '#EDE7E6',
-    dark: '#D9D5D5',
+    DEFAULT: '#F2F0F0',
+    dark: '#EBE6E6',
     darker: '#B5B1B1'
   },
   dark: {
