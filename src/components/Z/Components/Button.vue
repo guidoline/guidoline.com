@@ -161,4 +161,6 @@ const isDownloadable = computed(() => {
   .button.primary { @apply bg-main-primary text-main-light hover:(bg-main-primary-dark text-main-light-light); }
   .button.secondary { @apply bg-main-secondary text-main-dark hover:(bg-main-secondary-dark text-main-dark-dark); }
   .button.accent { @apply bg-main-accent text-main-light hover:(bg-main-accent-dark text-main-light-light); }
+  .button.light:not(.text) { @apply bg-main-primary text-main-light; }
+  .button.light.text { @apply text-main-light hover:text-main-light-light; }
 </style>
