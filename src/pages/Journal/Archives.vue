@@ -29,7 +29,7 @@ const currentYearArchives = computed(() => archives.value[currentYear.value])
     <Navigation />
     <main>
       <Title>Archives année «&nbsp;{{ currentYearArchives.name }}&nbsp;»</Title>
-      <div class="prose-container">
+      <div class="prose container">
         <router-link
           v-for="(year, index) in years"
           :key="index"
