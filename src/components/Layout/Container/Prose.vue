@@ -4,5 +4,12 @@
   </div>
 </template>
 <style scoped>
-.container-prose { @apply prose container mx-auto md:w-prose px-4 py-4; }
+.container-prose { @apply
+  <sm:prose-sm
+  sm:prose
+  md:prose
+  lg:prose-lg
+  xl:prose-xl
+  container mx-auto md:w-prose px-4 py-4;
+}
 </style>
