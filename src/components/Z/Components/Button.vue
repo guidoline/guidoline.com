@@ -147,7 +147,7 @@ const isDownloadable = computed(() => {
     @apply inline-flex justify-center items-center align-middle;
   }
   /* Propriétés paramétrable */
-  .button { @apply min-h-2.25rem px-4 py-2 mx-1 tracking-wide text-main-dark hover:(text-main-dark-dark); }
+  .button { @apply min-h-2.25rem px-4 py-2 tracking-wide text-main-dark hover:(text-main-dark-dark); }
   a.button { @apply text-gray-600 ; }
   .button.is-active { text-decoration: underline; }
   .button[disabled=""] { @apply opacity-30 cursor-not-allowed; }
@@ -163,4 +163,6 @@ const isDownloadable = computed(() => {
   .button.accent { @apply bg-main-accent text-main-light hover:(bg-main-accent-dark text-main-light-light); }
   .button.light:not(.text) { @apply bg-main-primary text-main-light; }
   .button.light.text { @apply text-main-light hover:text-main-light-light; }
+  /* Espace blanc */
+  .button + .button { @apply ml-1; }
 </style>
