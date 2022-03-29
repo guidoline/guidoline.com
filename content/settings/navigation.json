@@ -2,37 +2,31 @@
   "main": [
     {
       "name": "Journal",
-      "to": "/journal",
       "highlight": false,
-      "url": "/journal"
+      "to": "/journal"
     },
     {
-      "to": "/a-propos",
       "highlight": false,
       "name": "Qui sommes-nous ?",
-      "url": "/qui-sommes-nous"
+      "to": "/qui-sommes-nous"
     }
   ],
   "footer": [
     {
       "name": "Accueil",
-      "to": "/",
-      "url": "/"
+      "to": "/"
     },
     {
       "name": "Contacts",
-      "to": "/a-propos#contacts",
-      "url": "/a-propos#contacts"
+      "to": "/a-propos#contacts"
     },
     {
       "name": "Newsletters",
-      "to": "/journal/categorie/newsletter",
-      "url": "https://example.com"
+      "to": "https://example.com"
     },
     {
       "name": "Animations",
-      "to": "/journal/etiquettes",
-      "url": "/journal/categorie/animation"
+      "to": "/journal/categorie/animation"
     }
   ]
 }

@@ -10,7 +10,7 @@ fields:
     config:
       required: true
     label: Nom
-  - name: url
+  - name: to
     type: text
     config:
       required: true
@@ -19,9 +19,9 @@ fields:
     type: boolean
     label: Mettre en avant
   config:
-    min: 
+    min:
     max: '3'
-    labelField: 
+    labelField:
   label: Principale
 - name: footer
   type: field_group_list
@@ -31,15 +31,15 @@ fields:
     config:
       required: true
     label: Nom
-  - name: url
+  - name: to
     type: text
     config:
       required: true
     label: Cible
   config:
-    min: 
-    max: 
-    labelField: 
+    min:
+    max:
+    labelField:
   label: Pied de page
 pages:
 - content/settings/navigation.json
