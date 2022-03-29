@@ -16,6 +16,7 @@ const colors = {
     darker: '#B5B1B1'
   },
   dark: {
+    lighter: '#405259',
     light: '#2A414C',
     DEFAULT: '#1B2B33',
     dark: '#11171C',
@@ -163,6 +164,7 @@ export default {
       main: colors,
       day: {
         text: {
+          lighter: colors.dark.lighter,
           light: colors.dark.light,
           DEFAULT: colors.dark.DEFAULT,
           dark: colors.dark.dark
@@ -170,7 +172,8 @@ export default {
         background: {
           light: colors.light.light,
           DEFAULT: colors.light.DEFAULT,
-          dark: colors.light.dark
+          dark: colors.light.dark,
+          darker: colors.light.darker
         },
         link: {
           light: colors.primary.light,
