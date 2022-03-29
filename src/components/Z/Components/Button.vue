@@ -87,17 +87,13 @@ const props = defineProps({
     type: String,
     default: null
   },
-  // isCompact: {
-  //   type: Boolean,
-  //   default: false
-  // }
 })
+
 const isDisabled = computed(() => {
   return attrs['disabled'] === true
 })
-// const additionnalClasses =
-//   `${props.type ? props.type : ''}` +
-//   `${props.isCompact ? ' is-compact' : ''}`
+
+// Attributs personnalisés
 const availablesStyles = [
   'text', 'tonal', 'filled', 'outline', 'elevated',
   'small', 'large', 'fullwidth', 'compact',
@@ -105,10 +101,9 @@ const availablesStyles = [
   'is-caps',
 ]
 const attrs = useAttrs()
-// const classes = availablesStyles
+// Compilation des attributs en classe
 const classes = computed(() => {
   let r = ''
-  // .reduce((previous, style) => {
   availablesStyles
   .forEach((style) => {
     r =  Object.keys(attrs).includes(style) ?
@@ -118,6 +113,7 @@ const classes = computed(() => {
 
   return r
 })
+
 const isDownloadable = computed(() => {
   if (!props.to) return
   return props.icon === 'download' ? props.to.split('/').pop() : null
