@@ -79,7 +79,8 @@ const sitemap = contentStore.pages
 footer {
   @apply flex flex-wrap justify-between mt-4 antialiased font-light pt-12 bg-night-background text-night-text dark:bg-night-background-dark dark:text-night-text-light-dark;
 }
-footer h2 { @apply uppercase; }
+footer h1,
+footer h2  { @apply uppercase font-bold; }
 footer section { @apply p-4; }
 footer section.sub-footer { @apply w-full text-xs italic bg-night-background-dark text-night-text-light; }
 </style>
