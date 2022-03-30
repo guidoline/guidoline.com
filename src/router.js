@@ -4,6 +4,7 @@
  * @todo: scroll behavior: https://github.com/GionDesign/Vite-and-Vue-3-Base-Starter-Template/blob/9574f5fc680ea936749af50d67fc47b506e1bd2c/src/router/index.js#L5
  *
  * @todo: clean that mess!
+ * @doc Meilleur design pattern ? : https://itnext.io/vue-tricks-smart-router-for-vuejs-93c287f46b50
  */
 
 import {
