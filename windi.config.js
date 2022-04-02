@@ -246,6 +246,9 @@ export default {
             },
             strong: {
               color: colors.light.light
+            },
+            hr: {
+              backgroundColor: colors.light.darker
             }
           }
         },
@@ -262,6 +265,10 @@ export default {
             h1: {
               color: colors.dark.DEFAULT,
               fontWeight: 'normal'
+            },
+            hr: {
+              height: '1px',
+              backgroundColor: colors.dark.lighter
             }
           }
         }
