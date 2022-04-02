@@ -66,13 +66,13 @@ const additionnalClasses = computed(() =>
 )
 </script>
 <style scoped>
-menu {
-  @apply list-none px-0 m-0
-}
+menu { @apply list-none px-0 m-0; }
 /* menu:not(.is-vertical){ @apply flex flex-wrap justify-center items-center } */
-menu:not(.is-vertical) .button { @apply w-full }
-menu { @apply flex-wrap justify-center items-center }
-menu:not(.is-responsive){ @apply flex }
-menu.is-responsive{ @apply sm:(flex ) }
-menu.is-vertical{ @apply block text-left }
+menu:not(.is-vertical) .button { @apply w-full; }
+menu { @apply flex-wrap justify-center items-center; }
+menu:not(.is-responsive){ @apply flex; }
+menu.is-responsive{ @apply sm:(flex ); }
+menu.is-vertical{ @apply block text-left; }
+menu.is-horizontal li { @apply px-4; }
+menu.is-horizontal li + li { @apply pl-0; }
 </style>
