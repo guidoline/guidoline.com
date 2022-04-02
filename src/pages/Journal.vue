@@ -59,14 +59,21 @@ const changePage = (folio) => {
         :folio="folio"
         :folio-count="pagesCount"
       />
-      <z-grid>
-        <p>
-          {{ articlesCount }} articles
-        </p>
-        <p>
-          Pages {{ folio }} / {{ pagesCount }}
-        </p>
-      </z-grid>
+      <footer>
+        <z-grid>
+          <p>
+            {{ articlesCount }} articles
+          </p>
+          <p class="text-right">
+            Pages {{ folio }} / {{ pagesCount }}
+          </p>
+        </z-grid>
+      </footer>
     </main>
   </LayoutDefault>
 </template>
+<style scoped>
+footer {
+  @apply px-12 text-sm italic text-day-text-lighter;
+}
+</style>
