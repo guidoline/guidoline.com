@@ -35,7 +35,7 @@
   </nav>
 </template>
 <script setup>
-import Logo from '~/assets/logo.svg?inline'
+import Logo from '~/assets/logo-guidoline-small.svg?inline'
 import { main as mainMenu } from '@/content/settings/navigation.json'
 import { watch } from 'vue'
 // import { useRoute } from 'vue-router'
@@ -70,6 +70,7 @@ watch(() => props.menuOpen, (state) => emit('update:menuOpen', state))
 }
 .logo {
   /* Idéalement w-18 sans forcer la hauteur du parent */
-  @apply w-12;
+  @apply w-46 h-auto;
+  /* <- laisser prendre la taille du parent avec sgc.height = "100%" */
 }
 </style>

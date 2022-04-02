@@ -61,6 +61,7 @@
           class="<md:hidden"
           :links="mainMenu"
           type="light"
+          linkClasses="text"
         />
       </div>
     </div>
@@ -88,7 +89,7 @@
 </template>
 <script setup>
 import HeaderOffScreen from '~/components/Layout/Header/OffScreen.vue'
-import Logo from '~/assets/logo.svg?inline'
+import Logo from '~/assets/logo-guidoline-small.svg?inline'
 import { main as mainMenu } from '@/content/settings/navigation.json'
 import { contacts } from '@/content/settings/global.json'
 import { ref } from 'vue'
@@ -141,7 +142,7 @@ const secondaryMenu = [
 .nav-center,
 .nav-left,
 .nav-right {
-  @apply flex flex-wrap justify-between items-center
+  @apply flex flex-wrap justify-between items-center;
 }
 /* .nav.is-open,
 .nav.is-open .nav-sup,
@@ -161,10 +162,10 @@ const secondaryMenu = [
 .nav-left,
 .nav-center,
 .nav-right { @apply p-4 } */
-.nav-item { @apply py-2 pl-2 last:pr-2 sm:(py-4 pl-4 last:pr-4) }
-.nav-center { @apply justify-center }
-.nav-left { @apply justify-left }
-.nav-right { @apply justify-right ml-auto}
+.nav-item { @apply py-2 pl-2 last:pr-2 sm:(py-4 pl-4 last:pr-4); }
+.nav-center { @apply justify-center; }
+.nav-left { @apply justify-left; }
+.nav-right { @apply justify-right ml-auto; }
 
 /* .nav.is-compact { @apply text-sm} */
 /* .nav.nav-sup { @apply bg-primary-700 text-primary-100 }
@@ -172,12 +173,12 @@ const secondaryMenu = [
 .nav.nav-sub { @apply bg-primary-100 text-primary-700 } */
 
 /* Burger: visible mobile */
-.nav-burger { @apply sm:hidden justify-right pl-0 }
+.nav-burger { @apply sm:hidden justify-right pl-0; }
 /* Menu: Visible desktop */
 /* .nav-menu-burger:not(.is-open) { @apply <md:hidden md:flex } */
 
 .logo {
   /* Idéalement w-18 sans forcer la hauteur du parent */
-  @apply w-12
+  @apply w-8;
 }
 </style>
