@@ -13,7 +13,6 @@ links:
 
 # Guide de style
 
-### Table des matières
 [[TOC]]
 
 ## Titrages
@@ -112,23 +111,32 @@ Pour sauvegarder faite le raccourci `ctrl + s`
 
 ### Autres marqueurs
 
+#### Abbréviation. *<small>(non installé)</small>*
+
+Cette pages est composé avec HTML. 
+
 *[HTML]: Hyper Text Markup Language
+
 ~~~
 *[HTML]: Hyper Text Markup Language
 ~~~
 
+#### Exposant & indice. *<small>(non installé)</small>*
 
+On est classés 1^er^.
 ~~~
-<abbr title="Détail de l'abbréviation"></abbr>
-<dfn></dfn> (terme qui est défini dans le paragraphe)
-<sup></sup>
-<sub></sub>
+On est classés 1^er^.
+~~~
+
+La formule brut de l'eau est H~2~0.
+~~~
+La formule brut de l'eau est H~2~0.
 ~~~
 
 
 ## Hyperliens
 
-Hyperlien.
+Hyperlien avec texte.
 
 [exemple de lien](https://example.com)
 ~~~
@@ -156,7 +164,7 @@ Lien email.
 <ziopod@gmail.com>
 ~~~
 
-Hyperlien référencé.
+Hyperlien référencé. *<small>(non installé)</small>*
 
 [Site d'exemple][1]
 [1]: https://example.com
@@ -176,16 +184,12 @@ Note de bas de page [^1]
 [^1]: Ceci est une note de bas de page.
 ~~~
 
-
-
 ## Médias
 
 ![Image d'exemple en 150 × 150](https://via.placeholder.com/150)
 ~~~
 ![Image d'exemple en 150 × 150](https://via.placeholder.com/150)
 ~~~
-
-
 
 ## Listes
 
@@ -217,7 +221,7 @@ Liste ordonnée.
 4. Cuire à 240° pendant 15 minutes
 ~~~
 
-Liste de définition.
+Liste de définition. *<small>(non installé)</small>*
 
 Pain
 : Aliment fait de farine pétrie et cuite.
@@ -227,7 +231,7 @@ Pain
 : Aliment fait de farine pétrie et cuite.
 ~~~
 
-Liste de tâches.
+Liste de tâches. *<small>(non installé)</small>*
 
 1. [x] Acheter les ingrédients
 2. [ ] Pétrir la pâte
@@ -262,6 +266,11 @@ Liste de tâches.
 Ligne de séparation.
 
 ---
+
 ~~~
 ---
 ~~~
+
+## À considérer
+
+Le marquage de blocs avec [Markdown It Container](https://github.com/markdown-it/markdown-it-container). Usage : Créer des inserts de texte (note, information, etc.).
