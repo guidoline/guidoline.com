@@ -36,7 +36,6 @@ const pages = import.meta.glob('./pages/**/*.vue')
 // Voir si les composants/route (ex. `src/pages/journal/[slug].vue`) (Nuxt) ont
 // une place dans cette solution. Ou si il est préférable d'avoir ce genre de
 // composants dans un répertoire "hors routes" (ex: `src/templates/articles.vue`) (Gridsome)
-
 /**
  * Création de routes basé sur les pages `vue`.
  */
@@ -337,7 +336,7 @@ export const routerOptions = {
     if (savedPosition) return savedPosition
     if (to.hash)  return { el: to.hash, behavior: 'smooth' }
     const content = document.getElementById('content')
-    || document.getElementsByTagName('main')[0]
+    || document.getElementsByTagName('main')[0] || document.getElementById('app')
     if (content) return { el: content, behavior: 'smooth' }
     return { top: 0, behavior: 'smooth' }
   }
