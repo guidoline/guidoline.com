@@ -10,7 +10,7 @@ template: page
 ---
 # Qui sommes-nous ?
 
-\[\[TOC\]\]
+[[TOC]]
 
 Guidoline est **née en 2010** de l'envie de trois passionnés de **mettre Rouen en selle !**
 
@@ -18,11 +18,11 @@ Guidoline est **née en 2010** de l'envie de trois passionnés de **mettre Rouen
 
 Aujourd’hui **l’association fédère plus de 8000 adhérent-e-s** à travers :
 
-\- **deux ateliers** (Rouen et Sotteville-lès-Rouen) pour apprendre par vous-même à entretenir et réparer vos bicyclettes
+- **deux ateliers** (Rouen et Sotteville-lès-Rouen) pour apprendre par vous-même à  entretenir et réparer vos bicyclettes
 
-\- **des animations** dans toute la métropole pour mettre en avant la culture vélo
+- **des animations** dans toute la métropole pour mettre en avant la culture vélo
 
-\- **un café culturel** qui donne lieu à des rencontres enrichissantes
+- **un café culturel** qui donne lieu à des rencontres enrichissantes
 
 ![Entrée de l'atelier de Guidoline](/uploads/2020/01/guidoline-entree.jpg)
 
