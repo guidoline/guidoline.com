@@ -15,22 +15,22 @@ const colors = {
     // DEFAULT: '#F2F0F0',
     // dark: '#EBE6E6',
     // darker: '#B5B1B1'
-    lighter: wColors.zinc[50],
-    light: wColors.zinc[100],
-    DEFAULT: wColors.zinc[200],
-    dark: wColors.zinc[300],
-    darker: wColors.zinc[400]
+    lighter: wColors.gray[50],
+    light: wColors.gray[100],
+    DEFAULT: wColors.gray[200],
+    dark: wColors.gray[300],
+    darker: wColors.gray[400]
   },
   dark: {
     // lighter: '#405259',
     // light: '#2A414C',
     // DEFAULT: '#1B2B33',
     // dark: '#11171C',
-    lighter: wColors.zinc[500],
-    light: wColors.zinc[600],
-    DEFAULT: wColors.zinc[700],
-    dark: wColors.zinc[800],
-    darker: wColors.zinc[900]
+    lighter: wColors.gray[500],
+    light: wColors.gray[600],
+    DEFAULT: wColors.gray[700],
+    dark: wColors.gray[800],
+    darker: wColors.gray[900]
   },
   primary: {
     light: '#F06B62',
