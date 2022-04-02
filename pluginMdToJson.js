@@ -4,6 +4,8 @@ import grayMatter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
 import MarkdownItAnchor from 'markdown-it-anchor'
 import MarkdownItTOC from 'markdown-it-table-of-contents'
+import MarkdownItFootnote from 'markdown-it-footnote'
+import MarkdownItIns from 'markdown-it-ins'
 
 /**
  * @todo
@@ -68,7 +70,12 @@ function renderMarkdown(rawMarkdown, options) {
     ...options
   })
   markdown.use(MarkdownItAnchor.default)
-  markdown.use(MarkdownItTOC)
+  markdown.use(MarkdownItTOC, {
+    includeLevel: [2, 3],
+    containerHeaderHtml: '<h3>Table des matières</h3>'
+  })
+  markdown.use(MarkdownItFootnote)
+  markdown.use(MarkdownItIns)
   return markdown.render(rawMarkdown)
 }
 
