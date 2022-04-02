@@ -6,20 +6,31 @@
 import typography from 'windicss/plugin/typography'
 // Preflight
 import plugin from 'windicss/plugin'
-import { colors as defaultColors } from 'windicss/colors'
+// import { Colors as wColors } from 'windicss/colors'
+import wColors from 'windicss/colors'
 import defaultTheme from 'windicss/defaultTheme'
 const colors = {
   light: {
-    light: '#FFFDFC',
-    DEFAULT: '#F2F0F0',
-    dark: '#EBE6E6',
-    darker: '#B5B1B1'
+    // light: '#FFFDFC',
+    // DEFAULT: '#F2F0F0',
+    // dark: '#EBE6E6',
+    // darker: '#B5B1B1'
+    lighter: wColors.zinc[50],
+    light: wColors.zinc[100],
+    DEFAULT: wColors.zinc[200],
+    dark: wColors.zinc[300],
+    darker: wColors.zinc[400]
   },
   dark: {
-    lighter: '#405259',
-    light: '#2A414C',
-    DEFAULT: '#1B2B33',
-    dark: '#11171C',
+    // lighter: '#405259',
+    // light: '#2A414C',
+    // DEFAULT: '#1B2B33',
+    // dark: '#11171C',
+    lighter: wColors.zinc[500],
+    light: wColors.zinc[600],
+    DEFAULT: wColors.zinc[700],
+    dark: wColors.zinc[800],
+    darker: wColors.zinc[900]
   },
   primary: {
     light: '#F06B62',
@@ -65,7 +76,7 @@ export default {
       addBase({
         'body': {
           color: theme('colors.day.text.DEFAULT'),
-          background: theme('colors.day.background.DEFAULT')
+          background: theme('colors.day.background.light')
         },
         '.dark': {
           'body': {
