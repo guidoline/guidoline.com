@@ -1,3 +1,6 @@
+<script setup>
+import ProgressBar from '~/components/Layout/ProgressBar.vue'
+</script>
 <script>
 /**
  * Documentation
@@ -17,17 +20,20 @@ export default {
     if(!import.meta.env.SSR) {
       preferColorScheme()
     }
-  }
+  },
+
 }
 </script>
 <template>
-  <router-view v-slot="{ Component }">
-      <Suspense>
-        <component :is="Component" />
-      </Suspense>
-  </router-view>
+  <RouterView v-slot="{ Component }">
+    <template v-if="Component">
+      <component :is="Component" />
+    </template>
+  </RouterView>
+  <ProgressBar/>
 </template>
 <style>
+
 /* Debug */
 .gs-debug { @apply bg-violet-200 sm:bg-blue-200 md:bg-teal-200 lg:bg-lime-200 xl:bg-orange-200 2xl:bg-pink-200; }
 .gs-debug > * { @apply outline-fuchsia-500 outline-dashed outline-thin; }
