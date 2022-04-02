@@ -151,7 +151,7 @@ const isDownloadable = computed(() => {
   a.button { @apply text-gray-600 ; }
   .button.is-active { text-decoration: underline; }
   .button[disabled=""] { @apply opacity-30 cursor-not-allowed; }
-  .button.text { @apply px-0 underline; }
+  .button.text { @apply px-0; }
   .button.tonal { @apply bg-main-light-dark bg-opacity-40 hover:(bg-opacity-60); }
   .button.filled { @apply bg-main-light-dark hover:(bg-main-dark-light text-main-light); }
   .button.outline { @apply ring-3 ring-day-border hover:(ring-day-border bg-day-border); }
