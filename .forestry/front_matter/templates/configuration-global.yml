@@ -37,7 +37,7 @@ fields:
       label: Description
     - type: field_group
       name: address
-      label: Addresse
+      label: Addresse postale
       fields:
       - type: text
         name: name
@@ -54,7 +54,6 @@ fields:
       - type: text
         name: country
         label: Pays
-      description: Adresse postale.
     - type: text
       name: email
       label: Email
@@ -76,7 +75,7 @@ fields:
       label: Description
     - type: field_group
       name: address
-      label: Adresse
+      label: Adresse postale
       fields:
       - type: text
         name: name
