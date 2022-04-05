@@ -61,8 +61,8 @@ export default { name: 'LayoutHome' }
       <h1>{{ section.title }}</h1>
       <div v-if="section.content" v-html="markdownify(section.content)"/>
       <template v-if="section.link">
+        <div v-if="section.link.href" class="text-center">
         <z-button
-          v-if="section.link.href"
           :to="section.link.href"
           :icon="section.link.icon"
           :class="section.link.color"
@@ -70,6 +70,7 @@ export default { name: 'LayoutHome' }
         >
           {{ section.link.text }}
         </z-button>
+        </div>
       </template>
     </section>
     <section class="z-grid-item-major is-gizmo">
