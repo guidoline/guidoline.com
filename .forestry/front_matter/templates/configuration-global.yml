@@ -132,7 +132,7 @@ fields:
       config:
         required: true
       label: Nom
-      description: L'icône sera basé sur le nom du réseau social.
+      description: L'icône affiché sera basé sur le nom du réseau social.
     - name: link
       type: text
       config:
