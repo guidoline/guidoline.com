@@ -47,5 +47,13 @@
       "Newsletter",
       "Tutoriel"
     ]
+  },
+  "socials": {
+    "socials": [
+      {
+        "name": "Facebook",
+        "link": "https://fr-fr.facebook.com/Guidoline"
+      }
+    ]
   }
 }
