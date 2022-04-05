@@ -6,13 +6,19 @@ fields:
 - name: text
   type: text
   config:
-    required: false
+    required: true
     max: '44'
   label: Texte
-- name: href
+- name: title
   type: text
   config:
     required: false
+  label: Titre
+  description: Texte à afficher lors du survol de la souris.
+- name: href
+  type: text
+  config:
+    required: true
   label: Cible
 - name: icon
   type: select
@@ -20,13 +26,20 @@ fields:
   config:
     required: false
     options:
-    - download
+    - Facebook
+    - Twitter
+    - Instagram
+    - Mail
     source:
       type: simple
       section: 
       file: 
       path: 
   label: Icone
+- name: sr
+  type: boolean
+  label: Afficher l'icône seule
+  description: Le texte du lien sera utilisé pour les assistants vocaux.
 - name: color
   type: select
   default: []
@@ -35,6 +48,7 @@ fields:
     options:
     - primary
     - secondary
+    - accent
     source:
       type: simple
       section: 

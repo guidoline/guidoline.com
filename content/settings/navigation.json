@@ -28,5 +28,15 @@
       "name": "Animations",
       "to": "/journal/categorie/animation"
     }
+  ],
+  "secondary": [
+    {
+      "text": "Facebook",
+      "title": "Aller sur la page Facebook de Guidoline.",
+      "href": "https://www.facebook.com/Guidoline",
+      "icon": "Facebook",
+      "sr": true,
+      "color": "secondary"
+    }
   ]
 }
