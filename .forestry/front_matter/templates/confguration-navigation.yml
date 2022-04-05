@@ -23,6 +23,21 @@ fields:
     max: '3'
     labelField: 
   label: Principale
+  description: Menu affiché à coté du logo d'entête.
+- name: secondary
+  type: field_group_list
+  fields:
+  - name: link
+    type: include
+    config: {}
+    template: _lien
+    label: Lien
+  config:
+    min: 
+    max: 
+    labelField: text
+  label: Secondaire
+  description: Menu affiché à droite de l'entête.
 - name: footer
   type: field_group_list
   fields:
