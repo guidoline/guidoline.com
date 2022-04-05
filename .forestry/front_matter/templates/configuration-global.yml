@@ -109,17 +109,20 @@ fields:
     type: tag_list
     default: []
     label: Catégories
+    description: Les catégories vous permettrons de classez les publications du blog.
+      la présentation des articles peuvent être basé sur le nom de la catégorie.
   - name: articles_per_page
     type: number
     label: Articles par page
-    description: ''
     default: 25
     required: true
     config:
       min: 5
       max: 60
       step: 
+    description: Configuration de la pagination de la page d'index du Blog.
   label: Journal
+  description: Options pour le blog.
 - name: socials
   type: field_group
   config: {}
