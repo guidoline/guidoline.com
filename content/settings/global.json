@@ -51,6 +51,10 @@
   "socials": {
     "socials": [
       {
+        "name": "Instagram",
+        "link": "https://www.instagram.com/_guidoline/"
+      },
+      {
         "name": "Facebook",
         "link": "https://fr-fr.facebook.com/Guidoline"
       }
