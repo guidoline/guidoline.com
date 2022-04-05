@@ -27,7 +27,7 @@ const paginateArticles = computed(() => articles.value.slice(offset.value, offse
 const router = useRouter()
 const changePage = (folio) => {
   router.push({
-    to: 'journal-folio',
+    to: 'journal-index',
     params: {
       folio
     }

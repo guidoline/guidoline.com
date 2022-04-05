@@ -1,10 +1,9 @@
 /**
  * Configuration du routeur
  *
- * @todo: scroll behavior: https://github.com/GionDesign/Vite-and-Vue-3-Base-Starter-Template/blob/9574f5fc680ea936749af50d67fc47b506e1bd2c/src/router/index.js#L5
- *
- * @todo: clean that mess!
- * @doc Meilleur design pattern ? : https://itnext.io/vue-tricks-smart-router-for-vuejs-93c287f46b50
+ * @todo si publish vaut false lancer une 404.
+ * @todo rennommer `.src/pages` en `./src/views`
+ * @todo revoir le layout : https://itnext.io/vue-tricks-smart-layouts-for-vuejs-5c61a472b69b
  */
 
 import {
@@ -21,23 +20,17 @@ import { createPinia } from 'pinia'
 import { useContentsStore } from './store/modules/contents'
 import { useArticlesStore } from './store/modules/articles'
 const contentStore = useContentsStore(createPinia())
-// await contentStore.initialize()
- contentStore.initialize()
- const articlesStore = useArticlesStore(createPinia())
- articlesStore.initialize()
+contentStore.initialize()
+const articlesStore = useArticlesStore(createPinia())
+articlesStore.initialize()
 
-// Création de routes à partir d'un répertoire de composants
+// Création de routes à partir d'un répertoire de composants.
+// Chacun de ces fichiers doit avoir un équivalent de contenu dans le
+// reperoitre `content`.
 const pages = import.meta.glob('./pages/**/*.vue')
-// @Todo: tester l'auto chargement de composant à partir des données du store :
-// const pages = contentStore.contents() // <== permet de générer les routes
-// des pages "virtuelles" (pages d'articles du journal par exemple)
-// Permettrer facilement de générer les pages dynamiques de pagination (le
-// sera en charge de générer les données de pagination store)
-// Voir si les composants/route (ex. `src/pages/journal/[slug].vue`) (Nuxt) ont
-// une place dans cette solution. Ou si il est préférable d'avoir ce genre de
-// composants dans un répertoire "hors routes" (ex: `src/templates/articles.vue`) (Gridsome)
+
 /**
- * Création de routes basé sur les pages `vue`.
+ * Création de routes basé sur les composants `./src/pages`.
  */
 const routes = Object.keys(pages)
   .reduce((routes, componentPath) => {
@@ -56,7 +49,8 @@ const routes = Object.keys(pages)
     // Contenu asynchrone avec Vue router 4
     // let beforeEnter = async (to, from, next) => {
     //   const content = await contentStore.content(to.path)
-
+    //   ...
+    // }
     let beforeEnter = (to, from, next) => {
       if (to.path === null) {
         next({ name: '404', params: [to.path] })
@@ -66,67 +60,73 @@ const routes = Object.keys(pages)
         next()
       }
     }
+
+    // Passer les paramètres en propriété de composant
+    // https://router.vuejs.org/guide/essentials/passing-props.html#boolean-mode
     let props = true
+
+    // Information complémentaires à attacher à la route
+    // https://router.vuejs.org/guide/advanced/meta.html
     const meta = {
       props: {}
     }
+
+    // Routes imbriquées
+    // https://router.vuejs.org/guide/essentials/nested-routes.html
+    let children = []
+
+    // Création des routes basé sur les nom du fichier
     switch (name) {
       case 'welcome':
         path = '/'
         meta.layout = 'home'
-        props = (route) => ({
-          content: route.meta.props.content
-        })
+        props = (route) => ({ content: route.meta.props.content })
         break
       case '404':
         path = '/:pathMatch(.*)*'
         meta.excludeFromNavigation = true
         // ?
-        props = (route) => ({
-          content: route.meta.props.content
-        })
+        props = (route) => ({ content: route.meta.props.content })
         break
       case 'journal':
-        name = 'journal-folio'
+        name = 'journal-index'
         path = '/journal/:folio(\\d+)?'
         props = (route) => ({
           folio: Number(route.params.folio) || 1
         })
+        beforeEnter = null
+        break
+      case 'journal-article':
+        name = 'journal-article'
+        path = '/journal/:year(\\d{4})/:month(\\d{2})/:slug'
+        props = (route) => ({ content: route.meta.props.content })
         break
       case 'journal-category':
-        path = '/journal/categorie/:category/:folio(\\d+)?',
-        props = (route) => ({
-          category: route.params.category,
-          folio: Number(route.params.folio) || 1
-        })
+        path = '/journal/categorie/:category',
+        props = (route) => ({ category: route.params.category })
         break
       case 'journal-etiquette':
-        path = '/journal/etiquette/:tag/:folio(\\d+)?',
-        props = (route) => ({
-          tag: route.params.tag,
-          folio: Number(route.params.folio) || 1
-        })
+        path = '/journal/etiquette/:tag',
+        props = (route) => ({ tag: route.params.tag })
         break
-      // @todo: Paramètres obligatoire
-      // permettre de modifier le composant et http:status
-      // depuis le `switch`
-      // https://github.com/vuejs/vue-router/issues/977
       case 'journal-archives':
-        path = '/journal/archives/:year(\\d+)?/:month(\\d+)?'
+        // @todo le classement par mois est overkill, nettoyer tout ça
+        path = '/journal/archives/:year(\\d{4})?/:month(\\d{2})?'
         props = (route) => ({
           year: Number(route.params.year),
           month: Number(route.params.month) || null
         })
         break
       case 'pages':
-        // Parmètre de route répetable
-        // https://router.vuejs.org/guide/essentials/route-matching-syntax.html#repeatable-params
         path = '/pages/:slug+'
+        // @note utiliser une source de contenu générique `content`
+        // (actuellement `articles` et `content`) permettrait de definie un
+        // `beforeEnter` générique.
+        // @note plutôt qu'une redirection 404, remplacer le composant de
+        // contenu par le composant `404.vue` et fournir un `HTTP status 404`.
         beforeEnter = (to, from, next) => {
           const content = contentStore.content(to.path)
           if (!content) {
-            // @todo: à corriger 404 est appelé en attendant
-            // le chargement de content
             next({ name: '404', params: [to.path] })
           } else {
             Object.assign(to.meta, { props: { content } })
@@ -141,7 +141,6 @@ const routes = Object.keys(pages)
       case 'styleguide':
         path = '/styleguide/:slug+'
         beforeEnter = (to, from, next) => {
-          console.log('STYLEGUIDE ', to)
           const content = contentStore.content(to.path)
           if (!content) {
             next({ name: '404', params: [to.path] })
@@ -156,24 +155,27 @@ const routes = Object.keys(pages)
         }
         break
       default:
-        // 404 ou Index
+        // Les autres pages sans contenu transmis par la route :
+        // pages `index`, `404`, etc.
         props = (route) => ({
           content: route.meta.props.content
         })
     }
 
     routes.push({
-      beforeEnter,
-      name,
       path,
+      name,
       component: pages[componentPath],
+      beforeEnter,
       props,
-      meta
+      meta,
+      children
     })
 
     return routes
   }, [])
 
+// Ajout de pages aditionnelles
 // Styleguide, ajout de l'index
 routes.push({
   name: 'styleguide-index',
@@ -182,37 +184,9 @@ routes.push({
   component: () => import('./pages/Pages.vue')
 })
 
-// Articles
-routes.push({
-  name: 'journal-article',
-  path: '/journal/:year(\\d+)?/:month(\\d+)?/:slug',
-  // @todo tester le chargement asynchrone
-  // beforeEnter: async (to, from, next) => {
-  beforeEnter: (to, from, next) => {
-    // Lancer un 404 si le contenu n'existe pas
-    // https://github.com/vuejs/vue-router/issues/977#issuecomment-266221374
-    const article = articlesStore.getArticle(to.path)
-    if (!article) {
-      next({ name: '404', params: [to.path] })
-    } else {
-      Object.assign(to.meta, { props: { content: article } })
-      next()
-    }
-  },
-  props: (route) => {
-    const article = articlesStore.getArticle(route.path)
-    return { content : article }
-  },
-  component: () => import('./pages/Journal/Article.vue')
-})
-
-
-
-// @todo: Concatener avec `routes` de la même manière que les fichiers `.vue`
-// (comme si c'était des ficheirs "virtuelles")
+// Genération des pages virtuelles pour le SSG
 if (import.meta.env.SSR) {
   // Articles
-
   articlesStore.articles.forEach(a => {
     routes.push({
       name: a.name,
@@ -224,14 +198,7 @@ if (import.meta.env.SSR) {
     })
   })
 
-  // @todo : génerer de manière génrique tout les contenus
-  // provenant du store `contents` (`contents` => `getPages`) et `getArticles`
-  // Les contenu ne doivent pas être chargées de manière asynchrone par
-  // `route.beforeEnter`.
-  // Le composant doit correspondre au chemin du contenu :
-  // ex. `content/articles` `./src/articles.vue`
   contentStore.contents.forEach(c => {
-    // console.log('CCC', c.name, c.path)
     routes.push({
       name: c.name,
       path: c.path,
@@ -245,73 +212,53 @@ if (import.meta.env.SSR) {
     })
   })
 
-
-  // Pagination
+  // Index de journal & pagination
   const pagesCount = Math.ceil(articlesStore.articles.length / articlesStore.limit)
   for (let i = 1; i < pagesCount + 1; i ++) {
-    console.log('FOLIO ', i)
     routes.push({
       name: `journal-folio-${i}`,
       path: `/journal/${i}`,
+      props: {
+        folio: Number(i)
+      },
       component: () => import('./pages/Journal.vue')
     })
   }
 
-  // Archives
-  // Categories
+  // Categories du journal
   articlesStore.getCategories().forEach(c => {
     const limit = 10
     const categoryRoute = {
       name: `journal-category-${c.slug}`,
       path: c.to,
-      props: {
-        category: c.slug,
-        folio: 1
-      },
+      props: { category: c.slug },
       component: () => import('./pages/Journal/Category.vue')
     }
     routes.push(categoryRoute)
-    const count = articlesStore.getCategoryArticles(c.slug).length
-    const pagesCount = Math.ceil(count / limit)
-    for (let i = 1; i < pagesCount + 1; i ++) {
-      routes.push( {
-        name: `journal-category-${c.slug}-${i}`,
-        path: `${c.to}/${i}`,
-        props: {
-          category: c.slug,
-          folio: i
-        },
-        component: () => import('./pages/Journal/Category.vue')
-      })
-    }
   })
 
-  // Étiquettes
+  // Étiquettes du journal
   articlesStore.getTags().forEach(t => {
-    const limit = 10
     const tagRoute = {
       name: `journal-tag-${t.slug}`,
       path: t.to,
-      props: {
-        tag: t.slug,
-        folio: 1
-      },
+      props: { tag: t.slug },
       component: () => import('./pages/Journal/Etiquette.vue')
     }
     routes.push(tagRoute)
-    const count = articlesStore.getTagArticles(t.slug).length
-    const pagesCount = Math.ceil(count / limit)
-    for (let i = 1; i < pagesCount + 1; i ++) {
-      routes.push( {
-        name: `journal-tag-${t.slug}-${i}`,
-        path: `${t.to}/${i}`,
-        props: {
-          tag: t.slug,
-          folio: i
-        },
-        component: () => import('./pages/Journal/Etiquette.vue')
-      })
+  })
+
+  // Archives du journal
+  Object.keys(articlesStore.articlesByDate()).forEach(y => {
+    const yearRoute = {
+      name: `journal-archives-year-${y}`,
+      path: `/journal/archives/${y}`,
+      props: {
+        year: Number(y)
+      },
+      component: () => import('./pages/Journal/Archives.vue')
     }
+    routes.push(yearRoute)
   })
 
   console.log('\n——————————————————————————————————————————————')
