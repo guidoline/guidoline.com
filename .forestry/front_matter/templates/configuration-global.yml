@@ -120,5 +120,23 @@ fields:
       max: 60
       step: 
   label: Journal
+- name: socials
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Nom
+  - name: link
+    type: text
+    config:
+      required: true
+    label: Lien
+  config:
+    min: 
+    max: 3
+    labelField: 
+  label: Socials
 pages:
 - content/settings/global.json
