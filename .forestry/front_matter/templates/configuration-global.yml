@@ -140,8 +140,9 @@ fields:
     config:
       min: 
       max: 3
-      labelField: 
+      labelField: name
     label: Socials
   label: Socials
+  description: Liens vers les réseaux sociaux affiché sous forme d'icônes.
 pages:
 - content/settings/global.json
