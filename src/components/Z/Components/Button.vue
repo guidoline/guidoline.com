@@ -6,7 +6,7 @@
     :title="title"
     v-if="href && !isDisabled"
   >
-    <z-icon :icon="icon" />
+    <z-icon v-if="icon" :icon="icon" />
     <span
       v-if="!!$slots.default"
       class="btn-text"
@@ -14,7 +14,7 @@
     >
       <slot/>
     </span>
-    <z-icon :icon="iconRight" />
+    <z-icon v-if="iconRight" :icon="iconRight" />
   </a>
   <router-link
     class="button"
@@ -25,7 +25,7 @@
     :download="isDownloadable"
     :target="isDownloadable ? '_blank' : null"
   >
-    <z-icon :icon="icon" />
+    <z-icon v-if="icon" :icon="icon" />
     <span
       v-if="!!$slots.default"
       class="btn-text"
@@ -33,7 +33,7 @@
     >
       <slot/>
     </span>
-    <z-icon :icon="iconRight" />
+    <z-icon v-if="iconRight" :icon="iconRight" />
   </router-link>
   <button
     v-else
@@ -41,7 +41,7 @@
     :class="classes"
     :title="title"
   >
-    <z-icon :icon="icon" />
+    <z-icon v-if="icon" :icon="icon" />
     <span
       v-if="!!$slots.default"
       class="btn-text"
@@ -49,7 +49,7 @@
     >
       <slot/>
     </span>
-    <z-icon :icon="iconRight" />
+    <z-icon v-if="iconRight" :icon="iconRight" />
   </button>
 </template>
 <script setup>
