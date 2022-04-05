@@ -79,14 +79,18 @@ export default {
           background: theme('colors.day.background.light')
         },
         'a': {
-          color: theme('colors.day.text.DEFAULT'),
-          '&:hover': { color: theme('colors.day.text.dark') }
+          color: theme('colors.day.link.DEFAULT'),
+          '&:hover': { color: theme('colors.day.link.dark') }
         },
         '.dark': {
           'body': {
             color: theme('colors.night.text.DEFAULT'),
             background: theme('colors.night.background.DEFAULT')
-          }
+          },
+          'a': {
+            color: theme('colors.night.link.DEFAULT'),
+            '&:hover': { color: theme('colors.night.link.dark') }
+          },
         },
         '.prose.container': {
           marginRight: 'auto',
