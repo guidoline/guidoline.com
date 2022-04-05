@@ -150,7 +150,7 @@ const isDownloadable = computed(() => {
     @apply inline-flex justify-center items-center align-middle;
   }
   /* Propriétés paramétrable */
-  .button { @apply min-h-2.25rem px-4 py-2 tracking-wide text-main-dark hover:(text-main-dark-dark); }
+  .button { @apply min-h-2.25rem px-3 py-2 tracking-wide text-main-dark hover:(text-main-dark-dark); }
   .button.compact { @apply px-2 py-1;}
   .button
   a.button { @apply text-gray-600 ; }
@@ -172,5 +172,5 @@ const isDownloadable = computed(() => {
   .button + .button { @apply ml-1; }
   .button .icon { @apply mt-[2px]; }
   .button .icon + span,
-  .button span + .icon { @apply ml-[2px]; }
+  .button span + .icon { @apply ml-[4px]; }
 </style>
