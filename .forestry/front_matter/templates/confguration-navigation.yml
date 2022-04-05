@@ -34,7 +34,7 @@ fields:
     label: Lien
   config:
     min: 
-    max: 
+    max: 3
     labelField: text
   label: Secondaire
   description: Menu affiché à droite de l'entête.
