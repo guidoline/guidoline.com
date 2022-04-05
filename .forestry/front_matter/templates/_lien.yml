@@ -9,6 +9,12 @@ fields:
     required: false
     max: '44'
   label: Texte
+- name: title
+  type: text
+  config:
+    required: false
+  label: Titre
+  description: Texte à afficher lors du survol de la souris.
 - name: href
   type: text
   config:
@@ -42,6 +48,7 @@ fields:
     options:
     - primary
     - secondary
+    - accent
     source:
       type: simple
       section: 
