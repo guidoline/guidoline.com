@@ -15,5 +15,3 @@ fields:
   config: {}
   template: _base
   label: Base
-pages:
-- content/a-propos.md
