@@ -63,7 +63,7 @@ const props = defineProps({
   //   default: null
   // },
   icon: {
-    type: String,
+    type: [String, Object],
     default: null
   },
   iconRight: {
@@ -111,6 +111,9 @@ const classes = computed(() => {
       ''
   })
 
+  // SR impose une version compacte
+  if (props.sr) r = `${r} compact`
+
   return r
 })
 
@@ -148,6 +151,8 @@ const isDownloadable = computed(() => {
   }
   /* Propriétés paramétrable */
   .button { @apply min-h-2.25rem px-4 py-2 tracking-wide text-main-dark hover:(text-main-dark-dark); }
+  .button.compact { @apply px-2 py-1;}
+  .button
   a.button { @apply text-gray-600 ; }
   .button.is-active { text-decoration: underline; }
   .button[disabled=""] { @apply opacity-30 cursor-not-allowed; }

@@ -52,7 +52,7 @@
       <ZSearch />
       <z-menu
         :links="secondaryMenu"
-        class="nav-menu-burger nav-item"
+        class="nav-menu-burger nav-item is-compact"
         :is-responsive="false"
       />
     </div>
@@ -73,6 +73,9 @@
  */
 import HeaderOffScreen from '~/components/Layout/Header/OffScreen.vue'
 import Logo from '~/assets/logo-guidoline-small.svg?inline'
+import IconFacebook from '~/assets/icons/facebook.svg?inline'
+import IconTwitter from '~/assets/icons/twitter.svg?inline'
+import IconInstagram from '~/assets/icons/instagram.svg?inline'
 import { main as mainMenu } from '@/content/settings/navigation.json'
 import { contacts, name as siteName } from '@/content/settings/global.json'
 import { ref } from 'vue'
@@ -84,17 +87,26 @@ const importantMenu = [
 // @todo récupérer les liens depuis le fichier de configuration
 const secondaryMenu = [
   {
-    name: 'F',
+    name: 'Facebook',
     title: 'Consultez nos publication Facebook',
     href: 'https://example.com',
-    // icon: 'Facebook'
+    icon: IconFacebook,
+    sr: true,
+    class: 'secondary elevated'
   },
   {
-    name: 'T',
+    name: 'Twitter',
     title: 'Contacter via Twitter',
     href: 'https://example.com',
-    // icon: 'AtSymbol',
-    // sr: true
+    icon: IconTwitter,
+    sr: true
+  },
+  {
+    name: 'Instagram',
+    title: 'Nos photos sur instagram',
+    href: 'https://example.com',
+    icon: IconInstagram,
+    sr: true
   },
   {
     name: 'Écrivez-nous',

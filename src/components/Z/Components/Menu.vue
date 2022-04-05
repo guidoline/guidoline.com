@@ -15,7 +15,7 @@
         :sr="link.sr"
         :title="link.title || link.name"
         :is-compact="isCompact"
-        :class="linkClasses"
+        :class="`${linkClasses} ${link.class}`"
       >
         {{ link.name }}
       </z-button>
@@ -55,7 +55,7 @@ const props = defineProps({
   },
   linkClasses: {
     type: String,
-    default: null
+    default: ''
   }
 })
 const hasLinks = computed(() => props.links.length >= 1 )
@@ -73,6 +73,7 @@ menu { @apply flex-wrap justify-center items-center; }
 menu:not(.is-responsive){ @apply flex; }
 menu.is-responsive{ @apply sm:(flex ); }
 menu.is-vertical{ @apply block text-left; }
-menu.is-horizontal li { @apply px-4; }
+menu.is-horizontal li { @apply px-2; }
+menu.is-horizontal.is-compact li { @apply px-0; }
 menu.is-horizontal li + li { @apply pl-0; }
 </style>
