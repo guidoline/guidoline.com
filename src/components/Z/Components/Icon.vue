@@ -1,5 +1,5 @@
 <template>
-  <component :is="heroIcons[currentIcon]" class="h-5 w-5 mx-0.5 inline"/>
+  <component :is="heroIcons[currentIcon]" class="icon"/>
 </template>
 <script setup>
 // https://heroicons.com/
@@ -18,3 +18,6 @@ const currentIcon = computed(() => {
   return `${props.icon}Icon`
 })
 </script>
+<style scoped>
+.icon { @apply h-5 w-5 mx-0.5 inline; }
+</style>

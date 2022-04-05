@@ -163,6 +163,9 @@ const isDownloadable = computed(() => {
   .button.accent { @apply bg-main-accent text-main-light hover:(bg-main-accent-dark text-main-light-light); }
   .button.light:not(.text) { @apply bg-main-primary text-main-light; }
   .button.light.text { @apply font-light text-main-light hover:text-main-light-light; }
-  /* Espace blanc */
+  /* Gestion des espaces blanc */
   .button + .button { @apply ml-1; }
+  .button .icon { @apply mt-[2px]; }
+  .button .icon + span,
+  .button span + .icon { @apply ml-[2px]; }
 </style>

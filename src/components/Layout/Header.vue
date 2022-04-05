@@ -4,24 +4,22 @@
   />
   <div class="nav-sup">
     <div class="nav-item">
-      <p v-if="contacts.main.email">
-        <z-icon icon="Mail">
-          <!-- @todo: placeholder texte & accessibilité -->
-          Email
-        </z-icon>
-        <a :href="`mailto:${contacts.main.email}`">
-          {{ contacts.main.email }}
-        </a>
-      </p>
-
+      <z-button
+        icon="Mail"
+        class="light text"
+        :href="`mailto:${contacts.main.email}`"
+      >
+        {{ contacts.main.email }}
+      </z-button>
     </div>
     <div class="nav-item">
-      <p v-if="contacts.main.phone">
-        <z-icon icon="Phone"/>
-        <a :href="`tel:${contacts.main.phone}`">
-          {{ contacts.main.phone }}
-        </a>
-      </p>
+      <z-button
+        icon="Phone"
+        class="light text"
+        :href="`tel:${contacts.main.phone}`"
+      >
+        {{ contacts.main.phone}}
+      </z-button>
     </div>
   </div>
   <!-- https://freefrontend.com/css-fullscreen-menus/ -->
@@ -53,7 +51,7 @@
       >
         <slot>
           <Logo class="logo" />
-          <h1 class="sr-only">Default title</h1>
+          <h1 class="sr-only">{{ siteName }}</h1>
         </slot>
       </router-link>
       <div class="nav-menu-burger nav-item">
@@ -91,7 +89,7 @@
 import HeaderOffScreen from '~/components/Layout/Header/OffScreen.vue'
 import Logo from '~/assets/logo-guidoline-small.svg?inline'
 import { main as mainMenu } from '@/content/settings/navigation.json'
-import { contacts } from '@/content/settings/global.json'
+import { contacts, name as siteName } from '@/content/settings/global.json'
 import { ref } from 'vue'
 const menuOpen = ref(true)
 menuOpen.value = false
