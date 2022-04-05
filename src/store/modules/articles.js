@@ -46,6 +46,7 @@ export const useArticlesStore = defineStore({
         return tags
       }, [])
     },
+
     // Articles d'une categorie
     getCategoryArticles(state) {
       return (category) => {
