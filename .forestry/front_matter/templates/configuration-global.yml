@@ -142,6 +142,7 @@ fields:
       max: 3
       labelField: name
     label: Socials
+    description: L'icône sera basé sur le nom du réseau social.
   label: Socials
   description: Liens vers les réseaux sociaux affiché sous forme d'icônes.
 pages:
