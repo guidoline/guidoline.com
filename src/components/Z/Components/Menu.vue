@@ -13,11 +13,11 @@
         :href="link.href"
         :icon="link.icon"
         :sr="link.sr"
-        :title="link.title || link.name"
+        :title="link.title || link.text"
         :is-compact="isCompact"
         :class="`${linkClasses} ${link.class}`"
       >
-        {{ link.name }}
+        {{ link.text }}
       </z-button>
     </li>
   </menu>

@@ -7,7 +7,7 @@ const cover = {
   supcaption: props.content.cover.supcaption ||
     props.content.category
     ? stringsToURL('/journal/categorie/', [props.content.category.name])
-        .reduce((string, link) => `${string} [${link.name}](${link.to})` , '')
+        .reduce((string, link) => `${string} [${link.text}](${link.to})` , '')
     : null,
   ...props.content.cover
 }
