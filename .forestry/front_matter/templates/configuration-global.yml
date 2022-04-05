@@ -37,7 +37,7 @@ fields:
       label: description
     - type: field_group
       name: address
-      label: address
+      label: Addresse
       fields:
       - type: text
         name: name
@@ -54,6 +54,7 @@ fields:
       - type: text
         name: country
         label: country
+      description: Adresse postale.
     - type: text
       name: email
       label: email
@@ -101,6 +102,7 @@ fields:
     - type: text
       name: hours
       label: hours
+  description: Diverse coordonnées à afficher sur le site.
 - name: journal
   type: field_group
   config: {}
