@@ -78,6 +78,10 @@ export default {
           color: theme('colors.day.text.DEFAULT'),
           background: theme('colors.day.background.light')
         },
+        'a': {
+          color: theme('colors.day.text.DEFAULT'),
+          '&:hover': { color: theme('colors.day.text.dark') }
+        },
         '.dark': {
           'body': {
             color: theme('colors.night.text.DEFAULT'),
