@@ -40,7 +40,7 @@ fields:
   type: boolean
   label: Afficher l'icône seule
   description: Le texte du lien sera utilisé pour les assistants vocaux.
-- name: color
+- name: class
   type: select
   default: []
   config:
@@ -54,4 +54,4 @@ fields:
       section: 
       file: 
       path: 
-  label: Couleur
+  label: Aspect
