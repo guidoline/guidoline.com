@@ -121,22 +121,27 @@ fields:
       step: 
   label: Journal
 - name: socials
-  type: field_group_list
+  type: field_group
+  config: {}
   fields:
-  - name: name
-    type: text
+  - name: socials
+    type: field_group_list
+    fields:
+    - name: name
+      type: text
+      config:
+        required: true
+      label: Nom
+    - name: link
+      type: text
+      config:
+        required: true
+      label: Lien
     config:
-      required: true
-    label: Nom
-  - name: link
-    type: text
-    config:
-      required: true
-    label: Lien
-  config:
-    min: 
-    max: 3
-    labelField: 
+      min: 
+      max: 3
+      labelField: 
+    label: Socials
   label: Socials
 pages:
 - content/settings/global.json
