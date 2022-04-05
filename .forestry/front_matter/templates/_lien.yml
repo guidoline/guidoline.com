@@ -20,13 +20,20 @@ fields:
   config:
     required: false
     options:
-    - download
+    - Facebook
+    - Twitter
+    - Instagram
+    - Mail
     source:
       type: simple
       section: 
       file: 
       path: 
   label: Icone
+- name: sr
+  type: boolean
+  label: Afficher l'icône seule
+  description: Le texte du lien sera utilisé pour les assistants vocaux.
 - name: color
   type: select
   default: []
