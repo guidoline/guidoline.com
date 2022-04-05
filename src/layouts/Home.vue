@@ -1,10 +1,12 @@
 <script setup>
 
-// /!\ Pas d'accès au frontmatter d'ici !
-
 import Header from '~/components/Layout/Header.vue'
 import Footer from '~/components/Layout/Footer.vue'
 import Cover from '~/components/Layout/Cover.vue'
+import { secondary as _secondaryMenu } from '@/content/settings/navigation.json'
+import IconFacebook from '~/assets/icons/facebook.svg?inline'
+import IconTwitter from '~/assets/icons/twitter.svg?inline'
+import IconInstagram from '~/assets/icons/instagram.svg?inline'
 import { computed } from 'vue'
 import { markdownify } from '~/services/utilities.js'
 
@@ -30,7 +32,23 @@ const hasHero = computed(() => {
   if (!props.content.hero) return false
   return true
 })
-
+const customIcons = {
+  'facebook': IconFacebook,
+  'twitter': IconTwitter,
+  'instagram': IconInstagram
+}
+const secondaryMenu = computed(() => {
+  const iconsList = Object.keys(customIcons)
+  // return
+  const r = _secondaryMenu.map(l => {
+    if (iconsList.includes(l.icon.toLowerCase())) {
+      l.icon = customIcons[l.icon.toLowerCase()]
+    }
+    return l
+  })
+  console.log(r)
+  return r
+})
 // @todo: doit pouvoir charger des templates comme `./layouts/Markdown.vue` ?
 </script>
 <script>
@@ -47,8 +65,8 @@ export default { name: 'LayoutHome' }
       <slot/>
     </div>
     <div class="container col-span-2 col-start-5 row-start-2 place-self-center mx-auto max-w-42ch text-center my-4">
-      [F] [T]<br>
-      Newsletter
+      <z-menu :links="secondaryMenu" />
+      <p>Newsletter</p>
     </div>
   </div>
   <z-grid class="sections px-4">
