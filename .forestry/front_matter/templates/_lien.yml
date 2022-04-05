@@ -6,7 +6,7 @@ fields:
 - name: text
   type: text
   config:
-    required: false
+    required: true
     max: '44'
   label: Texte
 - name: title
@@ -18,7 +18,7 @@ fields:
 - name: href
   type: text
   config:
-    required: false
+    required: true
   label: Cible
 - name: icon
   type: select
