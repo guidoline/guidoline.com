@@ -5,7 +5,9 @@ export default { name: 'TemplateArticle'}
 // @note: l'idéal serait de placer les fichiers de template dans le
 // repertoire `./src/pages(/<parent>)/<template>.vue`
 import Cover from '~/components/Layout/Cover.vue'
+import ArticleInfoItems from '~/components/Journal/Article/Info/Items.vue'
 import ContainerProse from '~/components/Layout/Container/Prose.vue'
+import JournalPagination from '~/components/Journal/Pagination.vue'
 import { computed } from 'vue'
 import { stringsToURL }from '~/services/utilities.js'
 const props = defineProps({
@@ -28,7 +30,12 @@ const cover = computed(() => {
   }
 })
 
-const date = props.content.date;
+const dateItem = computed(() => {
+  return {
+    name: props.content.formattedDate || props.content.date,
+    to: `/journal/archives/${props.content.year}#${props.content.month}`
+  }
+})
 
 /**
  * Author
@@ -43,79 +50,43 @@ const author = computed(() => {
 
 </script>
 <template>
+<LayoutDefault>
   <main
     :class="content.cover ? `has-cover`: null"
   >
     <Cover v-if="cover" :cover="cover" />
     <ContainerProse>
-      <div v-if="date" class="article-date">
-        Publié le {{ date }}
-      </div>
       <slot />
     </ContainerProse>
-    <footer class="">
-      <z-grid class="article-info prose-container ">
-        <section v-if="content.category">
-          <h1 class="article-info-title">Catégorie</h1>
-          <router-link :to="content.category.to">
-            {{ content.category.name }}
-          </router-link>
-        </section>
-        <section v-if="author">
-          <h1 class="article-info-title">Auteur</h1>
-          <router-link
-            v-if="author.to"
-            :to="author.to"
-          >
-          {{ author.name }}
-          </router-link>
-          <template v-else>
-            {{ author.name }}
-          </template>
-        </section>
-        <section v-if="content.tags" class="col-span-full">
-          <h1 class="article-info-title">Étiquettes</h1>
-          <span class="tags">
-            <router-link
-              v-for="tag in content.tags"
-              :key="tag.to"
-              :to="tag.to"
-            >
-              {{ tag.name }}
-            </router-link>
-          </span>
-        </section>
-      </z-grid>
-      <section>
+    <footer class="container px-4">
+      <section class="article-info">
         <z-grid>
-          <div>
-            <z-button
-              :to="content.pagination.previous.to"
-              icon="ChevronLeft"
-            >
-              {{ content.pagination.previous.name }}
-            </z-button>
-          </div>
-          <div>
-            <z-button
-              :to="content.pagination.next.to"
-              icon-right="ChevronRight"
-              style="float: right"
-            >
-              {{ content.pagination.next.name }}
-            </z-button>
-          </div>
+        <ArticleInfoItems
+          v-if="dateItem"
+          title="Publié le"
+          :items="[dateItem]"
+        />
+        <ArticleInfoItems
+          v-if="content.category"
+          title="Catégories"
+          :items="[content.category]"
+        />
+        <ArticleInfoItems
+          v-if="content.tags"
+          title="Étiquettes"
+          :items="content.tags"
+        />
         </z-grid>
       </section>
+
     </footer>
     <!-- @ajouter : auteur, date, tags, category, related_posts, aticle suivat / précedent-->
+    <JournalPagination :pagination="content.pagination"/>
   </main>
+</LayoutDefault>
 </template>
 <style scoped>
 .article-info-title { @apply inline pr-2 uppercase text-xs text-gray-400; }
 .article-info { @apply bg-white text-gray-500 font-light mb-12; }
 .article-info > section { @apply text-sm; }
-.tags a:not(:last-child):after {
-  content: ", ";
-}
 </style>

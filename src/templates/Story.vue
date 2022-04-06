@@ -1,16 +1,13 @@
 <script setup>
+import { computed } from 'vue'
 import Cover from '~/components/Layout/Cover.vue'
+import JournalPagination from '~/components/Journal/Pagination.vue'
 import { stringsToURL } from '~/services/utilities.js'
 //  Passer la catégorie en sur légende de la couverture
-console.log('SUPCATION ', props.content.category)
-const cover = {
-  supcaption: props.content.cover.supcaption ||
-    props.content.category
-    ? stringsToURL('/journal/categorie/', [props.content.category.name])
-        .reduce((string, link) => `${string} [${link.text}](${link.to})` , '')
-    : null,
-  ...props.content.cover
-}
+const cover = computed(() => {
+  if (!props.content.cover.src) return false
+  return props.content.cover
+})
 
 const props = defineProps({
   content: {
@@ -21,55 +18,58 @@ const props = defineProps({
 
 </script>
 <template>
-  <main class="has-cover">
-    <div class="cover-wrapper">
-      <div class="cover-info article-info">
-        <div>
-          <span class="article-info-title">Date de publication : </span>
-          {{ content.date }}
-        </div>
-        <div>
-          <span class="article-info-title">Par : </span>
-          {{ content.author }}
-        </div>
-      </div>
-      <Cover
-        v-if="cover"
-        :cover="cover"
-        class="is-full"
-      />
-    </div>
-    <div class="article-wrapper">
-        <div class="article">
-          <slot/>
-          <div class="article-info">
-            <div>
-              <span class="article-info-title">Étiquettes : </span>
-              <span class="tags">
-                <template
-                  v-for="(tag, index) in content.tags"
-                  :key="index"
-                >
-                  <a href="#">{{ tag }}</a>
-                </template>
-              </span>
-            </div>
-            <div v-if="content.license">
-              <span class="article-info-title">Licence : </span>
-              <a :href="content.license.href">{{ content.license.name }}</a>
-            </div>
+  <LayoutDefault>
+    <main class="has-cover">
+      <div class="cover-wrapper">
+        <div class="cover-info article-info">
+          <div v-if="content.date">
+            <span class="article-info-title">Date de publication : </span>
+            {{ content.date }}
+          </div>
+          <div v-if="content.author">
+            <span class="article-info-title">Par : </span>
+            {{ content.author }}
           </div>
         </div>
-        <aside class="article-aside">
-          <h2>Aside</h2>
-          <details><pre>{{ content }}</pre></details>
-        </aside>
-    </div>
-  </main>
+        <Cover
+          v-if="cover"
+          :cover="cover"
+          class="is-full"
+        />
+      </div>
+      <div class="article-wrapper">
+          <div class="article">
+            <slot/>
+            <div class="article-info">
+              <div>
+                <span class="article-info-title">Étiquettes : </span>
+                <span class="tags">
+                  <template
+                    v-for="(tag, index) in content.tags"
+                    :key="index"
+                  >
+                    <a href="#">{{ tag }}</a>
+                  </template>
+                </span>
+              </div>
+              <div v-if="content.license">
+                <span class="article-info-title">Licence : </span>
+                <a :href="content.license.href">{{ content.license.name }}</a>
+              </div>
+            </div>
+          </div>
+          <aside class="article-aside">
+            <h2>Aside</h2>
+            <details><pre>{{ content }}</pre></details>
+          </aside>
+      </div>
+      <JournalPagination :pagination="content.pagination" />
+    </main>
+  </LayoutDefault>
 </template>
 <style scoped>
 /* .fancy { @apply bg-primary-500 text-white p6; } */
-.cover-wrapper { @apply relative h-100vh min-h-94; }
+.cover-wrapper:not(.no-image) { @apply relative h-100vh min-h-94; }
 .cover-info { @apply absolute flex flex-wrap justify-between z-1 left-4 bottom-4 right-4; }
 /* - None	width: 100%;
 - sm (640px)	max-width: 640px;
