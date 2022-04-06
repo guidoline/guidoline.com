@@ -20,14 +20,6 @@
           type="text"
           linkClasses="light text"
         />
-        <h2>Dates</h2>
-        <z-menu
-          :links="years"
-          :is-vertical="true"
-          :is-compatc="true"
-          type="text"
-          linkClasses="light text"
-        />
       </section>
       <section>
         <h2>Sitemap</h2>
@@ -68,7 +60,6 @@ const categories = computed(() => articleStore.getCategories().map(c => {
   c.text = c.name
   return c
 }))
-const years = computed(() => Object.keys(articleStore.articlesByDate()).map(d => ({ text: d, slug: d, to: `/journal/archives/${d}` })).reverse())
 const contentStore = useContentsStore()
 contentStore.initialize()
 const sitemap = contentStore.pages
