@@ -5,23 +5,15 @@ fields:
 - name: main
   type: field_group_list
   fields:
-  - name: name
-    type: text
-    config:
-      required: true
-    label: Nom
-  - name: to
-    type: text
-    config:
-      required: true
-    label: Cible
-  - name: highlight
-    type: boolean
-    label: Mettre en avant
+  - name: link
+    type: include
+    config: {}
+    template: _lien
+    label: Lien
   config:
     min: 
     max: '3'
-    labelField: 
+    labelField: text
   label: Principale
   description: Menu affiché à coté du logo d'entête.
 - name: secondary
@@ -41,12 +33,12 @@ fields:
 - name: footer
   type: field_group_list
   fields:
-  - name: name
+  - name: text
     type: text
     config:
       required: true
-    label: Nom
-  - name: to
+    label: Texte du lien
+  - name: href
     type: text
     config:
       required: true
