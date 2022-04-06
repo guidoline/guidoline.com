@@ -11,7 +11,7 @@ import { stringsToURL }from '~/services/utilities.js'
 const props = defineProps({
   content: {
     type: Object,
-    default: {}
+    required: true
   }
 })
 
