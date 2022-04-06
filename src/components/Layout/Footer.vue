@@ -64,13 +64,16 @@ import { useContentsStore } from '~/store/modules/contents.js'
 import { useArticlesStore } from '~/store/modules/articles.js'
 const articleStore = useArticlesStore()
 articleStore.initialize()
-const categories = computed(() => articleStore.getCategories())
-const years = computed(() => Object.keys(articleStore.articlesByDate()).map(d => ({ name: d, slug: d, to: `/journal/archives/${d}` })).reverse())
+const categories = computed(() => articleStore.getCategories().map(c => {
+  c.text = c.name
+  return c
+}))
+const years = computed(() => Object.keys(articleStore.articlesByDate()).map(d => ({ text: d, slug: d, to: `/journal/archives/${d}` })).reverse())
 const contentStore = useContentsStore()
 contentStore.initialize()
 const sitemap = contentStore.pages
   .map(r => ({
-    name: r.title || r.name,
+    text: r.title || r.name,
     to: r.path
   }))
 </script>

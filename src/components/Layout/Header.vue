@@ -87,7 +87,7 @@ const importantMenu = [
 // @todo récupérer les liens depuis le fichier de configuration
 const secondaryMenu = [
   {
-    name: 'Facebook',
+    text: 'Facebook',
     title: 'Consultez nos publication Facebook',
     href: 'https://example.com',
     icon: IconFacebook,
@@ -95,21 +95,21 @@ const secondaryMenu = [
     class: 'secondary elevated'
   },
   {
-    name: 'Twitter',
+    text: 'Twitter',
     title: 'Contacter via Twitter',
     href: 'https://example.com',
     icon: IconTwitter,
     sr: true
   },
   {
-    name: 'Instagram',
+    text: 'Instagram',
     title: 'Nos photos sur instagram',
     href: 'https://example.com',
     icon: IconInstagram,
     sr: true
   },
   {
-    name: 'Écrivez-nous',
+    text: 'Écrivez-nous',
     href: 'mailto:hello@example.com',
     icon: 'Mail',
     sr: true
