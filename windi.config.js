@@ -288,6 +288,14 @@ export default {
               color: colors.dark.DEFAULT,
               fontWeight: 'normal'
             },
+            h2: {
+              color: colors.dark.DEFAULT,
+              fontWeight: 'normal'
+            },
+            h3: {
+              color: colors.dark.DEFAULT,
+              fontWeight: 'normal'
+            },
             hr: {
               height: '1px',
               backgroundColor: colors.dark.lighter
