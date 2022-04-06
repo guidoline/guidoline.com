@@ -5,7 +5,7 @@ import { useRoute } from 'vue-router'
 const props = defineProps({
   content: {
     type: Object,
-    default: {}
+    required: true
   }
 })
 
