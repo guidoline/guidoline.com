@@ -21,7 +21,7 @@ export const useArticlesStore = defineStore({
     // @todo: Ajouter le compte d'article par catégorie et par étiquette
     // cf. ancien projets.
     getCategories: state => () => {
-      const r=  state.articles.reduce((categories, article) => {
+      const r=  state.articles.filter(a=>a.category).reduce((categories, article) => {
         if (
           !categories.find(c => c.name === article.category.name)
           && article.category.name

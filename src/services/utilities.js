@@ -21,7 +21,7 @@ slug.charmap['\''] = '-'
 
 const slugify = (text) => slug(text.toString(), { locale: 'fr' })
 
-const stringsToURL = (route, texts) => texts.map(text => {
+const stringsToURL = (route, texts) => texts.filter(t=>t).map(text => {
   const slug = slugify(text)
   return {
     name: text,
