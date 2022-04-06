@@ -9,7 +9,6 @@ export const useRootStore = defineStore({
   },
   getters: {
     isReady: state => state.ready,
-    // isLoading: state => state.loading
   },
   actions: {
     initialize() {
