@@ -80,7 +80,10 @@ export default {
         },
         'a': {
           color: theme('colors.day.link.DEFAULT'),
-          '&:hover': { color: theme('colors.day.link.dark') }
+          '&:hover': {
+            color: theme('colors.day.link.dark'),
+            textDecoration: 'underline'
+          }
         },
         '.dark': {
           'body': {
