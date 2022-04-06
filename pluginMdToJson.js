@@ -66,7 +66,7 @@ function renderMarkdown(rawMarkdown, options) {
     linkfy: true,
     typographer: true,
     breaks: false,
-    quotes: ['«\x40', '\x40»', '<\x40', '\x40>'],
+    quotes: ['«\xa0', '\xa0»', '<\xa0', '\xa0>'],
     ...options
   })
   markdown.use(MarkdownItAnchor.default)
