@@ -4,7 +4,7 @@
     :class="classes"
     :href="href"
     :title="title"
-    v-if="href && !isDisabled"
+    v-if="isExternal && !isDisabled"
   >
     <z-icon v-if="icon" :icon="icon" />
     <span
@@ -19,9 +19,9 @@
   <router-link
     class="button"
     :class="classes"
-    :to="to"
+    :to="to || href"
     :title="title"
-    v-else-if="to && !isDisabled"
+    v-else-if="(to && !isDisabled) || (href && !isExternal)"
     :download="isDownloadable"
     :target="isDownloadable ? '_blank' : null"
   >
@@ -92,6 +92,8 @@ const props = defineProps({
 const isDisabled = computed(() => {
   return attrs['disabled'] === true
 })
+
+const isExternal = computed(() => props.href && props.href.startsWith('http'))
 
 // Attributs personnalisés
 const availablesStyles = [
