@@ -3,6 +3,7 @@
 import Header from '~/components/Layout/Header.vue'
 import Footer from '~/components/Layout/Footer.vue'
 import Cover from '~/components/Layout/Cover.vue'
+import Newsletter from '~/components/Utilities/Newsletter.vue'
 import { secondary as _secondaryMenu } from '@/content/settings/navigation.json'
 import IconFacebook from '~/assets/icons/facebook.svg?inline'
 import IconTwitter from '~/assets/icons/twitter.svg?inline'
@@ -63,7 +64,7 @@ export default { name: 'LayoutHome' }
     </div>
     <div class="container col-span-2 col-start-5 row-start-2 place-self-center mx-auto max-w-42ch text-center my-4">
       <z-menu :links="secondaryMenu" />
-      <p>Newsletter</p>
+      <Newsletter />
     </div>
   </div>
   <z-grid class="sections px-4">
