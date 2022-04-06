@@ -55,6 +55,9 @@
 <script setup>
 /** Bouton
  * Séléction automatique d'un lien, bouton ou lien routeur.
+ *
+ * @todo refactorer la bacule lien externe / lien interne pour quelques chose
+ * de plus simple / lisible.
  */
 import { computed, useAttrs } from 'vue'
 const props = defineProps({
