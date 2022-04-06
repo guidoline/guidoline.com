@@ -270,7 +270,7 @@ const groupBy = (entries, prop, callback) => {
     const month = new Date(date).toLocaleDateString('fr-FR', { month: 'long'})
     if (!month) return archives
     if (!archives[year]) archives[year] = { name: year, months: {} }
-    if (!archives[year][month]) archives[year]['months'][month] = { name: ucFirst(month), articles: []}
+    if (!archives[year]['months'][month]) archives[year]['months'][month] = { name: ucFirst(month), articles: []}
     archives[year]['months'][month]['articles'].push(e)
     return archives
  }, {})
