@@ -8,6 +8,7 @@ export const useArticlesStore = defineStore({
     return {
       ready: false,
       articles: [],
+      editorialArticles: [],
       limit: 10,
     }
   },
@@ -90,8 +91,11 @@ export const useArticlesStore = defineStore({
 
       // console.log('ARTICLES FROM STORE : ', this.articles.map(a => a.path))
       // Links pagination
+      this.editorialArticles = this.articles.filter(a => ['story', 'article'].includes(a.template))
       this.articles = this.articles.map((a, index) => {
-        const pagination = neighbors(index, this.articles)
+        const pagination = neighbors(
+          this.editorialArticles.findIndex(ea => ea.path === a.path),
+          this.editorialArticles)
         return {
           // 'raw-date': new Date(a.date),
           pagination,
@@ -139,6 +143,9 @@ export const useArticlesStore = defineStore({
           'rawDate': rawDate,
           'formattedDate': rawDate ? new Date(rawDate)
             .toLocaleDateString('fr-FR', dateOptions) : null,
+          'year': rawDate ? new Date(rawDate).getFullYear() : null,
+          'month': rawDate ? new Date(rawDate)
+            .toLocaleDateString('fr-FR', {month: 'long'}) : null,
           ...f
         }
       })
@@ -173,18 +180,17 @@ export const useArticlesStore = defineStore({
   const lastIndex = entries.length - 1
   const previousId = index - 1 < 0 ? lastIndex : index - 1
   const nextId = index + 1 > lastIndex ? 0 : index + 1
-  const previous = entries[previousId]
-  const next = entries[nextId]
-  return {
-    previous: {
-      name: previous['short-title'] || previous.title ||previous.name,
-      to: previous.path
-    },
-    next: {
-      name: next['short-title'] || next.title || next.name,
-      to: next.path
-    }
-  }
+  const previousEntry = previousId !== index ? entries[previousId] : null
+  const nextEntry = nextId !== index ? entries[nextId] : null
+  const previous = previousEntry ? {
+    name: previousEntry['short-title'] || previousEntry.title || previousEntry.name,
+    to: previousEntry.path
+  } : null
+  const next = nextEntry ? {
+    name: nextEntry['short-title'] || nextEntry.title || nextEntry.name,
+    to: nextEntry.path
+  } : null
+  return { previous, next }
 }
 
 // @todo: permettre de filter sur des contenu imbriqués
