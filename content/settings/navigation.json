@@ -1,9 +1,6 @@
 {
   "main": [
     {
-      "name": "Journal",
-      "highlight": false,
-      "to": "/journal",
       "text": "Blog",
       "title": "",
       "href": "/journal",
@@ -12,10 +9,7 @@
       "class": ""
     },
     {
-      "highlight": false,
-      "name": "Qui sommes-nous ?",
-      "to": "/qui-sommes-nous",
-      "text": "Qui sommes nous ?",
+      "text": "Qui sommes-nous ?",
       "title": "",
       "href": "/qui-sommes-nous",
       "icon": "",
@@ -25,14 +19,10 @@
   ],
   "footer": [
     {
-      "name": "Accueil",
-      "to": "/",
       "text": "Acceuil",
       "href": "/"
     },
     {
-      "name": "Contacts",
-      "to": "/a-propos#contacts",
       "text": "Contacts",
       "href": "/qui-sommes-nous#contacts"
     }

@@ -39,15 +39,12 @@ const customIcons = {
 }
 const secondaryMenu = computed(() => {
   const iconsList = Object.keys(customIcons)
-  // return
-  const r = _secondaryMenu.map(l => {
+  return _secondaryMenu.map(l => {
     if (iconsList.includes(l.icon.toLowerCase())) {
       l.icon = customIcons[l.icon.toLowerCase()]
     }
     return l
   })
-  console.log(r)
-  return r
 })
 // @todo: doit pouvoir charger des templates comme `./layouts/Markdown.vue` ?
 </script>
