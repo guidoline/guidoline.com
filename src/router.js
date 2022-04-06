@@ -58,6 +58,7 @@ const routes = Object.keys(pages)
         const content = contentStore.content(to.path)
         Object.assign(to.meta, { props: { content } })
         next()
+        }
       }
     }
 
@@ -100,6 +101,15 @@ const routes = Object.keys(pages)
         name = 'journal-article'
         path = '/journal/:year(\\d{4})/:month(\\d{2})/:slug'
         props = (route) => ({ content: route.meta.props.content })
+        beforeEnter = (to, from, next) => {
+          const article = articlesStore.getArticle(to.path)
+          if (!content) {
+            next({ name: '404', params: [to.path] })
+          } else {
+            Object.assign(to.meta, { props: { content: article } })
+            next()
+          }
+        }
         break
       case 'journal-category':
         path = '/journal/categorie/:category',
