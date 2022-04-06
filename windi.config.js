@@ -72,7 +72,7 @@ export default {
      *  - `addUtilities` pour le spetites utilitaires (centrage auto, etc.)
      */
     plugin(function({ addBase, theme }) {
-      const md = theme('screens.md', {})
+      const md = theme('screens.md')
       addBase({
         'body': {
           color: theme('colors.day.text.DEFAULT'),
@@ -101,12 +101,8 @@ export default {
           paddingTop: theme('padding.4'),
           paddingBottom: theme('padding.4'),
           maxWidth: md,
-          '@media (min-width: 768px)': {
-            width: theme('prose.width'),
-          }
+          color: 'green'
         }
-
-        // 'hn'
       })
     }),
     plugin(function({ addComponents, theme }) {
@@ -182,6 +178,9 @@ export default {
    * etc.
    */
   theme: {
+    container: {
+      center: true
+    },
     colors: {
       main: colors,
       day: {
