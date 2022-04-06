@@ -1,5 +1,6 @@
 ---
 publish: true
+date: 2022/03/01  
 SEO:
   author: authors/guidoline.md
   date: 2022/03/11 4:05 PM +0000
@@ -10,7 +11,8 @@ title: Exemple de reportage
 cover:
   src: ''
   alt: ''
-  legend: ''
+  legend: 'Je suis une légende.'
+  subcaption: 'Je suis une information complétementaire.'
 category: Reportage
 related_articles:
 - content/journal/2018/11/rallye-photo-a-velo.md
