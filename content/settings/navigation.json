@@ -3,30 +3,38 @@
     {
       "name": "Journal",
       "highlight": false,
-      "to": "/journal"
+      "to": "/journal",
+      "text": "Blog",
+      "title": "",
+      "href": "/journal",
+      "icon": "",
+      "sr": false,
+      "class": ""
     },
     {
       "highlight": false,
       "name": "Qui sommes-nous ?",
-      "to": "/qui-sommes-nous"
+      "to": "/qui-sommes-nous",
+      "text": "Qui sommes nous ?",
+      "title": "",
+      "href": "/qui-sommes-nous",
+      "icon": "",
+      "sr": false,
+      "class": ""
     }
   ],
   "footer": [
     {
       "name": "Accueil",
-      "to": "/"
+      "to": "/",
+      "text": "Acceuil",
+      "href": "/"
     },
     {
       "name": "Contacts",
-      "to": "/a-propos#contacts"
-    },
-    {
-      "name": "Newsletters",
-      "to": "https://example.com"
-    },
-    {
-      "name": "Animations",
-      "to": "/journal/categorie/animation"
+      "to": "/a-propos#contacts",
+      "text": "Contacts",
+      "href": "/qui-sommes-nous#contacts"
     }
   ],
   "secondary": [
