@@ -2,19 +2,19 @@
 import SubNav from '~/components/Layout/Navigation/SubNav.vue'
 const links = [
   {
-    name: 'Articles',
+    text: 'Articles',
     to: '/journal/'
   },
   {
-    name: 'Catégories',
+    text: 'Catégories',
     to: '/journal/categories'
   },
   {
-    name: 'Étiquettes',
+    text: 'Étiquettes',
     to: '/journal/etiquettes'
   },
   {
-    name: 'Archives',
+    text: 'Archives',
     to: '/journal/archives'
   }
 ]
