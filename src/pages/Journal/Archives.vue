@@ -40,8 +40,9 @@ const currentYearArchives = computed(() => archives.value[currentYear.value])
         </router-link>
         <ul>
           <li
-            v-for="month in currentYearArchives.months"
+            v-for="(month, key) in currentYearArchives.months"
             :key="`${currentYearArchives.name}-${month.name}`"
+            :id="key"
           >
             {{ month.name }} {{ currentYearArchives.name }}
             <ul>
