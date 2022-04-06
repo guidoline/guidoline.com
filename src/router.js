@@ -58,7 +58,6 @@ const routes = Object.keys(pages)
         const content = contentStore.content(to.path)
         Object.assign(to.meta, { props: { content } })
         next()
-        }
       }
     }
 
