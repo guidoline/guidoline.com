@@ -102,7 +102,7 @@ const routes = Object.keys(pages)
         props = (route) => ({ content: route.meta.props.content })
         beforeEnter = (to, from, next) => {
           const article = articlesStore.getArticle(to.path)
-          if (!content) {
+          if (!article) {
             next({ name: '404', params: [to.path] })
           } else {
             Object.assign(to.meta, { props: { content: article } })
