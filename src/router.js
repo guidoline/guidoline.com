@@ -99,7 +99,7 @@ const routes = Object.keys(pages)
       case 'journal-article':
         name = 'journal-article'
         path = '/journal/:year(\\d{4})/:month(\\d{2})/:slug'
-        props = (route) => ({ content: route.meta.props.content })
+        props = (route) => ({ content:  articlesStore.getArticle(route.path) })
         beforeEnter = (to, from, next) => {
           const article = articlesStore.getArticle(to.path)
           if (!article) {
@@ -221,6 +221,7 @@ if (import.meta.env.SSR) {
     })
   })
 
+  //
   contentStore.contents.forEach(c => {
     routes.push({
       name: c.name,
