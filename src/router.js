@@ -104,10 +104,24 @@ const routes = Object.keys(pages)
       case 'journal-category':
         path = '/journal/categorie/:category',
         props = (route) => ({ category: route.params.category })
+        beforeEnter = (to, from, next) => {
+          if (articlesStore.categoryExist(to.params.category)) {
+            next()
+          } else {
+            next({ name: '404', params: [to.path] })
+          }
+        }
         break
       case 'journal-etiquette':
         path = '/journal/etiquette/:tag',
         props = (route) => ({ tag: route.params.tag })
+        beforeEnter = (to, from, next) => {
+          if (articlesStore.tagExist(to.params.tag)) {
+            next()
+          } else {
+            next({ name: '404', params: [to.path] })
+          }
+        }
         break
       case 'journal-archives':
         // @todo le classement par mois est overkill, nettoyer tout ça

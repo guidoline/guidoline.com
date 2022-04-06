@@ -148,6 +148,12 @@ export const useArticlesStore = defineStore({
       // Ordonné par date descendante
       .reverse()
     },
+    categoryExist(category) {
+      return this.getCategories().some(c => c.slug === category)
+    },
+    tagExist(tag) {
+      return this.getTags().some(c => c.slug === tag)
+    }
   }
 })
 
