@@ -72,10 +72,7 @@ export const useArticlesStore = defineStore({
     // },
 
     // Articles groupés par catégories (usages ?)
-    articlesByDate: state => () => groupBy(state.articles, 'date'),
-    articlesByCategories: state => () => groupBy(state.articles, 'category'),
-    articlesByTag: state => (tag) => groupBy(state.articles, 'tag')
-
+    articlesByDate: state => () => groupByDate(state.articles),
   },
   actions: {
     // async initialize() {
@@ -262,7 +259,7 @@ const orderBy = (entries, prop = 'raw-date', order = 'desc') => {
   })
 }
 
-const groupBy = (entries, prop, callback) => {
+const groupByDate = (entries) => {
  return entries.reduce((archives, e) => {
     const date = new Date(Date.parse(e.date))
     const year = date.getFullYear()
