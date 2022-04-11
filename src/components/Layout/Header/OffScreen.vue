@@ -38,7 +38,6 @@
 import Logo from '~/assets/logo-guidoline-small.svg?inline'
 import { main as mainMenu } from '@/content/settings/navigation.json'
 import { watch } from 'vue'
-// import { useRoute } from 'vue-router'
 
 const props = defineProps({
   menuOpen : {
@@ -50,12 +49,10 @@ const props = defineProps({
     default: false
   }
 })
+
 // Observateur : remonter la valeur transmise par le bouton
 const emit = defineEmits(['update:menuOpen'])
 watch(() => props.menuOpen, (state) => emit('update:menuOpen', state))
-// Évite d'utiliser un écouteur sur les évenements ddes liens, néanmoins,
-// une route courante clicquée ne referme pas le menu.
-// watch(useRoute(), (route) => emit('update:menuOpen', false))
 
 </script>
 <style scoped>
