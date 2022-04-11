@@ -52,7 +52,7 @@
       "href": "https://www.instagram.com/_guidoline/",
       "icon": "Instagram",
       "class": "primary",
-      "sr": false
+      "sr": true
     },
     {
       "text": "Facebook",
