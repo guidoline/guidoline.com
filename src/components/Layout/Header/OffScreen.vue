@@ -1,3 +1,35 @@
+<script setup>
+import Logo from '~/assets/logo-guidoline-small.svg?inline'
+import { main as mainMenu } from '@/content/settings/navigation.json'
+import { watch } from 'vue'
+
+const props = defineProps({
+  menuOpen : {
+    type: Boolean,
+    required: true
+  },
+  show: {
+    type: Boolean,
+    default: false
+  }
+})
+
+// Observateur : remonter la valeur transmise par le bouton
+const emit = defineEmits(['update:menuOpen'])
+watch(() => props.menuOpen, (state) => emit('update:menuOpen', state))
+
+</script>
+<style scoped>
+.nav-off-screen {
+  /* @apply flex flex-col flex-1 p-4 */
+  margin-top: -100vh;
+  @apply px-4 pb-12 h-screen w-screen -mt-screen bg-callout-background text-callout-text transition-margin duration-500 ease-out overflow-hidden;
+}
+.nav-off-screen:target,
+.nav-off-screen.is-show { @apply <sm:mt-0; }
+.logo { @apply w-46 h-auto; }
+</style>
+
 <template>
   <nav
     id="off-screen-navigation"
@@ -33,40 +65,3 @@
     </div>
   </nav>
 </template>
-<script setup>
-import Logo from '~/assets/logo-guidoline-small.svg?inline'
-import { main as mainMenu } from '@/content/settings/navigation.json'
-import { watch } from 'vue'
-
-const props = defineProps({
-  menuOpen : {
-    type: Boolean,
-    required: true
-  },
-  show: {
-    type: Boolean,
-    default: false
-  }
-})
-
-// Observateur : remonter la valeur transmise par le bouton
-const emit = defineEmits(['update:menuOpen'])
-watch(() => props.menuOpen, (state) => emit('update:menuOpen', state))
-
-</script>
-<style scoped>
-.nav-off-screen {
-  /* @apply flex flex-col flex-1 p-4 */
-  margin-top: -100vh;
-  @apply px-4 pb-12 h-screen w-screen -mt-screen bg-callout-background text-callout-text transition-margin duration-500 ease-out overflow-hidden;
-}
-.nav-off-screen:target,
-.nav-off-screen.is-show {
-  @apply <sm:mt-0;
-}
-.logo {
-  /* Idéalement w-18 sans forcer la hauteur du parent */
-  @apply w-46 h-auto;
-  /* <- laisser prendre la taille du parent avec sgc.height = "100%" */
-}
-</style>
