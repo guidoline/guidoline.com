@@ -17,6 +17,24 @@ fields:
     schema:
       format: markdown
   label: Contenu
+- name: class
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - primary
+    - secondary
+    - accent
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Aspect
+- name: add_link
+  type: boolean
+  label: Ajouter un lien
 - name: link
   type: field_group
   config: {}
@@ -27,3 +45,5 @@ fields:
     template: _lien
     label: Lien
   label: Lien
+  showOnly:
+    field: add_link
