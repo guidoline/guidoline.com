@@ -16,7 +16,7 @@ fields:
     labelField: text
   label: Principale
   description: Menu affiché à coté du logo d'entête.
-- name: social
+- name: socials
   type: field_group_list
   fields:
   - name: link
@@ -28,7 +28,7 @@ fields:
     min: 
     max: 3
     labelField: text
-  label: Social
+  label: Sociaux
   description: Lien vers les réseaux sociaux
 - name: footer
   type: field_group_list
