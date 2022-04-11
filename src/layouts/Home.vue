@@ -4,18 +4,11 @@ import Header from '~/components/Layout/Header.vue'
 import Footer from '~/components/Layout/Footer.vue'
 import Cover from '~/components/Layout/Cover.vue'
 import Newsletter from '~/components/Utilities/Newsletter.vue'
-import { secondary as _secondaryMenu } from '@/content/settings/navigation.json'
-import IconFacebook from '~/assets/icons/facebook.svg?inline'
-import IconTwitter from '~/assets/icons/twitter.svg?inline'
-import IconInstagram from '~/assets/icons/instagram.svg?inline'
+import Socials from '~/components/Layout/Navigation/Socials.vue'
 import { computed } from 'vue'
 import { markdownify } from '~/services/utilities.js'
 
 
-// https://gridsome.org/docs/body-html-attributes/#change-attributes-globally
-// https://gridsome.org/docs/data-store-api/
-import setting_navigation from '@/content/settings/navigation.json';
-import setting_global from '@/content/settings/global.json';
 const props = defineProps({
   // Récupération de tout le contenu
   content: {
@@ -33,20 +26,7 @@ const hasHero = computed(() => {
   if (!props.content.hero) return false
   return true
 })
-const customIcons = {
-  'facebook': IconFacebook,
-  'twitter': IconTwitter,
-  'instagram': IconInstagram
-}
-const secondaryMenu = computed(() => {
-  const iconsList = Object.keys(customIcons)
-  return _secondaryMenu.map(l => {
-    if (iconsList.includes(l.icon.toLowerCase())) {
-      l.icon = customIcons[l.icon.toLowerCase()]
-    }
-    return l
-  })
-})
+
 // @todo: doit pouvoir charger des templates comme `./layouts/Markdown.vue` ?
 </script>
 <script>
@@ -63,7 +43,7 @@ export default { name: 'LayoutHome' }
       <slot/>
     </div>
     <div class="container col-span-2 col-start-5 row-start-2 place-self-center mx-auto max-w-42ch text-center my-4">
-      <z-menu :links="secondaryMenu" />
+      <Socials />
       <Newsletter />
     </div>
   </div>
@@ -88,9 +68,6 @@ export default { name: 'LayoutHome' }
         </z-button>
         </div>
       </template>
-    </section>
-    <section class="z-grid-item-major is-gizmo">
-      GIZMO
     </section>
   </z-grid>
   <!-- Contenu divers, inscription newsletter, mise en vavant des réseaux sociaux, récupération de vélo, articles mis en avant, derniers articles, etc. -->

@@ -44,16 +44,10 @@
       </div>
     </div>
     <div class="nav-right justify-right">
-      <z-menu
-        v-if="importantMenu.length"
-        :links="importantMenu"
-        class="nav-menu nav-item"
-      />
       <ZSearch />
-      <z-menu
-        :links="secondaryMenu"
+      <Socials
         class="nav-menu-burger nav-item is-compact"
-        :is-responsive="false"
+        :is-resonsive="true"
       />
     </div>
     <div class="nav-burger nav-item">
@@ -73,48 +67,12 @@
  */
 import HeaderOffScreen from '~/components/Layout/Header/OffScreen.vue'
 import Logo from '~/assets/logo-guidoline-small.svg?inline'
-import IconFacebook from '~/assets/icons/facebook.svg?inline'
-import IconTwitter from '~/assets/icons/twitter.svg?inline'
-import IconInstagram from '~/assets/icons/instagram.svg?inline'
-import { main as mainMenu } from '@/content/settings/navigation.json'
+import Socials from '~/components/Layout/Navigation/Socials.vue'
+import { main as mainMenu, socials as _socialLinks } from '@/content/settings/navigation.json'
 import { contacts, name as siteName } from '@/content/settings/global.json'
 import { ref } from 'vue'
 const menuOpen = ref(true)
 menuOpen.value = false
-const importantMenu = [
-  // Pas utilisé sur ce thème
-]
-// @todo récupérer les liens depuis le fichier de configuration
-const secondaryMenu = [
-  {
-    text: 'Facebook',
-    title: 'Consultez nos publication Facebook',
-    href: 'https://example.com',
-    icon: IconFacebook,
-    sr: true,
-    class: 'secondary elevated'
-  },
-  {
-    text: 'Twitter',
-    title: 'Contacter via Twitter',
-    href: 'https://example.com',
-    icon: IconTwitter,
-    sr: true
-  },
-  {
-    text: 'Instagram',
-    title: 'Nos photos sur instagram',
-    href: 'https://example.com',
-    icon: IconInstagram,
-    sr: true
-  },
-  {
-    text: 'Écrivez-nous',
-    href: 'mailto:hello@example.com',
-    icon: 'Mail',
-    sr: true
-  }
-]
 </script>
 <style scoped>
 /** @todo: construire un header standard (sobre et simple) :
