@@ -25,10 +25,8 @@ export default {
 }
 </script>
 <template>
-  <RouterView v-slot="{ Component }">
-    <template v-if="Component">
-      <component :is="Component" />
-    </template>
+  <RouterView v-slot="{ Component, route }">
+    <component :is="Component" :key="route.path" />
   </RouterView>
   <ProgressBar/>
 </template>
