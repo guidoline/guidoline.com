@@ -27,6 +27,24 @@
       "href": "/qui-sommes-nous#contacts"
     }
   ],
+  "secondary": [
+    {
+      "text": "Instagram",
+      "title": "",
+      "href": "https://www.instagram.com/_guidoline/",
+      "icon": "Instagram",
+      "class": "primary",
+      "sr": false
+    },
+    {
+      "text": "Facebook",
+      "title": "Aller sur la page Facebook de Guidoline.",
+      "href": "https://www.facebook.com/Guidoline",
+      "icon": "Facebook",
+      "sr": true,
+      "class": "secondary"
+    }
+  ],
   "socials": [
     {
       "text": "Instagram",
