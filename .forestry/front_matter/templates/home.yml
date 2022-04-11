@@ -28,6 +28,9 @@ fields:
 - name: sections
   type: field_group_list
   fields:
+  - name: highlight
+    type: boolean
+    label: Mettre en avant
   - name: section
     type: include
     config: {}
