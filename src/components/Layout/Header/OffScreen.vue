@@ -30,7 +30,6 @@
         type="light"
         @click="$emit('update:menuOpen', false)"
       />
-      <ZSearch />
     </div>
   </nav>
 </template>
