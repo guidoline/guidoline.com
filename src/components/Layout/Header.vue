@@ -44,7 +44,6 @@
       </div>
     </div>
     <div class="nav-right justify-right">
-      <ZSearch />
       <Socials
         class="nav-menu-burger nav-item is-compact"
         :is-resonsive="true"
