@@ -17,6 +17,11 @@ sections:
     icon: ''
     color: ''
     href: ''
+    title: ''
+    sr: false
+    class: ''
+  class: primary
+  add_link: false
 - title: Une image comme section
   content: |-
     ![](/uploads/2020/01/match-de-bike-polo.jpg)
@@ -27,6 +32,11 @@ sections:
     href: "/uploads/2021/11/Félix_Nadar_1820-1910_portraits_Jules_Verne.png"
     icon: download
     color: primary
+    title: ''
+    sr: false
+    class: ''
+  class: ''
+  add_link: false
 title: Bienvenue
 hero:
   src: "/uploads/2020/01/vu4t4.jpeg"
@@ -41,6 +51,9 @@ hero:
     href: "/journal/2021/11/exemple-d-information-pratique"
     icon: ''
     color: primary
+    title: ''
+    sr: false
+    class: ''
 SEO:
   author: content/authors/guidoline.md
   date: ''
