@@ -46,7 +46,7 @@
     <div class="nav-right justify-right">
       <Socials
         class="nav-menu-burger nav-item is-compact"
-        :is-resonsive="true"
+        :is-responsive="false"
       />
     </div>
     <div class="nav-burger nav-item">
