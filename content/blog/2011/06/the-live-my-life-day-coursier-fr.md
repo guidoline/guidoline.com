@@ -3,7 +3,7 @@ title: "The Live My Life Day | Coursier.fr"
 date: "2011-06-15"
 ---
 
-[![](images/eflyer_thelivemylifeday_coursierfr.jpg "eflyer_thelivemylifeday_coursierfr")](http://www.guidoline.com/wp-content/uploads/2011/06/eflyer_thelivemylifeday_coursierfr.jpg)
+[![](/uploads/eflyer_thelivemylifeday_coursierfr.jpg "eflyer_thelivemylifeday_coursierfr")](http://www.guidoline.com/wp-content/uploads/2011/06/eflyer_thelivemylifeday_coursierfr.jpg)
 
 Rendez-vous le **18 juin prochain**, enfin ce week-end pour **TheLiveMyLifeDay**, l’événement 100% vélo organisé par [**Coursier.fr**](http://www.facebook.com/coursier.fr)
 
