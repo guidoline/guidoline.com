@@ -51,5 +51,3 @@ fields:
       type: pages
       section: blog
   label: Articles en relation
-pages:
-- content/journal/2022/03/exemple-d-article.md
