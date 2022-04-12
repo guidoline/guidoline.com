@@ -11,7 +11,7 @@ Depuis mai, et pour trois mois, "Rapha Cycle Club" a ouvert à Londres un lieu u
 
 un lieu créatif (livres, expositions, conférences, projections) ou les cyclistes viennent partager leurs passions et leurs expériences.
 
-![](images/coppiccino.jpg "coppiccino")
+![](/uploads/coppiccino.jpg "coppiccino")
 
 [**Rapha cycle club**](http://www.rapha.cc/london)
 

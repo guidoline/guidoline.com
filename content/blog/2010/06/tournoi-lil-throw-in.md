@@ -3,7 +3,7 @@ title: "Tournoi Lil' throw in"
 date: "2010-06-07"
 ---
 
-![](images/lil-throw-spokecard.jpg "Lil' Throw In ")
+![](/uploads/lil-throw-spokecard.jpg "Lil' Throw In ")
 
 A l'occasion du festival de l'Entorse qui se déroulait le week-end dernier à Lille, 7 joueurs de Rouen ont fait le déplacement pour participer au tournoi de bike-polo Lil' Throw In.
 

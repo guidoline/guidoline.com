@@ -31,6 +31,6 @@ Bref, que du bon ! Alors le 18/06/11, vous venez à vélo \[celui de votre choix
 
  
 
-![](images/tee-shirt_spokecard_thelivemylifeday_coursierfr.png "tee-shirt_spokecard_thelivemylifeday_coursierfr")
+![](/uploads/tee-shirt_spokecard_thelivemylifeday_coursierfr.png "tee-shirt_spokecard_thelivemylifeday_coursierfr")
 
-![](images/casquette_thelivemylifeday_coursierfr.png "casquette_thelivemylifeday_coursierfr")
+![](/uploads/casquette_thelivemylifeday_coursierfr.png "casquette_thelivemylifeday_coursierfr")

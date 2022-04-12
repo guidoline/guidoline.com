@@ -14,7 +14,7 @@ template: page
 
 Guidoline est **née en 2010** de l'envie de trois passionnés de **mettre Rouen en selle !**
 
-![Façade de l'atelier Guidoline à Rouen](/uploads/2020/01/guidoline-facade.jpg)
+![Façade de l'atelier Guidoline à Rouen](/uploads/guidoline-facade.jpg)
 
 Aujourd’hui **l’association fédère plus de 8000 adhérent-e-s** à travers :
 
@@ -24,7 +24,7 @@ Aujourd’hui **l’association fédère plus de 8000 adhérent-e-s** à travers
 
 - **un café culturel** qui donne lieu à des rencontres enrichissantes
 
-![Entrée de l'atelier de Guidoline](/uploads/2020/01/guidoline-entree.jpg)
+![Entrée de l'atelier de Guidoline](/uploads/guidoline-entree.jpg)
 
 Membre de l’ADRESS, Agence pour le Développement de l’Economie Sociale et Solidaire (ESS), Guidoline repose ses valeurs et sur les principes de l’éducation populaire.
 

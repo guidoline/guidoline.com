@@ -3,7 +3,7 @@ title: "Inauguration atelier Guidoline"
 date: "2010-10-22"
 ---
 
-![](images/inauguration_atelier.jpg "inauguration_atelier")
+![](/uploads/inauguration_atelier.jpg "inauguration_atelier")
 
 Déjà presque un mois sans vous donner de nouvelles ...
 

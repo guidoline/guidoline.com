@@ -3,7 +3,7 @@ title: "Atelier Guidoline en travaux"
 date: "2010-09-14"
 ---
 
-![](images/atelier.jpg "atelier")
+![](/uploads/atelier.jpg "atelier")
 
 Les travaux avancent à grands pas dans le futur atelier Guidoline !
 

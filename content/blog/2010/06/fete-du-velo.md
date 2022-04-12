@@ -3,7 +3,7 @@ title: "Fête du vélo"
 date: "2010-06-08"
 ---
 
-![](images/fete_velo_rouen-212x300.jpg "Fête du vélo")
+![](/uploads/fete_velo_rouen-212x300.jpg "Fête du vélo")
 
 Samedi 12 juin, la Ville de **Rouen** fête le vélo sur le Parvis de l’**Hôtel de Ville** de 14h30 à 18h.
 

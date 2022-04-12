@@ -3,7 +3,7 @@ title: "Robin Melee Bike polo tournament"
 date: "2011-09-07"
 ---
 
-![](images/melle-tournoi.jpg "Melee Bike polo tournament")
+![](/uploads/melle-tournoi.jpg "Melee Bike polo tournament")
 
 Quelques images du tournoi de bike polo organisé dimanche dernier par l'ami Robinou avec des joueurs 100% da Rouen. Une journée polo vraiment cool à reproduire plus souvent, pour preuve différents messages tirés du forum.
 

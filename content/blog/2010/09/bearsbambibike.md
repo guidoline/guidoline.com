@@ -3,7 +3,7 @@ title: "Bears*Bambi*Bike"
 date: "2010-09-16"
 ---
 
-![](images/tom-1.jpg)
+![](/uploads/tom-1.jpg)
 
 Le mois d'octobre est réjouissant... avec notamment cette exposition à la galerie [_Une poussière dans l'oeil_](http://labelle.epoque.free.fr/).
 

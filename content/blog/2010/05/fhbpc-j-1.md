@@ -3,7 +3,7 @@ title: "FHBPC | J-1"
 date: "2010-05-27"
 ---
 
-![](images/spoke_fhbpc.jpg "spoke_fhbpc")
+![](/uploads/spoke_fhbpc.jpg "spoke_fhbpc")
 
 \- Panneaux des scores - Buts - Tap out - Chronomètre, sifflet - Spoke card - Lots participants - Couverture  photo & vidéo sur les deux jours - Barbecue, café, thé, bière, coca, hamburger, salade, ...
 

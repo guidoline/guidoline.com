@@ -24,7 +24,7 @@ sections:
   add_link: false
 - title: Une image comme section
   content: |-
-    ![](/uploads/match-de-bike-polo.jpg)
+    ![](/uploads/image.png)
   link:
     text: ''
     href: ''
@@ -37,7 +37,7 @@ sections:
   add_link: false
 title: Bienvenue
 hero:
-  src: "/uploads/vu4t4.jpeg"
+  src: ''
   alt: Carte, badges et casquette de cycliste.
   supcaption: Exemple de surtitrage
   credit: crédit photo © machin truc
@@ -46,7 +46,7 @@ hero:
     Exemple de **description de couverture** [250 signes maximum].
   link:
     text: Exemple de lien vers du contenu
-    href: "/blog/2021/11/exemple-d-information-pratique"
+    href: ''
     icon: ''
     color: primary
     title: ''

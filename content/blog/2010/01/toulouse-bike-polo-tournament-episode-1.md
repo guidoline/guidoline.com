@@ -3,7 +3,7 @@ title: "Toulouse | Bike Polo Tournament | Episode 1"
 date: "2010-01-19"
 ---
 
-![](images/toulouseepisode1.jpg "toulouseepisode1") 19 Janvier 2010
+![](/uploads/toulouseepisode1.jpg "toulouseepisode1") 19 Janvier 2010
 
 Résultat :
 

@@ -3,7 +3,7 @@ title: "Equinox Ride | Photos"
 date: "2011-04-02"
 ---
 
-![](images/equinox-ride.jpg "Equinox Ride")
+![](/uploads/equinox-ride.jpg "Equinox Ride")
 
 Un super dimanche où le soleil et la bonne ambiance furent au rendez-vous. Les **130 km ont fait peur à certains**, mais ont finalement laissé des bons souvenirs de **beaux paysages Normand** et de nouveaux liens d'amitiés ...
 

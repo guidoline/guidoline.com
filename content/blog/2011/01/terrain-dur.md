@@ -3,7 +3,7 @@ title: "Terrain Dur | Bike Polo Show"
 date: "2011-01-14"
 ---
 
-![](images/terrain-dur.jpg "Terrain Dur Bike Polo Show")
+![](/uploads/terrain-dur.jpg "Terrain Dur Bike Polo Show")
 
 Bonjour les amis,
 
