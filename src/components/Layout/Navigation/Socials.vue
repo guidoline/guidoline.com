@@ -3,7 +3,6 @@
  * Liste de liens avec des icônes personnaliséé
  */
 import { computed } from 'vue'
-import { socials as _socialLinks } from '@/content/settings/navigation.json'
 import IconFacebook from '~/assets/icons/facebook.svg?inline'
 import IconTwitter from '~/assets/icons/twitter.svg?inline'
 import IconInstagram from '~/assets/icons/instagram.svg?inline'
@@ -12,9 +11,16 @@ const customIcons = {
   'twitter': IconTwitter,
   'instagram': IconInstagram
 }
+const props = defineProps({
+  links: {
+    type: Array,
+    require: true
+  }
+})
+
 const socialLinks = computed(() => {
   const iconsList = Object.keys(customIcons)
-  return _socialLinks.map(l => {
+  return props.links.map(l => {
     if (typeof l.icon !== 'string') return l
     if (iconsList.includes(l.icon.toLowerCase())) {
       l.icon = customIcons[l.icon.toLowerCase()]
@@ -22,6 +28,7 @@ const socialLinks = computed(() => {
     return l
   })
 })
+
 </script>
 <template>
   <z-menu :links="socialLinks" />

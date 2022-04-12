@@ -69,6 +69,7 @@
           <Socials
             class="nav-menu-burger nav-item is-compact"
             :is-responsive="false"
+            :links="socialLinks"
           />
         </NavItem>
 
@@ -87,7 +88,7 @@ import Logo from '~/assets/logo-guidoline-small.svg?inline'
 import Socials from '~/components/Layout/Navigation/Socials.vue'
 import NavWrapper from '~/components/Layout/Navigation/Wrapper.vue'
 import NavItem from '~/components/Layout/Navigation/Item.vue'
-import { main as mainMenu, socials as _socialLinks } from '@/content/settings/navigation.json'
+import { main as mainMenu, socials as socialLinks } from '@/content/settings/navigation.json'
 import { contacts, name as siteName } from '@/content/settings/global.json'
 import { ref } from 'vue'
 const menuOpen = ref(true)

@@ -4,7 +4,6 @@ import Header from '~/components/Layout/Header.vue'
 import Footer from '~/components/Layout/Footer.vue'
 import Cover from '~/components/Layout/Cover.vue'
 import Newsletter from '~/components/Utilities/Newsletter.vue'
-import Socials from '~/components/Layout/Navigation/Socials.vue'
 import Section from '~/components/Layout/Section.vue'
 import { computed } from 'vue'
 import { markdownify } from '~/services/utilities.js'
@@ -44,7 +43,6 @@ export default { name: 'LayoutHome' }
       <slot/>
     </div>
     <div class="container col-span-2 col-start-5 row-start-2 place-self-center mx-auto max-w-42ch text-center my-4">
-      <Socials />
       <Newsletter />
     </div>
   </div>

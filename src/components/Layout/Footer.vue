@@ -10,6 +10,7 @@
           type="text"
           linkClasses="light text"
         />
+        <Socials :links="socialLinks"/>
       </section>
       <section>
         <h2>Catégories</h2>
@@ -49,8 +50,9 @@
   </footer>
 </template>
 <script setup>
+import Socials from '~/components/Layout/Navigation/Socials.vue'
 import { computed } from 'vue'
-import { footer as footerMenu } from '@/content/settings/navigation.json'
+import { footer as footerMenu, socials as _socialLinks } from '@/content/settings/navigation.json'
 import { name, about, contacts, categories as _categories } from '@/content/settings/global.json'
 import { useContentsStore } from '~/store/modules/contents.js'
 import { useArticlesStore } from '~/store/modules/articles.js'
@@ -67,6 +69,12 @@ const sitemap = contentStore.pages
     text: r.title || r.name,
     to: r.path
   }))
+
+// Imposer une couleur de contraste
+const socialLinks = computed(() => _socialLinks.map(l => {
+  l.class = 'secondary'
+  return l
+}))
 </script>
 <style scoped>
 /* Utiliser les couleurs de nuit pour le pied de page */
