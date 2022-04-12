@@ -240,9 +240,9 @@ export default {
       },
       callout: {
         text: {
-          light: colors.dark.light,
-          DEFAULT: colors.dark.DEFAULT,
-          dark: colors.dark.dark
+          light: colors.light.light,
+          DEFAULT: colors.light.DEFAULT,
+          dark: colors.light.dark
         },
         background: {
           light: colors.primary.light,

@@ -5,6 +5,7 @@ import Footer from '~/components/Layout/Footer.vue'
 import Cover from '~/components/Layout/Cover.vue'
 import Newsletter from '~/components/Utilities/Newsletter.vue'
 import Socials from '~/components/Layout/Navigation/Socials.vue'
+import Section from '~/components/Layout/Section.vue'
 import { computed } from 'vue'
 import { markdownify } from '~/services/utilities.js'
 
@@ -47,11 +48,32 @@ export default { name: 'LayoutHome' }
       <Newsletter />
     </div>
   </div>
-  <z-grid class="sections px-4">
+  <z-grid class="px-4 is-container">
+    <Section
+      v-for="(section, index) in content.sections"
+      :key="index"
+      :class="section.class ? section.class : ''"
+      class="secondary"
+    >
+      <h1>{{ section.title }}</h1>
+      <div v-if="section.content" v-html="markdownify(section.content)"/>
+      <template v-if="section.link">
+        <div v-if="section.link.href" class="text-center">
+        <z-button
+          :to="section.link.href"
+          :icon="section.link.icon"
+          :class="section.link.color"
+          filled
+        >
+          {{ section.link.text }}
+        </z-button>
+        </div>
+      </template>
+    </Section>
     <section
       v-for="(section, index) in content.sections"
       :key="index"
-      class="prose z-grid-item-major"
+      class="prose z-grid-item-major is-primary"
     >
       <!-- Créer des composants pour chaque type de template de section -->
       <h1>{{ section.title }}</h1>
@@ -76,5 +98,11 @@ export default { name: 'LayoutHome' }
   </Footer>
 </template>
 <style scoped>
-.sections section { @apply bg-day-background-dark dark:bg-night-background-dark text-insert-text p-4; }
+/* .sections section {
+  @apply p-4;
+  @apply text-insert-text bg-insert-background dark:bg-night-background-dark;
+}
+.sections section.is-primary {
+  @apply text-callout-text bg-callout-background;
+} */
 </style>
