@@ -106,7 +106,7 @@ const routes = Object.keys(pages)
           //   next({ name: '404', params: [to.path] })
           // } else {
             Object.assign(to.meta, { props: { content: article } })
-          //   next()
+            next()
           // }
         }
         break
