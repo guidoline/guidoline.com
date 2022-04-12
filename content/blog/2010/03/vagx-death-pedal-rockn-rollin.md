@@ -7,8 +7,4 @@ Une bien belle collaboration ! [Messenger bag](http://www.flamstore.com/front/ph
 
 ![](/uploads/capture-d_ecran-2010-03-20-a-22-33-11.png "VAGX")
 
-![](/uploads/tee.jpg "VAGX")
-
-![](/uploads/bag.png "VAGX") 
-
 [Rock'n'Rollin @ INSEP](http://vimeo.com/10246854) from [Julien Rideau](http://vimeo.com/julienrideau) on [Vimeo](http://vimeo.com).

@@ -11,9 +11,7 @@ Lors de la remise des lauréats, l'association Guidoline qui avait déposé un d
 
 L'association Guidoline remercie la CREA et le FEDER pour son soutient.
 
-![](/uploads/crea-2.jpg "crea-2")
-
-![](/uploads/bandeau_creactif.png "bandeau_creactif") **Creactifs**
+**Creactifs**
 
 _Un concours pour associer la créativité des jeunes à la démarche de développement durable de la CREA._
 

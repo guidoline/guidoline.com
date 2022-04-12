@@ -5,10 +5,4 @@ date: "2010-03-22"
 
 ![](/uploads/IMG_5064.jpg "IMG_5064")
 
-![](/uploads/IMG_5072.jpg "IMG_5072")
-
-![](/uploads/IMG_5076.jpg "IMG_5076")
-
-![](/uploads/IMG_5074.jpg "IMG_5074")
-
 Posters signés et numérotés disponible sur  [www.rebel8.com](http://www.rebel8.com)

@@ -6,5 +6,3 @@ date: "2010-06-17"
 Le [Bicycle Film Festival](http://www.bicyclefilmfestival.com/new-york) fête ses 10 ans du 16 au 20 Juin à New-York, retrouvez le programme complet [ici](http://www.bicyclefilmfestival.com/new-york).
 
 ![](/uploads/NY_BFF10_poster.jpg "NY_BFF10_poster")
-
-![](/uploads/June16th2010.jpg) ![](/uploads/June17th2010JoyRide.jpg) ![](/uploads/June19th2010FixedEvent.jpg) ![](/uploads/June19th2010ThrashBike.jpg) ![](/uploads/June19th2010BP.jpg) ![](/uploads/June19th2010Alleycat.jpg)

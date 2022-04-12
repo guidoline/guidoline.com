@@ -10,7 +10,3 @@ Suite à la superbe action de Max en mode W/SÜN streaker pendant la finale du E
 [EHBPC 2010 | Streaker](http://vimeo.com/13568983) from [Guidoline](http://vimeo.com/user4332343) on [Vimeo](http://vimeo.com).
 
 ![](/uploads/ehbpc-23.jpg "ehbpc-23")
-
-![](/uploads/ehbpc-140.jpg "ehbpc-140")
-
-![](/uploads/ehbpc-98.jpg "ehbpc-98")

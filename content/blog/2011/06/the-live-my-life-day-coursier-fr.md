@@ -11,26 +11,6 @@ Fidèles de la bicyclette vintage, du vélib’ en talons haut, du hollandais cr
 
 De nombreux lots seront à gagner dont un **séjour pour 2 personnes A/R pour NYC** et la **découverte d’une société de coursier à vélo made in New York**.
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
 \>>>>>> Pré-inscriptions et informations sur [Facebook](http://www.facebook.com/coursier.fr) <<<<<<
 
 Bref, que du bon ! Alors le 18/06/11, vous venez à vélo \[celui de votre choix\] à la **galerie Backslash**, 29 rue Notre-Dame de Nazareth Paris 3, et vous venez tôt \[à partir de 14h\] pour recevoir sur place l’un des 100 kits offerts aux participants avec la **casquette,** le **teeshirt** et la **spokecard** de l’event !
-
- 
-
-![](/uploads/tee-shirt_spokecard_thelivemylifeday_coursierfr.png "tee-shirt_spokecard_thelivemylifeday_coursierfr")
-
-![](/uploads/casquette_thelivemylifeday_coursierfr.png "casquette_thelivemylifeday_coursierfr")
