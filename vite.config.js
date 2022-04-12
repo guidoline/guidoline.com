@@ -59,7 +59,7 @@ export default defineConfig({
       routes = routes.map(route => {
         switch(route) {
           case '/:pathMatch(.*)*': return '404'
-          case '/pages/:slug': return false
+          case '/pages/:slug+': return false
           case '/blog/:folio(\\d+)?': return 'blog'
           case '/blog/:year(\\d{4})/:month(\\d{2})/:slug': return false
           case '/blog/archives/:year(\\d{4})?/:month(\\d{2})?': return '/blog/archives'
