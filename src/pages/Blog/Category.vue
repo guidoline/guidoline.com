@@ -2,6 +2,7 @@
 import ArticleAbstract from '~/components/Blog/Article/Abstract.vue'
 import Title from '~/components/Layout/Title.vue'
 import Navigation  from '~/components/Blog/Navigation.vue'
+import Footer from '~/components/Blog/Footer.vue'
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useArticlesStore } from '~/store/modules/articles.js'
@@ -59,6 +60,11 @@ const obCategory = computed(() => store.getCategories().find(c => c.slug === pro
         v-for="article in paginateArticles"
         :key="article.path"
         :article="article"
+      />
+      <Footer
+        :articles-count="articlesCount"
+        :pages-count="pagesCount"
+        :current-folio="folio"
       />
     </main>
   </LayoutDefault>

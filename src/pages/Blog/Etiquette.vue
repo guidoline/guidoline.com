@@ -1,7 +1,8 @@
 <script setup>
 import ArticleAbstract from '~/components/Blog/Article/Abstract.vue'
-import Navigation from '~/components/Blog/Navigation.vue'
 import Title from '~/components/Layout/Title.vue'
+import Navigation from '~/components/Blog/Navigation.vue'
+import Footer from '~/components/Blog/Footer.vue'
 import { computed, ref} from 'vue'
 import { useRouter } from 'vue-router'
 import { useArticlesStore } from '~/store/modules/articles.js'
@@ -47,20 +48,23 @@ const obTag = computed(() => store.getTags().find(c => c.slug === props.tag))
     <Navigation />
     <main>
       <Title>Étiquette «&nbsp;<strong>{{ obTag.name }}</strong>&nbsp;»</Title>
-      <div class="container">
-        <z-pagination
-          :route-prefix="`/blog/etiquettes/${tag}/`"
-          @change-folio="changePage($event)"
-          :folio="folio"
-          :folio-count="pagesCount"
-        />
-        <ArticleAbstract
-          class="prose"
-          v-for="article in paginateArticles"
-          :key="article.path"
-          :article="article"
-        />
-      </div>
+      <z-pagination
+        :route-prefix="`/blog/etiquettes/${tag}/`"
+        @change-folio="changePage($event)"
+        :folio="folio"
+        :folio-count="pagesCount"
+      />
+      <ArticleAbstract
+        class="prose"
+        v-for="article in paginateArticles"
+        :key="article.path"
+        :article="article"
+      />
+      <Footer
+        :articles-count="articlesCount"
+        :pages-count="pagesCount"
+        :current-folio="folio"
+      />
     </main>
   </LayoutDefault>
 </template>

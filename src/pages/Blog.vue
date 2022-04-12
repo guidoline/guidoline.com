@@ -2,6 +2,8 @@
 import ArticleAbstract from '~/components/Blog/Article/Abstract.vue'
 import Title from '~/components/Layout/Title.vue'
 import Navigation from '~/components/Blog/Navigation.vue'
+import BlogFooter from '~/components/Blog/Footer.vue'
+
 import { useRouter } from 'vue-router'
 import { computed, ref } from 'vue'
 import { useArticlesStore } from '~/store/modules/articles'
@@ -59,21 +61,11 @@ const changePage = (folio) => {
         :folio="folio"
         :folio-count="pagesCount"
       />
-      <footer>
-        <z-grid>
-          <p>
-            {{ articlesCount }} articles
-          </p>
-          <p class="text-right">
-            Pages {{ folio }} / {{ pagesCount }}
-          </p>
-        </z-grid>
-      </footer>
+      <BlogFooter
+        :articles-count="articlesCount"
+        :pages-count="pagesCount"
+        :current-folio="folio"
+      />
     </main>
   </LayoutDefault>
 </template>
-<style scoped>
-footer {
-  @apply px-12 text-sm italic text-day-text-lighter;
-}
-</style>
