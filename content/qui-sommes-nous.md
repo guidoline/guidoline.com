@@ -38,7 +38,7 @@ Tou-te-s sont bienvenus, les différents âges et genres, les novices et les exp
 
 ## Participer
 
-![L'équipe de bénévole de Guidoline](/uploads/pages/bienvenue/equipe-guidoline.jpg)
+![L'équipe de bénévole de Guidoline](/uploads/equipe-guidoline.jpg)
 
 Être bénévole, c’est donner de son temps libre ponctuellement ou régulièrement à l’association, c’est développer ses compétences et partager de bons moments. **C’est surtout ça : du plaisir.**
 

@@ -24,12 +24,10 @@ sections:
   add_link: false
 - title: Une image comme section
   content: |-
-    ![](/uploads/2020/01/match-de-bike-polo.jpg)
-
-    Lien de[ téléchargement direct](/uploads/2021/11/Houghton_FC8_V5946_869ve_-_Verne,_frontispiece.png).
+    ![](/uploads/match-de-bike-polo.jpg)
   link:
-    text: Télécharger le portrait de Jules Verne
-    href: "/uploads/2021/11/Félix_Nadar_1820-1910_portraits_Jules_Verne.png"
+    text: ''
+    href: ''
     icon: download
     color: primary
     title: ''
@@ -39,7 +37,7 @@ sections:
   add_link: false
 title: Bienvenue
 hero:
-  src: "/uploads/2020/01/vu4t4.jpeg"
+  src: "/uploads/vu4t4.jpeg"
   alt: Carte, badges et casquette de cycliste.
   supcaption: Exemple de surtitrage
   credit: crédit photo © machin truc
@@ -62,6 +60,6 @@ publish: true
 template: home
 
 ---
-![L'équipe de Guidoline](/uploads/pages/bienvenue/equipe-guidoline.jpg)
+![L'équipe de Guidoline](/uploads/equipe-guidoline.jpg)
 
 **Description** / résumé principal de Guidoline \[500 signes maximum\]
