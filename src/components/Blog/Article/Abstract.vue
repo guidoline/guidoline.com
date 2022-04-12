@@ -21,13 +21,15 @@ defineProps({
         </figcaption>
     </figure>
     <div class="md:col-span-3" >
-      <z-tag
-        v-if="article.category"
-        :to="article.category.to"
-        class="is-small is-secondary"
-      >
-        {{ article.category.name }}
-      </z-tag>
+      <footer>
+        <z-tag
+          v-if="article.category"
+          :to="article.category.to"
+          class="is-small is-secondary"
+        >
+          {{ article.category.name }}
+        </z-tag>
+      </footer>
       <div v-if="article.tags" class="tags">
         <z-tag
           v-for="(tag, index) in article.tags"
@@ -47,14 +49,6 @@ defineProps({
         <small>Publié le {{ article.formattedDate }}</small>
       </template>
       <div v-html="article.excerpt" class="last:mb-0" />
-      <footer>
-        <small>
-          <details>
-            <summary>debug</summary>
-            <pre>{{ article }}</pre>
-          </details>
-        </small>
-      </footer>
     </div>
   </article>
 </template>
