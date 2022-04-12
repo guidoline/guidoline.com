@@ -5,9 +5,9 @@ export default { name: 'TemplateArticle'}
 // @note: l'idéal serait de placer les fichiers de template dans le
 // repertoire `./src/pages(/<parent>)/<template>.vue`
 import Cover from '~/components/Layout/Cover.vue'
-import ArticleInfoItems from '~/components/Journal/Article/Info/Items.vue'
+import ArticleInfoItems from '~/components/Blog/Article/Info/Items.vue'
 import ContainerProse from '~/components/Layout/Container/Prose.vue'
-import JournalPagination from '~/components/Journal/Pagination.vue'
+import BlogPagination from '~/components/Blog/Pagination.vue'
 import { computed } from 'vue'
 import { stringsToURL }from '~/services/utilities.js'
 const props = defineProps({
@@ -33,7 +33,7 @@ const cover = computed(() => {
 const dateItem = computed(() => {
   return {
     name: props.content.formattedDate || props.content.date,
-    to: `/journal/archives/${props.content.year}#${props.content.month}`
+    to: `/blog/archives/${props.content.year}#${props.content.month}`
   }
 })
 
@@ -81,7 +81,7 @@ const author = computed(() => {
 
     </footer>
     <!-- @ajouter : auteur, date, tags, category, related_posts, aticle suivat / précedent-->
-    <JournalPagination :pagination="content.pagination"/>
+    <BlogPagination :pagination="content.pagination"/>
   </main>
 </LayoutDefault>
 </template>

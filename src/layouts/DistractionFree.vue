@@ -10,7 +10,7 @@ defineProps({
   <!-- Distraction free layout -->
   <nav class="navigation">
     <p>
-      <z-button type="light" icon="ArrowLeft" href="/journal" @click.prevent="$router.back()">Retour</z-button>
+      <z-button type="light" icon="ArrowLeft" href="/blog" @click.prevent="$router.back()">Retour</z-button>
     </p>
     <p>
       <z-button type="light" icon="DocumentDownload" >

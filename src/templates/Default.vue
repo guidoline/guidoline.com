@@ -1,6 +1,6 @@
 <script setup>
 import ProseContainer from '~/components/Layout/Container/Prose.vue'
-import JournalPagination from '~/components/Journal/Pagination.vue'
+import Blog from '~/components/Blog/Pagination.vue'
 defineProps({
   content: {
     type: Object,
@@ -14,6 +14,6 @@ defineProps({
     <ProseContainer>
       <slot/>
     </ProseContainer>
-    <JournalPagination :pagination="content.pagination"/>
+    <Blog :pagination="content.pagination"/>
   </LayoutDefault>
 </template>

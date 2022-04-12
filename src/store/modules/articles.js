@@ -67,7 +67,7 @@ export const useArticlesStore = defineStore({
     //   const pagesCount = Math.ceil(count / limit)
     //   const articlesRoutes = []
     //   for (const i = 1; i < pagesCount; i ++) {
-    //     articlesRoutes.push(`(/journal/${i})`)
+    //     articlesRoutes.push(`(/blog/${i})`)
     //   }
     //   return articlesRoutes
     // },
@@ -130,7 +130,7 @@ export const useArticlesStore = defineStore({
     setArticles() {
       const dateOptions = { dateStyle: 'long'}
       this.articles = data.filter(c => {
-        return c.dirname.startsWith('content/journal')
+        return c.dirname.startsWith('content/blog')
       })
       // Filtres de données
       .map(f => {
@@ -204,13 +204,13 @@ export const useArticlesStore = defineStore({
  *  category: {
  *    name: 'Exemple',
  *    slug: 'exemple',
- *    to: '/journal/categorie/exemple'
+ *    to: '/blog/categorie/exemple'
  *  },
  *  tags: [
  *    {
  *     name: 'Exemple',
  *     slug: 'exemple',
- *     to: '/journal/tag/exemple'
+ *     to: '/blog/tag/exemple'
  *    }
  *  ],
  *  simplObject: { 1: 'a', 2: 'b', 3: 'c' },
@@ -302,8 +302,8 @@ const getFilter = (key) => filters[key]
 import { stringsToURL } from '~/services/utilities'
 
 const filters = {
-  category: (value) => stringsToURL('/journal/categorie/', [value]).shift(),
-  tags: (value) => stringsToURL('/journal/etiquette/', value)
+  category: (value) => stringsToURL('/blog/categorie/', [value]).shift(),
+  tags: (value) => stringsToURL('/blog/etiquette/', value)
 }
 
 

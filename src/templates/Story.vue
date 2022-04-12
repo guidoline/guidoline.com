@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import Cover from '~/components/Layout/Cover.vue'
-import JournalPagination from '~/components/Journal/Pagination.vue'
+import BlogPagination from '~/components/Blog/Pagination.vue'
 import { stringsToURL } from '~/services/utilities.js'
 //  Passer la catégorie en sur légende de la couverture
 const cover = computed(() => {
@@ -63,7 +63,7 @@ const props = defineProps({
             <details><pre>{{ content }}</pre></details>
           </aside>
       </div>
-      <JournalPagination :pagination="content.pagination" />
+      <BlogPagination :pagination="content.pagination" />
     </main>
   </LayoutDefault>
 </template>

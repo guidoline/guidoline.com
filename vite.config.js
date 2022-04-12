@@ -47,9 +47,9 @@ export default defineConfig({
       // @note: Pas d'accès à `import` ici.
       // console.log('VITE CONFIG ARE SSR : ', import.meta.env.SSR)
       // @todo :
-      // 1. compter toutes les routes `/journal/`
-      // 2. calculer les routes d'index du journal basé sur la pagination
-      // 2bis. unifier la pagination (avec `journal.vue`)
+      // 1. compter toutes les routes `/blog/`
+      // 2. calculer les routes d'index du blog basé sur la pagination
+      // 2bis. unifier la pagination (avec `blog.vue`)
       // 3. ajouter les routes d'index aux routes globale
       console.log('——————————————————————————————————————————————')
       console.log('Rendu SSG des routes ')
@@ -60,11 +60,11 @@ export default defineConfig({
         switch(route) {
           case '/:pathMatch(.*)*': return '404'
           case '/pages/:slug': return false
-          case '/journal/:folio(\\d+)?': return 'journal'
-          case '/journal/:year(\\d{4})/:month(\\d{2})/:slug': return false
-          case '/journal/archives/:year(\\d{4})?/:month(\\d{2})?': return '/journal/archives'
-          case '/journal/categorie/:category': return false
-          case '/journal/etiquette/:tag': return false
+          case '/blog/:folio(\\d+)?': return 'blog'
+          case '/blog/:year(\\d{4})/:month(\\d{2})/:slug': return false
+          case '/blog/archives/:year(\\d{4})?/:month(\\d{2})?': return '/blog/archives'
+          case '/blog/categorie/:category': return false
+          case '/blog/etiquette/:tag': return false
           default: return route
         }
       }).filter(r => r !== false)
@@ -74,10 +74,10 @@ export default defineConfig({
       // articleStore.articles.forEach(a => {
       //   routes.push(a.path)
       // })
-      // Journal folio
-      // Journal Archives
-      // Journal catégories
-      // Journal etiquettes
+      // blog folio
+      // blog Archives
+      // blog catégories
+      // blog etiquettes
       return routes
     }
   }

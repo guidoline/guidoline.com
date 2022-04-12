@@ -102,7 +102,7 @@ fields:
       name: hours
       label: Horaires
   description: Diverse coordonnées à afficher sur le site.
-- name: journal
+- name: blog
   type: field_group
   config: {}
   fields:
@@ -120,9 +120,9 @@ fields:
     config:
       min: 5
       max: 60
-      step: 
+      step:
     description: Configuration de la pagination de la page d'index du Blog.
-  label: Journal
+  label: Blog
   description: Options pour le blog.
 - name: socials
   type: field_group
@@ -149,7 +149,7 @@ fields:
       label: Description
       description: Par ex. "Consultez nos dernières actualités sur Facebook."
     config:
-      min: 
+      min:
       max: 3
       labelField: name
     label: Socials

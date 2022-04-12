@@ -88,17 +88,17 @@ const routes = Object.keys(pages)
         // ?
         props = (route) => ({ content: route.meta.props.content })
         break
-      case 'journal':
-        name = 'journal-index'
-        path = '/journal/:folio(\\d+)?'
+      case 'blog':
+        name = 'blog-index'
+        path = '/blog/:folio(\\d+)?'
         props = (route) => ({
           folio: Number(route.params.folio) || 1
         })
         beforeEnter = null
         break
-      case 'journal-article':
-        name = 'journal-article'
-        path = '/journal/:year(\\d{4})/:month(\\d{2})/:slug'
+      case 'blog-article':
+        name = 'blog-article'
+        path = '/blog/:year(\\d{4})/:month(\\d{2})/:slug'
         props = (route) => ({ content:  articlesStore.getArticle(route.path) })
         beforeEnter = (to, from, next) => {
           const article = articlesStore.getArticle(to.path)
@@ -110,8 +110,8 @@ const routes = Object.keys(pages)
           }
         }
         break
-      case 'journal-category':
-        path = '/journal/categorie/:category',
+      case 'blog-category':
+        path = '/blog/categorie/:category',
         props = (route) => ({ category: route.params.category })
         beforeEnter = (to, from, next) => {
           if (articlesStore.categoryExist(to.params.category)) {
@@ -121,8 +121,8 @@ const routes = Object.keys(pages)
           }
         }
         break
-      case 'journal-etiquette':
-        path = '/journal/etiquette/:tag',
+      case 'blog-etiquette':
+        path = '/blog/etiquette/:tag',
         props = (route) => ({ tag: route.params.tag })
         beforeEnter = (to, from, next) => {
           if (articlesStore.tagExist(to.params.tag)) {
@@ -132,9 +132,9 @@ const routes = Object.keys(pages)
           }
         }
         break
-      case 'journal-archives':
+      case 'blog-archives':
         // @todo le classement par mois est overkill, nettoyer tout ça
-        path = '/journal/archives/:year(\\d{4})?/:month(\\d{2})?'
+        path = '/blog/archives/:year(\\d{4})?/:month(\\d{2})?'
         props = (route) => ({
           year: Number(route.params.year),
           month: Number(route.params.month) || null
@@ -217,7 +217,7 @@ if (import.meta.env.SSR) {
       props: {
         content: a
       },
-      component: () => import('./pages/Journal/Article.vue')
+      component: () => import('./pages/blog/Article.vue')
     })
   })
 
@@ -236,51 +236,51 @@ if (import.meta.env.SSR) {
     })
   })
 
-  // Index de journal & pagination
+  // Index de blog & pagination
   const pagesCount = Math.ceil(articlesStore.articles.length / articlesStore.limit)
   for (let i = 1; i < pagesCount + 1; i ++) {
     routes.push({
-      name: `journal-folio-${i}`,
-      path: `/journal/${i}`,
+      name: `blog-folio-${i}`,
+      path: `/blog/${i}`,
       props: {
         folio: Number(i)
       },
-      component: () => import('./pages/Journal.vue')
+      component: () => import('./pages/blog.vue')
     })
   }
 
-  // Categories du journal
+  // Categories du blog
   articlesStore.getCategories().forEach(c => {
     const limit = 10
     const categoryRoute = {
-      name: `journal-category-${c.slug}`,
+      name: `blog-category-${c.slug}`,
       path: c.to,
       props: { category: c.slug },
-      component: () => import('./pages/Journal/Category.vue')
+      component: () => import('./pages/blog/Category.vue')
     }
     routes.push(categoryRoute)
   })
 
-  // Étiquettes du journal
+  // Étiquettes du blog
   articlesStore.getTags().forEach(t => {
     const tagRoute = {
-      name: `journal-tag-${t.slug}`,
+      name: `blog-tag-${t.slug}`,
       path: t.to,
       props: { tag: t.slug },
-      component: () => import('./pages/Journal/Etiquette.vue')
+      component: () => import('./pages/blog/Etiquette.vue')
     }
     routes.push(tagRoute)
   })
 
-  // Archives du journal
+  // Archives du blog
   Object.keys(articlesStore.articlesByDate()).forEach(y => {
     const yearRoute = {
-      name: `journal-archives-year-${y}`,
-      path: `/journal/archives/${y}`,
+      name: `blog-archives-year-${y}`,
+      path: `/blog/archives/${y}`,
       props: {
         year: Number(y)
       },
-      component: () => import('./pages/Journal/Archives.vue')
+      component: () => import('./pages/blog/Archives.vue')
     }
     routes.push(yearRoute)
   })
