@@ -49,7 +49,7 @@ upload_dir: public/uploads
 public_path: "/uploads"
 front_matter_path: "/uploads"
 use_front_matter_path: true
-file_template: ":year:/:month:/:filename:"
+file_template: ":filename:"
 build:
   preview_output_directory: "./"
   install_dependencies_command: npm install
