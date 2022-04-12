@@ -76,4 +76,6 @@ defineProps({
 .article.category-fancy .article-cover{ @apply md:col-span-3 xl:col-span-5; }
 .article.category-fancy .article-cover img { @apply md:max-h-96; }
 /* .article.category-fancy .dead-col-left { @apply md:hidden; } */
+.article :deep(h2),
+.article :deep(p) { @apply my-2;}
 </style>
