@@ -96,7 +96,7 @@ const isDisabled = computed(() => {
   return attrs['disabled'] === true
 })
 
-const isExternal = computed(() => (props.href.startsWith('http')) || props.to.startsWith('http') || !props.href.startsWith('/') || !props.to.startsWith('/'))
+const isExternal = computed(() => (props.href.startsWith('http')) || props.to.startsWith('http') ||  !(props.href.startsWith('/') || props.to.startsWith('/')))
 
 // Attributs personnalisés
 const availablesStyles = [
