@@ -8,8 +8,8 @@ sections:
   path: content/index.md
   label: Accueil
 - type: directory
-  path: content/journal
-  label: Journal
+  path: content/blog
+  label: Blog
   create: all
   match: "**/*"
   templates:
