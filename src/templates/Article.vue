@@ -87,6 +87,6 @@ const author = computed(() => {
 </template>
 <style scoped>
 .article-info-title { @apply inline pr-2 uppercase text-xs text-gray-400; }
-.article-info { @apply bg-white text-gray-500 font-light mb-12; }
+.article-info { @apply bg-white text-gray-500 font-light mb-6; }
 .article-info > section { @apply text-sm; }
 </style>
