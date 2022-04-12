@@ -3,7 +3,7 @@ author: authors/guidoline.md
 sections:
 - title: Animation / prestations
   content: |-
-    Guidoline [**organise et participe régulièrement à des manifestations**](/journal/categorie/animation) pour donner son regard sur la **culture vélo**.
+    Guidoline [**organise et participe régulièrement à des manifestations**](/blog/categorie/animation) pour donner son regard sur la **culture vélo**.
 
     * Atelier mobile
     * Roller racing
@@ -48,7 +48,7 @@ hero:
     Exemple de **description de couverture** [250 signes maximum].
   link:
     text: Exemple de lien vers du contenu
-    href: "/journal/2021/11/exemple-d-information-pratique"
+    href: "/blog/2021/11/exemple-d-information-pratique"
     icon: ''
     color: primary
     title: ''
