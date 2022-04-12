@@ -60,7 +60,7 @@ defineProps({
 </template>
 <style scoped>
 
-.article { @apply mb-4 grid gap-4 px-4 mx-auto max-w-64ch md:(max-w-none grid-cols-6 px-6) md:(px-8) xl:(grid-cols-8) xl:(max-w-screen-2xl ml-0); }
+.article { @apply mb-8 grid gap-4 px-4 mx-auto max-w-64ch md:(max-w-none grid-cols-6 px-6) md:(px-8) xl:(grid-cols-8) xl:(max-w-screen-2xl ml-0); }
 .article:not(.is-covered) > * { @apply md:col-start-2 lg:col-start-3 xl:col-start-4; }
 /* .dead-col { @apply bg-teal-50; } */
 .article-cover { @apply my-0 w-full md:col-start-2 xl:col-start-3; }
