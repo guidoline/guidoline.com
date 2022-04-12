@@ -73,7 +73,7 @@ menu { @apply flex-wrap justify-center items-center; }
 menu:not(.is-responsive) { @apply flex; }
 menu.is-responsive { @apply sm:(flex ); }
 menu.is-vertical,
-menu.is-left { @apply text-left; }
+menu.is-left { @apply text-left mb-4; }
 menu.is-vertical { @apply block; }
 menu.is-horizontal li { @apply px-4; }
 menu.is-horizontal.is-compact li { @apply px-0; }

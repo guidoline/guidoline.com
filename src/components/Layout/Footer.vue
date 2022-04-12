@@ -2,6 +2,10 @@
   <footer>
     <z-grid class="is-container">
       <section>
+        <div v-html="about" />
+
+        <Socials :links="socialLinks" class="is-left" />
+
         <h2>Navigation</h2>
         <z-menu
           :links="footerMenu"
@@ -10,9 +14,8 @@
           type="text"
           linkClasses="light text"
         />
-        <Socials :links="socialLinks" class="is-left" />
-      </section>
-      <section>
+
+
         <h2>Catégories</h2>
         <z-menu
           :links="categories"
@@ -23,19 +26,18 @@
         />
       </section>
       <section>
-        <h2>Sitemap</h2>
-        <z-menu :links="sitemap" type="text" :is-vertical="true" linkClasses="light text"/>
-      </section>
-      <section>
-        <h1>{{name}}</h1>
-        <div v-html="about" />
-
         <h2>{{ contacts.main.name }}</h2>
-        <div v-html="contacts.main.description" />
+        <p v-html="contacts.main.description" />
         <address>
-          {{ contacts.main.email }}<br>
+          <p>
+            <a href="mailto:{{ contacts.main.email }}">
+              {{ contacts.main.email }}
+            </a><br>
+            <a href="tel:{{ contacts.main.phone }}">
+              {{ contacts.main.phone }}
+            </a>
+          </p>
           <strong>{{ contacts.main.address.name }}</strong><br>
-          {{ contacts.main.phone }}<br>
           {{ contacts.main.address.street }}<br>
           {{ contacts.main.address.zipcode }} {{ contacts.main.address.city }}<br>
           {{ contacts.main.address.country }}
@@ -43,9 +45,29 @@
         <h3>Horaires</h3>
         {{ contacts.main.hours }}
       </section>
+      <section>
+        <h2>{{ contacts.secondary.name }}</h2>
+        <p v-html="contacts.secondary.description" />
+        <address>
+          <p>
+            <a href="mailto:{{contact.secondary.email}}">
+              {{ contacts.secondary.email }}
+            </a><br>
+            <a href="tel:{{ contacts.secondary.phone }}">
+              {{ contacts.secondary.phone }}
+            </a>
+          </p>
+          <strong>{{ contacts.secondary.address.name }}</strong><br>
+          {{ contacts.secondary.address.street }}<br>
+          {{ contacts.secondary.address.zipcode }} {{ contacts.secondary.address.city }}<br>
+          {{ contacts.secondary.address.country }}
+        </address>
+        <h3>Horaires</h3>
+        {{ contacts.secondary.hours }}
+      </section>
     </z-grid>
     <section class="sub-footer">
-      <slot name="subfooter"/>
+      Tout droits réservés © {{name}} {{year}} <z-menu :links="sitemap" type="text" linkClasses="light text"/>
     </section>
   </footer>
 </template>
@@ -75,6 +97,7 @@ const socialLinks = computed(() => _socialLinks.map(l => {
   l.class = 'secondary'
   return l
 }))
+const year = computed(() => (new Date()).getFullYear())
 </script>
 <style scoped>
 /* Utiliser les couleurs de nuit pour le pied de page */
@@ -82,7 +105,15 @@ footer {
   @apply flex flex-wrap justify-between mt-4 antialiased font-light pt-12 bg-night-background text-night-text dark:bg-night-background-dark dark:text-night-text-light-dark;
 }
 footer h1,
-footer h2  { @apply uppercase font-bold; }
+footer h2,
+footer :deep(h1),
+footer :deep(h2),
+footer :deep(h3) { @apply uppercase font-bold; }
+footer :deep(h1),
+footer :deep(h2),
+footer :deep(h3),
+footer :deep(address),
+footer :deep(p) { @apply mb-4; }
 footer section { @apply p-4; }
-footer section.sub-footer { @apply w-full text-xs italic bg-night-background-dark text-night-text-light; }
+.sub-footer { @apply flex justify-center items-center w-full text-xs italic bg-night-background-dark text-night-text-light; }
 </style>
