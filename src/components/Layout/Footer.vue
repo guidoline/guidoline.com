@@ -10,7 +10,7 @@
           type="text"
           linkClasses="light text"
         />
-        <Socials :links="socialLinks"/>
+        <Socials :links="socialLinks" class="is-left" />
       </section>
       <section>
         <h2>Catégories</h2>
