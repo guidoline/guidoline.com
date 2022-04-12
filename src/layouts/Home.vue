@@ -53,7 +53,6 @@ export default { name: 'LayoutHome' }
       v-for="(section, index) in content.sections"
       :key="index"
       :class="section.class ? section.class : ''"
-      class="secondary"
     >
       <h1>{{ section.title }}</h1>
       <div v-if="section.content" v-html="markdownify(section.content)"/>
@@ -70,27 +69,7 @@ export default { name: 'LayoutHome' }
         </div>
       </template>
     </Section>
-    <section
-      v-for="(section, index) in content.sections"
-      :key="index"
-      class="prose z-grid-item-major is-primary"
-    >
-      <!-- Créer des composants pour chaque type de template de section -->
-      <h1>{{ section.title }}</h1>
-      <div v-if="section.content" v-html="markdownify(section.content)"/>
-      <template v-if="section.link">
-        <div v-if="section.link.href" class="text-center">
-        <z-button
-          :to="section.link.href"
-          :icon="section.link.icon"
-          :class="section.link.color"
-          filled
-        >
-          {{ section.link.text }}
-        </z-button>
-        </div>
-      </template>
-    </section>
+
   </z-grid>
   <!-- Contenu divers, inscription newsletter, mise en vavant des réseaux sociaux, récupération de vélo, articles mis en avant, derniers articles, etc. -->
   <Footer>
