@@ -19,5 +19,3 @@ fields:
   type: image_gallery
   config: {}
   label: Galerie d'images
-pages:
-- content/journal/2022/03/exemple-de-reportage.md

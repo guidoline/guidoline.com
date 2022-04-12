@@ -120,7 +120,7 @@ fields:
     config:
       min: 5
       max: 60
-      step:
+      step: 
     description: Configuration de la pagination de la page d'index du Blog.
   label: Blog
   description: Options pour le blog.
@@ -149,7 +149,7 @@ fields:
       label: Description
       description: Par ex. "Consultez nos dernières actualités sur Facebook."
     config:
-      min:
+      min: 
       max: 3
       labelField: name
     label: Socials

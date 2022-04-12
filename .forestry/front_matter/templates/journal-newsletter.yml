@@ -14,5 +14,3 @@ fields:
   config: {}
   template: _base
   label: Base
-pages:
-- content/journal/2022/03/exemple-de-newsletter.md
