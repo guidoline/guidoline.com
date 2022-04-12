@@ -126,7 +126,7 @@ title:  Inset
   <template #right>
     <small>À lire égalemment</small>
     <h2>
-      <a href="#">
+      <a href="!#">
         Une publication incroyable
       </a>
     </h2>
