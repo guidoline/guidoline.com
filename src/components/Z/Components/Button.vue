@@ -83,12 +83,12 @@ const props = defineProps({
   },
   to: {
     type: String,
-    default: null
+    default: ''
   },
   // Extrenal
   href: {
     type: String,
-    default: null
+    default: ''
   },
 })
 
@@ -96,7 +96,7 @@ const isDisabled = computed(() => {
   return attrs['disabled'] === true
 })
 
-const isExternal = computed(() => props.href && props.href.startsWith('http'))
+const isExternal = computed(() => (props.href.startsWith('http')) || props.to.startsWith('http') || !props.href.startsWith('/') || !props.to.startsWith('/'))
 
 // Attributs personnalisés
 const availablesStyles = [
