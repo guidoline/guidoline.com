@@ -217,7 +217,7 @@ if (import.meta.env.SSR) {
       props: {
         content: a
       },
-      component: () => import('./pages/blog/Article.vue')
+      component: () => import('./pages/Blog/Article.vue')
     })
   })
 
@@ -245,7 +245,7 @@ if (import.meta.env.SSR) {
       props: {
         folio: Number(i)
       },
-      component: () => import('./pages/blog.vue')
+      component: () => import('./pages/Blog.vue')
     })
   }
 
@@ -256,7 +256,7 @@ if (import.meta.env.SSR) {
       name: `blog-category-${c.slug}`,
       path: c.to,
       props: { category: c.slug },
-      component: () => import('./pages/blog/Category.vue')
+      component: () => import('./pages/Blog/Category.vue')
     }
     routes.push(categoryRoute)
   })
@@ -267,7 +267,7 @@ if (import.meta.env.SSR) {
       name: `blog-tag-${t.slug}`,
       path: t.to,
       props: { tag: t.slug },
-      component: () => import('./pages/blog/Etiquette.vue')
+      component: () => import('./pages/Blog/Etiquette.vue')
     }
     routes.push(tagRoute)
   })
@@ -280,7 +280,7 @@ if (import.meta.env.SSR) {
       props: {
         year: Number(y)
       },
-      component: () => import('./pages/blog/Archives.vue')
+      component: () => import('./pages/Blog/Archives.vue')
     }
     routes.push(yearRoute)
   })
