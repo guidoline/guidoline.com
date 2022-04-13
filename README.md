@@ -12,14 +12,14 @@ Les contenus Markdwown sont importé via `vite-plugin-md`, les routes sont gén�
  - [×] framework CSS (Windi CSS) ;
  - [×] tester la configuration Vite et Rollup de Windi CSS ;
  - [×] importation auto d'icônes ;
- - [ ] framework de composant Shoelace (lus le module de directive two way) ;
+ - [ ] framework de composant Shoelace (plus le module de directive two way) ;
  - [ ] test/valider le mariage Shoelace et WindiCSS ;
  - [ ] composants hors build (noSSR) ;
- - [ ] dark mode ;
- - [ ] génération de marqueurs d'images responsives (cd [Remark images](https://github.com/florianeckerstorfer/remark-images)) ;
- - [ ] Retaillage automatique des images responsives ;
+ - [x] dark mode ;
+ - [x] génération de marqueurs d'images responsives (cd [Remark images](https://github.com/florianeckerstorfer/remark-images)) ;
+ - [x] Retaillage automatique des images responsives ;
  - [ ] Injecter `vue-router` sur les liens relatifs Markdown correspondant à une des routes ; 
- - [ ] preview & lazyload des images ;
+ - [x] preview & lazyload des images ;
  - [ ] optimisations diverses (PWA, images, CSS…) cf. [Antfu blog](https://github.com/antfu/antfu.me/blob/main/vite.config.ts).
 
  ## Convention pour les routes et les données
