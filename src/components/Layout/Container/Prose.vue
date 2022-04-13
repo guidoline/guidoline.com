@@ -10,6 +10,6 @@
   md:prose
   lg:prose-lg
   xl:prose-xl
-  prose container mx-auto md:w-prose px-4 py-4;
+  prose container mx-auto md:w-prose px-4 py-4 mt-8;
 }
 </style>
