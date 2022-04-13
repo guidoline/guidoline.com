@@ -6,7 +6,7 @@ import MarkdownItAnchor from 'markdown-it-anchor'
 import MarkdownItTOC from 'markdown-it-table-of-contents'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItIns from 'markdown-it-ins'
-
+import EleventyImage from '@11ty/eleventy-img'
 /**
  * @todo
  * Tester un rendu Markdown dans la vue directement.
@@ -76,12 +76,73 @@ function renderMarkdown(rawMarkdown, options) {
   })
   markdown.use(MarkdownItFootnote)
   markdown.use(MarkdownItIns)
+
+  // Retaillage et optimisation des images
+  // @todo il semble que les images soient optimisées 2 x lors du build production
+  // @todo à etendre à toutes les images Vite.
+  // @todo externaliser la configuration
+  const production =
+    (options.vite?.command === 'build' || false)
+    && (options.vite?.mode === 'production' || false)
+
+  if (production) {
+    markdown.renderer.rules.image = function(tokens, idx, options, env, self) {
+      const token = tokens[idx]
+      let imgSrc = token.attrGet('src')
+      const remote = imgSrc.startsWith('http')
+      // console.log('OPTION', options)
+      // console.log('ENV', env)
+      // console.log('SELF', self)
+
+      if (!remote) { imgSrc = `./public${imgSrc}` }
+
+      // @todo Tester si le fichier existe
+
+      const imgAlt = token.content
+      // Taille par défaut
+      const imgSize = token.attrGet('title') || '(max-width: 200px) 100vw, 200px'
+      const widths = [250, 426, 580, 768]
+      const imgOpts = {
+        widths: widths
+          .concat(widths.map(w => w * 2))
+          .filter((v, i, s) => s.indexOf(v) === i),
+        formats: ['webp', 'jpeg'],
+        urlPath: '/uploads/', // HTML output
+        outputDir: './dist/uploads/'
+
+      }
+      EleventyImage(imgSrc, imgOpts)
+
+      console.log('Optimisation de: ', imgSrc)
+
+      let metadata
+      if (remote) {
+        metadata = EleventyImage.statsByDimensionsSync(imgSrc, imgOpts)
+      } else {
+        metadata = EleventyImage.statsSync(imgSrc, imgOpts)
+      }
+
+      return EleventyImage.generateHTML(metadata, {
+        alt: imgAlt,
+        sizes: imgSize,
+        loading: 'lazy',
+        decoding: 'async'
+      })
+
+    }
+  }
+
+
   return markdown.render(rawMarkdown)
 }
 
 export default function pluginMdToJson(params = {}) {
   const directory = params.directory || 'content'
   const markdownOptions = params.markdownOptions || {}
+  markdownOptions.vite= {
+    command : params.vite?.command || null,
+    mode: params.vite?.mode || null,
+  }
   let files = markdownFilesToData(scanFiles(`./${directory}`, ['.md']), directory, markdownOptions)
   // Grouper les fichiers par répertoire
 

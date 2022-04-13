@@ -27,6 +27,7 @@
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
+    "@11ty/eleventy-img": "^2.0.0",
     "@heroicons/vue": "^1.0.6",
     "@vitejs/plugin-vue": "^1.10.2",
     "@vue/compiler-sfc": "^3.2.31",

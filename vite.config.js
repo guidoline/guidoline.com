@@ -13,14 +13,14 @@ import { resolve } from 'path'
 // articleStore.initialize(data)
 // articleStore.initialize()
 
-export default defineConfig({
+export default defineConfig(({ command, mode }) => ({
   define: {
     '__VUE_PROD_DEVTOOLS__': 'true'
   },
   resolve: {
     alias: {
       '~/': `${resolve(__dirname, 'src')}/`,
-      '@/': `${resolve(__dirname, '.')}/`,
+      '@/': `${resolve(__dirname, '.')}/`
     }
   },
   plugins: [
@@ -29,7 +29,7 @@ export default defineConfig({
     }),
     windicss(),
     vueSvg({ svgo: false }),
-    mdToJson()
+    mdToJson({ vite: { command, mode }})
   ],
   server: { fs: { strict: true } },
   build: {
@@ -81,4 +81,4 @@ export default defineConfig({
       return routes
     }
   }
-})
+}))
