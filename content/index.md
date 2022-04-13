@@ -22,13 +22,13 @@ sections:
     class: ''
   class: primary
   add_link: false
-- title: Une image comme section
+- title: Guidoline recrute
   content: |-
     ![](/uploads/image.png)
   link:
-    text: ''
-    href: ''
-    icon: download
+    text: "Consulter l'annonce"
+    href: '/blog/2021/02/lassociatiton-guidoline-recrute'
+    icon: ''
     color: primary
     title: ''
     sr: false
