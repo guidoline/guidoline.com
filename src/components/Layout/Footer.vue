@@ -3,27 +3,7 @@
     <z-grid class="is-container">
       <section>
         <div v-html="about" />
-
         <Socials :links="socialLinks" class="is-left" />
-
-        <h2>Navigation</h2>
-        <z-menu
-          :links="footerMenu"
-          :is-vertical="true"
-          :is-compact="true"
-          type="text"
-          linkClasses="light text"
-        />
-
-
-        <h2>Catégories</h2>
-        <z-menu
-          :links="categories"
-          :is-vertical="true"
-          :is-compact="true"
-          type="text"
-          linkClasses="light text"
-        />
       </section>
       <section>
         <h2>{{ contacts.main.name }}</h2>
@@ -66,6 +46,28 @@
         {{ contacts.secondary.hours }}
       </section>
     </z-grid>
+    <z-grid class="is-container">
+      <section>
+        <h2>Navigation</h2>
+        <z-menu
+          :links="footerMenu"
+          :is-vertical="true"
+          :is-compact="true"
+          type="text"
+          linkClasses="light text"
+        />
+      </section>
+      <section>
+        <h2>Catégories</h2>
+        <z-menu
+          :links="categories"
+          :is-vertical="true"
+          :is-compact="true"
+          type="text"
+          linkClasses="light text"
+        />
+      </section>
+    </z-grid>
     <section class="sub-footer">
       Tout droits réservés © {{name}} {{year}} <z-menu :links="sitemap" type="text" linkClasses="light text"/>
     </section>
@@ -102,7 +104,8 @@ const year = computed(() => (new Date()).getFullYear())
 <style scoped>
 /* Utiliser les couleurs de nuit pour le pied de page */
 footer {
-  @apply flex flex-wrap justify-between mt-4 antialiased font-light pt-12 bg-night-background text-night-text dark:bg-night-background-dark dark:text-night-text-light-dark;
+  /* @apply flex flex-wrap justify-between mt-4 antialiased font-light pt-12 bg-night-background text-night-text dark:bg-night-background-dark dark:text-night-text-light-dark; */
+  @apply mt-4 antialiased font-light pt-12 bg-night-background text-night-text dark:bg-night-background-dark dark:text-night-text-light-dark;
 }
 footer h1,
 footer h2,
