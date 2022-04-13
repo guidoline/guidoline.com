@@ -75,12 +75,11 @@ Pour l'intégration d'une vidéo Vimeo, veuillez saisir le code suivant :
   height="349"
   frameborder="0"
   allow="fullscreen; picture-in-picture"></iframe>
-
 ~~~
 
-Vous devez personnaliser le paramètre `[videoID]` par l'identifiant de la video. L'identifiant de la vidéo est disponible dans la barre d'adresse de la vidéo.
+Vous devez personnaliser le paramètre `[videoID]` par l'identifiant de la video. L'identifiant de la vidéo est disponible dans la barre d'adresse de la vidéo à la fin de l'url.
 
-Par exemple, pour cette videéo : <https://vimeo.com/14419945>, l'identifiant est `14419945`. Ce qui donnerais : 
+Par exemple, pour cette videéo : <https://vimeo.com/14419945>, l'identifiant est `14419945`. À intégrer de cette manière : 
 
 ~~~
 <iframe
@@ -94,3 +93,38 @@ Par exemple, pour cette videéo : <https://vimeo.com/14419945>, l'identifiant es
 Ce qui donne : 
 
 <iframe src="https://player.vimeo.com/video/14419945?color=EA4848&portrait=0" width="100%" height="349" frameborder="0" allow="fullscreen; picture-in-picture"></iframe>
+
+
+#### Iframe Youtube
+
+Pour l'intégration d'une vidéo Youtube, saisissez le code suivant : 
+
+~~~
+<iframe
+  width="100%"
+  height="315"
+  src="https://www.youtube-nocookie.com/embed/[videoID]"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
+~~~
+
+Personnaliser la portion `[videoID` par l'identifiant de la vidéo. L'identifiant d'une vidéo Youtube est situé dans l'url juste après le paramètre `?v=`.
+
+Par exemple, pour la vidéo <https://www.youtube.com/watch?v=o93jIJ1_zWE> l'identifiant est `o93jIJ1_zWE`, à insérer de cette manière : 
+
+~~~
+<iframe
+  width="100%"
+  height="315"
+  src="https://www.youtube-nocookie.com/embed/[videoID]"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
+~~~~
+
+Ce qui donneras : 
+
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/o93jIJ1_zWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
