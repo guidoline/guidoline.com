@@ -3,6 +3,7 @@ title: La CREA soutient Guidoline
 date: '2010-06-25'
 cover:
   src: "/uploads/crea-1.jpg"
+publish: true
 
 ---
 [La CREA](http://www.la-crea.fr) _Communauté d'agglomération Rouen-Elbeuf-Austreberthe,_ à travers le [concours Créactifs](http://www.la-crea.fr/creactifs-dans-la-crea.html) soutient financièrement des projets présentant un axe de développement durable et de participation à la vie de la collectivité.
