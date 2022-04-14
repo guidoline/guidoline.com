@@ -56,7 +56,8 @@ watch(() => props.menuOpen, (state) => emit('update:menuOpen', state))
       -->
       <z-menu
         :links="mainMenu"
-        type="light"
+        is-vertical
+        is-center
         @click="$emit('update:menuOpen', false)"
       />
     </Item>

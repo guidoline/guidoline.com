@@ -45,6 +45,10 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
+  isCenter: {
+    type: Boolean,
+    default: false
+  },
   isResponsive: {
     type: Boolean,
     default: false
@@ -62,7 +66,8 @@ const hasLinks = computed(() => props.links.length >= 1 )
 const additionnalClasses = computed(() =>
 `${props.isCompact ? 'is-compact ' : '' }`+
 `${props.isVertical ? 'is-vertical ' : 'is-horizontal ' }`+
-`${props.isResponsive ? 'is-responsive ' : '' }`
+`${props.isResponsive ? 'is-responsive ' : '' }`+
+`${props.isCenter ? 'is-center ' : '' }`
 )
 </script>
 <style scoped>
@@ -73,7 +78,9 @@ menu { @apply flex-wrap justify-center items-center; }
 menu:not(.is-responsive) { @apply flex; }
 menu.is-responsive { @apply sm:(flex ); }
 menu.is-vertical,
-menu.is-left { @apply text-left mb-4; }
+menu.is-left { @apply mb-4; }
+menu.is-left { @apply text-left; }
+menu.is-center { @apply text-center; }
 menu.is-vertical { @apply block; }
 menu.is-horizontal li { @apply px-4; }
 menu.is-horizontal.is-compact li { @apply px-0; }
