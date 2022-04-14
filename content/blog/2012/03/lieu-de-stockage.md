@@ -1,8 +1,9 @@
 ---
-title: "Lieu de stockage"
-date: "2012-03-13"
----
+title: Lieu de stockage
+date: '2012-03-13'
+publish: true
 
+---
 Guidoline recherche du renfort pour **dimanche** prochain (**18 mars**). Double mission au programme, vider un **local** qui servira de lieu de **stockage** et un **grenier** plein** de vélos** à récupérer pour l'atelier.
 
 Si vous êtes dispo, n'hésitez pas à faire signe ! Vous pouvez me contacter par mail : [simon@guidoline.com](mailto:simon@guidoline.com)
