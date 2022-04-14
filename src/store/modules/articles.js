@@ -137,7 +137,7 @@ export const useArticlesStore = defineStore({
         const rawDate = Date.parse(f.date)
         const hasCover = !!f.cover?.src
         return {
-          category: f.category || 'Lecture',
+          category: f.category,
           hasCover,
           template: slugify(f.category || 'article'),
           'rawDate': rawDate,
