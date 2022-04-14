@@ -1,8 +1,9 @@
 ---
-title: "Montage Terrain Dur"
-date: "2011-04-16"
----
+title: Montage Terrain Dur
+date: '2011-04-16'
+publish: true
 
+---
 ![](/uploads/IMG_6656.jpg "Terrain Dur")
 
 Le montage de l'exposition **Terrain Dur Bike Polo Show** se déroule depuis quelques jours à L'**ECFM** de _Canteleu_.
@@ -19,4 +20,4 @@ L'exposition est prévue jusqu'au 30 avril 2011 dans le cadre du **11ème Festiv
 
 Merci à toutes les personnes qui nous ont soutenu dans ce projet, qui nous l’espérons saura trouver sa place dans la communauté du Bike Polo mais surtout permettra de faire découvrir cette atmosphère si singulière à des personnes que les images ne laissent pas indifférent !
 
-<https://www.flickr.com/photos/guidoline/albums/72157626498875552>
+[https://www.flickr.com/photos/guidoline/albums/72157626498875552](https://www.flickr.com/photos/guidoline/albums/72157626498875552 "Photos Terrain dur")
