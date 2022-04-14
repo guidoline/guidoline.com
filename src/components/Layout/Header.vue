@@ -51,7 +51,6 @@
           <div>
             <z-menu
               :links="mainMenu"
-              type="light"
               linkClasses="text"
             />
           </div>
