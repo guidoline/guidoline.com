@@ -4,6 +4,8 @@ date: '2010-01-19'
 cover:
   src: "/uploads/toulouseepisode1.jpg"
 publish: true
+SEO:
+  author: content/authors/guidoline.md
 
 ---
 19 Janvier 2010
