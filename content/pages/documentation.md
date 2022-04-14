@@ -7,11 +7,18 @@ title: Documentation
 
 Document de référence pour la gestion des contenu éditoriaux.
 
-[TOC]
+[[TOC]]
 
-## Blog
+## Le table des matières
 
-### Les images
+Une table des manitères peut être généré automatiquement à partir des liens le second et troisième niveau (`##` et `###` au foramt Markdown,`<h2>` et `<h3>` au format HTML).
+
+Pour générer une table de matière, insérer le code suivant : 
+~~~
+[[TOC]]
+~~~
+
+## Les images
 
 Comment organiser et faire les meilleurs choix de dimensions et de format.
 
@@ -35,12 +42,12 @@ Détails des formats:
 
  - [gif](https://fr.wikipedia.org/wiki/Graphics_Interchange_Format) parfait pour de petites images avec peu de couleurs (256 couleurs max.) (non destructif);
 
-#### Dimensions
+### Dimensions
 
 - couverture :  1280 × 460
 - contenu : 787 pixels de large, hauteur libre, ratio conseillé 4/3 (787 × 590 pixels).
 
-#### Nommage
+### Nommage
 
 Il est recommander de prendre soin du nommage des fichiers. Cela vous permettras de retrouver vos images facilement via le moteur de recherche du CMS.
 
@@ -58,13 +65,13 @@ Essayer de nommer l'image de façon descriptive plutôt que par son usage.
 - `story-nocturne-2021-10-29.png` ;
 - `couverture-newsletter-fevrier-2019.jpg`.
 
-### Vidéos
+## Vidéos
 
 Les vidéos doivent être hébergées sur des plateformes de diffusion tierces (Youtube, Vimeo, etc.). 
 
 L'intégration la plus saine est de saisir soit même l'iframe d'intégration et de personnaliser l'identifiant de la vidéo.
 
-#### Iframe Vimeo
+### Iframe Vimeo
 
 Pour l'intégration d'une vidéo Vimeo, veuillez saisir le code suivant : 
 
@@ -95,7 +102,7 @@ Ce qui donne :
 <iframe src="https://player.vimeo.com/video/14419945?color=EA4848&portrait=0" width="100%" height="349" frameborder="0" allow="fullscreen; picture-in-picture"></iframe>
 
 
-#### Iframe Youtube
+### Iframe Youtube
 
 Pour l'intégration d'une vidéo Youtube, saisissez le code suivant : 
 
