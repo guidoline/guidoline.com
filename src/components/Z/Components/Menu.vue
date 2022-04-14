@@ -15,7 +15,7 @@
         :sr="link.sr"
         :title="link.title || link.text"
         :is-compact="isCompact"
-        :class="`${linkClasses} ${link.class}`"
+        :class="`${linkClasses} ${link.class || ''}`"
       >
         {{ link.text }}
       </z-button>

@@ -68,17 +68,15 @@
         />
       </section>
     </z-grid>
-    <section class="sub-footer">
-      Tout droits réservés © {{name}} {{year}} <z-menu :links="sitemap" type="text" linkClasses="light text"/>
-    </section>
+    <FooterSub />
   </footer>
 </template>
 <script setup>
 import Socials from '~/components/Layout/Navigation/Socials.vue'
+import FooterSub from '~/components/Layout/Footer/Sub.vue'
 import { computed } from 'vue'
 import { footer as footerMenu, socials as _socialLinks } from '@/content/settings/navigation.json'
 import { name, about, contacts, categories as _categories } from '@/content/settings/global.json'
-import { useContentsStore } from '~/store/modules/contents.js'
 import { useArticlesStore } from '~/store/modules/articles.js'
 const articleStore = useArticlesStore()
 articleStore.initialize()
@@ -86,20 +84,12 @@ const categories = computed(() => articleStore.getCategories().map(c => {
   c.text = c.name
   return c
 }))
-const contentStore = useContentsStore()
-contentStore.initialize()
-const sitemap = contentStore.pages
-  .map(r => ({
-    text: r.title || r.name,
-    to: r.path
-  }))
 
 // Imposer une couleur de contraste
 const socialLinks = computed(() => _socialLinks.map(l => {
   l.class = 'secondary'
   return l
 }))
-const year = computed(() => (new Date()).getFullYear())
 </script>
 <style scoped>
 /* Utiliser les couleurs de nuit pour le pied de page */
@@ -118,5 +108,5 @@ footer :deep(h3),
 footer :deep(address),
 footer :deep(p) { @apply mb-4; }
 footer section { @apply p-4; }
-.sub-footer { @apply flex justify-center items-center w-full text-xs italic bg-night-background-dark text-night-text-light; }
+.sub-footer { @apply bg-night-background-dark text-night-text-light; }
 </style>

@@ -1,4 +1,5 @@
 <script setup>
+import FooterSub from '~/components/Layout/Footer/Sub.vue'
 defineProps({
   content: {
     type: Object,
@@ -21,7 +22,10 @@ defineProps({
       </z-button>
     </p>
   </nav>
-  <slot />
+  <main style="min-height: calc(100vh - 8rem)">
+    <slot />
+  </main>
+  <FooterSub />
 </template>
 <style scoped>
 nav {
