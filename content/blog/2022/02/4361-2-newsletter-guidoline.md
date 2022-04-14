@@ -3,7 +3,7 @@ title: Newsletter Janvier
 date: '2022-02-15'
 cover:
   src: "/uploads/tips-and-tricks-cover.webp"
-
+template: information
 ---
 
 # Newsletter Janvier 2022

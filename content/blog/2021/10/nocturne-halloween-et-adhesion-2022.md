@@ -4,6 +4,8 @@ date: "2021-10-21"
 coverImage: "Capture-d’écran-2021-10-21-à-17.40.54-1.png"
 ---
 
+# Nocturne Halloween et adhésion 2022
+
 Chaque année, Guidoline missionne un.e artiste pour la création d'un visuel de l'association. Il se trouve notamment au dos de votre carte d'adhérent.e. Retrouvez le dans la [newsletter d'octobre](http://kork.mjt.lu/nl2/kork/mq74k.html?hl=fr).
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
