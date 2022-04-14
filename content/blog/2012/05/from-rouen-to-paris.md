@@ -1,8 +1,9 @@
 ---
-title: "From Rouen to Paris"
-date: "2012-05-01"
----
+title: From Rouen to Paris
+date: '2012-05-01'
+publish: true
 
+---
 Encore un super week-end polo à Rouen, avec à la clé les **8 premières équipes** du tournoi **qualifiées pour les championnats d'Europe**, qui se dérouleront cette année à **Paris du 19 au 22 juillet** !
 
 Résultats :
