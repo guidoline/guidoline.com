@@ -1,9 +1,12 @@
 ---
-title: "Toulouse | Bike Polo Tournament | Episode 1"
-date: "2010-01-19"
----
+title: Toulouse | Bike Polo Tournament | Episode 1
+date: '2010-01-19'
+cover:
+  src: "/uploads/toulouseepisode1.jpg"
+publish: true
 
-![](/uploads/toulouseepisode1.jpg "toulouseepisode1") 19 Janvier 2010
+---
+19 Janvier 2010
 
 Résultat :
 
@@ -11,14 +14,8 @@ Résultat :
 
 Récompenses individuelles :
 
-Meilleur buteur : Alejandro de "Indypolo" avec 17 buts (!), suivi par William des "Rolling Hoods" avec 15 buts et Simon des "Broken Legs" avec 14 buts Meilleur dribbleur : William des "Rolling Hoods" Meilleur retardateur : sans contestation possible, Gustavo de la "Sparton-Team" Meilleur gardien : Manu, alias Fabien Barthez, des Mamama's
-
-### Photos & vidéos du tournoi
-
-[Rolling Hoods on tour - Toulouse - Bike Polo](http://vimeo.com/9346534) from [mapple](http://vimeo.com/user3144096) on [Vimeo](http://vimeo.com).
-
-[Tournoi Bike-Polo Toulouse 7 Février 2010](http://vimeo.com/9416357) from [Mohand BAHA](http://vimeo.com/user3165637) on [Vimeo](http://vimeo.com).
+Meilleur buteur : Alejandro de "Indypolo" avec 17 buts (!), suivi par William des "Rolling Hoods" avec 15 buts et Simon des "Broken Legs" avec 14 buts Meilleur dribbleur : William des "Rolling Hoods" Meilleur retardateur : sans contestation possible, Gustavo de la "Sparton-Team" Meilleur gardien : Manu, alias Fabien Barthez, des Mamama's.
 
 ### Flickr
 
-<https://www.flickr.com/photos/guidoline/albums/72157623410832335>
+[https://www.flickr.com/photos/guidoline/albums/72157623410832335](https://www.flickr.com/photos/guidoline/albums/72157623410832335)
