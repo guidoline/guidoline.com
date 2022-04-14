@@ -47,7 +47,7 @@ const props = defineProps({
   },
   isResponsive: {
     type: Boolean,
-    default: true
+    default: false
   },
   type: {
     type: String,
@@ -80,6 +80,11 @@ menu.is-horizontal.is-compact li { @apply px-0; }
 menu.is-horizontal li + li { @apply pl-0; }
 menu.is-left {
   @apply justify-start;
-  li:first-child { @apply pl-0; }
+  li { @apply first:pl-0; }
+  /* li:first-child { @apply pl-0; } */
+}
+menu.is-right {
+  @apply justify-end;
+  li { @apply last:pr-0; }
 }
 </style>

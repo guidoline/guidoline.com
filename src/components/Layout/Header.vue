@@ -47,10 +47,9 @@
             </slot>
           </router-link>
         </NavItem>
-        <NavItem>
-          <div class="nav-menu-burger">
+        <NavItem class="<sm:hidden">
+          <div>
             <z-menu
-              class="<md:hidden"
               :links="mainMenu"
               type="light"
               linkClasses="text"
@@ -59,20 +58,19 @@
         </NavItem>
       </template>
       <template #right>
+        <NavItem class="sm:mr-4">
+          <Socials
+            class="nav-item is-right"
+            :is-responsive="false"
+            :links="socialLinks"
+          />
+        </NavItem>
         <NavItem class="nav-burger">
           <ZNavigationBurgerButton
             v-model:menu-open="menuOpen"
             fallback-target="#off-screen-navigation"
           />
         </NavItem>
-        <NavItem class="<sm:hidden">
-          <Socials
-            class="nav-menu-burger nav-item is-compact"
-            :is-responsive="false"
-            :links="socialLinks"
-          />
-        </NavItem>
-
       </template>
     </NavWrapper>
   </header>
@@ -104,7 +102,7 @@ menuOpen.value = false
 
 .nav-sup { @apply text-sm bg-night-background text-night-text; }
 header { @apply bg-callout-background text-callout-text; }
-.nav-burger { @apply sm:hidden justify-right pl-0; }
+.nav-burger { @apply sm:hidden justify-right; }
 .logo { @apply w-8 text-day-text hover:(text-day-text-dark); }
 .wrapper.is-compact .item { @apply sm:(py-2 pl-2 last:pr-4); }
 /* .nav-sub { @apply bg-gray-600; } */
