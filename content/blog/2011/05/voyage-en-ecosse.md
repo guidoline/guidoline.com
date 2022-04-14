@@ -3,6 +3,7 @@ title: Voyage en Ecosse
 date: '2011-05-16'
 cover:
   src: "/uploads/ecosse.jpg"
+publish: true
 
 ---
 Bonjour les amis.
