@@ -135,7 +135,7 @@ export const useArticlesStore = defineStore({
       // Filtres de données
       .map(f => {
         const rawDate = Date.parse(f.date)
-        const hasCover = !!f.cover?.src
+        const hasCover = f.cover ? !!f.cover.src : false
         return {
           category: f.category,
           hasCover,
