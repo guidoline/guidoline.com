@@ -1,9 +1,10 @@
 ---
-title: "Votre vieux vélo a un futur !"
-date: "2014-11-06"
-coverImage: "recup-velo-A41.jpg"
----
+title: Votre vieux vélo a un futur !
+date: '2014-11-06'
+coverImage: recup-velo-A41.jpg
+publish: true
 
+---
 Dans le cadre de la Semaine Européenne de la Réduction des Déchets qui a lieu du 22 au 30 novembre, Guidoline lance une **campagne de récupération des vieux vélos**.
 
 Cette action vise à **réfléchir à la façon de réutiliser, recycler et valoriser les déchets**. Les vieux vélos sont réutilisés et les vélos hors d’usage permettent de récupérer de nombreuses pièces utiles à la réparation d’autres bicyclettes !
