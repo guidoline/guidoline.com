@@ -17,6 +17,7 @@ links:
 
 ## Sommaire
 - [Typographie](/styleguide/typographie)
+- [Couleurs](/styleguide/couleurs)
 - [Inset](/styleguide/inset)
 - [Grid](/styleguide/grid)
 - [Components](/styleguide/components)
