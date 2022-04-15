@@ -2,6 +2,7 @@
 title: Onitsuka Tiger Goldsprint Contest
 date: '2013-03-07'
 coverImage: roller-racing-580x580.jpg
+publish: true
 
 ---
 Installation du Roller Racing pour la marque [Onitsuka Tiger](http://www.facebook.com/onitsukatiger?group_id=0) au 3ème étage du [Citadium](http://www.facebook.com/citadium?group_id=0) à Paris.
