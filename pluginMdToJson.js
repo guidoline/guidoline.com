@@ -48,7 +48,7 @@ function markdownFilesToData(files, directory, markdownOptions) {
     })
 
     // Ignorer les brouilons
-    if (!matter.publish) return data
+    if (!matter.data.publish) return data
 
     data.push({
       path: file.replace(directory, '').replace('.md', ''),
