@@ -1,6 +1,9 @@
 ---
 title: MEET ME HALF WAY | Paris vs. Rouen
 date: '2009-12-13'
+SEO:
+  author: content/authors/guidoline.md
+publish: true
 
 ---
 # MEET ME HALF WAY | Paris vs. Rouen
@@ -9,6 +12,6 @@ L'idée est simple, certains partent de Paris, d'autres partent de Rouen, on se 
 
 ### Flickr
 
-[https://www.flickr.com/photos/guidoline/albums/72157623410889149](https://www.flickr.com/photos/guidoline/albums/72157623410889149)
+[https://www.flickr.com/photos/guidoline/albums/72157623410889149](https://www.flickr.com/photos/guidoline/albums/72157623410889149 "Photos FLICKR")
 
 [Discussion MEET ME HALF WAY | Paris vs. Rouen sur pignonfixe.com](http://www.pignonfixe.com/comments.php?DiscussionID=24454)

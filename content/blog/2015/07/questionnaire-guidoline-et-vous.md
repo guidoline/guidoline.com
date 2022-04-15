@@ -1,9 +1,10 @@
 ---
-title: "Questionnaire Guidoline et vous !"
-date: "2015-07-02"
-coverImage: "bg-formulaire.jpg"
----
+title: Questionnaire Guidoline et vous !
+date: '2015-07-02'
+coverImage: bg-formulaire.jpg
+publish: true
 
+---
 Dans l'optique de mieux connaitre les adhérents de Guidoline et leur donner la parole, un questionnaire a été mis en ligne en avril 2015, il a reçu 63 réponses.
 
 Comportant trois parties, il s'attachait d'abord à dresser le portrait des répondants avant d'évaluer leur rapport au vélo et à Guidoline. Les questionnés étaient invités, à l'aide de demandes ouvertes posées à la fin du questionnaire, à détailler les points forts et les points faibles de l'association ainsi que ses perspectives d'évolution/d'amélioration.

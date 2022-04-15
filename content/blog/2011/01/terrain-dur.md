@@ -1,10 +1,11 @@
 ---
-title: "Terrain Dur | Bike Polo Show"
-date: "2011-01-14"
+title: Terrain Dur | Bike Polo Show
+date: '2011-01-14'
+cover:
+  src: "/uploads/terrain-dur.jpg"
+publish: true
+
 ---
-
-![](/uploads/terrain-dur.jpg "Terrain Dur Bike Polo Show")
-
 Bonjour les amis,
 
 Nous sommes heureux de vous annoncer que deux gars de notre équipe viennent de prendre le contrôle d'une exposition intitulée "TERRAIN DUR Bike Polo Show", je ne vous en dis pas plus et vous laisse découvrir le projet ...

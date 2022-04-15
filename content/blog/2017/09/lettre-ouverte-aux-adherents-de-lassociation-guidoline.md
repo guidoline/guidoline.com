@@ -1,9 +1,10 @@
 ---
-title: "Lettre ouverte aux adhérents de l'association Guidoline"
-date: "2017-09-19"
-coverImage: "lettre-ouverte.jpg"
----
+title: Lettre ouverte aux adhérents de l'association Guidoline
+date: '2017-09-19'
+coverImage: lettre-ouverte.jpg
+publish: true
 
+---
 Chères adhérentes, chers adhérents,
 
 L’association Guidoline fait face à des changements importants qui auront des répercussions sur son fonctionnement. Le Conseil d’Administration souhaite vous en informer.

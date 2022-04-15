@@ -1,11 +1,12 @@
 ---
-title: "Roller racing – O'Kallaghan's - Rouen"
-date: "2011-12-13"
+title: Roller racing – O'Kallaghan's - Rouen
+date: '2011-12-13'
+cover:
+  src: "/uploads/roller-o-kallaghans-731x1024.jpg"
+publish: true
+
 ---
-
-[![](/uploads/roller-o-kallaghans-731x1024.jpg "Roller racing O'kallaghan's")](http://www.guidoline.com/wp-content/uploads/2011/12/roller-o-kallaghans.jpg)
-
-Guidoline organise vendredi 16 décembre un Roller racing, course de vélos sur rouleaux au pub O’kallaghan’s à Rouen.
+Guidoline organise vendredi 16 décembre un **Roller racing**, course de vélos sur rouleaux au pub O’kallaghan’s à Rouen.
 
 Venez vous affronter en duel ou battre votre record sur 300 m !
 

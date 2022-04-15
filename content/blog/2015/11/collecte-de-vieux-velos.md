@@ -1,8 +1,9 @@
 ---
-title: "Collecte de vieux vélos"
-date: "2015-11-20"
----
+title: Collecte de vieux vélos
+date: '2015-11-20'
+publish: true
 
+---
 A l’occasion de la [Semaine Européenne de la Réduction des Déchets](http://www.serd.ademe.fr/), Guidoline organise une **opération de collecte de vélos**.
 
 Si **vous avez un vélo inutilisé** et poussiéreux dans votre cave, coincé entre la lampe de grand mère et l’appareil à raclette, **vous pouvez venir nous le donner.**
@@ -15,7 +16,7 @@ Ces donations sont importantes pour notre association car elles nous permettent 
 
 Si votre syndic souhaite vider ses caves à vélo, n'hésitez pas à [nous contacter](http://www.guidoline.com/#contactez-nous), nous pouvons nous en occuper.
 
-Vous pouvez aussi venir nous aider à démonter ces vélos lors des [ateliers démontage](http://www.guidoline.com/evenement/atelier-montage-demontage-n20/) tous les premiers samedi du mois de 9h à 12h, le prochain est le 5 décembre. Tout le monde est le bienvenue.
+Vous pouvez aussi venir nous aider à démonter ces vélos lors des ateliers démontage tous les premiers samedi du mois de 9h à 12h, le prochain est le 5 décembre. Tout le monde est le bienvenue.
 
 #### 1,5 million de vélos détruits par an !
 

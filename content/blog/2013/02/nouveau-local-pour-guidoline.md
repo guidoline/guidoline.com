@@ -1,8 +1,12 @@
 ---
-title: "Nouveau local"
-date: "2013-02-23"
----
+title: Nouveau local
+date: '2013-02-23'
+SEO:
+  author: content/authors/guidoline.md
+  date: 2013/01/16 12:00 AM +0000
+publish: true
 
+---
 Apprenant en décembre 2012 la fin de la mise à disposition de notre local au 31 janvier 2013 et dans un souci d'amélioration des conditions d'accueil et de travail, l'**association investit un nouveau local** dans la même rue que l'atelier où nous sommes depuis deux ans.
 
 Ce **nouvel espace** de **235 m2** situé au **36-38 rue Molière** va permettre d'envisager l'avenir avec beaucoup plus de sérénité et d’**élargir le projet au-delà du service d’auto-réparation** en offrant un espace dédié à d'autres activités et animations qui suscitaient de l'intérêt mais dont l'environnement ne permettait pas de voir le jour.

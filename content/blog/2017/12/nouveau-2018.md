@@ -1,9 +1,10 @@
 ---
-title: "Du nouveau pour 2018 !"
-date: "2017-12-19"
-coverImage: "24327318_932230453595484_2070910557275291648_n.jpg"
----
+title: Du nouveau pour 2018 !
+date: '2017-12-19'
+coverImage: 24327318_932230453595484_2070910557275291648_n.jpg
+publish: true
 
+---
 Bonjour Guidoline, bonjour chères et chers adhérents,
 
 Après un automne plein de doutes durant lequel vous avez participé aux réflexions urgentes et nécessaires sur le devenir de notre bien commun et belle association; une nouvelle année s'annonce, riche en projets et changements.
