@@ -10,7 +10,7 @@ defineProps({
 <template>
   <LayoutDefault>
     <ContainerProse>
-      <main v-html="content.content"/>
+      <main v-if="content" v-html="content.content"/>
     </ContainerProse>
   </LayoutDefault>
 </template>

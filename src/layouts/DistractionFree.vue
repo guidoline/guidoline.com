@@ -100,10 +100,6 @@ const print = () => {
   .print-zone {
     width: 100% !important;
     margin: 0;
-    color: green !important;
-  }
-  .print-zone * {
-    color: green !important;
   }
   .only-print {
     display: block !important;

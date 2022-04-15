@@ -15,6 +15,6 @@ defineProps({
 </script>
 <template>
   <LayoutHome :content="content">
-    <div v-html="content.content"/>
+    <div v-if="content" v-html="content.content"/>
   </LayoutHome>
 </template>

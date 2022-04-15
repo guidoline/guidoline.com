@@ -46,7 +46,7 @@ export default { name: 'LayoutHome' }
       <Newsletter />
     </div>
   </div>
-  <z-grid class="px-4 is-container">
+  <z-grid class="px-4 is-container" v-if="content">
     <Section
       v-for="(section, index) in content.sections"
       :key="index"
