@@ -12,6 +12,9 @@ import defaultTheme from 'windicss/defaultTheme'
 const colors = {
   // shade ou grey
   // https://bulma.io/documentation/overview/colors/
+  // @todo chiant de devoir écrire défault à chaque fois
+  // modifier la sctructure des données afin de ne pas
+  // avoir de couleurs `DEFAULT`
   white: {
     DEFAULT: wColors.zinc[50],
     invert:wColors.zinc[900]
