@@ -60,7 +60,7 @@ const print = () => {
   <main style="min-height: calc(100vh - 8rem)" class="print-zone">
     <slot />
   </main>
-  <FooterSub class="dark:text-night-text-dark" />
+  <FooterSub />
 </template>
 <style scoped>
 .only-print {

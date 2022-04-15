@@ -14,7 +14,7 @@ const sitemap = contentStore.pages
 </script>
 <style scoped>
 .sub-footer {
-  @apply justify-center items-center text-center p-4 text-xs italic text-day-text-lighter;
+  @apply justify-center items-center text-center p-4 text-xs italic text-main-grey-light-invert bg-main-grey-light;
   @apply md:(flex);
   p { @apply mb-2 md:mb-0; }
 }
