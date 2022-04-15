@@ -10,6 +10,96 @@ import plugin from 'windicss/plugin'
 import wColors from 'windicss/colors'
 import defaultTheme from 'windicss/defaultTheme'
 const colors = {
+  // shade ou grey
+  // https://bulma.io/documentation/overview/colors/
+  white: {
+    DEFAULT: wColors.zinc[50],
+    invert:wColors.zinc[900]
+  },
+  black: {
+    DEFAULT: wColors.zinc[900],
+    invert: wColors.zinc[50]
+  },
+  grey: {
+    lightest: {
+      DEFAULT: wColors.zinc[100],
+      invert: wColors.zinc[700]
+    },
+    lighter: {
+      DEFAULT: wColors.zinc[200],
+      invert: wColors.zinc[700]
+    },
+    light: {
+      DEFAULT: wColors.zinc[300],
+      invert: wColors.zinc[800]
+    },
+    DEFAULT: wColors.zinc[400],
+    invert: wColors.zinc[900],
+    dark: {
+      DEFAULT: wColors.zinc[500],
+      invert: wColors.zinc[200]
+    },
+    darker: {
+      DEFAULT: wColors.zinc[600],
+      invert: wColors.zinc[300]
+    },
+    darkest: {
+      DEFAULT: wColors.zinc[700],
+      invert: wColors.zinc[300]
+    }
+  },
+  /*
+  Variante d'une couleur / Les shades
+
+  sombre et lumineux
+  dark and bright
+
+  ombre et lumière
+  shadow and light
+  Ombrées : shaded / shady
+  limineuse : luminous / bri  ght / illuminated
+  */
+  bright: {
+    lighter: {
+      DEFAULT: wColors.zinc[50],
+      invert: wColors.zinc[500]
+    },
+    light: {
+      DEFAULT: wColors.zinc[100],
+      invert: wColors.zinc[700]
+    },
+    DEFAULT: wColors.zinc[200],
+    invert: wColors.zinc[700],
+    dark: {
+      DEFAULT: wColors.zinc[300],
+      invert: wColors.zinc[900]
+    },
+    darker: {
+      DEFAULT: wColors.zinc[400],
+      invert: wColors.zinc[900]
+    }
+  },
+  shade: {
+    lighter: {
+      DEFAULT: wColors.zinc[500],
+      invert: wColors.zinc[50]
+    },
+    light: {
+      DEFAULT: wColors.zinc[600],
+      invert: wColors.zinc[100]
+    },
+    DEFAULT: wColors.zinc[700],
+    invert: wColors.zinc[100],
+    dark: {
+      DEFAULT: wColors.zinc[800],
+      invert: wColors.zinc[200]
+    },
+    darker: {
+      DEFAULT: wColors.zinc[900],
+      invert: wColors.zinc[200]
+    }
+  },
+
   light: {
     // light: '#FFFDFC',
     // DEFAULT: '#F2F0F0',
@@ -33,21 +123,48 @@ const colors = {
     darker: wColors.gray[900]
   },
   primary: {
-    light: '#F06B62',
+    light: {
+      DEFAULT: '#F06B62',
+      invert: wColors.slate[800]
+    },
     DEFAULT: '#EA4848',
-    dark: '#D43D56'
+    invert: wColors.slate[900],
+    dark: {
+      DEFAULT: '#D43D56',
+      invert: wColors.slate[50]
+    }
   },
   // @tester inverser Secondary et accent
   secondary: {
-    light: '#F2E37E',
+    light: {
+      DEFAULT: '#F2E37E',
+      invert: wColors.zinc[700]
+    },
     DEFAULT: '#EBC855',
-    dark: '#E0A84E'
+    invert: wColors.zinc[800],
+    dark: {
+      DEFAULT: '#E0A84E',
+      invert: wColors.zinc[900]
+    }
   },
   accent: {
-    light: '#CC5CDB',
+    light: {
+      DEFAULT: '#CC5CDB',
+      invert: wColors.gray[800]
+    },
     DEFAULT: '#B33EC7',
-    dark: '#9639BD'
-  }
+    invert: wColors.gray[900],
+    dark: {
+      DEFAULT: '#9639BD',
+      invert: wColors.gray[50]
+    }
+  },
+  // Bulma like
+  link: {},
+  info: {},
+  success: {},
+  warning: {},
+  danger: {},
 }
 const weights = {
   light: 300,
@@ -183,7 +300,41 @@ export default {
     },
     colors: {
       main: colors,
+      // Nommage d'usage
+      // tester :
+      // - text.disabled
+      // - text.DEFAULT
+      // - text.strong
+      // - brand.DEFAULT (primary)
+      // @todo: nommer `invert`, plutôt que `bg` ?
       day: {
+        disabled: colors.dark.lighter,
+        quiet: colors.dark.light,
+        DEFAULT: colors.dark.DEFAULT,
+        loud: colors.dark.dark,
+        bg: colors.light.light,
+        link: {
+          DEFAULT: colors.primary.dark.DEFAULT,
+          active: colors.secondary.dark.DEFAULT,
+          hover: colors.accent.dark.DEFAULT,
+          visited: colors.shade.light.DEFAULT,
+          disabled: colors.bright.darker.DEFAULT
+        },
+        // link: {
+        //   DEFAULT: colors.primary.dark,
+        //   hover: colors.accent.dark,
+        // },
+        highlight: {
+          DEFAULT: colors.dark.dark,
+          bg: colors.secondary.light,
+        },
+        border: {
+          quiet: colors.bright,
+          DEFAULT: colors.bright.dark,
+          loud: colors.bright.darker,
+        },
+
+        //
         text: {
           lighter: colors.dark.lighter,
           light: colors.dark.light,
@@ -195,11 +346,6 @@ export default {
           DEFAULT: colors.light.DEFAULT,
           dark: colors.light.dark,
           darker: colors.light.darker
-        },
-        link: {
-          light: colors.primary.light,
-          DEFAULT: colors.primary.DEFAULT,
-          dark: colors.primary.dark
         }
       },
       night: {
