@@ -46,6 +46,10 @@ function markdownFilesToData(files, directory, markdownOptions) {
         file.excerpt = file.excerpt.replace(/[#]+/g, '')
       }
     })
+
+    // Ignorer les brouilons
+    if (!matter.publish) return data
+
     data.push({
       path: file.replace(directory, '').replace('.md', ''),
       dirname,
