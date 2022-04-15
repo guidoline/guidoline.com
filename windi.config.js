@@ -220,8 +220,7 @@ export default {
           marginLeft: 'auto',
           paddingTop: theme('padding.4'),
           paddingBottom: theme('padding.4'),
-          maxWidth: md,
-          color: 'green'
+          maxWidth: md
         }
       })
     }),
