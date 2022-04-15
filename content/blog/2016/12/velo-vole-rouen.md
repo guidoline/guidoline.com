@@ -1,9 +1,10 @@
 ---
-title: "VÉLO VOLÉ ROUEN"
-date: "2016-12-23"
-coverImage: "Vélo-Volé.png"
----
+title: VÉLO VOLÉ ROUEN
+date: '2016-12-23'
+coverImage: Vélo-Volé.png
+publish: true
 
+---
 Cela fait un peu plus de deux ans que [la page Vélo volé Rouen](https://www.facebook.com/groups/319660908222099/?fref=ts) existe maintenant et il est temps de faire un mini bilan !
 
 Nous avons pu, grâce à votre vigilance et sur la base de vos témoignages, établir u[ne carte des vélos volés sur Rouen et ses alentours](https://www.google.com/maps/d/viewer?mid=1Nwr59mV5PcyyWPth3GcsSOAT5rc&hl=fr&ll=49.43129611230107%2C1.0498391000000993&z=12) entre décembre 2014 et décembre 2016. Comme vous pouvez le voir aucun coin n'est épargné.
@@ -14,4 +15,4 @@ Privilégiez un bon **antivol en U** ou encore les **antivols fixes** en complé
 
 N'hésitez pas à faire un tour sur [la page](https://www.facebook.com/groups/319660908222099/?fref=ts), peut-être qu'un jour elle vous aidera, qui sait !
 
-_\+ d'infos :  [Groupe vélo volé Rouen](https://www.facebook.com/groups/319660908222099/) / [Carte des vélos volés Rouen](https://www.google.com/maps/d/viewer?mid=1Nwr59mV5PcyyWPth3GcsSOAT5rc&hl=fr&ll=49.43129611230107%2C1.0498391000000993&z=12)_
+_+ d'infos :_  [_Groupe vélo volé Rouen_](https://www.facebook.com/groups/319660908222099/) _/_ [_Carte des vélos volés Rouen_](https://www.google.com/maps/d/viewer?mid=1Nwr59mV5PcyyWPth3GcsSOAT5rc&hl=fr&ll=49.43129611230107%2C1.0498391000000993&z=12)
