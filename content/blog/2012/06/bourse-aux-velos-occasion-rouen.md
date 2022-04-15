@@ -1,9 +1,10 @@
 ---
-title: "Bourse aux velos - Rouen"
-date: "2012-06-26"
----
+title: Bourse aux velos - Rouen
+date: '2012-06-26'
+publish: true
 
-Dans le cadre de la [fête du vélo](http://www.rouen.fr/les-animations-autour-du-velo "Fête du vélo à Rouen") et de [Rouen sur Mer](http://rouensurmer.fr/ "Rouen sur Mer"), Guidoline organise une **bourse aux vélos d'occasion** **dimanche 1 juillet, **sur les quais rive gauche.
+---
+Dans le cadre de la fête du vélo et de Rouen sur Mer, Guidoline organise une **bourse aux vélos d'occasion** **dimanche 1 juillet, **sur les quais rive gauche.
 
 Ouvert à tous, le **principe** est simple, vous pouvez **vendre votre vélo et/ou en acheter un**.
 
