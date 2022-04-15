@@ -44,8 +44,9 @@ Détails des formats:
 
 ### Dimensions
 
-- couverture :  1280 × 460
-- contenu : 787 pixels de large, hauteur libre, ratio conseillé 4/3 (787 × 590 pixels).
+- couverture : 1280 × 460 ;
+- contenu : 787 pixels de large, hauteur libre, ratio conseillé 4/3 (787 × 590 pixels) ;
+- Section de page d'accueil : 450 pixels de large, hauteru libre, ratio conseillé 4/3 (450 × 338 pixels)
 
 ### Nommage
 
