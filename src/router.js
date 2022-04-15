@@ -36,7 +36,7 @@ const routes = Object.keys(pages)
   .reduce((routes, componentPath) => {
     // Extraction du chemin de base du composant
     const filename = componentPath.match(/\.\/pages(.*)\.vue$/)
-    if (!filename?.length) return routes
+    if (!filename.length) return routes
     // Remplacer le CamelCase par du snake case
     let path = filename[1]
       .replace(/(?<!\/)[A-Z]/g, p =>`-${p}`)
