@@ -1,9 +1,10 @@
 ---
-title: "Assemblée générale 2015"
-date: "2016-03-30"
-coverImage: "DSC03908.jpg"
----
+title: Assemblée générale 2015
+date: '2016-03-30'
+coverImage: DSC03908.jpg
+publish: true
 
+---
 Fidèle à son objectif initial; promouvoir et valoriser la pratique du vélo en ville au quotidien, l'association Guidoline a encore, durant cette année 2015, a amplifié ses actions et dynamisé ses moyens.
 
 Avec 3348 adhérents comptabilisés (enregistrés) en décembre 2015, l'atelier Guidoline continue d'accueillir chaque jour de nouveaux participants.
