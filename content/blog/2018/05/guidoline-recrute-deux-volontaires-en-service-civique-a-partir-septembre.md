@@ -1,8 +1,10 @@
 ---
-title: "Guidoline recrute deux volontaires en Service Civique à partir de septembre !"
-date: "2018-05-22"
----
+title: Guidoline recrute deux volontaires en Service Civique à partir de septembre
+  !
+date: '2018-05-22'
+publish: true
 
+---
 Guidoline recherche **2 volontaires en Service Civique** !
 
 Envie de rejoindre notre équipe, participer à la vie de l'association, dynamiser l'atelier, organiser des animations, plus de détails sur le site du Service Civique [www.service-civique.gouv.fr/missions/dynamiser-lanimation-dun-atelier-velo-solidaire](https://www.service-civique.gouv.fr/missions/dynamiser-lanimation-dun-atelier-velo-solidaire)
