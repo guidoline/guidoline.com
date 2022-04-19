@@ -25,7 +25,8 @@ export default defineConfig(({ command, mode }) => ({
   },
   plugins: [
     vue({
-      include: [/\.vue$/, /\.md$/]
+      include: [/\.vue$/, /\.md$/],
+      isCustomElement: (tag) => tag.includes('-')
     }),
     windicss(),
     vueSvg({ svgo: false }),

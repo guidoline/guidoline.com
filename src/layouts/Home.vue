@@ -4,6 +4,7 @@ import Header from '~/components/Layout/Header.vue'
 import Footer from '~/components/Layout/Footer.vue'
 import Cover from '~/components/Layout/Cover.vue'
 import Newsletter from '~/components/Utilities/Newsletter.vue'
+import RDV from '~/components/Utilities/RDV.vue'
 import Section from '~/components/Layout/Section.vue'
 import { computed } from 'vue'
 import { markdownify } from '~/services/utilities.js'
@@ -38,11 +39,12 @@ export default { name: 'LayoutHome' }
     v-if="hasHero"
     :cover="content.hero"
   />
-  <div id="content" class=" md:grid grid-cols-6 grid-rows-3 px-4">
-    <div class="col-span-4 lg:col-start-2 lg:col-span-3 row-span-3 prose">
+  <div id="content" class=" md:grid grid-cols-6 px-4">
+    <div class="col-span-4 lg:col-start-2 lg:col-span-3  prose">
       <slot/>
+      <RDV />
     </div>
-    <div class="container col-span-2 col-start-5 row-start-2 place-self-center mx-auto max-w-42ch text-center my-4">
+    <div class="container col-span-2 col-start-5 place-self-center mx-auto max-w-42ch text-center my-4">
       <Newsletter />
     </div>
   </div>
