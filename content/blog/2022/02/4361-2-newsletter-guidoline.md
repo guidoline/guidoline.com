@@ -2,9 +2,13 @@
 title: Newsletter Janvier
 date: '2022-02-15'
 cover:
-  src: "/uploads/tips-and-tricks-cover.webp"
+  src: ''
 template: information
 publish: true
+SEO:
+  description: "**Retrouvez la première Newsletter Guidoline 2022** avec un petit
+    récap' en photo de l'année 2021, et quelques rappels concernant les adhésions
+    et le bénévolat."
 
 ---
 # Newsletter Janvier 2022
