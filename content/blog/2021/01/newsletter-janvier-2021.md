@@ -1,9 +1,10 @@
 ---
-title: "Newsletter janvier 2021"
-date: "2021-01-14"
-coverImage: "visuel-2021.jpeg"
----
+title: Newsletter janvier 2021
+date: '2021-01-14'
+coverImage: visuel-2021.jpeg
+publish: true
 
+---
 #### **Rentrée des ateliers de Guidoline**
 
 Chères et chers adhérent.e.s, vous êtes toujours aussi nombreuses et nombreux à utiliser nos ateliers en cette nouvelle année. Et cela malgré le contexte sanitaire rendant notre mission plus compliquée, nos locaux moins festifs. 
