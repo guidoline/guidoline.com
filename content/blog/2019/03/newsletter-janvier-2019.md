@@ -1,9 +1,10 @@
 ---
-title: "Newsletter Janvier 2019"
-date: "2019-03-05"
-coverImage: "visuel-tandem-23-2.png"
----
+title: Newsletter Janvier 2019
+date: '2019-03-05'
+coverImage: visuel-tandem-23-2.png
+publish: true
 
+---
 **Une nouvelle année commence !**
 
 Bonjour chères et chers adhérents,
