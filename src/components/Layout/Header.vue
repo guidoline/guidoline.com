@@ -40,9 +40,10 @@
           <router-link
             to="/"
             title="Retour sur la page d'accueil"
+            class="logo"
           >
             <slot>
-              <Logo class="logo" />
+              <Logo />
               <h1 class="sr-only">{{ siteName }}</h1>
             </slot>
           </router-link>
@@ -102,7 +103,10 @@ menuOpen.value = false
 .nav-sup { @apply text-sm bg-night-background text-night-text; }
 header { @apply bg-callout-background text-callout-text; }
 .nav-burger { @apply sm:hidden justify-right; }
-.logo { @apply w-8 text-day-text hover:(text-day-text-dark); }
+.logo {
+  @apply text-main-shade hover:(text-day-text-dark);
+  svg { @apply w-8; }
+}
 .wrapper.is-compact .item { @apply sm:(py-2 pl-2 last:pr-4); }
 /* .nav-sub { @apply bg-gray-600; } */
 /* .nav-item { @apply py-2 pl-2 last:pr-2 sm:(py-4 pl-4 last:pr-4); }
