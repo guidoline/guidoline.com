@@ -1,9 +1,10 @@
 ---
-title: "Newsletter Juillet 2019"
-date: "2019-07-02"
-coverImage: "insta.png"
----
+title: Newsletter Juillet 2019
+date: '2019-07-02'
+coverImage: insta.png
+publish: true
 
+---
 **Guidoline ouvre un second atelier vélo !**
 
 **Communiqué de presse de la Ville de Sotteville lès Rouen :**
