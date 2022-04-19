@@ -1,9 +1,10 @@
 ---
-title: "Newsletter Février 2019"
-date: "2019-03-05"
-coverImage: "u6kxj-1.png"
----
+title: Newsletter Février 2019
+date: '2019-03-05'
+coverImage: u6kxj-1.png
+publish: true
 
+---
 **Un nouvel agencement de l'atelier !**
 
 Bonjour chères et chers adhérents,
