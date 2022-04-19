@@ -2,7 +2,7 @@
 title: Newsletter Janvier
 date: '2022-02-15'
 cover:
-  src: "/uploads/tips-and-tricks-cover.webp"
+  src: ''
 template: information
 publish: true
 SEO:
