@@ -4,8 +4,9 @@ date: '2022-02-15'
 cover:
   src: "/uploads/tips-and-tricks-cover.webp"
 template: information
----
+publish: true
 
+---
 # Newsletter Janvier 2022
 
 ![Tips and tricks](/uploads/tips-and-tricks.webp)

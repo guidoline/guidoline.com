@@ -23,18 +23,17 @@ sections:
   class: primary
   add_link: false
 - title: Guidoline recrute
-  content: |-
-    ![](/uploads/image.png)
+  content: "![](/uploads/image.png)"
   link:
-    text: "Consulter l'annonce"
-    href: '/blog/2021/02/lassociatiton-guidoline-recrute'
+    text: Consulter l'annonce
+    href: "/blog/2021/02/lassociatiton-guidoline-recrute"
     icon: ''
     color: primary
     title: ''
     sr: false
     class: ''
   class: ''
-  add_link: false
+  add_link: true
 title: Bienvenue
 hero:
   src: ''

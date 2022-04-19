@@ -1,10 +1,11 @@
 ---
-title: "Dernière Newsletter de l'année 2021 !"
-date: "2021-12-01"
-coverImage: "Sans-titre-9-e1638357065848.png"
+title: Dernière Newsletter de l'année 2021 !
+date: '2021-12-01'
+coverImage: Sans-titre-9-e1638357065848.png
 template: information
----
+publish: true
 
+---
 # Dernière Newsletter de l'année 2021
 
 **Retrouvez l'actualité de Guidoline** du mois de novembre en terme de prestations, d'évènements culturels, artistiques ou encore caritatifs !

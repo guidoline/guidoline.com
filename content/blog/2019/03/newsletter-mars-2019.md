@@ -1,9 +1,10 @@
 ---
-title: "Newsletter Mars 2019"
-date: "2019-03-05"
-coverImage: "newslettermars2019.png"
----
+title: Newsletter Mars 2019
+date: '2019-03-05'
+coverImage: newslettermars2019.png
+publish: true
 
+---
 **Assemblée générale 2019**
 
 Chères adhérentes, chers adhérents,

@@ -1,9 +1,10 @@
 ---
-title: "Newsletter Avril 2019"
-date: "2019-03-27"
-coverImage: "newsletteravril.png"
----
+title: Newsletter Avril 2019
+date: '2019-03-27'
+coverImage: newsletteravril.png
+publish: true
 
+---
 **Venez gagner une nuit au milieu des voiliers de l'Armada, jeudi 4 avril à partir de 19h00**
 
 En partenariat avec la Métropole de Rouen Normandie, Guidoline a la chance de pouvoir faire gagner à ses adhérents des nuits sur le Camping Flottant cycliste installé sur une barge au cœur de l'Armada et de ses voiliers.

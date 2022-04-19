@@ -1,9 +1,10 @@
 ---
-title: "Précisions sur la ré-ouverture"
-date: "2020-05-14"
-coverImage: "IMG_1401-rotated.jpg"
----
+title: Précisions sur la ré-ouverture
+date: '2020-05-14'
+coverImage: IMG_1401-rotated.jpg
+publish: true
 
+---
 #### Les ateliers
 
 L'atelier de Rouen a ré-ouvert le 12 mai, celui de Sotteville-lès-Rouen ré-ouvre mercredi **27 mai**.Vous pouvez venir réparer votre vélo uniquement sur rendez-vous sur des créneaux **d'1h30**. Pour s'inscrire à l'atelier de Rouen c'est à ce [lien](https://www.rdv360.com/guidoline) (prenez le temps de lire les conditions d'accès).

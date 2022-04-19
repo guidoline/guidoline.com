@@ -1,9 +1,10 @@
 ---
-title: "Newsletter Mai 2019"
-date: "2019-04-30"
-coverImage: "news_mai_insta.png"
----
+title: Newsletter Mai 2019
+date: '2019-04-30'
+coverImage: news_mai_insta.png
+publish: true
 
+---
 **Nocturnes #2 et #3**
 
 En partenariat avec la Métropole de Rouen Normandie, Guidoline a la chance de pouvoir faire gagner à ses adhérents des nuits sur le Camping Flottant cycliste installé sur une barge au cœur de l'Armada et de ses voiliers entre le 6 et le 16 juin.

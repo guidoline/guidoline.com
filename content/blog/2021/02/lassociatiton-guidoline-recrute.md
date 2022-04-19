@@ -1,10 +1,11 @@
 ---
-title: "L'association Guidoline recrute !"
-date: "2021-02-03"
-coverImage: "guido_recrute.jpeg"
+title: L'association Guidoline recrute !
+date: '2021-02-03'
+coverImage: guido_recrute.jpeg
 template: information
----
+publish: true
 
+---
 # Nous cherchons un responsable d'atelier
 
 Animant deux ateliers d’autoréparation de vélo à Rouen et à Sotteville-lès-Rouen et régulièrement des ateliers mobiles dans toute la Métropole de Rouen, l’association cherche à recruter un.e **deuxième responsable d’atelier**.
