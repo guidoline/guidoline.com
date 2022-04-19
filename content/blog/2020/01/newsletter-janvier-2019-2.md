@@ -1,9 +1,10 @@
 ---
-title: "Newsletter Janvier 2020"
-date: "2020-01-23"
-coverImage: "vuvo8.jpeg"
----
+title: Newsletter Janvier 2020
+date: '2020-01-23'
+coverImage: vuvo8.jpeg
+publish: true
 
+---
 **Guidoline vous souhaite une joyeuse année 2020 !**
 
 Chères et chers adhérents, Guidoline vous souhaite une belle année 2020. L'association sera à vos côtés pour vous aider à fluidifier les éventuels roulements grinçants et faire flamboyer vos phares afin d'illuminer votre route !  
