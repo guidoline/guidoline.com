@@ -1,8 +1,9 @@
 ---
-title: "Guidoline recherche un(e) Coordinateur(rice) d’association"
-date: "2018-09-10"
----
+title: Guidoline recherche un(e) Coordinateur(rice) d’association
+date: '2018-09-10'
+publish: true
 
+---
 Simon notre bouillonnant directeur-fondateur s'en va vers de nouveaux projets vélocipédiques. Nous lui souhaitons le meilleur bien évidemment.
 
 Un poste de coordinateur à mi-temps sera donc vacant et nous cherchons un remplaçant à partir du 1er novembre 2018. Reine ou roi de l'organisation, animateur dynamique d'équipe, diva des réseaux sociaux, passionné de vélo... vos candidatures sont les bienvenues !
