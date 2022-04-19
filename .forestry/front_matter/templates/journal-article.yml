@@ -51,3 +51,5 @@ fields:
       type: pages
       section: blog
   label: Articles en relation
+pages:
+- content/blog/2009/12/meet-me-half-way-paris-vs-rouen.md

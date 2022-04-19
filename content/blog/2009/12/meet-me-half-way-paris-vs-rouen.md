@@ -3,7 +3,17 @@ title: MEET ME HALF WAY | Paris vs. Rouen
 date: '2009-12-13'
 SEO:
   author: content/authors/guidoline.md
+  date: ''
+  description: ''
 publish: true
+template: article
+tags: []
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+category: ''
+related_articles: []
 
 ---
 # MEET ME HALF WAY | Paris vs. Rouen
