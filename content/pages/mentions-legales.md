@@ -1,6 +1,7 @@
 ---
 title: Mentions légales
 template: page
+publish: true
 
 ---
 # Mentions légales
@@ -19,25 +20,23 @@ contact@guidoline.com
 
 ## Hébergement
 
-**\[Nom de l'hébergeur\]**  
-\[Rue\]  
-\[CP\] \[Ville\]
-\[Pays\]
+**Netlify**  
+44 Montgomery Street  
+Suite 300, San Francisco, California 94104
 
-\[URL\]  
-\[Email\]  
-\[Téléphone\]
+[https://www.netlify.com/](https://www.netlify.com/ "https://www.netlify.com/")  
+support@netlify.com
 
 ## Conception / réalisation
 
-**\[Nom du prestaire\]**
-\[Rue\]  
-\[CP\] \[Ville\]
-\[Pays\]
+**Beau Steve**
 
-\[URL\]  
-\[Email\]  
-\[Téléphone\]
+36 rue Molière  
+76000 Rouen, France
+
+https://ziopod.com  
+steve.beau@ziopod.com  
+06\.78.30.87.13
 
 ## Conditions d'utilisation
 
