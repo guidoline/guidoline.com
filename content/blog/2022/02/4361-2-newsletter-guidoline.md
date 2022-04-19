@@ -5,9 +5,15 @@ cover:
   src: "/uploads/tips-and-tricks-cover.webp"
 template: information
 publish: true
+SEO:
+  description: "**Retrouvez la première Newsletter Guidoline 2022** avec un petit
+    récap' en photo de l'année 2021, et quelques rappels concernant les adhésions
+    et le bénévolat."
 
 ---
 # Newsletter Janvier 2022
+
+![Tips and tricks](/uploads/tips-and-tricks.webp)
 
 **Retrouvez la première Newsletter Guidoline 2022** avec un petit récap' en photo de l'année 2021, et quelques rappels concernant les adhésions et le bénévolat.
 
