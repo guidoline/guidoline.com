@@ -9,6 +9,7 @@ links:
     to: '/styleguide/components'
   - name: 'Composant Inset'
     to: '/styleguide/inset'
+publish: true
 ---
 
 <z-menu :links="frontmatter.links" />

@@ -9,48 +9,56 @@ import plugin from 'windicss/plugin'
 // import { Colors as wColors } from 'windicss/colors'
 import wColors from 'windicss/colors'
 import defaultTheme from 'windicss/defaultTheme'
+// `colors` => `iniitalColors`
+// Ces couleurs n'ont pas vocation à être appellées directement dans les
+// templates, elles sont exploitées par les définitions de couleurs d'usages.
+// Ne pas employer `DEFAULT`, mais plutôt `normal` du coup.
+// ou conserver tout de même DEFAUlT pour un usage plus souple (
+// ! Toutes les définition doivent avoir u `DEFAULT` dans ce cas.
+
 const colors = {
   // shade ou grey
   // https://bulma.io/documentation/overview/colors/
   // @todo chiant de devoir écrire défault à chaque fois
   // modifier la sctructure des données afin de ne pas
   // avoir de couleurs `DEFAULT`
-  white: {
-    DEFAULT: wColors.zinc[50],
-    invert:wColors.zinc[900]
-  },
-  black: {
-    DEFAULT: wColors.zinc[900],
-    invert: wColors.zinc[50]
-  },
-  grey: {
-    lightest: {
-      DEFAULT: wColors.zinc[100],
-      invert: wColors.zinc[700]
-    },
-    lighter: {
-      DEFAULT: wColors.zinc[200],
-      invert: wColors.zinc[700]
-    },
-    light: {
-      DEFAULT: wColors.zinc[300],
-      invert: wColors.zinc[800]
-    },
-    DEFAULT: wColors.zinc[400],
-    invert: wColors.zinc[900],
-    dark: {
-      DEFAULT: wColors.zinc[500],
-      invert: wColors.zinc[200]
-    },
-    darker: {
-      DEFAULT: wColors.zinc[600],
-      invert: wColors.zinc[300]
-    },
-    darkest: {
-      DEFAULT: wColors.zinc[700],
-      invert: wColors.zinc[300]
-    }
-  },
+  // Ces couleurs initiales n'ont pa
+  // white: {
+  //   DEFAULT: wColors.zinc[50],
+  //   invert:wColors.zinc[900]
+  // },
+  // black: {
+  //   DEFAULT: wColors.zinc[900],
+  //   invert: wColors.zinc[50]
+  // },
+  // grey: {
+  //   lightest: {
+  //     DEFAULT: wColors.zinc[100],
+  //     invert: wColors.zinc[700]
+  //   },
+  //   lighter: {
+  //     DEFAULT: wColors.zinc[200],
+  //     invert: wColors.zinc[700]
+  //   },
+  //   light: {
+  //     DEFAULT: wColors.zinc[300],
+  //     invert: wColors.zinc[800]
+  //   },
+  //   DEFAULT: wColors.zinc[400],
+  //   invert: wColors.zinc[900],
+  //   dark: {
+  //     DEFAULT: wColors.zinc[500],
+  //     invert: wColors.zinc[200]
+  //   },
+  //   darker: {
+  //     DEFAULT: wColors.zinc[600],
+  //     invert: wColors.zinc[300]
+  //   },
+  //   darkest: {
+  //     DEFAULT: wColors.zinc[700],
+  //     invert: wColors.zinc[300]
+  //   }
+  // },
   /*
   Variante d'une couleur / Les shades
 
@@ -133,7 +141,7 @@ const colors = {
     DEFAULT: '#EA4848',
     invert: wColors.slate[900],
     dark: {
-      DEFAULT: '#D43D56',
+      DEFAULT: '#C7364B',
       invert: wColors.slate[50]
     }
   },
@@ -146,28 +154,53 @@ const colors = {
     DEFAULT: '#EBC855',
     invert: wColors.zinc[800],
     dark: {
-      DEFAULT: '#E0A84E',
+      DEFAULT: '#DEA140',
+      invert: wColors.zinc[900]
+    },
+    darker: {
+      DEFAULT: '#CC380A',
       invert: wColors.zinc[900]
     }
   },
   accent: {
     light: {
-      DEFAULT: '#CC5CDB',
+      DEFAULT: '#CD63DB',
       invert: wColors.gray[800]
     },
     DEFAULT: '#B33EC7',
     invert: wColors.gray[900],
     dark: {
-      DEFAULT: '#9639BD',
+      DEFAULT: '#8C30B2',
       invert: wColors.gray[50]
     }
   },
   // Bulma like
   link: {},
-  info: {},
-  success: {},
-  warning: {},
-  danger: {},
+  info: {
+    dark: wColors.sky[400],
+    DEFAULT: wColors.sky[300],
+    light: wColors.sky[200],
+    invert: wColors.zinc[800],
+  },
+  success: {
+    dark: wColors.emerald[500],
+    DEFAULT: wColors.emerald[400],
+    light: wColors.emerald[300],
+    invert: wColors.zinc[800],
+  },
+  warning: {
+    dark: wColors.amber[400],
+    DEFAULT: wColors.amber[300],
+    light: wColors.amber[200],
+    invert: wColors.zinc[800],
+  },
+  danger: {
+    dark: wColors.red[400],
+    DEFAULT: wColors.red[400],
+    light: wColors.red[300],
+    invert: wColors.zinc[800],
+  },
+
 }
 const weights = {
   light: 300,
@@ -196,7 +229,7 @@ export default {
       addBase({
         'body': {
           color: theme('colors.day.text.DEFAULT'),
-          background: theme('colors.day.background.light')
+          background: theme('colors.day.background.DEFAULT')
         },
         'a': {
           color: theme('colors.day.link.DEFAULT'),
@@ -230,7 +263,7 @@ export default {
           color: theme('colors.day.background.DEFAULT'),
           backgroundColor: theme('colors.day.link.DEFAULT'),
           '&-variant': {
-            backgroundColor: 'green',
+            // backgroundColor: 'green',
           }
         },
         // '.prose-container': {
@@ -310,17 +343,19 @@ export default {
       // - brand.DEFAULT (primary)
       // @todo: nommer `invert`, plutôt que `bg` ?
       day: {
-        disabled: colors.dark.lighter,
-        quiet: colors.dark.light,
-        DEFAULT: colors.dark.DEFAULT,
-        loud: colors.dark.dark,
-        bg: colors.light.light,
+        // Text
+        disabled: colors.shade.lighter,
+        quiet: colors.shade.DEFAULT,
+        DEFAULT: colors.shade.dark,
+        loud: colors.shade.dark,
+        bg: colors.bright.light,
+        // END Text
         link: {
           DEFAULT: colors.primary.dark.DEFAULT,
-          active: colors.secondary.dark.DEFAULT,
+          active: colors.secondary.darker.DEFAULT,
           hover: colors.accent.dark.DEFAULT,
           visited: colors.shade.light.DEFAULT,
-          disabled: colors.bright.darker.DEFAULT
+          disabled: colors.shade.DEFAULT
         },
         // link: {
         //   DEFAULT: colors.primary.dark,
@@ -337,12 +372,12 @@ export default {
         },
 
         //
-        text: {
-          lighter: colors.dark.lighter,
-          light: colors.dark.light,
-          DEFAULT: colors.dark.DEFAULT,
-          dark: colors.dark.dark
-        },
+        // text: {
+        //   lighter: colors.dark.lighter,
+        //   light: colors.dark.light,
+        //   DEFAULT: colors.dark.DEFAULT,
+        //   dark: colors.dark.dark
+        // },
         background: {
           light: colors.light.light,
           DEFAULT: colors.light.DEFAULT,
@@ -389,7 +424,7 @@ export default {
       callout: {
         text: {
           light: colors.dark.light,
-          DEFAULT: colors.dark.DEFAULT,
+          DEFAULT: colors.primary.invert,
           dark: colors.dark.dark
         },
         background: {
@@ -407,6 +442,8 @@ export default {
     extend: {
       // Configuration de Typography
       // https://github.com/windicss/windicss/blob/main/src/plugin/typography/styles.ts
+      // @todo `colors` doit être préparé dans une variable en ammont afin
+      // d'éviter de devoir ressaisr de nouvelles variable (ex. couleur du text)
       typography: {
         DARK: {
           css: {
@@ -423,7 +460,7 @@ export default {
         },
         DEFAULT: {
           css: {
-            color: colors.dark.DEFAULT,
+            color: colors.shade.dark,
             a: {
               color: colors.primary.DEFAULT
             },

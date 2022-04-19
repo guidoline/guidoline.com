@@ -1,5 +1,6 @@
 ---
 title: Couleurs
+publish: true
 ---
 
 # Couleurs

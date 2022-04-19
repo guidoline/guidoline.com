@@ -5,6 +5,7 @@ links:
     to: '/styleguide/typographie'
   - name: 'Composants'
     to: '/styleguide/components'
+publish: true
 ---
 
 [Guide de style](/styleguide)

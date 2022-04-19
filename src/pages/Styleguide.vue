@@ -111,14 +111,24 @@ td { @apply p-4; }
 
       <table class="text-center">
         <tr>
-          <td class="bg-main-info-light text-main-info-light-invert">info light</td>
-          <td class="bg-main-info text-main-info-invert">info</td>
-          <td class="bg-main-info-dark text-main-info-dark-invert">info dark</td>
+          <td class="bg-main-info text-main-info-invert border-t-6 border-b-6 border-main-info-dark border-t-main-info-light">
+            info
+          </td>
+          <td class="bg-main-success text-main-success-invert border-t-6 border-b-6 border-main-success-dark border-t-main-success-light">
+            success
+          </td>
+          <td class="bg-main-warning text-main-warning-invert border-t-6 border-b-6 border-main-warning-dark border-t-main-warning-light">
+            warning
+          </td>
+          <td class="bg-main-danger text-main-danger-invert border-t-6 border-b-6 border-main-danger-dark border-t-main-danger-light">
+            danger
+          </td>
         </tr>
         <tr>
-          <td class="text-main-info-light bg-main-info-light-invert">info light</td>
           <td class="text-main-info bg-main-info-invert">info</td>
-          <td class="text-main-info-dark bg-main-info-dark-invert">info dark</td>
+          <td class="text-main-success bg-main-success-invert">success</td>
+          <td class="text-main-warning bg-main-warning-invert">warning</td>
+          <td class="text-main-danger bg-main-danger-invert">danger</td>
         </tr>
       </table>
 
@@ -178,9 +188,9 @@ td { @apply p-4; }
 
       <h2>Day</h2>
       <div class="bg-day-bg">
-        <p class="p-4">
+        <p class="p-4 bg-day-bg text-day">
           <code>day.bg</code>
-          Fond par défault
+          Fond par défault et texte par défaut.
         </p>
         <p class="p-4 text-day-disabled">
           <code>day.disabled</code>
@@ -188,7 +198,7 @@ td { @apply p-4; }
         </p>
         <p class="p-4 text-day-quiet">
           <code>day.quiet</code>
-          Text quiet (ajustement visuel pour grand texte, titrage)
+          <b>Text quiet (ajustement visuel pour grand texte, titrage)</b>
         </p>
         <p class="p-4 text-day">
           <code>day</code>
