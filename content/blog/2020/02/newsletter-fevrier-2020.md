@@ -1,9 +1,10 @@
 ---
-title: "Newsletter février 2020"
-date: "2020-02-06"
-coverImage: "Guido2020.png"
----
+title: Newsletter février 2020
+date: '2020-02-06'
+coverImage: Guido2020.png
+publish: true
 
+---
 **Venez à l'AG de votre association préférée !**
 
 L'assemblée général annuelle faisant le bilan 2019 de Guidoline se tiendra le **3 mars 2020**, à **19h**, à l'**atelier rue Molière**. Vous êtes toutes et tous conviés à venir participer à ce moment important de la vie de l'association.  
