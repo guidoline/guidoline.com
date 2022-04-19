@@ -345,8 +345,8 @@ export default {
       day: {
         // Text
         disabled: colors.shade.lighter,
-        quiet: colors.shade.DEFAULT,
-        DEFAULT: colors.shade.dark,
+        quiet: colors.shade.light,
+        DEFAULT: colors.shade.DEFAULT,
         loud: colors.shade.dark,
         bg: colors.bright.light,
         // END Text
