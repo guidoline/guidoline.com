@@ -85,9 +85,9 @@ function renderMarkdown(rawMarkdown, options) {
   // @todo il semble que les images soient optimisées 2 x lors du build production
   // @todo à etendre à toutes les images Vite.
   // @todo externaliser la configuration
-  const production =
-    (options.vite?.command === 'build' || false)
-    && (options.vite?.mode === 'production' || false)
+  const production =options.vite
+    ? (options.vite.command === 'build') && (options.vite.mode === 'production')
+    : false
 
   if (production) {
     markdown.renderer.rules.image = function(tokens, idx, options, env, self) {
@@ -144,8 +144,8 @@ export default function pluginMdToJson(params = {}) {
   const directory = params.directory || 'content'
   const markdownOptions = params.markdownOptions || {}
   markdownOptions.vite= {
-    command : params.vite?.command || null,
-    mode: params.vite?.mode || null,
+    command : params.vite ? params.vite.command : null,
+    mode: params.vite ? params.vite.mode : null,
   }
   let files = markdownFilesToData(scanFiles(`./${directory}`, ['.md']), directory, markdownOptions)
   // Grouper les fichiers par répertoire
