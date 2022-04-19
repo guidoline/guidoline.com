@@ -1,9 +1,10 @@
 ---
-title: "Rallye photo à vélo"
-date: "2018-11-13"
-coverImage: "45593428_10156077749413693_4286967017468067840_n.jpg"
----
+title: Rallye photo à vélo
+date: '2018-11-13'
+coverImage: 45593428_10156077749413693_4286967017468067840_n.jpg
+publish: true
 
+---
 Vous pensiez avoir manqué l'édition 2018 de notre célèbre Rallye photo ? et bien non la voici enfin !
 
 Équipés d’un appareil photo et d’un vélo, vous sillonnerez la ville de Rouen, version insolite, dans un temps limité : Sportifs, cyclistes du dimanche, entre amis, entre illustres inconnus, ou en famille avec vos enfants, le principe de ce rallye est de rechercher des indices, et de les prendre en photo pour cumuler un maximum de points.
