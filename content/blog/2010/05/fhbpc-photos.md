@@ -7,7 +7,8 @@ cover:
   legend: ''
 publish: true
 template: article
-tags: []
+tags:
+- Bike Polo
 SEO:
   author: content/authors/guidoline.md
   description: Résultats et photos du tournoi FHBPC
