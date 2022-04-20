@@ -11,7 +11,7 @@ tags:
 - Bike Polo
 category: Évenements
 SEO:
-  author: ''
+  author: content/authors/guidoline.md
   date: ''
   description: ''
 related_articles: []
