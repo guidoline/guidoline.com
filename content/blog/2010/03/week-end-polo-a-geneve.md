@@ -7,7 +7,8 @@ cover:
   legend: ''
 publish: true
 template: article
-tags: []
+tags:
+- Bike Polo
 SEO:
   description: Retour en images sur ce week-end polo Genevois
   author: content/authors/guidoline.md
