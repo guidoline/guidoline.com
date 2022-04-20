@@ -3,6 +3,24 @@ title: Newsletter Janvier 2019
 date: '2019-03-05'
 coverImage: visuel-tandem-23-2.png
 publish: true
+template: article
+tags:
+- Café
+- Prestations
+- Adhésion
+- Bénévolat
+category: Newsletter
+SEO:
+  author: content/authors/guidoline.md
+  description: 'Guidoline commence l’année avec de nombreux changements, notamment
+    des nouveaux services : la réparation express des crevaisons, le retour de la
+    vente de pièces neuves et un atelier d''upcycling.'
+  date: ''
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 **Une nouvelle année commence !**
@@ -21,6 +39,6 @@ Aussi, pour continuer à bénéficier de cette belle association, nous tous, mem
 
 Au plaisir de se voir à Guidoline.
 
-\_\_\_
+___
 
 Suite de la newsletter en suivant ce lien : [http://bit.ly/2IPgn1V](http://bit.ly/2IPgn1V)
