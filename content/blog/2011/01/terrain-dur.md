@@ -2,8 +2,20 @@
 title: Terrain Dur | Bike Polo Show
 date: '2011-01-14'
 cover:
-  src: "/uploads/terrain-dur.jpg"
+  src: ''
+  alt: ''
+  legend: ''
 publish: true
+template: article
+tags:
+- Exposition
+- Bike Polo
+SEO:
+  author: content/authors/guidoline.md
+  description: Exposition sur la jeune histoire du Bikepolo
+  date: ''
+category: Évenements
+related_articles: []
 
 ---
 Bonjour les amis,
@@ -35,3 +47,5 @@ Nous comptons sur votre participation.
 Merci et vive le Bikepolo.
 
 Eugène et Yaralt
+
+![](/uploads/terrain-dur.jpg)
