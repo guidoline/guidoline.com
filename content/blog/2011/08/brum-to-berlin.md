@@ -2,8 +2,19 @@
 title: Brum To Berlin
 date: '2011-08-02'
 cover:
-  src: "/uploads/229252_143077859097684_128497113889092_280413_2967062_n.jpg"
+  src: ''
+  alt: ''
+  legend: ''
 publish: true
+template: article
+tags: []
+SEO:
+  author: content/authors/guidoline.md
+  description: Ils sont jeunes et font du vélo pour le plaisir, ils s'appellent Andrew
+    Senior, Dyjan Jones, Edward Smith, Jess Duffy et Matthew Cox.
+  date: ''
+category: Évenements
+related_articles: []
 
 ---
 900 miles, soit 1450 km, c'est la distance qui sépare Birmingham de Berlin à vélo.
@@ -16,7 +27,7 @@ Ils sont jeunes et font du vélo pour le plaisir, ils s'appellent Andrew Senior,
 
 Le projet mérite d'être suivi et vous trouverez toutes les infos sur leur site [brumtoberlin.com](http://www.brumtoberlin.com/)
 
-pour soutenir le projet : [Faire un don !](http://www.justgiving.com/brumtoberlin/eurl.axd/86cb1ddc9e2ec04882f6169eb85318e5 "Faire un don")
+Pour soutenir le projet : [Faire un don !](http://www.justgiving.com/brumtoberlin/eurl.axd/86cb1ddc9e2ec04882f6169eb85318e5 "Faire un don")
 
 Day 1 02/08: Birmingham to London 109 miles
 
@@ -51,3 +62,5 @@ Day 15 16/08: In Berlin
 Day 16 17/08: In Berlin
 
 Day 17 18/08: Return to London
+
+![](/uploads/229252_143077859097684_128497113889092_280413_2967062_n.jpg)
