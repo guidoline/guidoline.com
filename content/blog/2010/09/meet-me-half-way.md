@@ -2,8 +2,18 @@
 title: Meet me half way
 date: '2010-09-18'
 cover:
-  src: "/uploads/MMHW-AMIENS.jpg"
+  src: ''
+  alt: ''
+  legend: ''
 publish: true
+template: article
+tags: []
+SEO:
+  author: content/authors/guidoline.md
+  date: ''
+  description: ''
+category: Évenements
+related_articles: []
 
 ---
 Après le succès du 1er Meet Me Half Way de cet hiver entre Paris et Rouen, il était temps d'en organiser un autre. Amiens... sa cathédrale, le quartier de Saint Leu, le club d'aviron d'Amiens...
@@ -19,3 +29,5 @@ Paris --> Amiens : 140 km
 Rouen --> Amiens : 110 km
 
 Lille --> Amiens : 110 km
+
+![](/uploads/MMHW-AMIENS.jpg)
