@@ -8,7 +8,8 @@ cover:
 date_start: '2022-04-14T12:44:15.000+00:00'
 publish: true
 template: article
-tags: []
+tags:
+- Exposition
 category: Évenements
 SEO:
   author: content/authors/guidoline.md
