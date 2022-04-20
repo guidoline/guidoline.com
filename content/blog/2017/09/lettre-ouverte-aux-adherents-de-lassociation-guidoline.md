@@ -3,6 +3,20 @@ title: Lettre ouverte aux adhérents de l'association Guidoline
 date: '2017-09-19'
 coverImage: lettre-ouverte.jpg
 publish: true
+template: article
+tags: []
+SEO:
+  author: content/authors/guidoline.md
+  description: L’association Guidoline fait face à des changements importants qui
+    auront des répercussions sur son fonctionnement. Le Conseil d’Administration souhaite
+    vous en informer.
+  date: ''
+category: Évenements
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 Chères adhérentes, chers adhérents,
