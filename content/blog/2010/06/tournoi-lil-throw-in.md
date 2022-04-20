@@ -11,7 +11,8 @@ SEO:
   description: Tournoi de bike-polo Lil' Throw In.
   date: ''
 template: article
-tags: []
+tags:
+- Bike Polo
 category: Évenements
 related_articles: []
 
