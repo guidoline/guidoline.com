@@ -3,6 +3,20 @@ title: Fête du vélo
 date: '2013-05-29'
 coverImage: 579325_10151441051388693_2000064547_n-580x820.jpg
 publish: true
+template: article
+tags:
+- Prestations
+SEO:
+  description: A l’occasion de la [**Fête nationale du vélo**](http://www.rouen.fr/velo),
+    la Ville de Rouen organise un **rassemblement vélo**.
+  author: content/authors/guidoline.md
+  date: ''
+category: Évenements
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 A l’occasion de la [**Fête nationale du vélo**](http://www.rouen.fr/velo), la Ville de Rouen organise un **rassemblement vélo**.
