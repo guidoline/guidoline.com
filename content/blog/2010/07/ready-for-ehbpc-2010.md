@@ -7,7 +7,8 @@ cover:
   legend: ''
 publish: true
 template: article
-tags: []
+tags:
+- Bike Polo
 SEO:
   author: content/authors/guidoline.md
   description: Guidoline aux championnats d'Europe de Bike Polo EHBPC !
