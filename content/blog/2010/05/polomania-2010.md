@@ -7,7 +7,8 @@ cover:
   legend: ''
 publish: true
 template: article
-tags: []
+tags:
+- Bike Polo
 category: Évenements
 SEO:
   author: content/authors/guidoline.md
