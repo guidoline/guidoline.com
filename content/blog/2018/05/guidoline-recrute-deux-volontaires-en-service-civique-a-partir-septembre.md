@@ -1,8 +1,20 @@
 ---
-title: Guidoline recrute deux volontaires en Service Civique à partir de septembre
-  !
+title: Guidoline recrute deux volontaires !
 date: '2018-05-22'
 publish: true
+template: article
+tags:
+- Volontariat
+category: Évenements
+SEO:
+  author: ''
+  date: ''
+  description: ''
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 Guidoline recherche **2 volontaires en Service Civique** !
