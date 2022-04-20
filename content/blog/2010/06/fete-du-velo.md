@@ -2,7 +2,7 @@
 title: Fête du vélo
 date: '2010-06-08'
 cover:
-  src: "/uploads/fete_velo_rouen-212x300.jpg"
+  src: ''
   alt: ''
   legend: ''
 publish: true
@@ -29,7 +29,25 @@ Le **Bicycle Roller Racing** sera toujours là pour des courses endiablées, ain
 
 ***
 
-Mais aussi: - Une bourse aux vélos - Séances d’initiation à la pratique du vélo urbain - Rallye Vélo en Ville - Sensibilisation aux angles morts - Animation les Vélos Folies - Location de Cy’clic - Spectacles ludoéducatifs - Spectacle  Le Vélotonome  Cie Des Frères Georges - Présentation du Cargo cycle solaire
+Mais aussi: 
+
+\- Une bourse aux vélos 
+
+\- Séances d’initiation à la pratique du vélo urbain 
+
+\- Rallye Vélo en Ville 
+
+\- Sensibilisation aux angles morts 
+
+\- Animation les Vélos Folies 
+
+\- Location de Cy’clic 
+
+\- Spectacles ludoéducatifs 
+
+\- Spectacle  Le Vélotonome  Cie Des Frères Georges 
+
+\- Présentation du Cargo cycle solaire
 
 Retrouvez aussi la **fête de la biodiversité** dans les jardins de l’Hôtel de Ville dès 14h30.
 
