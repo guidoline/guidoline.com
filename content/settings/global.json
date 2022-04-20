@@ -45,18 +45,21 @@
       "Évenements",
       "Reportage",
       "Newsletter",
-      "Tutoriel"
+      "Tutoriel",
+      "Appel à bénévoles"
     ]
   },
   "socials": {
     "socials": [
       {
         "name": "Instagram",
-        "link": "https://www.instagram.com/_guidoline/"
+        "link": "https://www.instagram.com/_guidoline/",
+        "description": ""
       },
       {
         "name": "Facebook",
-        "link": "https://fr-fr.facebook.com/Guidoline"
+        "link": "https://fr-fr.facebook.com/Guidoline",
+        "description": ""
       }
     ]
   }
