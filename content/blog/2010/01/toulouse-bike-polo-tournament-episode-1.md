@@ -9,10 +9,11 @@ publish: true
 SEO:
   author: content/authors/guidoline.md
   date: ''
-  description: ''
+  description: Résultats, récompenses et photos
 template: article
-tags: []
-category: ''
+tags:
+- Bike Polo
+category: Évenements
 related_articles: []
 
 ---
