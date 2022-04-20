@@ -3,6 +3,19 @@ title: APPEL À IDÉES !
 date: '2016-12-23'
 coverImage: Sondage.jpg
 publish: true
+template: article
+tags: []
+SEO:
+  description: L'équipe de Guidoline souhaite connaitre **vos attentes pour la nouvelle
+    saison**.
+  author: content/authors/guidoline.md
+  date: ''
+category: Évenements
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 L'équipe de Guidoline souhaite connaitre **vos attentes pour la nouvelle saison**.
