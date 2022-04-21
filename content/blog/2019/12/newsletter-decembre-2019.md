@@ -3,6 +3,22 @@ title: Newsletter Décembre 2019
 date: '2019-12-11'
 coverImage: photo-carte-adherent2020.jpeg
 publish: true
+template: article
+tags:
+- Prestations
+- Fermeture
+- Sotteville
+- Adhésion
+SEO:
+  author: content/authors/guidoline.md
+  description: Retrouvez toute l'actualité de Guidoline !
+  date: ''
+category: Newsletter
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 **Guidoline vous souhaite de joyeuses fêtes de fin d'année**
@@ -13,6 +29,6 @@ Les adhésions 2020 à l'association sont déjà disponibles, en plus de souteni
 
 **25€** pour une **adhésion atelier et café** et **5€** pour une adhésion **café culturel seul**.
 
-\_\_\_
+___
 
 Suite de la newsletter en suivant ce lien : [http://kork.mjt.lu/nl2/kork/mgiy4.html?](http://kork.mjt.lu/nl2/kork/mgiy4.html?)
