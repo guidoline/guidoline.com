@@ -24,6 +24,7 @@ const props = defineProps({
 
 const cover = computed(() => {
   if (!props.content.cover) return null
+  if (!props.content.cover.src) return null
   return {
     ...props.content.cover,
     // supcaption: `Publié le ${props.content.date}`
