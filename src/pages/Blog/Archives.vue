@@ -23,22 +23,23 @@ const years = computed(() => Object.keys(archives.value).reverse())
 // Pagination par année et mois
 const currentYear = computed(() => props.year || years.value[0])
 const currentYearArchives = computed(() => archives.value[currentYear.value])
+const hasArticles = computed(() => Object.keys(archives.value).length >= 1)
 </script>
 <template>
   <LayoutDefault>
     <Navigation />
     <main>
-      <Title v-if="archives.length">Archives année «&nbsp;{{ currentYearArchives.name }}&nbsp;»</Title>
+      <Title v-if="hasArticles">Archives année «&nbsp;{{ currentYearArchives.name }}&nbsp;»</Title>
       <Title v-else>Archives</Title>
       <div class="prose container">
-        <template v-if="archives.length">
+        <template v-if="hasArticles">
           <router-link
             v-for="(year, index) in years"
             :key="index"
             :to="`/blog/archives/${year}`"
             class="px-2"
           >
-            {{ year }}
+            {{ year }} 
           </router-link>
           <ul>
             <li
