@@ -43,10 +43,10 @@
     "articles_per_page": 25,
     "categories": [
       "Évenements",
-      "Reportage",
       "Newsletter",
       "Tutoriel",
-      "Appel à bénévoles"
+      "Appel à bénévoles",
+      "Article"
     ]
   },
   "socials": {
