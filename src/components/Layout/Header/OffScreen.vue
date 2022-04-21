@@ -31,7 +31,7 @@ watch(() => props.menuOpen, (state) => emit('update:menuOpen', state))
 }
 .nav-off-screen:target,
 .nav-off-screen.is-show { @apply <sm:mt-0; }
-.logo { @apply h-auto m-4 w-16 text-day-text hover:(text-day-text-dark); }
+.logo { @apply h-auto m-4 w-16 text-day-text hover:(text-day-loud); }
 </style>
 
 <template>

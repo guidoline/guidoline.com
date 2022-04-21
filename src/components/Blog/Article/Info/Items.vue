@@ -26,7 +26,7 @@ defineProps({
 <style scoped>
 .items { @apply inline mr-4; }
 .items-title {
-  @apply inline pr-1 text-xs uppercase text-day-text-light;
+  @apply inline pr-1 text-xs uppercase text-day-quiet;
   @apply dark:(text-night-text-dark);
 }
 .item { @apply text-sm; }

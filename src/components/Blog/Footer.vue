@@ -16,7 +16,7 @@ defineProps({
 </script>
 <style scoped>
 footer {
-  @apply px-12 text-sm italic text-day-text-lighter;
+  @apply px-12 text-sm italic text-day-quiet;
 }
 </style>
 <template>

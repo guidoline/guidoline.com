@@ -46,7 +46,7 @@ const hasLink = computed(() => {
 .cover.is-full img { @apply absolute h-full min-h-100vh; }
 .cover figcaption { @apply absolute bottom-4 left-4 p-4 bg-day-background text-day-text; }
 .cover figcaption :deep(h1) { @apply text-6xl font-medium mb-1; }
-.cover-supcaption { @apply pb-2 text-sm text-day-text-light uppercase; }
+.cover-supcaption { @apply pb-2 text-sm text-day-quiet uppercase; }
 .cover-legend { @apply text-day-text; }
 .cover-legend :deep(h2) { @apply text-lg font-bold; }
 .cover-legend :deep(p) { @apply mb-4; }

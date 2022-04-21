@@ -104,7 +104,7 @@ menuOpen.value = false
 header { @apply bg-callout-background text-callout-text; }
 .nav-burger { @apply sm:hidden justify-right; }
 .logo {
-  @apply text-main-shade hover:(text-day-text-dark);
+  @apply text-main-shade hover:(text-day-loud);
   svg { @apply w-8; }
 }
 .wrapper.is-compact .item { @apply sm:(py-2 pl-2 last:pr-4); }
