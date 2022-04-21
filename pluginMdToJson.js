@@ -85,7 +85,7 @@ function renderMarkdown(rawMarkdown, options) {
   // @todo il semble que les images soient optimisées 2 x lors du build production
   // @todo à etendre à toutes les images Vite.
   // @todo externaliser la configuration
-  const production =options.vite
+  const production = options.vite
     ? (options.vite.command === 'build') && (options.vite.mode === 'production')
     : false
 
@@ -111,13 +111,12 @@ function renderMarkdown(rawMarkdown, options) {
           .concat(widths.map(w => w * 2))
           .filter((v, i, s) => s.indexOf(v) === i),
         formats: ['webp', 'jpeg'],
-        urlPath: '/uploads/', // HTML output
-        outputDir: './dist/uploads/'
+        urlPath: '/uploads/opt/', // HTML output
+        outputDir: './public/uploads/opt/'
 
       }
       EleventyImage(imgSrc, imgOpts)
 
-      console.log('Optimisation de: ', imgSrc)
 
       let metadata
       if (remote) {
@@ -126,16 +125,18 @@ function renderMarkdown(rawMarkdown, options) {
         metadata = EleventyImage.statsSync(imgSrc, imgOpts)
       }
 
-      return EleventyImage.generateHTML(metadata, {
+      const ei = EleventyImage.generateHTML(metadata, {
         alt: imgAlt,
         sizes: imgSize,
         loading: 'lazy',
         decoding: 'async'
       })
 
+      console.log('Optimisation de: ', imgSrc)
+
+      return ei
     }
   }
-
 
   return markdown.render(rawMarkdown)
 }
