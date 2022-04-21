@@ -34,9 +34,9 @@ export default defineConfig(({ command, mode }) => ({
   ],
   server: { fs: { strict: true } },
   build: {
-    // sourcemap: true,
-    // manifest: true,
-    // ssrManifest: true
+    sourcemap: true,
+    manifest: true,
+    ssrManifest: true
   },
   // Documentation sur `vite-ssg:ssgOptions` :
   // https://github.com/antfu/vite-ssg/blob/main/src/types.ts
