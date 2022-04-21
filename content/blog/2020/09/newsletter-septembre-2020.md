@@ -2,6 +2,22 @@
 title: Newsletter septembre 2020
 date: '2020-09-18'
 publish: true
+template: article
+tags:
+- Recrutement
+- Service civique
+- Bike Polo
+- Prestations
+SEO:
+  author: content/authors/guidoline.md
+  description: Retrouvez toute l'actualité de Guidoline !
+  date: ''
+category: Newsletter
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 #### **Guidoline vous souhaite une belle rentrée !**
