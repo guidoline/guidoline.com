@@ -3,6 +3,21 @@ title: Newsletter Juillet 2019
 date: '2019-07-02'
 coverImage: insta.png
 publish: true
+template: article
+tags:
+- Nocturne
+- Prestations
+- Fermeture
+SEO:
+  author: content/authors/guidoline.md
+  description: Retrouvez toute l'actualité de Guidoline !
+  date: ''
+category: Newsletter
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 **Guidoline ouvre un second atelier vélo !**
@@ -19,6 +34,6 @@ Voisin de la 3ème maison citoyenne, qui ouvrira ses portes en novembre prochain
 
 Une convention de mise à disposition gracieuse des locaux équipés en conséquence et d’accompagnement financier de l’association a été adoptée par le conseil municipal du 13 juin dernier.
 
-\_\_\_
+___
 
 Suite de la newsletter en suivant ce lien : [http://bit.ly/2t7DmOx](http://bit.ly/2t7DmOx)
