@@ -3,6 +3,19 @@ title: Guidoline Recrute
 date: '2020-09-23'
 coverImage: image.png
 publish: true
+template: article
+tags: []
+category: Évenements
+SEO:
+  author: content/authors/guidoline.md
+  description: Nous sommes à la recherche d'un **administrateur ou d'une** administratrice
+    d'association.
+  date: ''
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 L'association Guidoline **recrute** !
