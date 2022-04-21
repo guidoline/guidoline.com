@@ -3,6 +3,21 @@ title: Equinoxe Ride 2020
 date: '2020-03-05'
 coverImage: equinox-ride-2020.png
 publish: true
+template: article
+tags:
+- Sortie
+SEO:
+  author: content/authors/guidoline.md
+  description: Des bénévoles de l'association organisent le traditionnel 'Equinoxe
+    Ride' qui aura lieu dimanche 22 mars avec un nouveau trajet ROUEN – LA MER – ROUEN
+    !
+  date: ''
+category: Évenements
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 Des bénévoles de l'association organisent le traditionnel 'Equinoxe Ride' qui aura lieu dimanche 22 mars avec un nouveau trajet ROUEN – LA MER – ROUEN !
