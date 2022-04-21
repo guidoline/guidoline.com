@@ -3,6 +3,19 @@ title: Rallye photo à vélo
 date: '2018-11-13'
 coverImage: 45593428_10156077749413693_4286967017468067840_n.jpg
 publish: true
+template: article
+tags: []
+SEO:
+  author: content/authors/guidoline.md
+  description: Vous pensiez avoir manqué l'édition 2018 de notre célèbre Rallye photo
+    ? et bien non la voici enfin !
+  date: ''
+category: Évenements
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 Vous pensiez avoir manqué l'édition 2018 de notre célèbre Rallye photo ? et bien non la voici enfin !

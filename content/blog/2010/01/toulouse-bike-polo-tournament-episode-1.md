@@ -2,13 +2,24 @@
 title: Toulouse | Bike Polo Tournament | Episode 1
 date: '2010-01-19'
 cover:
-  src: "/uploads/toulouseepisode1.jpg"
+  src: ''
+  alt: ''
+  legend: ''
 publish: true
 SEO:
   author: content/authors/guidoline.md
+  date: ''
+  description: Résultats, récompenses et photos
+template: article
+tags:
+- Bike Polo
+category: Évenements
+related_articles: []
 
 ---
 19 Janvier 2010
+
+![](/uploads/toulouseepisode1.jpg)
 
 Résultat :
 

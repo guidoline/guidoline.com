@@ -2,8 +2,19 @@
 title: Alpine Bike Polo Tournament | Photos
 date: '2011-04-21'
 cover:
-  src: "/uploads/DSC_1653-1024x678.jpg"
+  src: ''
+  alt: ''
+  legend: ''
 publish: true
+template: article
+tags:
+- Bike Polo
+category: Évenements
+SEO:
+  author: content/authors/guidoline.md
+  date: ''
+  description: ''
+related_articles: []
 
 ---
 En attendant le petit montage vidéo que nous prépare Pierre, vous pouvez déjà profiter de ces quelques photos de l'**Alpine Bike Polo Tournament** qui s'est déroulé le week-end dernier à **Grenoble**.
@@ -17,3 +28,5 @@ Résultats :
 Détail des matchs de la première journée (swiss round) sur [Challonge](http://challonge.com/alpinebikepolo)
 
 [https://www.flickr.com/photos/guidoline/albums/72157626421310793](https://www.flickr.com/photos/guidoline/albums/72157626421310793)
+
+![](/uploads/DSC_1653-1024x678.jpg)

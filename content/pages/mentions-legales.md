@@ -14,7 +14,7 @@ publish: true
 76 000 Rouen  
 France
 
-\[URL\]  
+https://guidoline.com  
 contact@guidoline.com  
 09\.52.52.67.11
 
@@ -44,9 +44,9 @@ L'utilisation de ce site implique l'acceptation pleine et entière des condition
 
 ## Informatique et liberté
 
-\-> Détails des données utilisateur conservées  
-\-> Pourquoi & comment ces données sont utilisées  
-\-> Comment l'utilisateur peut supprimer ces données
+* Détails des données utilisateur conservées
+* Pourquoi & comment ces données sont utilisées
+* Comment l'utilisateur peut supprimer ces données
 
 Un cookie peut être enregistré sur votre navigateur afin de permettre des mesures d'audiences.
 
@@ -56,9 +56,9 @@ Le site ne recueille pas d’informations personnelles, et n’est pas assujetti
 
 ## Propriété intellectuelle
 
-\-> distinguer la propriété intellectuelles des éléments d'identité (logo, icônes, images) des éléments rédactionnels (contenus, textes, images éditoriales).  
-\-> définir une licence par défaut pour le contenu texte et image des articles (un CC par exemple https://creativecommons.org/licenses/?lang=fr-FR)  
-\-> l'auteur et la licence doivent être détaillés sur les visuels utilisés.
+* distinguer la propriété intellectuelles des éléments d'identité (logo, icônes, images) des éléments rédactionnels (contenus, textes, images éditoriales).
+* définir une licence par défaut pour le contenu texte et image des articles (un CC par exemple https://creativecommons.org/licenses/?lang=fr-FR)
+* l'auteur et la licence doivent être détaillés sur les visuels utilisés.
 
 Sauf mention contraire, tous les éléments accessibles sur le site (textes, images, graphismes, logo, icônes, sons, logiciels, etc.) restent la propriété exclusive de leurs auteurs, en ce qui concerne les droits de propriété intellectuelle ou les droits d’usage.
 

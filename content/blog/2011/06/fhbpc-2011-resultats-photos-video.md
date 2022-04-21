@@ -2,8 +2,19 @@
 title: FHBPC 2011 | Résultats, photos, vidéo
 date: '2011-06-06'
 cover:
-  src: "/uploads/fhbpc2011.jpg"
+  src: ''
+  alt: ''
+  legend: ''
 publish: true
+template: article
+tags:
+- Bike Polo
+category: Évenements
+SEO:
+  author: content/authors/guidoline.md
+  date: ''
+  description: ''
+related_articles: []
 
 ---
 Résultats FHBPC 2011 | Toulouse :
@@ -17,3 +28,5 @@ Toulouse France 28 mai 2011
 Edit of the last FHBPC 2011 in Toulouse, France.
 
 [https://www.flickr.com/photos/guidoline/albums/72157626750136485](https://www.flickr.com/photos/guidoline/albums/72157626750136485)
+
+![](/uploads/fhbpc2011.jpg)

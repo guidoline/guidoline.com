@@ -4,7 +4,18 @@ date: '2013-02-23'
 SEO:
   author: content/authors/guidoline.md
   date: 2013/01/16 12:00 AM +0000
+  description: L'**association investit un nouveau local** dans la même rue que l'atelier
+    où nous sommes depuis deux ans !
 publish: true
+template: article
+tags:
+- Atelier
+category: Évenements
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 Apprenant en décembre 2012 la fin de la mise à disposition de notre local au 31 janvier 2013 et dans un souci d'amélioration des conditions d'accueil et de travail, l'**association investit un nouveau local** dans la même rue que l'atelier où nous sommes depuis deux ans.

@@ -2,6 +2,23 @@
 title: Sports pour tous - Parc Expo - Rouen
 date: '2012-04-04'
 publish: true
+template: article
+tags:
+- Prestations
+- Bike Polo
+- Exposition
+category: Évenements
+SEO:
+  author: content/authors/guidoline.md
+  description: Ce week-end nous participons  à "[**Sports pour tous**](http://www.foirederouen.fr/index.php/exposer/sports-pour-tous)"
+    dans le cadre de la [Foire de Rouen](http://www.foirederouen.fr) du vendredi 6
+    au lundi 9 avril où une cinquantaine de clubs sportifs présenteront leurs disciplines.
+  date: ''
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 Ce week-end nous participons  à "**[Sports pour tous](http://www.foirederouen.fr/index.php/exposer/sports-pour-tous)**" dans le cadre de la [Foire de Rouen](http://www.foirederouen.fr) du vendredi 6 au lundi 9 avril où une cinquantaine de clubs sportifs présenteront leurs disciplines.

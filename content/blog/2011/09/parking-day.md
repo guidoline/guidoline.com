@@ -2,6 +2,19 @@
 title: Park(ing) Day
 date: '2011-09-14'
 publish: true
+template: article
+tags: []
+SEO:
+  author: content/authors/guidoline.md
+  description: Transformer temporairement des places de parking payantes en espaces
+    de verdure ou lieux de convivialité, c'est ça le Park(ing) Day !
+  date: ''
+category: Évenements
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 Ce week-end c'est [Park(ing) Day](http://www.parkingday.fr/), un **événement mondial d’un jour ouvert à tous**, durant lequel citoyens, artistes collaborent pour **transformer temporairement des places de parking payantes en espaces de verdure ou lieux de convivialité**. Concours de street Badminton, terrasses mobiles, recyclage de cagettes en cabane temporaire, voiture-jardin, terrain de mini-golf, potagers, espace bibliothèque, lieux d’échanges et de partages, installations et performances artistiques…

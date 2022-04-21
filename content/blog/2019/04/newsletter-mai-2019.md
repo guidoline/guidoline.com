@@ -3,6 +3,22 @@ title: Newsletter Mai 2019
 date: '2019-04-30'
 coverImage: news_mai_insta.png
 publish: true
+template: article
+tags:
+- Nocturne
+- Volontariat
+- Exposition
+- Atelier
+SEO:
+  author: content/authors/guidoline.md
+  description: Retrouvez toute l'actualité de Guidoline !
+  date: ''
+category: Newsletter
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 **Nocturnes #2 et #3**
@@ -17,6 +33,6 @@ Pour la nocturne #2, le collectif HSH proposera également un atelier convivial 
 
 Lors de ces nocturnes, c'est le café culturel de Guidoline qui est ouvert et accueille les festivités (pas l'atelier, donc pas de mécanique).
 
-\_\_\_
+___
 
 Suite de la newsletter en suivant ce lien : [http://bit.ly/2Y2ZFiH](http://bit.ly/2Y2ZFiH)

@@ -3,6 +3,21 @@ title: Chantier et déménagement
 date: '2013-02-23'
 coverImage: P1050158-580x435.jpg
 publish: true
+template: article
+tags:
+- Atelier
+SEO:
+  author: content/authors/guidoline.md
+  description: Le chantier du futur lieu est en cours depuis début février et jusqu'à
+    fin mars, le déménagement de l'atelier a lieu dimanche 24 février à partir de
+    13h00.
+  date: ''
+category: Évenements
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 Le **chantier** du futur lieu est en cours depuis début février et jusqu'à fin mars, le **déménagement de l'atelier** a lieu **dimanche 24 février** à partir de **13h00**.

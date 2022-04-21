@@ -2,8 +2,19 @@
 title: Voyage en Ecosse
 date: '2011-05-16'
 cover:
-  src: "/uploads/ecosse.jpg"
+  src: ''
+  alt: ''
+  legend: ''
 publish: true
+template: article
+tags: []
+SEO:
+  author: content/authors/guidoline.md
+  description: Premier coup de pédales à Rouen en direction de Dieppe pour Fabrice
+    !
+  date: ''
+category: Évenements
+related_articles: []
 
 ---
 Bonjour les amis.
@@ -15,3 +26,5 @@ Une fois arrivé, un long périple du sud écossais jusqu'au nord  par la cote 
 Il profitera de la mer "the Minch" pour faire du bodysurf  et du paysage pour se vider la tête et revenir avec plein de bon souvenirs.
 
 Sur la route pour deux semaines, à son retour il reviendra avec des notes et des illustrations à partager lors d'une soirée spéciale organisée à l'Atelier Guidoline. On compte déjà sur vous pour venir écouter cette superbe aventure.
+
+![](/uploads/ecosse.jpg)

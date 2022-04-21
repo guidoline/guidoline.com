@@ -3,6 +3,23 @@ title: Guidoline ouvre un second atelier vélo !
 date: '2019-07-02'
 coverImage: sotteville_guido.png
 publish: true
+template: article
+tags:
+- Atelier
+- Sotteville
+SEO:
+  author: content/authors/guidoline.md
+  date: ''
+  description: "**_L’association Guidoline_** _et la ville de Sotteville-les-Rouen
+    s’associent pour ouvrir, à partir de novembre 2019 au 23 rue Pierre Corneille,
+    un atelier vélo à destination de tous les Sottevillais. **Objectif : lever les
+    obstacles techniques, sociaux et culturels à l’usage du cycle !**_"
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
+category: Évenements
 
 ---
 _**Communiqué de presse de la Ville de Sotteville lès Rouen :**_

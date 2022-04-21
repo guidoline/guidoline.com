@@ -2,6 +2,21 @@
 title: Collecte de vieux vélos
 date: '2015-11-20'
 publish: true
+template: article
+tags:
+- Dons
+category: Évenements
+SEO:
+  author: content/authors/guidoline.md
+  date: ''
+  description: Si **vous avez un vélo inutilisé** et poussiéreux dans votre cave,
+    coincé entre la lampe de grand mère et l’appareil à raclette, **vous pouvez venir
+    nous le donner !**
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 A l’occasion de la [Semaine Européenne de la Réduction des Déchets](http://www.serd.ademe.fr/), Guidoline organise une **opération de collecte de vélos**.

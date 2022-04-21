@@ -3,6 +3,19 @@ title: Guidoline recrute !
 date: '2014-01-09'
 coverImage: service.jpg
 publish: true
+template: article
+tags:
+- Volontariat
+category: Évenements
+SEO:
+  author: content/authors/guidoline.md
+  description: Guidoline recrute un **volontaire en Service Civique**.
+  date: ''
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 Guidoline recrute un **volontaire en Service Civique**.

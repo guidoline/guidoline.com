@@ -1,8 +1,22 @@
 ---
-title: Guidoline recrute des volontaires en Service Civique !
+title: Guidoline recrute !
 date: '2014-07-08'
 coverImage: service.jpg
 publish: true
+template: article
+tags:
+- Volontariat
+category: Évenements
+SEO:
+  author: content/authors/guidoline.md
+  description: Guidoline recherche **2 volontaires en Service Civique** pour deux
+    missions différentes d'une durée de 8 mois !
+  date: ''
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 Guidoline recherche **2 volontaires en Service Civique** pour deux missions différentes d'une durée de 8 mois.

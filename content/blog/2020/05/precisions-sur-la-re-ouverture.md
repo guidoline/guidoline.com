@@ -3,6 +3,20 @@ title: Précisions sur la ré-ouverture
 date: '2020-05-14'
 coverImage: IMG_1401-rotated.jpg
 publish: true
+template: article
+tags:
+- Atelier
+- Tips
+category: Évenements
+SEO:
+  author: content/authors/guidoline.md
+  description: 'Réouverture et aide "Coup de pouce vélo" '
+  date: ''
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 #### Les ateliers

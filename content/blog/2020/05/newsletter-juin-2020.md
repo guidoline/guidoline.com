@@ -3,6 +3,21 @@ title: Newsletter juin 2020
 date: '2020-05-29'
 coverImage: 20180407_151927-scaled.jpg
 publish: true
+template: article
+tags:
+- Atelier
+- Prestations
+- Sotteville
+SEO:
+  author: content/authors/guidoline.md
+  description: Retrouvez toute l'actualité de Guidoline !
+  date: ''
+category: Newsletter
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 #### Ateliers mobiles

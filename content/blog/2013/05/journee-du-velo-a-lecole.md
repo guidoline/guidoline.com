@@ -3,6 +3,20 @@ title: Journée du vélo à l'école
 date: '2013-05-29'
 coverImage: 923223_10151439274823693_339360416_n-580x580.jpg
 publish: true
+template: article
+tags:
+- Prestations
+SEO:
+  author: content/authors/guidoline.md
+  description: Journée d'actions dans les locaux de l'association avec 50 élèves de
+    CM2 !
+  date: ''
+category: Évenements
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 Dans le cadre de la journée du vélo à l'école lancée par le ministère de l’éducation nationale, **Guidoline** et **Avélo** ont mis en place en accord avec la directrice de l’école Laurent Bimorel,  une journée d'actions dans les locaux de l'association avec 50 élèves de CM2.

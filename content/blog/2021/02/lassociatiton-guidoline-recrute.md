@@ -2,8 +2,20 @@
 title: L'association Guidoline recrute !
 date: '2021-02-03'
 coverImage: guido_recrute.jpeg
-template: information
+template: article
 publish: true
+tags:
+- Recrutement
+SEO:
+  author: content/authors/guidoline.md
+  description: L’association cherche à recruter un.e **deuxième responsable d’atelier**.
+  date: ''
+category: Évenements
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 # Nous cherchons un responsable d'atelier

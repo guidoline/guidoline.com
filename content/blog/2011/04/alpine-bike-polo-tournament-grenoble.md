@@ -2,7 +2,19 @@
 title: Alpine Bike Polo Tournament | Grenoble
 date: '2011-04-04'
 cover:
-  src: "/uploads/AFFICHE-TOURNOI-ALPIN.jpeg"
+  src: ''
+  alt: ''
+  legend: ''
+publish: true
+template: article
+tags:
+- Bike Polo
+category: Évenements
+SEO:
+  author: ''
+  date: ''
+  description: ''
+related_articles: []
 
 ---
 La fine équipe Grenobloise nous a concocté pour le week-end du **16 et 17 avril l'Alpine Bike Polo Tournament**.
@@ -18,3 +30,5 @@ Et comme le précise Mapple, ce tournoi tombe malheureusement en même temps que
 Liste des équipes présentes:
 
 1\. Poneys / Clément Quentin Johan / Genève 2. Moteurs Fuckeurs / Sammy Michel Laurent / Genève 3. L'équipe / Mario Lucas Manu / Genève 4. Tigers / Cento Tobia Mattia / Venise 5. Reporta Pista / Gio Giv ... / Turin & Lausanne 6. **Hooks / Woods Maks Quentin / Rouen** 7. MGM / Marmou Greg Matt / Paris 8. Dans Ta Gueule / Pierre Hugo Will / Paris & grenoble 9. C. C. Clowns / Hannes Stephen Oli / Karlsruhe 10. Shark Attack / Oli Max Thomas / Karlsruhe 11. Shaft Punk / Alex Félix Rem's / Toulouse 12. **Triolisme / Eugène Pauline Simon / Rouen** 13. Get Your Ass Kicked / Romain John Oliv / Grenoble 14. BANG BANG! / Yann Rytch Henry / Grenoble 15. **TO BE A. / Jason Flo Anton / Grenoble & Rouen** 16. Polostroïka / Dada Sam Xavier / Grenoble
+
+![](/uploads/AFFICHE-TOURNOI-ALPIN.jpeg)

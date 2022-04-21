@@ -2,8 +2,19 @@
 title: Résultats & Photos | Epiphanie Bike Polo Week-end 2011
 date: '2011-02-01'
 cover:
-  src: "/uploads/epiphanie-bike-polo-2011.jpg"
+  src: ''
+  alt: ''
+  legend: ''
 publish: true
+template: article
+tags:
+- Bike Polo
+category: Évenements
+SEO:
+  author: ''
+  date: ''
+  description: ''
+related_articles: []
 
 ---
 Un grand merci à tout le monde pour avoir encore passé en ce début d'année un superbe week-end polo ! La bonne ambiance et le niveau étaient au rendez-vous avec une finale juste exceptionnelle entre **les Iron Ponies et les Call me Daddy**. Et promis pour l'année prochaine on fait tout pour pouvoir inviter plus d'équipes et avoir du soleil.
@@ -17,3 +28,5 @@ Un grand merci à tout le monde pour avoir encore passé en ce début d'année u
 #### Photos
 
 [https://www.flickr.com/photos/guidoline/albums/72157625820863557](https://www.flickr.com/photos/guidoline/albums/72157625820863557)
+
+![](/uploads/epiphanie-bike-polo-2011.jpg)

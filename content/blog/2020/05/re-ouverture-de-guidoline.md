@@ -3,6 +3,22 @@ title: Ré-ouverture de Guidoline
 date: '2020-05-12'
 coverImage: IMG_1399-rotated.jpg
 publish: true
+template: article
+tags:
+- Atelier
+- Tips
+SEO:
+  author: content/authors/guidoline.md
+  description: L'accès aux ateliers de Guidoline se faisant désormais uniquement sur
+    rendez-vous, vous avez la possibilité de réserver un créneau d'1h30, le mardi,
+    mercredi, vendredi ou samedi, pour l'atelier de Rouen seulement pour le moment.
+  date: ''
+category: Évenements
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 L'accès aux ateliers de Guidoline se faisant désormais uniquement sur rendez-vous, vous avez la possibilité de réserver un créneau d'1h30, le mardi, mercredi, vendredi ou samedi, pour l'atelier de Rouen seulement pour le moment.
