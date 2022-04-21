@@ -4,7 +4,7 @@
       v-if="links.before"
       :to="links.before.to"
       :icon="iconPrevious"
-      tonal
+      :class="linkClasses"
     >
       {{ links.before.name}}
     </z-button>
@@ -12,7 +12,7 @@
       v-if="links.after"
       :to="links.after.to"
       :icon-right="iconNext"
-      tonal
+      :class="linkClasses"
     >
       {{ links.after.name}}
     </z-button>
@@ -26,6 +26,7 @@
       :sr="true"
       :title="linkLabelFirst"
       :aria-label="linkLabelFirst"
+      :class="linkClasses"
     >
       {{ linkLabelFirst }}
     </z-button>
@@ -37,6 +38,7 @@
       :sr="true"
       :title="linkLabelPrevious"
       :aria-label="linkLabelPrevious"
+      :class="linkClasses"
     >
       {{ linkLabelPrevious }}
     </z-button>
@@ -55,8 +57,9 @@
         :title="link.label"
         :aria-label="link.label"
         @click.prevent="goTo(link.folio)"
+        :class="linkClasses"
       >
-        {{ link.folio }}
+         {{ link.folio }} 
       </z-button>
     </template>
 
@@ -68,6 +71,7 @@
       :sr="true"
       :title="linkLabelNext"
       :aria-label="linkLabelNext"
+      :class="linkClasses"
     >
       {{ linkLabelNext }}
     </z-button>
@@ -79,6 +83,7 @@
       :sr="true"
       :title="linkLabelLast"
       :aria-label="linkLabelLast"
+      :class="linkClasses"
     >
       {{ linkLabelLast }}
     </z-button>
@@ -108,6 +113,10 @@ const props = defineProps({
   routePrefix: {
     type: String,
     default: '/'
+  },
+  linkClasses: {
+    type: String,
+    default: 'text'
   },
   // À revoir: pas possible de passer
   // un paramètre de façon programatique avec

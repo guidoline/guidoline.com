@@ -3,6 +3,10 @@ defineProps({
   pagination: {
     type: Object,
     required: true
+  },
+  linkClasses: {
+    type: String,
+    default: ''
   }
 })
 </script>
@@ -14,6 +18,7 @@ defineProps({
         :to="pagination.previous.to"
         icon="ChevronLeft"
         class="compact"
+        :class="linkClasses"
       >
         {{ pagination.previous.name }}
       </z-button>
@@ -22,6 +27,7 @@ defineProps({
         :to="pagination.next.to"
         icon-right="ChevronRight"
         class="compact sm:float-right"
+        :class="linkClasses"
       >
         {{ pagination.next.name }}
       </z-button>

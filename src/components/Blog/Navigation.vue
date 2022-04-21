@@ -21,6 +21,6 @@ const links = [
 </script>
 <template>
   <SubNav>
-    <z-menu :links="links" />
+    <z-menu :links="links" link-classes="text"/>
   </SubNav>
 </template>

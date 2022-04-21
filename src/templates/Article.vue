@@ -81,7 +81,7 @@ const author = computed(() => {
 
     </footer>
     <!-- @ajouter : auteur, date, tags, category, related_posts, aticle suivat / précedent-->
-    <BlogPagination :pagination="content.pagination"/>
+    <BlogPagination :pagination="content.pagination" link-classes="text" />
   </main>
 </LayoutDefault>
 </template>
