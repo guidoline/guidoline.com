@@ -3,6 +3,23 @@ title: Newsletter Mars 2019
 date: '2019-03-05'
 coverImage: newslettermars2019.png
 publish: true
+template: article
+tags:
+- Assemblée Générale
+- Nocturne
+- Exposition
+- Fermeture
+SEO:
+  author: content/authors/guidoline.md
+  description: Assemblée Générale, Exposition, soirée, sortie, fermeture, tenez vous
+    au courant de toute l'actualité de Guidoline !
+  date: ''
+category: Newsletter
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 **Assemblée générale 2019**
@@ -17,6 +34,6 @@ Au plaisir de vous voir nombreux à contribuer à faire vivre notre belle associ
 
 Arnaud, président.
 
-\_\_\_
+___
 
 Suite de la newsletter en suivant ce lien : [http://bit.ly/2tPE142](http://bit.ly/2tPE142)
