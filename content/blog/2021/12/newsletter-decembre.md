@@ -2,8 +2,23 @@
 title: Dernière Newsletter de l'année 2021 !
 date: '2021-12-01'
 coverImage: Sans-titre-9-e1638357065848.png
-template: information
+template: article
 publish: true
+tags:
+- Prestations
+- Exposition
+- Nocturne
+- Fermeture
+SEO:
+  author: content/authors/guidoline.md
+  description: Retrouvez toute l'actualité de Guidoline !
+  date: ''
+category: Newsletter
+cover:
+  src: ''
+  alt: ''
+  legend: ''
+related_articles: []
 
 ---
 # Dernière Newsletter de l'année 2021
