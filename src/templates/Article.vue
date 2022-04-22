@@ -56,27 +56,27 @@ const author = computed(() => {
     :class="content.cover ? `has-cover`: null"
   >
     <Cover v-if="cover" :cover="cover" />
-    <ContainerProse>
+    <ContainerProse :class="cover ? 'covered' : ''">
       <slot />
     </ContainerProse>
     <footer class="container px-4">
       <section class="article-info">
         <z-grid>
-        <ArticleInfoItems
-          v-if="dateItem"
-          title="Publié le"
-          :items="[dateItem]"
-        />
-        <ArticleInfoItems
-          v-if="content.category"
-          title="Catégories"
-          :items="[content.category]"
-        />
-        <ArticleInfoItems
-          v-if="content.tags"
-          title="Étiquettes"
-          :items="content.tags"
-        />
+          <ArticleInfoItems
+            v-if="dateItem"
+            title="Publié le"
+            :items="[dateItem]"
+          />
+          <ArticleInfoItems
+            v-if="content.category"
+            title="Catégories"
+            :items="[content.category]"
+          />
+          <ArticleInfoItems
+            v-if="content.tags"
+            title="Étiquettes"
+            :items="content.tags"
+          />
         </z-grid>
       </section>
 
@@ -90,4 +90,5 @@ const author = computed(() => {
 .article-info-title { @apply inline pr-2 uppercase text-xs text-gray-400; }
 .article-info { @apply bg-white text-gray-500 font-light mb-6; }
 .article-info > section { @apply text-sm; }
+.covered { @apply sm:(relative -mt-24 mb-24 bg-day-bg); }
 </style>

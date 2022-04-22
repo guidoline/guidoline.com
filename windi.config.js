@@ -387,6 +387,7 @@ export default {
       },
       night: {
         // Text & background sont inversé par rapport à day
+        DEFAULT: colors.light.DEFAULT,
         text: {
           light: colors.light.light,
           DEFAULT: colors.light.DEFAULT,
