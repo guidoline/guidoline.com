@@ -1,23 +1,23 @@
 <template>
   <figure class="cover">
     <img v-if="cover.src" :src="cover.src" :alt="cover.alt"/>
-    <figcaption
-      v-if="cover.legend"
-    >
-      <div class="caption-wrapper">
-        <div class="cover-supcaption" v-if="cover.supcaption">{{ cover.supcaption }}</div>
-        <div class="cover-legend" v-html="markdownify(cover.legend)" />
-        <z-button
-          v-if="hasLink"
-          :to="cover.link.href"
-          :icon="cover.link.icon"
-          type="filled"
-          :class="cover.link.color"
+    <figcaption>
+      <template v-if="hasCaption">
+        <div class="caption-wrapper">
+          <div class="cover-supcaption" v-if="cover.supcaption">{{ cover.supcaption }}</div>
+          <div v-if="cover.legend" class="cover-legend" v-html="markdownify(cover.legend)" />
+          <z-button
+            v-if="hasLink"
+            :to="cover.link.href"
+            :icon="cover.link.icon"
+            type="filled"
+            :class="cover.link.color"
 
-        >
-          {{ cover.link.text }}
-        </z-button>
-      </div>
+          >
+            {{ cover.link.text }}
+          </z-button>
+        </div>
+      </template>
       <div class="cover-credit" v-if="cover.credit" v-html="markdownify(cover.credit)" />
     </figcaption>
   </figure>
@@ -33,6 +33,9 @@ const props = defineProps({
     type: Object,
     required: true
   }
+})
+const hasCaption = computed(() => {
+  return props.cover.legend || props.cover.supcaption || props.cover.link
 })
 const hasLink = computed(() => {
   if (!props.cover.link) return false
@@ -56,7 +59,8 @@ const hasLink = computed(() => {
   @apply w-max px-3 py-2 bg-day-background text-day-text;
 }
 .cover figcaption :deep(h1) { @apply text-6xl font-medium mb-1; }
-.cover-supcaption { @apply pb-2 text-sm text-day-quiet uppercase; }
+.cover-supcaption { @apply text-sm text-day-quiet uppercase; }
+.cover-supcaption:not(:last-child) { @apply pb-2; }
 .cover-legend { @apply text-day-text; }
 .cover-legend :deep(h2) { @apply text-lg font-bold; }
 .cover-legend :deep(p) { @apply mb-4; }
