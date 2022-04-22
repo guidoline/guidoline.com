@@ -17,7 +17,8 @@ category: Newsletter
 cover:
   src: '/uploads/decoration-de-noel-sapin-couverture.jpg'
   alt: 'Décoration de noël'
-  legend: 'crédit photo [© guidoline 2021](https://guidoline.com)'
+  legend: ''
+  credit: '**crédit** *photo* [© guidoline 2021](https://guidoline.com)'
 related_articles: []
 
 ---
