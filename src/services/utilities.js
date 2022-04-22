@@ -5,6 +5,7 @@
 
 import MD from 'markdown-it'
 const markdownify = (text, options = {}) => {
+  // Pour plus de contrôle cf. https://github.com/markdown-it/markdown-it#manage-rules
   return new MD({
     html: false,
     linkify: false, // Éviter les liens dans les extraits
