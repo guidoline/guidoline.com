@@ -15,9 +15,9 @@ SEO:
   date: ''
 category: Newsletter
 cover:
-  src: ''
-  alt: ''
-  legend: ''
+  src: '/uploads/Sans-titre-9-e1638357065848.png'
+  alt: 'Décoration de noël'
+  legend: 'crédit photo [© guidoline 2021](https://guidoline.com)'
 related_articles: []
 
 ---
