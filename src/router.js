@@ -111,8 +111,11 @@ const routes = Object.keys(pages)
         }
         break
       case 'blog-category':
-        path = '/blog/categorie/:category',
-        props = (route) => ({ category: route.params.category })
+        path = '/blog/categorie/:category/:folio(\\d+)?',
+        props = (route) => ({
+          category: route.params.category,
+          folio: Number(route.params.folio) || 1
+        })
         beforeEnter = (to, from, next) => {
           if (articlesStore.categoryExist(to.params.category)) {
             next()
@@ -122,8 +125,11 @@ const routes = Object.keys(pages)
         }
         break
       case 'blog-etiquette':
-        path = '/blog/etiquette/:tag',
-        props = (route) => ({ tag: route.params.tag })
+        path = '/blog/etiquette/:tag/:folio(\\d+)?',
+        props = (route) => ({
+          tag: route.params.tag,
+          folio: Number(route.params.folio) || 1
+        })
         beforeEnter = (to, from, next) => {
           if (articlesStore.tagExist(to.params.tag)) {
             next()
