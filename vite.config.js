@@ -64,8 +64,8 @@ export default defineConfig(({ command, mode }) => ({
           case '/blog/:folio(\\d+)?': return 'blog'
           case '/blog/:year(\\d{4})/:month(\\d{2})/:slug': return false
           case '/blog/archives/:year(\\d{4})?/:month(\\d{2})?': return '/blog/archives'
-          case '/blog/categorie/:category': return false
-          case '/blog/etiquette/:tag': return false
+          case '/blog/categorie/:category/:folio(\\d+)?': return false
+          case '/blog/etiquette/:tag/:folio(\\d+)?': return false
           default: return route
         }
       }).filter(r => r !== false)
