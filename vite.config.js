@@ -34,7 +34,7 @@ export default defineConfig(({ command, mode }) => ({
   ],
   server: { fs: { strict: true } },
   build: {
-    sourcemap: true,
+    sourcemap: false,
     manifest: true,
     ssrManifest: true
   },
