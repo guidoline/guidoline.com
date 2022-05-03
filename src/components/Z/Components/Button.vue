@@ -21,7 +21,7 @@
     :class="classes"
     :to="to || href"
     :title="title"
-    v-else-if="(to && !isDisabled) || (href && !isExternal)"
+    v-else-if="(to && !isDisabled) || (href && !isExternal && !isDisabled)"
     :download="isDownloadable"
     :target="isDownloadable ? '_blank' : null"
   >
