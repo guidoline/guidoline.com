@@ -258,25 +258,36 @@ if (import.meta.env.SSR) {
 
   // Categories du blog
   articlesStore.getCategories().forEach(c => {
-    const limit = 10
-    const categoryRoute = {
-      name: `blog-category-${c.slug}`,
-      path: c.to,
-      props: { category: c.slug },
-      component: () => import('./pages/Blog/Category.vue')
+    const pagesCount = Math.ceil(articlesStore.getCategoryArticles(c.slug).length / articlesStore.limit)
+    for (let i = 1; i < pagesCount + 1; i ++) {
+      const categoryRoute = {
+        name: `blog-category-${c.slug}-folio-${i}`,
+        path: `${c.to}/${i}`,
+        props: {
+          category: c.slug,
+          folio: Number(i)
+        },
+        component: () => import('./pages/Blog/Category.vue')
+      }
+      routes.push(categoryRoute)
     }
-    routes.push(categoryRoute)
   })
 
   // Étiquettes du blog
   articlesStore.getTags().forEach(t => {
-    const tagRoute = {
-      name: `blog-tag-${t.slug}`,
-      path: t.to,
-      props: { tag: t.slug },
-      component: () => import('./pages/Blog/Etiquette.vue')
+    const pagesCount = Math.ceil(articlesStore.getTagArticles(t.slug).length / articlesStore.limit)
+    for (let i = 1; i < pagesCount + 1; i ++) {
+      const tagRoute = {
+        name: `blog-tag-${t.slug}-folio-${i}`,
+        path: `${t.to}/${i}`,
+        props: {
+          tag: t.slug,
+          folio: Number(i)
+        },
+        component: () => import('./pages/Blog/Etiquette.vue')
+      }
+      routes.push(tagRoute)
     }
-    routes.push(tagRoute)
   })
 
   // Archives du blog
