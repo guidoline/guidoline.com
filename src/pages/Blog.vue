@@ -64,7 +64,6 @@ const changePage = (folio) => {
         @change-folio="changePage($event)"
         :folio="folio"
         :folio-count="pagesCount"
-        link-classes="text"
       />
       <BlogFooter
         :articles-count="articlesCount"
