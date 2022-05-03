@@ -102,12 +102,12 @@ const routes = Object.keys(pages)
         props = (route) => ({ content:  articlesStore.getArticle(route.path) })
         beforeEnter = (to, from, next) => {
           const article = articlesStore.getArticle(to.path)
-          // if (!article) {
-          //   next({ name: '404', params: [to.path] })
-          // } else {
+          if (!article) {
+            next({ name: '404', params: [to.path] })
+          } else {
             Object.assign(to.meta, { props: { content: article } })
             next()
-          // }
+          }
         }
         break
       case 'blog-category':
