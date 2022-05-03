@@ -180,9 +180,10 @@ const routes = Object.keys(pages)
       default:
         // Les autres pages sans contenu transmis par la route :
         // pages `index`, `404`, etc.
-        props = (route) => ({
-          content: route.meta.props.content
-        })
+        props = (route) => {
+          const content = contentStore.content(route.path)
+          return { content: content }
+        }
     }
 
     routes.push({
