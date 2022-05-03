@@ -111,3 +111,13 @@ Description des templates :
 
 @todo: cleaner les vue qui doivent correspondre au templates de contenu
 Actuelement nous avons des Layouts et des Templates, essayer d'uniformiser ça afin de n'avoir que des templates à gérer. Prendre en compte l'imbrication de rendu Composant Markdown
+
+## Nom de domaine 
+
+### Netlify
+
+Se rendre sur Site > Domains management > Custom domains > Add domain alias.
+
+Saisir le nom de domaine ou de sous domaine, puis cliquer sur Delegate.
+
+Configurer le DNS du registrar, ajouter un CNAME `{SOUS-DOMAINE} CNAME {NETLIFY-SITE-ID}.netlify.app.` à la zone DNS.
