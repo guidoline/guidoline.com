@@ -35,7 +35,7 @@ const pagesCount = computed(() => Math.ceil(articlesCount / limit.value))
 const paginateArticles = computed(() => articles.value.slice(offset.value, offset.value + limit.value))
 
 const router = useRouter()
-const chanPage = (folio) => {
+const changePage = (folio) => {
   router.push({
     to: 'blog-tag',
     params: {
