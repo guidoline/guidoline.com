@@ -54,7 +54,7 @@ const obTag = computed(() => store.getTags().find(c => c.slug === props.tag))
     <main>
       <Title>Étiquette «&nbsp;<strong>{{ obTag.name }}</strong>&nbsp;»</Title>
       <z-pagination
-        :route-prefix="`/blog/etiquettes/${tag}/`"
+        :route-prefix="`/blog/etiquette/${tag}/`"
         @change-folio="changePage($event)"
         :folio="folio"
         :folio-count="pagesCount"
