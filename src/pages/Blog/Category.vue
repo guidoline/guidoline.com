@@ -21,11 +21,15 @@ const props = defineProps({
 const store = useArticlesStore()
 store.initialize()
 
-// Pagination /!\ au SSG
-const limit = ref(10)
-const offset = computed(() => (props.folio - 1) * limit.value)
+// Pagination
 const articles = computed(() => store.getCategoryArticles(props.category))
 const articlesCount = articles.value.length
+const limit = ref(10)
+const folio = computed(() => props.folio > articlesCount
+  ? Math.ceil(articlesCount / limit.value)
+  : props.folio
+)
+const offset = computed(() => (props.folio - 1) * limit.value)
 const pagesCount = computed(() => Math.ceil(articlesCount / limit.value))
 const paginateArticles = computed(() => articles.value.slice(offset.value, offset.value + limit.value))
 

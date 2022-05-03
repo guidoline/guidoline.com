@@ -22,10 +22,15 @@ const store = useArticlesStore()
 store.initialize()
 
 // Pagination
-const limit = ref(2)
-const offset = computed(() => (props.folio -1) * limit.value)
 const articles = computed(() => store.getTagArticles(props.tag))
 const articlesCount = articles.value.length
+const limit = ref(10)
+const folio = computed(() => props.folio > articlesCount
+  ? Math.ceil(articlesCount / limit.value)
+  : props.folio
+)
+
+const offset = computed(() => (props.folio -1) * limit.value)
 const pagesCount = computed(() => Math.ceil(articlesCount / limit.value))
 const paginateArticles = computed(() => articles.value.slice(offset.value, offset.value + limit.value))
 
