@@ -8,8 +8,7 @@
 
 import {
   createMemoryHistory,
-  createWebHistory,
-  createRouter as _createRouter
+  createWebHistory
 } from 'vue-router'
 
 

@@ -1,7 +1,6 @@
 <script setup>
 import { computed } from 'vue'
 import * as templates from '~/templates'
-import { useRoute } from 'vue-router'
 const props = defineProps({
   content: {
     type: Object,
