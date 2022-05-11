@@ -62,3 +62,7 @@ template: home
 ![L'équipe de Guidoline](/uploads/equipe-guidoline.jpg)
 
 **Description** / résumé principal de Guidoline \[500 signes maximum\]
+
+| a | b |
+|---|---|
+| C | D |
