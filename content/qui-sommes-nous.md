@@ -31,7 +31,7 @@ L'association appartient également aux deux grandes fédérations des utilisate
 
 Une équipe composée de responsables d'atelier et de bénévoles vous aidera à réparer, entretenir voire customiser votre vélo avec les outils professionnels mis à disposition et les pièces d'occasion ou celles que vous aurez amenées.
 
-Tou-te-s sont bienvenus, les différents âges et genres, les novices et les experts s'entraident dans une ambiance chaleureuse et respectueuse de chacun-e.
+Tou-te-s sont bienvenu-e-s, les différents âges et genres, les novices et les experts s'entraident dans une ambiance chaleureuse et respectueuse de chacun-e.
 
 ## Participer
 
@@ -75,7 +75,7 @@ Il est complété par l'organisation de nombreux événements, animations et pre
 
 ## Le café culturel
 
-Pour discuter de votre dernière balade, pour attendre agréablement qu'on poste de réparation se libère les jours d'affluence, Guidoline propose café, jus de fruits et bières.
+Pour discuter de votre dernière balade, pour attendre agréablement qu'un poste de réparation se libère les jours d'affluence, Guidoline propose café, jus de fruits et bières.
 
 Pour nos ami-e-s cyclistes lecteur-trice-s, de nombreux ouvrages et revues sont également disponibles à la lecture.
 
@@ -100,11 +100,8 @@ Il est aussi possible de mettre en place un **module pédagogique** pour des int
 
 ### Balades à vélo
 
-Sous la forme de **balades conviviales, rallye photo ou encore le temps d’un week-end**, Guidoline organise régulièrement des sorties gratuites et ouvertes à tous-tes. Le **succès** de ces balades tient à une valeur simple, la **convivialité**.
+Sous la forme de **balades conviviales, rallye photo ou encore le temps d’un week-end**, Guidoline propose à ses adhérents d'organiser eux-mêmes des sorties gratuites et ouvertes à tous-tes. Le **succès** de ces balades tient à une valeur simple, la **convivialité**.
 
-### Bourse aux vélos
-
-De nombreuses personnes ont chez elles un ancien vélo, qu’ils n’utilisent plus, le principe d’une bourse aux vélos est simple, Il s’agit d’une **manifestation au cours de laquelle s’échangent vélos et matériel d’occasion**. Guidoline intervient pour mettre en relation vendeur-euse-s et acheteur-euse-s en vérifiant avec eux le bon fonctionnement du vélo et déterminant le prix de vente.
 
 ### Roller racing
 
@@ -122,11 +119,11 @@ N’hésitez pas à [nous contacter](http://www.guidoline.com/#contactez-nous), 
 
 ## Administration
 
-Envie de **partager vos compétences syntaxiques, linguistiques** au service de la communication, de la rédaction de dossier. Et pourquoi pas s’impliquer au plus haut niveau niveau en participant aux prises de décision en tant que **membre du conseil d’administration**.
+Envie de **partager vos compétences syntaxiques, linguistiques** au service de la communication, de la rédaction de dossier. Et pourquoi pas s’impliquer au plus haut niveau en participant aux prises de décision en tant que **membre du conseil d’administration**.
 
 **N’hésitez pas à vous en mêler !**
 
-Pour savoir quand et comment nous aider vous pouvez [nous contacter par mail](http://www.guidoline.com/#contactez-nous) ou passez voir notre chef d’atelier à l’accueil.
+Pour savoir quand et comment nous aider vous pouvez [nous contacter par mail](http://www.guidoline.com/#contactez-nous) ou passez voir notre coordinateur administratif à l'atelier de Rouen.
 
 ## Nos ressources
 
