@@ -6,7 +6,7 @@
 // Icônes des réseaux sociaux : https://simpleicons.org/
 // @todo : prévoir un screen reader ? cf. z-button
 // @todo : inclure la librairie d'icônes dans le plugin
-import * as heroIcons from '@heroicons/vue/outline'
+import * as heroIcons from '@heroicons/vue/outline/index.js'
 
 import { computed } from 'vue'
 const props = defineProps({
