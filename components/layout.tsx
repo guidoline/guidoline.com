@@ -1,5 +1,5 @@
 import { LayoutFooter } from "./layout/footer"
-import { LayoutHeader } from "./layout/headed"
+import { LayoutHeader } from "./layout/header"
 
 type Props = {
   children: React.ReactNode
