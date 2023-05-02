@@ -4,14 +4,11 @@
   "description": "Site web de l'association Guidoline.",
   "private": true,
   "scripts": {
-    "lint": "eslint ./src",
-    "dev": "vite",
-    "dev:distant": "--host",
-    "build": "cross-env NODE_ENV=development vite-ssg build",
-    "generate": "cross-env NODE_ENV=production vite-ssg build",
-    "serve": "vite preview",
-    "analysis": "windicss-analysis",
-    "admin": "netlify-cms-proxy-server & pnpm dev"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:eslint": "eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -24,25 +21,19 @@
   },
   "homepage": "https://github.com/guidoline/guidoline.com#readme",
   "dependencies": {
-    "vue": "^3.2.37",
-    "vue-router": "^4.1.3"
+    "next": "^13.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@11ty/eleventy-img": "^2.0.1",
-    "@heroicons/vue": "^1.0.6",
-    "@vitejs/plugin-vue": "^3.0.1",
-    "@vuetter/vite-plugin-vue-svg": "^0.1.2",
-    "@vueuse/head": "^0.7.7",
+    "@types/node": "18.16.3",
+    "@types/react": "18.2.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-footnote": "^3.0.3",
     "markdown-it-ins": "^3.0.1",
     "markdown-it-table-of-contents": "^0.6.0",
-    "pinia": "^2.0.17",
-    "slug": "^5.3.0",
-    "vite": "^3.0.3",
-    "vite-plugin-windicss": "^1.8.7",
-    "vite-ssg": "^0.20.2"
+    "typescript": "5.0.4"
   }
 }

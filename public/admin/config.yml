@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+site_url: http://localhost:3000
+locale: 'fr'
+local_backend: true
+publish_mode: editorial_workflow
+media_folder: public/uploads
+public_folder: uploads
+
+collections:
+  - name: page
+    label: Pages
+    label_singular: Page
+    description: >
+      Pages standard.
+    folder: content/pages
+    # https://github.com/netlify/netlify-cms/issues/5091#issuecomment-876714262
+    # L'approche 1 image est spécifique à 1 contenu, impose de varier le
+    # contenu.
+    # Le repertoire d'uploads du site, ne doit pas servir de stok image.
+    # Le plus pertinent :  image sotn regroupé en collection (page, article,
+    #  article-information, article-newsleter, etc.)
+    media_folder: /public/uploads/pages/{{filename}}
+    create: true
+    slug: '{{fields.title}}'
+    fields:
+      - { label: Titre, name: title, widget: string, required: true, hint: Titre SEO }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'YYYY-MM-DD',
+          timeFormat: 'HH:mm',
+          format: 'YYYY-MM-DD HH:mm',
+        }
+      - { label: 'slug', name: 'slug', widget: slug, required: false  }
+      - { label: Couverture, name: image, widget: image, required: false }
+      - { label: Contenu, name: body, widget: markdown, required: false }
+      - label: "Address"
+        name: "address"
+        widget: "object"
+        collapsed: true
+        required: false
+        fields:
+          - {label: "Street Address", name: "street", widget: "string", required: false}
+          - {label: "City", name: "city", widget: "string", required: false}
+          - {label: "Postal Code", name: "post-code", widget: "string", required: false}
