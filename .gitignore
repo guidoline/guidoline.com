@@ -50,5 +50,15 @@ Thumbs.db
 build
 dist
 .env
-**/.temp
-/public/uploads/opt/
+public/uploads/opt/
+
+# next.js
+/.next/
+/out/
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
