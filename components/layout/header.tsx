@@ -2,6 +2,7 @@ import Link from "next/link"
 
 type Props = {
   // cf. /types/global.ts
+  // @todo le type (Setting)Link doit etre tiré du modèle de données Settings
   links: Link[]
 }
 

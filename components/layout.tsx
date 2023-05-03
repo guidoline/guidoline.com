@@ -12,6 +12,10 @@ export default function Layout ({ children }: Props) {
         {
           href: "/",
           label: "Home"
+        },
+        {
+          href: "/example",
+          label: "Example"
         }
       ]} />
       {children}
