@@ -16,10 +16,14 @@ type Props = {
   children: React.ReactNode
 }
 
+export const metadata = {
+  title: "Guidoline",
+  description: "Description par defaut"
+}
+
 export default function RootLayout({ children }: Props ) {
   return (
     <html lang="fr">
-      <head />
       <body>
         <Header />
         <Suspense fallback={<Loading />}>
