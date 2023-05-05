@@ -22,9 +22,9 @@ export default function RootLayout({ children }: Props ) {
       <head />
       <body>
         <Header />
-        {/* <Suspense fallback={<Loading />}> */}
+        <Suspense fallback={<Loading />}>
           {children}
-        {/* </Suspense> */}
+        </Suspense>
         <Footer />
       </body>
     </html>
