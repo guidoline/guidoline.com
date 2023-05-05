@@ -1,6 +1,6 @@
 export {}
 declare global {
-  type Link = {
+  type LinkType = {
     href: string,
     label: string
   }

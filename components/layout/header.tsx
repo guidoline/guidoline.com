@@ -1,20 +1,26 @@
-import Link from "next/link"
+import Navigation from "./navigation"
 
-type Props = {
-  // cf. /types/global.ts
-  // @todo le type (Setting)Link doit etre tiré du modèle de données Settings
-  links: Link[]
-}
+const links = [
+  {
+    href: "/",
+    label: "Home"
+  },
+  {
+    href: "/example",
+    label: "Example"
+  },
+  {
+    href: "/no-ressource",
+    label: "Not found"
+  }
+]
 
-export function LayoutHeader({ links }: Props) {
+export function Header() {
   const showMenu = links.length>0
-  const menu = links.map((link, key) => {
-    return <Link key={key} href={link.href}>{link.label}</Link>
-  })
   return (
     <header>
       <pre>HEADER</pre>
-      { showMenu&& <nav>{menu}</nav> }
+      { showMenu && <Navigation links={links} /> }
     </header>
   )
 }
