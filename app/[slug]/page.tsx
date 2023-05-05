@@ -15,7 +15,7 @@ type Props = {
 
 // Documentation sur les paramètres statiques
 // https://nextjs.org/docs/app/api-reference/functions/generate-static-params
-export async function generatedStaticParams() {
+export async function generateStaticParams() {
   // Juste pour l'exemple.
   // Devras être généré à partir de données API data.
   return [
