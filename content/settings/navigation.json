@@ -1,7 +1,7 @@
 {
   "main": [
     {
-      "text": "Blog",
+      "label": "Blog",
       "title": "",
       "href": "/blog",
       "icon": "",
@@ -9,7 +9,7 @@
       "class": ""
     },
     {
-      "text": "Qui sommes-nous ?",
+      "label": "Qui sommes-nous ?",
       "title": "",
       "href": "/qui-sommes-nous",
       "icon": "",
@@ -19,46 +19,46 @@
   ],
   "footer": [
     {
-      "text": "Acceuil",
+      "label": "Acceuil",
       "href": "/"
     },
     {
-      "text": "Contacts",
+      "label": "Contacts",
       "href": "/qui-sommes-nous#contacts"
     }
   ],
   "secondary": [
     {
-      "text": "Instagram",
+      "label": "Instagram",
       "title": "",
       "href": "https://www.instagram.com/_guidoline/",
-      "icon": "Instagram",
+      "icon": "instagram",
       "class": "primary",
       "sr": false
     },
     {
-      "text": "Facebook",
+      "label": "Facebook",
       "title": "Aller sur la page Facebook de Guidoline.",
       "href": "https://www.facebook.com/Guidoline",
-      "icon": "Facebook",
+      "icon": "facebook",
       "sr": true,
       "class": "secondary"
     }
   ],
   "socials": [
     {
-      "text": "Instagram",
+      "label": "Instagram",
       "title": "",
       "href": "https://www.instagram.com/_guidoline/",
-      "icon": "Instagram",
+      "icon": "instagram",
       "class": "",
       "sr": true
     },
     {
-      "text": "Facebook",
+      "label": "Facebook",
       "title": "Aller sur la page Facebook de Guidoline.",
       "href": "https://www.facebook.com/Guidoline",
-      "icon": "Facebook",
+      "icon": "facebook",
       "sr": true,
       "class": "secondary"
     }

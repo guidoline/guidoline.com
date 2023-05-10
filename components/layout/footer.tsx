@@ -1,8 +1,14 @@
 import Link from "next/link";
-import settingsGlobal from "../../content/settings/global.json"
 
-// Note: Ce fichier illustre l'usage d'un fichier Markdown pour afficher
-// diverse type de données.
+// Note: Importer des fichiers JSON dans divers composants n'est pas
+// des plus optimisé. il est possible d'exploiter l'API pour
+// améliorer les performances (au pris d'un peu plus de complécité).
+
+import settingsGlobal from "../../content/settings/global.json"
+import settingsNavigation from "../../content/settings/navigation.json"
+import Navbar from "../navigation/menu";
+const linksSocials = settingsNavigation.socials
+
 
 export function Footer() {
   const contactRouen = settingsGlobal.contacts.main
@@ -28,6 +34,9 @@ export function Footer() {
           <a href={`mailto:${contactRouen.email}`}>{contactRouen.email}</a><br/>
           <a href={`tel:${contactRouen.phone}`}>{contactRouen.phone}</a>
         </p>
+      </section>
+      <section>
+      { linksSocials.length>0 && <Navbar links={linksSocials} /> }
       </section>
       <section>
         <Link href="/mentions-legales">Mentions légales</Link>

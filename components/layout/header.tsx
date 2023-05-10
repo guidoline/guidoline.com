@@ -1,26 +1,16 @@
-import Navigation from "./navigation"
+import Navbar from "../navigation/menu"
+import settingsNavigation from "../../content/settings/navigation.json"
+import Link from "next/link"
 
-const links = [
-  {
-    href: "/",
-    label: "Home"
-  },
-  {
-    href: "/example",
-    label: "Example"
-  },
-  {
-    href: "/no-ressource",
-    label: "Not found"
-  }
-]
+const linksMain = settingsNavigation.main
+const linksSecondary = settingsNavigation.secondary
 
 export function Header() {
-  const showMenu = links.length>0
   return (
     <header>
-      <pre>HEADER</pre>
-      { showMenu && <Navigation links={links} /> }
+      <Link href="/">Home</Link>
+      { linksMain.length>0 && <Navbar links={linksMain} /> }
+      { linksSecondary.length>0 && <Navbar links={linksSecondary} /> }
     </header>
   )
 }

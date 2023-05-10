@@ -5,13 +5,13 @@
 
 import { usePathname } from "next/navigation"
 import Link from "next/link"
-import styles from "./navigation.module.css"
+import styles from "./menu.module.css"
 
 type Props = {
   links: LinkType[]
 }
 
-export default function Navigation({ links }: Props) {
+export default function Menu({ links }: Props) {
   const pathname = usePathname()
   return (
     <>{
