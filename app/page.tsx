@@ -11,19 +11,29 @@
  * Documentation : https://nextjs.org/docs/app/building-your-application/routing
  */
 
+import mdToHtml from "../libs/mdToHtml"
+import { ModelMarkdown } from "../libs/model/markdown"
+import NotFound from "./not-found"
+
 // Personnaliser les métadonnées
 // https://nextjs.org/docs/app/api-reference/functions/generate-metadata
-// Les favicons peuvent être autoamtisés
+// Les favicons peuvent être automatisés.
 export const metadata = {
   title: "Next JS 13",
   description: "Some description"
 }
 
-
-export default function Home() {
+export default async function Home() {
+  const page = new ModelMarkdown().find("index", [
+    "title",
+    "content"
+  ])
+  if (!page) return NotFound()
+  const content = await mdToHtml(page.content || "")
   return (
     <main>
-      <pre>HOME</pre>
+      <h1>{page.title}</h1>
+      <div dangerouslySetInnerHTML={{__html:content}} />
     </main>
   )
 }
