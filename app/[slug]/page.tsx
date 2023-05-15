@@ -40,14 +40,6 @@ export default async function Page({ params }: Props) {
 
   if (!page) return notFound()
   const content = await mdToHtml(page.content || "")
-  console.log("content ", page)
-  // const { data } = await getPage(slug)
-  // const settings = JSON.parse(data)
-  // console.log("DATA FROM API ", settings)
-  // if (slug !== "mentions-legales") return <ErrorPage statusCode={404} />
-  // à  tester
-  // metadata.title = data.title
-  // metadata.description = data.description
 
   return (
     <main>
