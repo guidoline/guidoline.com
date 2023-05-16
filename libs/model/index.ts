@@ -3,27 +3,14 @@
  *
  * Repésentation normalisé des données en lecture seulement.
  *
+ * @todo : exploiter les espaces de noms de Typescript
+ * https://www.typescriptlang.org/docs/handbook/namespaces-and-modules.html#needless-namespacing
  *
  */
 
 /**
-export namespace Singleton {
-  export function someMethod() { ... }
-}
-// Usage
-import { SingletonInstance } from "path/to/Singleton";
-
-SingletonInstance.someMethod();
-var x = SingletonInstance; // If you need to alias it for some reason
-
-export namespace Model<M extends ModelValues> {
-
-}
-**/
-
-
-/**
- * Normalisation des donnes d'entrées
+ * Normalisation des donnes d'entrées.
+ * Celle fournis par al source de données.
  */
 export type DataValues = {
   id?: string | number | null
@@ -31,28 +18,30 @@ export type DataValues = {
 
 /**
  * Normalisation des données de sorties.
+ * Celle attendus pour les composants.
  */
 export type ModelValues = {
   id: string
 }
 
-// Abstraite ?
 export class Model<M extends ModelValues, D extends DataValues>{
   #data: Array<M> = []
+
   /**
-   * Normaliser les données brut.
+   * Normaliser les données brut et les enregistrer dans le modèle.
+   * @param data Données à normaliser
    */
-  constructor(data: Array<D>) {
+  loadData(data: Array<D>) {
     this.#data = this.normalize(data)
   }
 
   /**
-     * Récupérer une entrée.
-     *
-     * @param id Identifiant de la donnée
-     * @param fields Champs à retourner
-     * @returns Donnée normalisée <M>
-     */
+   * Récupérer une entrée à partir de son identifiant.
+   *
+   * @param id Identifiant de l'entrée
+   * @param fields Champs à retourner
+   * @returns Donnée normalisée <M>
+   */
   find(id: string, fields: (keyof M)[] = ["id"] as (keyof M)[] ): M | null {
     const item = this.#data.find(i => {
       return i.id == id
@@ -70,12 +59,12 @@ export class Model<M extends ModelValues, D extends DataValues>{
   /**
    * Récupérer toute les données.
    *
-   * @todo: implémenter des paramètres de paginoations :
+   * @todo: implémenter des paramètres de paginations :
    *  - offset : index de minimum
    *  - limit : nombre d'entrée à retourner
    *  - sortBy : trie des données par clef
    *
-   * @param fields Chmaps à retourner
+   * @param fields Champs à retourner
    * @return Tableau de données normalisée Array<M>
    */
   findAll(fields: (keyof M)[] = ["id"] as (keyof M)[]): Array<M> {
@@ -100,7 +89,6 @@ export class Model<M extends ModelValues, D extends DataValues>{
   normalize(data: Array<D>): Array<M> {
     return data.map(i => ({
       // Générer un id unique par exemple
-      // uuid: crypto.randomUUID(),
       id: i.id || crypto.randomUUID()
     })) as M[]
   }

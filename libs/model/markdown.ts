@@ -2,14 +2,20 @@
  * Implémentation d'un modèle de données pour
  * des fichiers de données Markdown.
  */
-import { DataValues, Model, ModelValues } from "."
+import { Model, ModelValues } from "."
 import { GrayMatter, getMarkdown } from "../getMarkdown"
 import { basename } from "path"
 
-/** Normalisation des données d'entrées */
+/**
+ * Les données d'entrées seront fournis par Graymatter.
+ */
 export interface MarkdownData extends GrayMatter {}
-/** Normalisation des données de sorties */
-export interface MarkdownValue extends ModelValues {
+/**
+ * Normalisation des données de sorties.
+ * Cette interface pourras être étendu par des classes enfants.
+ * Par exemple `ModelPost`.
+ */
+export interface MarkdownValues extends ModelValues {
   path: string
   slug: string
   date: Date
@@ -18,19 +24,26 @@ export interface MarkdownValue extends ModelValues {
   content?: string | null
 }
 
-export class ModelMarkdown<M extends MarkdownValue>
+export class ModelMarkdown<M extends MarkdownValues>
   extends Model<M, MarkdownData> {
-  static _directory = "content"
-  static _routePrefix = ""
+
+  #directory
+  #routePrefix
 
   /**
-   * Charger les ficheirs Markdown
+   * Charger les fichiers Markdown
    * @param directory Chemin vers les fchiers Markdown
+   * @param routePrefix Prefix d'URL.
    */
-  constructor (directory?: string) {
-    const dir = directory || ModelMarkdown._directory
-    const data = getMarkdown(dir)
-    super(data)
+  constructor (directory?: string, routePrefix?: string) {
+    super()
+    this.#directory= directory || "content"
+    this.#routePrefix = routePrefix || ""
+    // Récupérer et stocker les données
+    const data = getMarkdown(this.#directory)
+    console.group(`Récuperation des contenus depuis '${this.#directory}' :`)
+    this.loadData(data)
+    console.groupEnd()
   }
 
   /**
@@ -38,17 +51,24 @@ export class ModelMarkdown<M extends MarkdownValue>
    * @param data Données brut
    */
   normalize(data: Array<MarkdownData>): Array<M> {
-    return data.map(e => {
-      const slug = `${ModelMarkdown._routePrefix}${basename(e.path, ".md")}`
-      return {
-        path: e.path,
-        id: slug,
-        slug,
-        date: new Date(e.data.date || null),
-        title: e.data.title,
-        excerpt: e.excerpt,
-        content: e.content
-        }
-    }) as Array<M>
+    return data.map(e => this.normalizer(e)) as Array<M>
+  }
+
+  /**
+   * Ce normaliseur doit être étendu par les descendants.
+   * Par exemple `ModelPost` possèderas sont propre normaliseur.
+   */
+  normalizer(entry: MarkdownData): MarkdownValues {
+    const slug = `${this.#routePrefix || ""}${basename(entry.path, ".md")}`
+    console.log(`- ${entry.path}`)
+    return {
+      path: entry.path,
+      id: slug,
+      slug,
+      date: new Date(entry.data.date || null),
+      title: entry.data.title,
+      excerpt: entry.excerpt,
+      content: entry.content
+    }
   }
 }
