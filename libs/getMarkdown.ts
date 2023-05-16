@@ -8,6 +8,7 @@ import path from "path"
 import crypto from "crypto"
 import matter, { GrayMatterFile } from "gray-matter"
 
+// Il y a t-il un interêt d'étendre directement GrayMatterFile ?
 // export interface GrayMatter extends GrayMatterFile<string> {}
 export interface GrayMatter {
   data: {[key: string]: any}
@@ -22,15 +23,49 @@ export interface GrayMatter {
   // stringify(lang: string): string
 }
 
+/**
+ *
+ * @param dirPath Path to content
+ * @returns Array of gray matter data
+ */
 export function getMarkdown(dirPath: string): Array<GrayMatter> {
-  return fs
-    .readdirSync(dirPath)
-    .filter(f => isMarkdownFile(path.join(dirPath, f)))
-    .map(f => ({
-      ...matter.read(path.join(dirPath, f)),
-      id: crypto.randomUUID(),
-      path: f
-    }))
+  console.log("====================")
+  console.log("Get markdown files")
+  console.log("====================")
+  console.log("Get data from", dirPath)
+  const paths = getPaths(dirPath) // dir paths
+  const files: Array<GrayMatter> = []
+  paths.forEach(p => {
+    if (isMarkdownFile(p)) {
+      console.log("Add file ", p)
+      files.push({
+        ...matter.read(p),
+        id: crypto.randomUUID(),
+        path: p
+      })
+    }
+  })
+  console.log("====================")
+  console.log(`${files.length} files`)
+  console.log("====================")
+  return files
+}
+
+/**
+ * Applatir les chemins
+ */
+function getPaths(dirPath: string) {
+  let paths:string[] = []
+  fs.readdirSync(dirPath)
+    .forEach(p => {
+      const fp = path.join(dirPath, p)
+      if (fs.statSync(fp).isDirectory()) {
+        paths = paths.concat(getPaths(fp))
+      } else {
+        paths.push(fp)
+      }
+    })
+  return paths
 }
 
 const mdExts = [".md", ".markdown"]

@@ -1,9 +1,11 @@
-import mdToHtml from "../../libs/mdToHtml"
-import { ModelPost } from "../../libs/model/post"
-import notFound from "../not-found"
+import mdToHtml from "@/libs/mdToHtml"
+import { ModelPost } from "@/libs/model/post"
+import notFound from "@/app/not-found"
 
 type Props = {
   params: {
+    year: string
+    month: string
     slug: string
   }
 }
@@ -14,7 +16,9 @@ export async function generateStaticParams() {
 }
 
 export default async function Blog({ params }: Props) {
-  const post = new ModelPost().find(params.slug, [
+  const slug = `/blog/${params.year}/${params.month}/${params.slug}`
+  console.log("Find post ", slug)
+  const post = new ModelPost().find(slug, [
     "slug",
     "title",
     "content"

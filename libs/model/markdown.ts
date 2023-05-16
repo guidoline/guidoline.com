@@ -4,7 +4,7 @@
  */
 import { Model, ModelValues } from "."
 import { GrayMatter, getMarkdown } from "../getMarkdown"
-import { basename } from "path"
+import path from "path"
 
 /**
  * Les données d'entrées seront fournis par Graymatter.
@@ -41,9 +41,7 @@ export class ModelMarkdown<M extends MarkdownValues>
     this.#routePrefix = routePrefix || ""
     // Récupérer et stocker les données
     const data = getMarkdown(this.#directory)
-    console.group(`Récuperation des contenus depuis '${this.#directory}' :`)
     this.loadData(data)
-    console.groupEnd()
   }
 
   /**
@@ -59,8 +57,15 @@ export class ModelMarkdown<M extends MarkdownValues>
    * Par exemple `ModelPost` possèderas sont propre normaliseur.
    */
   normalizer(entry: MarkdownData): MarkdownValues {
-    const slug = `${this.#routePrefix || ""}${basename(entry.path, ".md")}`
-    console.log(`- ${entry.path}`)
+    // const slug = `${this.#routePrefix || ""}${basename(entry.path, ".md")}`
+    const { dir, name } = path.parse(entry.path)
+    const slug = this.#routePrefix.concat(
+      dir
+      .replace(this.#directory, "")
+      .replace(path.sep, "/")
+      .concat(`/${name}`)
+    )
+    // const slug = path.basename(entry.path, path.extname(entry.path))
     return {
       path: entry.path,
       id: slug,

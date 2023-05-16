@@ -11,7 +11,7 @@ export class ModelPost extends ModelMarkdown<PostValues> {
   constructor() {
     // @todo : Ajouter un scan de répertoire récursif à
     // `libs/getMarkdown.ts`.
-    super("content/blog", "blog/")
+    super("content/blog", "/blog")
   }
   // Extends normalizer
   normalizer(entry: MarkdownData): PostValues {
