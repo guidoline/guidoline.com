@@ -35,12 +35,12 @@ export class ModelMarkdown<M extends MarkdownValues>
    * @param directory Chemin vers les fchiers Markdown
    * @param routePrefix Prefix d'URL.
    */
-  constructor (directory?: string, routePrefix?: string) {
+  constructor (directory?: string, routePrefix?: string, deep=false) {
     super()
     this.#directory= directory || "content"
     this.#routePrefix = routePrefix || ""
     // Récupérer et stocker les données
-    const data = getMarkdown(this.#directory)
+    const data = getMarkdown(this.#directory, deep)
     this.loadData(data)
   }
 
@@ -57,15 +57,13 @@ export class ModelMarkdown<M extends MarkdownValues>
    * Par exemple `ModelPost` possèderas sont propre normaliseur.
    */
   normalizer(entry: MarkdownData): MarkdownValues {
-    // const slug = `${this.#routePrefix || ""}${basename(entry.path, ".md")}`
     const { dir, name } = path.parse(entry.path)
     const slug = this.#routePrefix.concat(
       dir
       .replace(this.#directory, "")
       .replace(path.sep, "/")
-      .concat(`/${name}`)
+      .concat(name)
     )
-    // const slug = path.basename(entry.path, path.extname(entry.path))
     return {
       path: entry.path,
       id: slug,

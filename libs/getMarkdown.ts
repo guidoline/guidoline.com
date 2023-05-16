@@ -28,12 +28,12 @@ export interface GrayMatter {
  * @param dirPath Path to content
  * @returns Array of gray matter data
  */
-export function getMarkdown(dirPath: string): Array<GrayMatter> {
+export function getMarkdown(dirPath: string, deep = false): Array<GrayMatter> {
   console.log("====================")
   console.log("Get markdown files")
   console.log("====================")
   console.log("Get data from", dirPath)
-  const paths = getPaths(dirPath) // dir paths
+  const paths = getPaths(dirPath, deep) // dir paths
   const files: Array<GrayMatter> = []
   paths.forEach(p => {
     if (isMarkdownFile(p)) {
@@ -54,13 +54,13 @@ export function getMarkdown(dirPath: string): Array<GrayMatter> {
 /**
  * Applatir les chemins
  */
-function getPaths(dirPath: string) {
+function getPaths(dirPath: string, deep = false) {
   let paths:string[] = []
   fs.readdirSync(dirPath)
     .forEach(p => {
       const fp = path.join(dirPath, p)
-      if (fs.statSync(fp).isDirectory()) {
-        paths = paths.concat(getPaths(fp))
+      if (fs.statSync(fp).isDirectory() && deep) {
+        paths = paths.concat(getPaths(fp, deep))
       } else {
         paths.push(fp)
       }
