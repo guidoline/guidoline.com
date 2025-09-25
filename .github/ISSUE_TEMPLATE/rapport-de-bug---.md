@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-Veuillez remplir minutieusement ce document, supprimez les paragraphes qui ne vous semble pas pertinents.
+Veuillez remplir minutieusement ce document, supprimez les paragraphes qui ne vous semble pas pertinentes.
 
 ## Description du bug
 
